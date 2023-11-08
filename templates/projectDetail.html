@@ -1,1 +1,70 @@
-프로젝트디테일이욘
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GNU 멋쟁이사자처럼-프로젝트</title>
+    <link
+      rel="shortcut icon"
+      href="{% static 'image/favicon.ico' %}"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="{% static 'image/favicon.ico' %}"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="{% static 'css/projectDetail.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <script src="{% static 'js/projectDetail.js' %}" defer></script>
+
+  </head>
+  <body>
+
+    <nav>
+        <div class="logo">
+            <img class="logoImg" src="/static/image/logo.png">
+            <div class="logoText1">멋쟁이사자처럼</div>
+            <div class="logoText2">경상국립대</div>
+        </div>
+        <div class="menu">
+            <div class="memuHome">홈</div>
+            <div class="menuProject">프로젝트</div>
+            <div class="menuPlan">활동and일정</div>
+            <div class="menuProfile">프로필</div>
+            <div class="menuQnA">QnA</div>
+        </div>
+    </nav>
+    <hr class="navLine">
+
+    <div class="container">
+
+        <div class="title">
+            <div class="titleLine leftLine"></div>
+            <div class="titleCircle leftCircle"></div>
+            <div class="titleText">WHEELWEGO</div>
+            <div class="titleLine rightLine"></div>
+            <div class="titleCircle rightCircle"></div>  
+        </div>
+
+        <div class="img">
+            <img class="preImg" src="/static/image/exImg1.png">
+            <img class="currentImg" src="/static/image/exImg2.png">
+            <img class="postImg" src="/static/image/exImg3.png">
+        </div>
+
+        <div class="moveBtn">
+            <i class="far fa-arrow-alt-circle-right rightBtn"></i>
+            <i class="far fa-arrow-alt-circle-left leftBtn"></i>
+        </div>
+        
+        <div class="slider">
+            <div class="page1"></div>
+            <div class="page2"></div>
+        </div>
+
+        
+    </div>
+  </body>
+</html>
