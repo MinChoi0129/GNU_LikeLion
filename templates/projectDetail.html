@@ -16,7 +16,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="{% static 'css/projectDetail.css' %}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="{% static 'js/projectDetail.js' %}" defer></script>
 
   </head>
@@ -41,29 +41,37 @@
     <div class="container">
 
         <div class="title">
+            <div class= "Line">
             <div class="titleLine leftLine"></div>
             <div class="titleCircle leftCircle"></div>
+            </div>
+            <!--아마 영어로는 11글자넘어가면 디자인 무너짐.....-->
             <div class="titleText">WHEELWEGO</div>
-            <div class="titleLine rightLine"></div>
+            <div class= "Line">
             <div class="titleCircle rightCircle"></div>  
+            <div class="titleLine rightLine"></div>
+            </div>
+
         </div>
 
-        <div class="img">
-            <img class="preImg" src="/static/image/exImg1.png">
-            <img class="currentImg" src="/static/image/exImg2.png">
-            <img class="postImg" src="/static/image/exImg3.png">
+        <div class= "mainBox">
+            <div class="eximg">
+                <img class="preImg" src="/static/image/exImg1.png">
+                <img class="currentImg" src="/static/image/exImg2.png">
+                <img class="postImg" src="/static/image/exImg3.png">
+            </div>
+
+            <div class="moveBtn">
+                <i class="fa-solid fa-circle-chevron-left fa-3x" style="color: #ffffff;"></i>
+                <i class="fa-solid fa-circle-chevron-right fa-3x" style="color: #ffffff;"></i>
+            </div>
         </div>
 
-        <div class="moveBtn">
-            <i class="far fa-arrow-alt-circle-right rightBtn"></i>
-            <i class="far fa-arrow-alt-circle-left leftBtn"></i>
-        </div>
-        
         <div class="slider">
-            <div class="page1"></div>
-            <div class="page2"></div>
+            <div class="page sliderActive"></div>
+            <div class="page"></div>
+            <div class="page"></div>
         </div>
-
         
     </div>
   </body>

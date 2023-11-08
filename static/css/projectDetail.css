@@ -142,4 +142,111 @@ html{
             margin:0px;
         }
 
+/* 메인컨텐츠 */
+.container{
+    width: 100vw;
+}
 
+    /* 작품 제목부분 */
+    .title{
+        display: flex;
+        height: 6.0417vw;
+        margin-top:5.2083vw;
+        justify-content: space-between; 
+    }
+        .titleText{
+            font-family: "Pretendard-ExtraBold";
+            font-size:5vw;
+            color:#FFFFFF;
+            margin:0;
+            padding:0;
+
+        }
+        .titleLine{
+            margin: 0px;
+            padding:0px;
+            border-bottom: 0.0521vw solid white;
+            height:3.1250vw;
+            width: 30.2083vw;;
+            margin:0;
+        }   
+        .titleCircle{
+            padding:0px;
+            margin: 0px;
+            width:0.7813vw;
+            height: 0.7813vw;
+            border-radius: 50%;
+            background-color:white;
+            margin-top: 2.7083vw;
+        }
+
+    /* 본문설정 */
+    .mainBox{
+        display: flex;
+        margin-top:3.9583vw;
+        width: 100vw;
+        justify-content: center;
+        position: relative;
+    }
+        /* 이미지설정 */
+
+        .currentImg{
+            position: relative;
+            width: 26.8229vw;
+            height: 27.1354vw;
+            z-index: 9999;
+        }
+        .preImg{
+            width: 23.4375vw;
+            height: 23.7500vw;
+            transform:translateX(11.4583vw);
+            opacity: 50%;
+
+        }
+        .postImg{
+            width: 23.4375vw;
+            height: 23.7500vw;
+            transform:translateX(-11.4583vw);
+            opacity: 50%;
+        }
+
+        .Line{
+            display: flex;
+        }
+
+
+        /* 좌우버튼 설정 */
+        .moveBtn{
+            display: flex;
+            position: absolute;
+            z-index: 99999;
+            width: 35vw;
+            height: fit-content;
+            margin-top:12.0833vw;
+            justify-content: space-between; 
+            color:white;
+
+        }
+
+        
+        /* 슬라이더 설정 */
+        .slider{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top:1.0417vw;
+        }
+        .page{
+            width:0.7813vw ;
+            height: 0.7813vw;
+            background-color: white;
+            border-radius: 50%;
+            margin:0.5vw;
+            opacity: 70%;
+
+        }
+        .sliderActive{
+            width: 1.6667vw;
+            height: 1.6667vw;
+            opacity: 100%;
+        }
