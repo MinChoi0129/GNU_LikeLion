@@ -8,6 +8,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var currentIndex = 0;
     var imageContainers = document.querySelectorAll('.eximg img');
+    var sliderContainer = document.querySelector('.slider');
+
+    for (var i = 0; i < imageList.length; i++) {
+        var sliderPage = document.createElement('div');
+        sliderPage.classList.add('page');
+        if (i === currentIndex) {
+            sliderPage.classList.add('sliderActive');
+        }
+        sliderContainer.appendChild(sliderPage);
+    }
+
+    var sliderPages = document.querySelectorAll('.slider .page');
 
     function updateImageState() {
         imageContainers[1].src = imageList[currentIndex];
@@ -31,6 +43,14 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             imageContainers[2].classList.remove('noLastViewImg');
         }
+
+        sliderPages.forEach(function(page, index) {
+            if (index === currentIndex) {
+                page.classList.add('sliderActive');
+            } else {
+                page.classList.remove('sliderActive');
+            }
+        });
     }
 
     updateImageState();
