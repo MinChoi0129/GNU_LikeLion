@@ -156,6 +156,11 @@ const starfield = (function() {
     }
   
     function resize_canvas(){
+        // viewport_width = window.innerWidth;
+        // viewport_height = window.innerHeight;
+        // star_canvas.width = viewport_width;
+        // star_canvas.height = viewport_height;
+
         viewport_width = window.innerWidth;
         viewport_height = window.innerHeight;
         star_canvas.width = viewport_width;
