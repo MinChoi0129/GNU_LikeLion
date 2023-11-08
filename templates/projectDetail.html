@@ -56,10 +56,18 @@
 
         <div class= "mainBox">
             <div class="eximg">
-                <img class="preImg" src="/static/image/exImg1.png">
-                <img class="currentImg" src="/static/image/exImg2.png">
-                <img class="postImg" src="/static/image/exImg3.png">
-            </div>
+                <div class="preImg"><img src="/static/image/exImg1.png"></div>
+                <div class="currentImg"><img src="/static/image/exImg2.png"></div>
+                <div class="postImg"><img src="/static/image/exImg3.png"></div>
+                <div class="unactive"><img src="/static/image/exImg4.png"></div>
+            </div>           
+            {% comment %} <div class="eximg">
+                preImg
+                <img class="preImg img1" src="/static/image/exImg1.png">
+                <img class="currentImg img2" src="/static/image/exImg2.png">
+                <img class="postImg img3" src="/static/image/exImg3.png">
+                <img class="unactive img4" src="/static/image/exImg4.png">
+            </div> {% endcomment %}
 
             <div class="moveBtn">
                 <i class="fa-solid fa-circle-chevron-left fa-3x" style="color: #ffffff;"></i>
@@ -68,9 +76,9 @@
         </div>
 
         <div class="slider">
-            <div class="page sliderActive"></div>
-            <div class="page"></div>
-            <div class="page"></div>
+            <div class="page1 sliderActive"></div>
+            <div class="page2"></div>
+            <div class="page3"></div>
         </div>
         
     </div>
