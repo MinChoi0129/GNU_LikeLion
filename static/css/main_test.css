@@ -1,0 +1,39 @@
+.header_of_someone {
+  background-color: rgb(15, 104, 74);
+  height: 60px;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.likelion {
+  height: 100vh;
+  font-family: "Pretendard";
+  text-align: center;
+}
+
+.likelion_eng {
+  font-weight: 1000;
+  font-size: 108px;
+  color: rgba(255, 254, 234, 1);
+}
+
+.likelion_kor {
+  font-weight: 400;
+  font-size: 108px;
+}
+.gnu_kor {
+  font-weight: 300;
+  font-size: 70px;
+  color: rgba(255, 255, 255, 0.54);
+}
+.recruit {
+}
+
+.who_we_are {
+}
+
+.activities {
+}
