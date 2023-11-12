@@ -17,20 +17,69 @@
     />
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
     <link rel="stylesheet" href="{% static 'css/main_test.css' %}" />
-    {% comment %}
-    <script src="{% static 'js/main.js' %}" defer></script>
-    {% endcomment %}
   </head>
-  <header class="header_of_someone">누군가의 헤더</header>
+
+  <header>누군가의 헤더</header>
+
   <body>
+    <a name="level1"></a>
     <div class="likelion">
       <div class="likelion_eng">LIKELION</div>
       <div class="likelion_kor">멋쟁이사자처럼</div>
       <div class="gnu_kor">경상국립대학교</div>
+      <a href="#level2"><button>ㅅ</button></a>
     </div>
-    <div class="recruit">지원 모집 + 아래 ㅅ 뒤집힌거 두개 누르면 밑으로</div>
-    <div class="who_we_are">우리는 누구인가</div>
+
+    <a name="level2"></a>
+    <div class="recruit">
+      <div></div>
+      <div class="twelveth_likelion">세모 12th 멋쟁이사자처럼</div>
+      <div class="baby_lion_orange">아기사자&nbsp;</div>
+      <div class="baby_lion_white">모집 중</div>
+      <div class="goto_submit_resume">지원하러 가기</div>
+      <div class="goto_faq">자주 묻는 질문</div>
+      <div class="likelion_question">경상국립대학교 멋쟁이사자처럼?</div>
+      <a href="#level3"><button>ㅅ</button></a>
+    </div>
+
+    <a name="level3"></a>
+    <div class="who_we_are">
+      <div class="who_we_are_white">Who&nbsp;</div>
+      <div class="who_we_are_orange">WE&nbsp;</div>
+      <div class="who_we_are_white">are :</div>
+
+      <div class="text_box">
+        <div>
+          우리는 뭐하는 사람이고 뭐하는 사람이며 나는 누구고 뭐하는 사람이다.
+        </div>
+        <br /><br />
+        <div>또한 우리는 엠제트 세대이고 폼 미친 사람이며 해커톤 레전드다.</div>
+        <br /><br />
+        <div>
+          캬캬코코 가나다라 동해물과 백두산이 마르고 닳도록 하느님이 보우하사
+          우리나라만세
+        </div>
+      </div>
+      <a href="#level4"><button>ㅅ</button></a>
+    </div>
+
+    <a name="level4"></a>
     <div class="activities">여러 활동들</div>
   </body>
-  <footer>바닥에 그 About 이런거</footer>
+
+  <footer>
+    <div class="about">About</div>
+    <div class="about_link">
+      <img width="64px" src="{% static 'image/instagram.png' %}" />
+      <div>Instagram</div>
+    </div>
+    <div class="about_link">
+      <img width="64px" src="{% static 'image/github.png' %}" />
+      <div>Github</div>
+    </div>
+    <div class="about_link">
+      <img width="64px" src="{% static 'image/meta.png' %}" />
+      <div>Meta</div>
+    </div>
+  </footer>
 </html>
