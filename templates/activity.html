@@ -8,8 +8,8 @@
     <title>GNU 멋쟁이사자처럼</title>
     <link rel="shortcut icon" href="{% static 'image/favicon.ico' %}" type="image/x-icon" />
     <link rel="icon" href="{% static 'image/favicon.ico' %}" type="image/x-icon" />
-    <link rel="stylesheet" href="{% static 'css/record.css' %}" />
-    <script src="{% static 'js/record.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'css/activity.css' %}" />
+    <script src="{% static 'js/activity.js' %}" defer></script>
 </head>
 
 <body>
@@ -34,12 +34,16 @@
             <div>RECORD</div>
         </div>
 
-        <div class="post"></div>
-        <div>게시글 목록</div>
-        {% for post in posts %}
-        <div>{{ post.title }}</div>
-        <div>{{ post.content }}</div>
-        {% endfor %}
+        <div>
+            {% for post in posts %}
+            <div class="post">
+                {% if post.image %}
+                <img src="{{ post.image.url }}" alt="{{ post.title }}">
+                {% endif %}
+                <h2>{{ post.title }}</h2>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 
     </div>
