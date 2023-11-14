@@ -35,3 +35,7 @@ def post_list(request):
 
 def projectDetail(request):
     return render(request, "projectDetail.html")
+
+
+def FAQ(request):
+    return render(request, "FAQ.html")
