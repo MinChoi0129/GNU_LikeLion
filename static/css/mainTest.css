@@ -122,8 +122,7 @@ body {
   position: relative;
 }
 
-
-.dropdownContainer{
+.dropdownContainer {
   text-align: left;
   position: absolute;
   top: 30%;
@@ -131,37 +130,37 @@ body {
   transform: translate(-50%, 0%);
   width: 50%;
 }
-.dropdownContainer>div{
+.dropdownContainer > div {
   margin-bottom: 7vh;
 }
 
-.dropdown{
+.dropdown {
   border-bottom: 3px solid black;
-  border-image: linear-gradient(to right, #FFFFFF, #000000);
+  border-image: linear-gradient(to right, #ffffff, #000000);
   border-image-slice: 0.5;
   padding-bottom: 1vh;
   margin-bottom: 3vh;
 }
-.ideathon:hover div{
+.ideathon:hover div {
   display: inline-block;
   transition-property: height;
   transition-duration: 3s;
   transition-timing-function: ease-out;
 }
-.MT:hover div{
+.MT:hover div {
   display: inline-block;
 }
-.hackathon:hover div{
+.hackathon:hover div {
   display: inline-block;
 }
-.session:hover div{
+.session:hover div {
   display: inlin-block;
 }
-.dropContent{
+.dropContent {
   display: none;
   align-items: center;
 }
-.dropContent div{
+.dropContent div {
   display: inline-block;
   overflow: hidden;
   background-color: white;
@@ -170,10 +169,9 @@ body {
   border-radius: 35%;
   margin-left: 1vw;
 }
-.more:hover{
+.more:hover {
   cursor: pointer;
 }
-
 
 /* footer */
 .about {
