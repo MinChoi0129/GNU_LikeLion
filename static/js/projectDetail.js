@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     var imageList = [
-        "/static/image/exImg1.png",
-        "/static/image/exImg2.png",
-        "/static/image/exImg3.png",
-        "/static/image/exImg4.png"
+        "{% static 'image/exImg1.png'%}",
+        "{% static 'image/exImg2.png'%}",
+        "{% static 'image/exImg3.png'%}",
+        "{% static 'image/exImg4.png'%}",
     ];
 
     var currentIndex = 0;
