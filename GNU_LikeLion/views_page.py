@@ -6,3 +6,6 @@ def main(request):
 
 def project(request):
     return render(request, "project.html")
+
+def projectDetail(request):
+    return render(request, "projectDetail.html")
