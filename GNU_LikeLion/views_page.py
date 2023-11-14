@@ -22,3 +22,6 @@ def activity(request):
 def post_list(request):
     posts = Post.objects.all()
     return render(request, 'activity.html', {'posts': posts})
+
+def projectDetail(request):
+    return render(request, "projectDetail.html")
