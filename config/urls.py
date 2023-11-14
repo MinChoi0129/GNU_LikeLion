@@ -17,9 +17,23 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from GNU_LikeLion import views_page
+from GNU_LikeLion.views_page import post_list
 
 urlpatterns = [
     path("", views_page.main, name="main"),
+    path('projectDetail/',views_page.projectDetail,name="projectDetail"),
+
     path("admin/", admin.site.urls),
     path("planpage/", views_page.planpage, name="planpage"),
+    path("project/", views_page.project, name="project"),
+    path("main_test/", views_page.main_test, name="main_test"),
+    path("activity/", views_page.activity, name="activity"),
+   
 ]
+
+
+
+
+
+
+
