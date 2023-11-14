@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             item.appendChild(box);
             var link = item.querySelector('a');
             if (link) {
-                link.style.color = '#000000';
+                link.style.color = '#ffffff';
             }
             // li 요소의 위치와 크기 가져오기
             var liRect = item.getBoundingClientRect();
@@ -27,10 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 box.remove();
             }
             if (link) {
-                link.style.color = '';
+                link.style.color = '#000000';
             }
             var link = item.querySelector('a');
-
         });
     });
 });

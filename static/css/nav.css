@@ -72,11 +72,15 @@
   canvas {
     display: block;
   }
+
   nav {
       margin: 1.5rem 2.5rem;
-      display: flex; 
-      justify-content: space-between; 
+      position: fixed;
+      display: flex;
+      justify-content: space-around; 
       align-items: center; 
+      width: 100%;
+      z-index: 999;
   }
   
   nav ul {
@@ -86,6 +90,7 @@
   }
   
   nav li {
+      color: #ffffff;
       display: inline-block;
   }
   
@@ -93,7 +98,6 @@
       display: block;
       padding: 10px 20px;
       text-decoration: none;
-      color: #000000;
   }
   
   nav img {
@@ -113,12 +117,8 @@
 
 .box {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  background-color: #000000;
+  background-color: #ffffff;
   opacity: 0.5;
-  width: 80%;
-  height: 80%;
   border-radius: 16px;
-  z-index: -1;
+  z-index: 999;
 }
