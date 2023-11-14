@@ -47,6 +47,7 @@ body {
   height: 100%;
   overflow: hidden;
   position: absolute;
+  font-size: 16px;
 }
 
 main,
@@ -82,3 +83,4 @@ a:active {
 a:hover {
   cursor: pointer;
 }
+
