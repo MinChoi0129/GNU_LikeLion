@@ -21,4 +21,5 @@ from GNU_LikeLion import views_page
 urlpatterns = [
     path("", views_page.main, name="main"),
     path("admin/", admin.site.urls),
+    path("introduce/", views_page.introduce, name="introduce"),
 ]
