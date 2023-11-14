@@ -1,6 +1,6 @@
 // JavaScript 코드
 document.addEventListener('DOMContentLoaded', function() {
-    var navItem = document.querySelectorAll('nav li');
+    var navItem = document.querySelectorAll('#nav li');
 
     navItem.forEach(function(item) {
         item.addEventListener('mouseenter', function() {
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 link.style.color = '#ffffff';
             }
             // li 요소의 위치와 크기 가져오기
-            var liRect = item.getBoundingClientRect();
+            var liRect = link.getBoundingClientRect();
 
             // 박스의 위치 설정
             box.style.left = liRect.left + 'px';
@@ -23,13 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         item.addEventListener('mouseleave', function() {
             var box = item.querySelector('.box');
+            var link = item.querySelector('a');
             if (box) {
                 box.remove();
             }
             if (link) {
-                link.style.color = '#000000';
+                link.style.color = '#ffffff';
             }
-            var link = item.querySelector('a');
         });
     });
 });

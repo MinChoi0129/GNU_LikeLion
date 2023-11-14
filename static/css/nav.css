@@ -73,35 +73,32 @@
     display: block;
   }
 
-  nav {
-      margin: 1.5rem 2.5rem;
+  #nav {
+    font-family: "Pretendard-Bold";
       position: fixed;
       display: flex;
+      width: 100%;
       justify-content: space-around; 
       align-items: center; 
-      width: 100%;
       z-index: 999;
+      margin-bottom: #ffffff 1px solid;
   }
   
-  nav ul {
+  #nav ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
   }
   
-  nav li {
+  #nav li {
       color: #ffffff;
       display: inline-block;
   }
   
-  nav li a {
+  #nav li a {
       display: block;
       padding: 10px 20px;
       text-decoration: none;
-  }
-  
-  nav img {
-      margin-right: 10px;
   }
   
   .nav-title {
@@ -109,7 +106,16 @@
       align-items: center;
   }
 
-  .nav-title span {
+  .nav-title #logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .nav-title #first-title {
+    color: #ffffff;
+  }
+
+  .nav-title #second-title {
     color: #40BCCB;
   }
 
@@ -119,6 +125,7 @@
   position: absolute;
   background-color: #ffffff;
   opacity: 0.5;
-  border-radius: 16px;
-  z-index: 999;
+  height: 3em;
+  border-radius: 25px;
+  z-index: 100;
 }
