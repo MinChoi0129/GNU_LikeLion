@@ -44,6 +44,8 @@
     height: 100%;
     overflow: hidden;
     position: absolute;
+    background-color: #032023;
+    box-shadow: inset 0 0 250px 20px #24586E;
   }
   
   main,
