@@ -119,24 +119,26 @@ body {
   text-align: center;
   padding-top: 20vh;
   background-color: rgb(89, 38, 103);
+  position: relative;
 }
 
 
 .dropdownContainer{
+  text-align: left;
   position: absolute;
   top: 30%;
   left: 50%;
   transform: translate(-50%, 0%);
-  width: 70%;
-  /* background-color: antiquewhite; */
+  width: 50%;
+}
+.dropdownContainer>div{
+  margin-bottom: 7vh;
 }
 
 .dropdown{
   border-bottom: 3px solid black;
-  /* 나중에 흰색으로 변경해주기 */
   border-image: linear-gradient(to right, #FFFFFF, #000000);
-   /*나중에 색상 반대로 넣어주기  */
-  border-image-slice: 1;
+  border-image-slice: 0.5;
   padding-bottom: 1vh;
   margin-bottom: 3vh;
 }
@@ -155,17 +157,21 @@ body {
 .session:hover div{
   display: inlin-block;
 }
-
 .dropContent{
   display: none;
+  align-items: center;
 }
 .dropContent div{
   display: inline-block;
   overflow: hidden;
   background-color: white;
-  width: 13vw;
-  height: 13vw;
-  border-radius: 35%;    
+  width: 10vw;
+  height: 10vw;
+  border-radius: 35%;
+  margin-left: 1vw;
+}
+.more:hover{
+  cursor: pointer;
 }
 
 
