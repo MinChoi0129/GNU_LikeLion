@@ -15,9 +15,10 @@
       href="{% static 'image/favicon.ico' %}"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="/static/css/project.css" />
+    <link rel="stylesheet" href="{% static 'css/project.css' %}"/>
     <script src="{% static 'js/project.js' %}" defer></script>
   </head>
+
   <body>
     <div class="introduce">
         <p class="title">11th.<br>
@@ -32,7 +33,6 @@
         <img src="/static/image/right.png">
         <img src="/static/image/left.png">
     </div>
-
-    
+  
   </body>
 </html>
