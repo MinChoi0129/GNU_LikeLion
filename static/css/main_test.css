@@ -121,6 +121,54 @@ body {
   background-color: rgb(89, 38, 103);
 }
 
+
+.dropdownContainer{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 70%;
+  /* background-color: antiquewhite; */
+}
+
+.dropdown{
+  border-bottom: 3px solid black;
+  /* 나중에 흰색으로 변경해주기 */
+  border-image: linear-gradient(to right, #FFFFFF, #000000);
+   /*나중에 색상 반대로 넣어주기  */
+  border-image-slice: 1;
+  padding-bottom: 1vh;
+  margin-bottom: 3vh;
+}
+.ideathon:hover div{
+  display: inline-block;
+  transition-property: height;
+  transition-duration: 3s;
+  transition-timing-function: ease-out;
+}
+.MT:hover div{
+  display: inline-block;
+}
+.hackathon:hover div{
+  display: inline-block;
+}
+.session:hover div{
+  display: inlin-block;
+}
+
+.dropContent{
+  display: none;
+}
+.dropContent div{
+  display: inline-block;
+  overflow: hidden;
+  background-color: black;
+  width: 13vw;
+  height: 13vw;
+  border-radius: 35%;    
+}
+
+
 /* footer */
 .about {
   font-family: "Pretendard";
