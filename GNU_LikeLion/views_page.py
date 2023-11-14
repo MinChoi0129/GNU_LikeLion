@@ -14,4 +14,4 @@ def activity(request):
 # activity record 게시글
 def post_list(request):
     posts = Post.objects.all()
-    return render(request, 'post_list.html', {'posts': posts})
+    return render(request, 'activity.html', {'posts': posts})

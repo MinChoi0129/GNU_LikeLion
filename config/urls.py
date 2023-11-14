@@ -24,5 +24,12 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("project/", views_page.project, name="project"),
     path("activity/", views_page.activity, name="activity"),
-    path('posts/', post_list, name='post_list'),
+   
 ]
+
+
+
+
+
+
+
