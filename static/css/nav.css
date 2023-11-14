@@ -74,9 +74,9 @@
   }
   nav {
       margin: 1.5rem 2.5rem;
-      display: flex; /* flex 컨테이너로 변경 */
-      justify-content: space-between; /* 요소들을 좌우로 정렬 */
-      align-items: center; /* 요소들을 수직 정렬 */
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
   }
   
   nav ul {
@@ -89,11 +89,11 @@
       display: inline-block;
   }
   
-  nav li ul a {
+  nav li a {
       display: block;
       padding: 10px 20px;
       text-decoration: none;
-      color: #ffffff;
+      color: #000000;
   }
   
   nav img {
@@ -109,13 +109,16 @@
     color: #40BCCB;
   }
 
-  .box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background-color: #ffffff;
-    width: 80%;
-    height: 80%;
-    border-radius: 15px;
-    z-index: -1;
+/* 기존의 CSS 코드 */
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #000000;
+  opacity: 0.5;
+  width: 80%;
+  height: 80%;
+  border-radius: 16px;
+  z-index: -1;
 }

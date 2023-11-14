@@ -8,7 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
             box.classList.add('box');
             item.appendChild(box);
             var link = item.querySelector('a');
-
+            if (link) {
+                link.style.color = '#000000';
+            }
             // li 요소의 위치와 크기 가져오기
             var liRect = item.getBoundingClientRect();
 
@@ -23,6 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
             var box = item.querySelector('.box');
             if (box) {
                 box.remove();
+            }
+            if (link) {
+                link.style.color = '';
             }
             var link = item.querySelector('a');
 
