@@ -47,6 +47,7 @@
     height: 100%;
     overflow: hidden;
     position: absolute;
+    background-color: black;
   }
   
   main,
@@ -82,4 +83,6 @@
   a:hover {
     cursor: pointer;
   }
-  
+  .title {
+    color: white;
+  }
