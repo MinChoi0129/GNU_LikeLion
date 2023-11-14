@@ -45,7 +45,8 @@ window.requestAnimFrame = (function () {
         }
     
         // 캔버스를 페이지에 추가
-        document.body.appendChild(star_canvas);
+        const backGround = document.querySelector(".backGround");
+        backGround.appendChild(star_canvas);
     
         // 키를 누르면 무언가 일어납니다
         document.addEventListener(
@@ -106,9 +107,7 @@ window.requestAnimFrame = (function () {
         });
     
         // 마우스 스크롤 이벤트를 처리합니다.
-        document.addEventListener(
-            "mousewheel",
-            function (e) {
+        document.addEventListener("mousewheel",function (e) {
                 e = e || window.event;
                 // 마우스 휠 방향에 따라 속도를 조절합니다.
                 if (e.deltaY > 0) {
@@ -122,8 +121,7 @@ window.requestAnimFrame = (function () {
                         y: velocity.y + 1,
                     };
                 }
-            },
-            false
+            },false
         );
     
         // 첫 프레임을 그리는 것은 그리기 루프를 시작합니다
@@ -143,11 +141,11 @@ window.requestAnimFrame = (function () {
             let s = stars.length;
             // 각 별에 대해
             while (s--) {
-            let star = stars[s];
-            // 개별 별의 위치 업데이트
-            star.update();
-            // 별을 캔버스에 렌더링
-            star.render(star_context);
+                let star = stars[s];
+                // 개별 별의 위치 업데이트
+                star.update();
+                // 별을 캔버스에 렌더링
+                star.render(star_context);
             }
         }
     
@@ -166,7 +164,7 @@ window.requestAnimFrame = (function () {
   
     function resize_canvas() {
         viewport_width = window.innerWidth;
-        viewport_height = window.innerHeight;
+        viewport_height = window.innerHeight * 4;
         star_canvas.width = viewport_width;
         star_canvas.height = viewport_height;
     }
