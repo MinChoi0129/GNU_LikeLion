@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GNU 멋쟁이사자처럼</title>
+    <link rel="shortcut icon" href="{% static 'image/favicon.ico' %}" type="image/x-icon" />
+    <link rel="icon" href="{% static 'image/favicon.ico' %}" type="image/x-icon" />
+    <link rel="stylesheet" href="{% static 'css/record.css' %}" />
+    <script src="{% static 'js/record.js' %}" defer></script>
+</head>
+
+<body>
+    <div class="page00">
+
+        <div class="text">
+            <div>Gyeongsang National University</div>
+            <div>LKELION</div>
+            <div>RECORD ACTIVITY</div>
+        </div>
+
+        <div class="lion_img">
+            <img src="/static/image/lion.png">
+        </div>
+
+    </div>
+
+    <div class="page01">
+        <div>2023</div>
+        <div>
+            <div>11th</div>
+            <div>RECORD</div>
+        </div>
+
+        <div class="post"></div>
+        <div>게시글 목록</div>
+        {% for post in posts %}
+        <div>{{ post.title }}</div>
+        <div>{{ post.content }}</div>
+        {% endfor %}
+    </div>
+
+    </div>
+</body>
+
+</html>
