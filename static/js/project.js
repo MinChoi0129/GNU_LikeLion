@@ -113,13 +113,13 @@ window.requestAnimFrame = (function () {
                 // 마우스 휠 방향에 따라 속도를 조절합니다.
                 if (e.deltaY > 0) {
                     velocity = {
-                    x: velocity.x,
-                    y: velocity.y - 5,
+                        x: velocity.x,
+                        y: velocity.y - 1,
                     };
                 } else {
                     velocity = {
-                    x: velocity.x,
-                    y: velocity.y + 5,
+                        x: velocity.x,
+                        y: velocity.y + 1,
                     };
                 }
             },
@@ -232,7 +232,7 @@ window.requestAnimFrame = (function () {
         // 항상 멋진 함수 이름으로 시작하세요!
         lets_roll: initialize,
     };
-  })();
+})();
   
-  starfield.lets_roll();
+starfield.lets_roll();
   
