@@ -158,9 +158,10 @@ html{
     }
         .titleText{
             font-family: "Pretendard-ExtraBold";
-            font-size:5vw;
+            font-size:3.1250vw;
             color:#FFFFFF;
             margin:0;
+            margin-top:1.5250vw;
             padding:0;
 
         }
@@ -194,32 +195,44 @@ html{
         .eximg{
             display:flex;
             align-items: center;
+            overflow: hidden; /* 이미지 넘침 제어 */
+
         }
         .eximg img{
             width: 100%;
             height: 100%;
+            transition: transform 0.5s ease; /* 부드러운 전환을 위한 transition 속성 추가 */
+
         }
         .eximg >div{
             margin:0;
+            transition: transform 0.5s ease; /* 부드러운 전환을 위한 transition 속성 추가 */
+
         }
         .currentImg{
             position: relative;
-            width: 26.8229vw;
-            height: 27.1354vw;
+            width: 28.8229vw;
+            height: 29.1354vw;
+            transition: transform 0.5s ease; /* 부드러운 전환을 위한 transition 속성 추가 */
+
             z-index: 9999;
         }
         .preImg{
-            width: 23.4375vw;
-            height: 23.7500vw;
+            width: 25.4375vw;
+            height: 25.7500vw;
             transform:translateX(11.4583vw);
             opacity: 50%;
+            transition: transform 0.5s ease; /* 부드러운 전환을 위한 transition 속성 추가 */
+
 
         }
         .postImg{
-            width: 23.4375vw;
-            height: 23.7500vw;
+            width: 25.4375vw;
+            height: 25.7500vw;
             transform:translateX(-11.4583vw);
             opacity: 50%;
+            transition: transform 0.5s ease; /* 부드러운 전환을 위한 transition 속성 추가 */
+
         }
         .unactive{
             display: none;
@@ -270,10 +283,14 @@ html{
             border-radius: 50%;
             margin:0.5vw;
             opacity: 70%;
+            transition: background-color 0.5s ease; /* 슬라이더 색상 전환을 위한 transition 속성 추가 */
+
 
         }
         .sliderActive{
             width: 1.6667vw;
             height: 1.6667vw;
             opacity: 100%;
+              transition: width 0.5s ease, height 0.5s ease; /* 슬라이더 활성화 효과 전환을 위한 transition 속성 추가 */
+
         }
