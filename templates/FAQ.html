@@ -20,22 +20,32 @@
   </head>
   <body>
     <div>
-        <h1>FAQ</h1>
-        <h3>Frequently Asked Questions</h3>
-        <div class="underbar"></div>
-        <div class="faq">
-            <div id="search-field" class="field has-addons">
-                <div class="control has-icons-left">
-                    <input id="search-input" class="input" type="input" placeholder="Search" onkeyup="enterkeySearch()">
-                    <span class="icon is-small is-left">
-                        <i class="fas fa-search"></i>
-                    </span>
-                </div>
-                <div id="btn-search-post" class="control" onclick="searchPost()">
-                    <button class="button is-sparta">검색</button>
-                </div>
+      <h1 class="faq-title">FAQ</h1>
+      <h3 class="faq-description">Frequently Asked Questions</h3>
+      <div class="underbar"></div>
+      <div class="faq">
+        <div class="container">
+          <div class="block"></div>
+          <div class="content">
+            <div class="search-content">
+              <input
+                type="text"
+                class="search"
+                id="search"
+                name="search"
+                autocomplete="off"
+                placeholder="검색어를 입력하시오."
+              />
+              <div class="SearchBtn" id="SearchBtn">검색</div>
             </div>
+            <div class="crossbar"></div>
+            <div class="faq-list">
+              <div class="faq-content">진짜?</div>
+            </div>
+          </div>
+          <div class="block"></div>
         </div>
+      </div>
     </div>
   </body>
 </html>
