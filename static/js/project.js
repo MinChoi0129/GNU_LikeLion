@@ -10,21 +10,17 @@ window.requestAnimFrame = (function () {
             window.setTimeout(callback, 1000 / 60);
         }
     );
-  })();
+})();
   
-  const starfield = (function () {
+const starfield = (function () {
     let stars = [],
-        star_density = 25,
+        star_density = 50,
         velocity = { x: 0, y: 0 },
         star_colors = ["rgba(0,0,0,.5)", "#ffe9c4", "#d4fbff"],
         star_canvas,
         star_context,
         viewport_width,
-        viewport_height,
-        // 마우스 드래그 관련 변수
-        isDragging = false,
-        lastMouseX,
-        lastMouseY;
+        viewport_height;
   
     function initialize() {
         // 캔버스 생성
@@ -54,18 +50,6 @@ window.requestAnimFrame = (function () {
             function (e) {
             e = e || window.event;
             // 기존 속도에 추가하여 속도 변화를 억제하고 방향 변경이 현실적으로 부드럽게 이루어지도록 만듭니다.
-            if (e.keyCode == 39) {
-                velocity = {
-                x: velocity.x - 5,
-                y: velocity.y,
-                };
-            }
-            if (e.keyCode == 37) {
-                velocity = {
-                x: velocity.x + 5,
-                y: velocity.y,
-                };
-            }
             if (e.keyCode == 40) {
                 velocity = {
                 x: velocity.x,
@@ -81,30 +65,6 @@ window.requestAnimFrame = (function () {
             },
             false
         );
-    
-        // 마우스 드래그 관련 이벤트 리스너 등록
-        star_canvas.addEventListener("mousedown", function (e) {
-            isDragging = true;
-            lastMouseX = e.clientX;
-            lastMouseY = e.clientY;
-        });
-    
-        star_canvas.addEventListener("mousemove", function (e) {
-            if (isDragging) {
-                let mouseX = e.clientX;
-                let mouseY = e.clientY;
-                velocity = {
-                    x: velocity.x + (mouseX - lastMouseX) / 10,
-                    y: velocity.y + (mouseY - lastMouseY) / 10,
-                };
-                lastMouseX = mouseX;
-                lastMouseY = mouseY;
-            }
-        });
-    
-        star_canvas.addEventListener("mouseup", function () {
-            isDragging = false;
-        });
     
         // 마우스 스크롤 이벤트를 처리합니다.
         document.addEventListener("mousewheel",function (e) {
@@ -130,9 +90,8 @@ window.requestAnimFrame = (function () {
         function clear_canvas() {
             // 매 프레임마다 캔버스에 반투명한 검은색을 그려서 이동 중인 별 뒤에 흔적 효과를 제공합니다.
     
-            // star_context.fillRect(0, 0, viewport_width, viewport_height);
             star_context.globalCompositeOperation = "source-over"; // 이전 프레임을 그립니다.
-            star_context.fillStyle = "rgba(0, 0, 0, 0.3)"; // 흔적의 색상 및 투명도 조절
+            star_context.fillStyle = "rgba(3, 32, 35, 0.3)"; // 흔적 및 배경의 색상 및 투명도 조절
             star_context.fillRect(0, 0, viewport_width, viewport_height);
             star_context.globalCompositeOperation = "lighter"; // 새로운 별을 그릴 때 사용할 별 모드
         }
@@ -157,6 +116,10 @@ window.requestAnimFrame = (function () {
         function draw_frame() {
             clear_canvas();
             // 무한 루프!
+
+            // velocity 값을 이용하여 위치를 업데이트
+            velocity.y = velocity.y - 0.1; // 위로 조금씩 움직이도록 수정
+
             frame = requestAnimFrame(draw_frame);
             draw_star();
         }
