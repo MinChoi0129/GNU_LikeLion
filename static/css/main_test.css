@@ -1,15 +1,24 @@
 /* 헤더 */
 header {
   background-color: rgb(15, 104, 74);
-  height: 60px;
+  height: 3.6rem;
 }
 footer {
   background-color: rgb(218, 255, 243);
-  height: 592px;
+  height: 15rem;
   text-align: center;
   color: black;
 }
 
+.arrow_btn {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
 /* 바디 */
 body {
   background-color: black;
@@ -26,16 +35,16 @@ body {
 }
 .likelion_eng {
   font-weight: 1000;
-  font-size: 108px;
+  font-size: 6.75rem;
   color: rgba(255, 254, 234, 1);
 }
 .likelion_kor {
   font-weight: 400;
-  font-size: 108px;
+  font-size: 6.75rem;
 }
 .gnu_kor {
   font-weight: 300;
-  font-size: 70px;
+  font-size: 4.375rem;
   color: rgba(255, 255, 255, 0.54);
 }
 
@@ -49,44 +58,43 @@ body {
 }
 .twelveth_likelion {
   text-decoration: underline;
-  font-size: 64px;
+  font-size: 4rem;
+  margin-top: 5rem;
 }
 .baby_lion_orange {
   font-weight: bold;
   color: rgba(255, 143, 0, 1);
   display: inline-block;
-  font-size: 64px;
+  font-size: 4rem;
 }
 .baby_lion_white {
   font-weight: bold;
-  font-size: 64px;
+  font-size: 4rem;
   display: inline-block;
 }
 .goto_submit_resume {
-  border-radius: 127px;
+  border-radius: 8rem;
   background-color: rgba(61, 187, 203, 0.6);
-  width: 572px;
-  height: 100px;
-  font-size: 40px;
+  width: 25rem;
+  height: 5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   margin: 60px auto;
-  padding-top: 15px;
-  padding-bottom: -15px;
+  line-height: 5rem;
 }
 .goto_faq {
-  border-radius: 127px;
+  border-radius: 8rem;
   background-color: rgba(30, 76, 93, 1);
-  width: 572px;
-  height: 100px;
-  font-size: 40px;
+  width: 25rem;
+  height: 5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   margin: 60px auto;
-  padding-top: 15px;
-  padding-bottom: -15px;
+  line-height: 5rem;
 }
 .likelion_question {
   font-family: "Pretendard";
-  font-size: 40px;
+  font-size: 2rem;
 }
 
 /* 섹션3 */
@@ -98,17 +106,18 @@ body {
   background-color: rgb(103, 101, 38);
 }
 .text_box {
-  margin: 20vh auto;
-  font-size: 20px;
+  padding-top: 17vh;
+  padding-bottom: 3vh;
+  font-size: 1.7rem;
 }
 .who_we_are_orange {
-  font-size: 50px;
+  font-size: 3.125rem;
   font-weight: 900;
   color: rgba(255, 145, 0, 1);
   display: inline-block;
 }
 .who_we_are_white {
-  font-size: 50px;
+  font-size: 3.125rem;
   display: inline-block;
 }
 
@@ -124,15 +133,15 @@ body {
 /* footer */
 .about {
   font-family: "Pretendard";
-  font-size: 50px;
-  padding: 150px;
+  font-size: 3.125rem;
+  padding: 1.56rem;
 }
 .about_link {
   font-family: "Pretendard";
   display: inline-block;
-  margin: 15px;
+  margin: 1rem;
 }
 .about_link > img {
   border-radius: 50%;
-  width: 64px;
+  width: 2rem;
 }
