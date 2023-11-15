@@ -1,8 +1,21 @@
-/* 헤더 */
+/******************** 광범위 대상 ********************/
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+/******************** 헤더 ********************/
 header {
   background-color: rgb(15, 104, 74);
   height: 3.6rem;
 }
+
+/******************** 푸터 ********************/
 footer {
   background-color: rgb(218, 255, 243);
   height: 15rem;
@@ -10,22 +23,31 @@ footer {
   color: black;
 }
 
+.about {
+  font-family: "Pretendard";
+  font-size: 3.125rem;
+  padding: 1.56rem;
+}
+
+.about_link {
+  font-family: "Pretendard";
+  display: inline-block;
+  margin: 1rem;
+}
+
+.about_link > img {
+  border-radius: 50%;
+  width: 2rem;
+}
+
+/******************** 광범위 이동 화살표 ********************/
+
 .arrow_btn {
   background-color: rgba(0, 0, 0, 0);
   border-color: rgba(0, 0, 0, 0);
 }
 
-html,
-body {
-  scroll-behavior: smooth;
-}
-/* 바디 */
-body {
-  background-color: black;
-  color: white;
-}
-
-/* 섹션1 */
+/********************* 섹션1 *********************/
 .likelion {
   height: 100vh;
   font-family: "Pretendard";
@@ -33,22 +55,25 @@ body {
   padding-top: 25vh;
   background-color: rgb(38, 103, 103);
 }
+
 .likelion_eng {
   font-weight: 1000;
   font-size: 6.75rem;
   color: rgba(255, 254, 234, 1);
 }
+
 .likelion_kor {
   font-weight: 400;
   font-size: 6.75rem;
 }
+
 .gnu_kor {
   font-weight: 300;
   font-size: 4.375rem;
   color: rgba(255, 255, 255, 0.54);
 }
 
-/* 섹션2 */
+/******************** 섹션2 ********************/
 .recruit {
   height: 100vh;
   font-family: "Pretendard";
@@ -56,22 +81,26 @@ body {
   padding-top: 10vh;
   background-color: rgb(38, 103, 62);
 }
+
 .twelveth_likelion {
   text-decoration: underline;
   font-size: 4rem;
   margin-top: 5rem;
 }
+
 .baby_lion_orange {
   font-weight: bold;
   color: rgba(255, 143, 0, 1);
   display: inline-block;
   font-size: 4rem;
 }
+
 .baby_lion_white {
   font-weight: bold;
   font-size: 4rem;
   display: inline-block;
 }
+
 .goto_submit_resume {
   border-radius: 8rem;
   background-color: rgba(61, 187, 203, 0.6);
@@ -82,6 +111,7 @@ body {
   margin: 60px auto;
   line-height: 5rem;
 }
+
 .goto_faq {
   border-radius: 8rem;
   background-color: rgba(30, 76, 93, 1);
@@ -92,12 +122,13 @@ body {
   margin: 60px auto;
   line-height: 5rem;
 }
+
 .likelion_question {
   font-family: "Pretendard";
   font-size: 2rem;
 }
 
-/* 섹션3 */
+/******************** 섹션3 ********************/
 .who_we_are {
   height: 100vh;
   font-family: "Pretendard";
@@ -105,23 +136,26 @@ body {
   padding-top: 20vh;
   background-color: rgb(103, 101, 38);
 }
+
 .text_box {
   padding-top: 17vh;
   padding-bottom: 3vh;
   font-size: 1.7rem;
 }
+
 .who_we_are_orange {
   font-size: 3.125rem;
   font-weight: 900;
   color: rgba(255, 145, 0, 1);
   display: inline-block;
 }
+
 .who_we_are_white {
   font-size: 3.125rem;
   display: inline-block;
 }
 
-/* 섹션4 */
+/******************** 섹션4 ********************/
 .activities {
   height: 100vh;
   font-family: "Pretendard";
@@ -139,6 +173,7 @@ body {
   transform: translate(-50%, 0%);
   width: 50%;
 }
+
 .dropdownContainer > div {
   margin-bottom: 7vh;
 }
@@ -150,25 +185,31 @@ body {
   padding-bottom: 1vh;
   margin-bottom: 3vh;
 }
+
 .ideathon:hover div {
   display: inline-block;
   transition-property: height;
   transition-duration: 3s;
   transition-timing-function: ease-out;
 }
+
 .MT:hover div {
   display: inline-block;
 }
+
 .hackathon:hover div {
   display: inline-block;
 }
+
 .session:hover div {
   display: inlin-block;
 }
+
 .dropContent {
   display: none;
   align-items: center;
 }
+
 .dropContent div {
   display: inline-block;
   overflow: hidden;
@@ -178,22 +219,7 @@ body {
   border-radius: 35%;
   margin-left: 1vw;
 }
+
 .more:hover {
   cursor: pointer;
-}
-
-/* footer */
-.about {
-  font-family: "Pretendard";
-  font-size: 3.125rem;
-  padding: 1.56rem;
-}
-.about_link {
-  font-family: "Pretendard";
-  display: inline-block;
-  margin: 1rem;
-}
-.about_link > img {
-  border-radius: 50%;
-  width: 2rem;
 }
