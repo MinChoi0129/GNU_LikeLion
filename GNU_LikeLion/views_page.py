@@ -26,6 +26,9 @@ def mainTest(request):
 def activity(request):
     return render(request, "activity.html")
 
+def introduce(request):
+    return render(request, "introduce.html")
+
 
 # activity record 게시글
 def post_list(request):
