@@ -1,6 +1,6 @@
 import{
     DataBase
-}from './DB';
+}from './DB.js';
 
 export class ScrollEvent{
     constructor(){
