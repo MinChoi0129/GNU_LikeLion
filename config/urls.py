@@ -25,6 +25,6 @@ urlpatterns = [
     path("activity/", views_page.activity, name="activity"),
     path("mainTest/", views_page.mainTest, name="mainTest"),
     path("project/", views_page.project, name="project"),
-    path("planPage/", views_page.planPage, name="planPage"),
+    path("planpage/", views_page.planpage, name="planpage"),
     path("projectDetail/", views_page.projectDetail, name="projectDetail"),
 ]

@@ -7,8 +7,8 @@ def main(request):
     return render(request, "main.html")
 
 
-def planPage(request):
-    return render(request, "planPage.html")
+def planpage(request):
+    return render(request, "planpage.html")
 
 
 def projectDetail(request):

@@ -48,6 +48,13 @@ body {
   overflow: hidden;
   position: absolute;
   font-size: 16px;
+  z-index: -99999;
+  display: block;
+}
+
+html {
+  overflow: hidden;
+  overflow-y: hidden;
 }
 
 main,
@@ -108,34 +115,17 @@ body {
 }
 
 /* rightSide */
-.April,
-.May,
-.June,
-.July {
+
+.Mon{
   display: flex;
   flex-direction: row;
+
+  margin-top: 4rem;
 }
-.April {
-  transform: rotate(-20deg);
-  margin-top: -6rem;
-  margin-left: -2rem;
-}
-.May {
-  margin-top: 8.5rem;
-  margin-left: 1rem;
-}
-.June {
-  transform: rotate(12deg);
-  margin-top: 6rem;
-}
-.July {
-  transform: rotate(25deg);
-  margin-top: 6rem;
-  margin-left: -4rem;
-}
+
 .Month {
   margin-left: 45rem;
-  margin-top: 5rem;
+  margin-top: -70rem;
 }
 .monthNum {
   font-size: 32px;
@@ -168,17 +158,17 @@ body {
   margin-top: 2.3rem;
 }
 
-.mainLine {
-  width: 1px;
-  height: 700px;
-  background-color: #ffffff;
-  border-radius: 100%;
+
+
+
+
+.mainCircle {
+  width: 78rem;
+  height: 80rem;
+  border-radius: 100rem;
+  border: solid white;
+  margin-left: -25rem;
+  margin-top: -10rem;
+  overflow: hidden;
 }
 
-.blurCircle {
-  width: 20px;
-  height: 20px;
-  border-radius: 50px;
-  color: #ffffff;
-  /* filter: blur(5px); */
-}
