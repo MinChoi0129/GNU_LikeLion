@@ -17,10 +17,10 @@ export class DataBase{
             this.MonSection[i].style.transition = 'all 0.3s linear 0s';
             this.MonSection[i].style.transform = `rotate(${this.monDeg.deg[i]}deg)`;
         }
-        let deg;
-        for(let i=0; i<this.MonSection.length; i++){
-            deg = this.monDeg.deg[i];        
-        }
+        // let deg;
+        // for(let i=0; i<this.MonSection.length; i++){
+        //     deg = this.monDeg.deg[i];        
+        // }
     }
 }
 
