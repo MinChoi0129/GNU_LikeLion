@@ -9,3 +9,14 @@ import{
 import{
   ScrollEvent
 }from './scrollEvent.js';
+
+export const database = new DataBase(); 
+
+class Main{
+  constructor(){
+  this.scrollEvent = new ScrollEvent();
+  }
+}
+window.onload = () => {
+  new Main();
+};
