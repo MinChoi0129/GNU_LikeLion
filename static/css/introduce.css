@@ -138,11 +138,42 @@ article {
 
     background-color: black;
 
-    width: 25vw;
+    width: 23rem;
 
     padding: 1%;
 
     display: flex;
+
+    position: relative;
+}
+
+.box1 {
+    margin-top: 5rem;
+}
+
+.box2 {
+    top: 4.5rem;
+    left: 45rem;
+}
+
+.box3 {
+    top: 9rem;
+    left: 5rem;
+}
+
+.box4 {
+    top: 13.5rem;
+    left: 43rem;
+}
+
+.box5 {
+    top: 18rem;
+}
+
+.curveCanvas {
+    position: relative;
+    bottom: 25rem;
+    left: 2.6rem;
 }
 
 .profile {
@@ -203,6 +234,10 @@ article {
 }
 
 /* babyLion */
+
+.babyLion {
+    margin-top: 30%;
+}
 
 .card {
     border: 2px solid #0099D9;
