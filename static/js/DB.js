@@ -6,7 +6,7 @@ export class DataBase{
 
         // 월 바뀔때마다 적용되는 css 추가해야됨 
         this.monDeg = {
-            deg : [0, -5, -10, -15, -20, -25, -30]
+            deg : [0,-1, 1, 2, 3, -1, -2, -3,-3,-3,-3]
         };
         this.transitionSpeed = [300, 150, 100];
     }
