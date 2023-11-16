@@ -1,12 +1,12 @@
 export class DataBase{
     constructor(){
         this.Num = 0;
-        this.MaxNum = 12;
+        this.MaxNum = 11;
         this.MonSection = document.querySelectorAll(".Mon");
 
         // 월 바뀔때마다 적용되는 css 추가해야됨 
         this.monDeg = {
-            deg : [0,-1, 1, 2, 3, -1, -2, -3,-3,-3,-3]
+            deg : [0, 30, 60, 90, 0, 0, 0, 0, 0, -90, -60, -30]
         };
         this.transitionSpeed = [300, 150, 100];
     }

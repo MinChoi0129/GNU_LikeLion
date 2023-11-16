@@ -11,7 +11,7 @@ export class ScrollEvent{
 
     wheelEvent(data){
         if(this.canwheel){
-            this.canwheel = false;
+            //this.canwheel = false;
             const wheelValue = data.wheelDelta;
 
             let MonSectiontemp = [...database.MonSection];
