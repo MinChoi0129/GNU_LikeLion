@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GNU 멋쟁이사자처럼</title>
+    <link rel="shortcut icon" href="{% static 'image/favicon.ico' %}" type="image/x-icon" />
+    <link rel="icon" href="{% static 'image/favicon.ico' %}" type="image/x-icon" />
+    <link rel="stylesheet" href="{% static 'css/activity.css' %}" />
+    <script src="{% static 'js/activity.js' %}" defer></script>
+</head>
+
+<body>
+    <div class="page00">
+
+        <div class="text">
+            <div>Gyeongsang National University</div>
+            <div>LKELION</div>
+            <div>RECORD ACTIVITY</div>
+        </div>
+
+        <div class="lion_img">
+            <img src="/static/image/lion.png">
+        </div>
+
+    </div>
+
+    <div class="page01">
+        <div>2023</div>
+        <div>
+            <div>11th</div>
+            <div>RECORD</div>
+        </div>
+
+        <div>
+            <h1>Post List</h1>
+            <ul>
+                {% for post in posts %}
+                    <li>
+                        {% if post.image %}
+                            <img src="{{ post.image.url }}" alt="{{ post.title }}">
+                        {% endif %}
+                        <h2>{{ post.title }}</h2>
+                        <p>{{ post.content }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>

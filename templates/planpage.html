@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GNU 멋쟁이사자처럼</title>
+    <link
+      rel="shortcut icon"
+      href="{% static 'image/favicon.ico' %}"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="{% static 'image/favicon.ico' %}"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="{% static 'css/planPage.css' %}" />
+    <script src="{% static 'js/planPage.js' %}" defer></script>
+  </head>
+  <body>
+    <div class="Wrap">
+      <div class="leftSide">
+        <div class="leftYear">2023</div>
+        <div class="leftText">연간일정</div>
+      </div>
+      <div class="rightSide">
+        <div class="Month">
+          <div class="April">
+            <p class="monthNum">04</p>
+            <p class="monthText">Apr</p>
+            <p class="circle"></p>
+            <p class="content">세션활동(프론트엔드)</p>
+          </div>
+          <div class="May">
+            <p class="monthNum">05</p>
+            <p class="monthText">May</p>
+            <p class="circle"></p>
+            <p class="content">세션활동(백엔드)</p>
+            <p class="blurCircle"></p>
+          </div>
+          <div class="June">
+            <p class="monthNum">06</p>
+            <p class="monthText">June</p>
+            <p class="circle"></p>
+            <p class="content">아이디어톤</p>
+          </div>
+          <div class="July">
+            <p class="monthNum">07</p>
+            <p class="monthText">July</p>
+            <p class="circle"></p>
+            <p class="content">해커톤 준비</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

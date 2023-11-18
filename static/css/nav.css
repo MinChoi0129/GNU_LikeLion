@@ -37,6 +37,7 @@
 
 * {
   box-sizing: content-box;
+  background: none;
 }
 
 html,
@@ -45,13 +46,8 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  /* overflow: hidden; */
+  overflow: hidden;
   position: absolute;
-  font-size: 16px;
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 main,
@@ -71,17 +67,84 @@ li {
   padding: 0;
   margin: 0;
 }
+a {
+  text-decoration: none;
+  color: white;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:focus {
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  text-decoration: none;
+}
 
 canvas {
   display: block;
 }
 
-a,
-a:visited,
-a:active {
-  color: inherit;
-  text-decoration: none;
+#nav {
+  font-family: "Pretendard-Bold";
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 150;
+  border-bottom: #ffffff 1px solid;
 }
-a:hover {
-  cursor: pointer;
+
+#nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav li {
+  font-family: "pretendard-regular";
+  color: #ffffff;
+  display: inline-block;
+}
+
+#nav ul li a {
+  display: block;
+  position: relative;
+  padding: 10px 20px;
+  text-decoration: none;
+  z-index: 150;
+}
+
+.nav-title {
+  display: flex;
+  align-items: center;
+  font-size: large;
+}
+
+.nav-title #logo {
+  width: 60px;
+  height: 60px;
+}
+
+.nav-title #first-title {
+  color: #ffffff;
+}
+
+.nav-title #second-title {
+  color: #40bccb;
+}
+
+/* 기존의 CSS 코드 */
+
+.box {
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 0.5;
+  border-radius: 25px;
+  z-index: 100;
 }

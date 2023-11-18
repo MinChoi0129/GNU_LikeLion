@@ -1,0 +1,268 @@
+@font-face {
+  font-weight: 300;
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
+    format("woff");
+}
+@font-face {
+  font-weight: 400;
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+}
+@font-face {
+  font-weight: 500;
+  font-family: "Pretendard-Medium";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff")
+    format("woff");
+}
+@font-face {
+  font-weight: 600;
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
+    format("woff");
+}
+@font-face {
+  font-weight: 700;
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
+}
+@font-face {
+  font-weight: 800;
+  font-family: "Pretendard-ExtraBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff")
+    format("woff");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  background-color: #032023;
+  box-shadow: inset 0 0 250px 20px #24586e;
+}
+
+main,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+}
+
+html {
+  background-color: black;
+}
+
+/* projectDetail 개별 css */
+/* viewport Width 1920px 기준 vw단위로 작성 */
+
+/* nav 설정 */
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 3.3333vw;
+  width: 100vw;
+  align-items: center;
+}
+.logoImg {
+  align-content: center;
+}
+.logo {
+  margin-left: 3.3333vw;
+  display: flex;
+  align-items: center;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  margin-right: 3.3333vw;
+}
+.logoImg {
+  width: 3.3vw;
+  height: 3.3vw;
+}
+.logoText1 {
+  font-size: 1.0417vw;
+  font-family: "Pretendard-Bold";
+  color: #40bccb;
+}
+.logoText2 {
+  font-size: 1.0417vw;
+  font-family: "Pretendard-Bold";
+  color: #ffffff;
+}
+.memuHome,
+.menuQnA,
+.menuPlan,
+.menuProfile {
+  font-family: "Pretendard-Regular";
+  font-size: 0.9375vw;
+  color: #ffffff;
+  align-items: center;
+  margin-left: 6.25vw;
+}
+/* 프로젝트 탭 글자 bold효과 */
+.menuProject {
+  font-family: "Pretendard-ExtraBold";
+  font-size: 1.0417vw;
+  align-items: center;
+  margin-left: 6.25vw;
+  color: #ffffff;
+}
+.navLine {
+  border-width: 0.0521vw 0 0 0;
+  margin: 0px;
+}
+
+/* 메인컨텐츠 */
+.container {
+  width: 100vw;
+}
+
+/* 작품 제목부분 */
+.title {
+  display: flex;
+  height: 6.0417vw;
+  margin-top: 5.2083vw;
+  justify-content: space-between;
+}
+.titleText {
+  font-family: "Pretendard-ExtraBold";
+  font-size: 5vw;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+.titleLine {
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 0.0521vw solid white;
+  height: 3.125vw;
+  width: 30.2083vw;
+  margin: 0;
+}
+.titleCircle {
+  padding: 0px;
+  margin: 0px;
+  width: 0.7813vw;
+  height: 0.7813vw;
+  border-radius: 50%;
+  background-color: white;
+  margin-top: 2.7083vw;
+}
+
+/* 본문설정 */
+.mainBox {
+  display: flex;
+  margin-top: 3.9583vw;
+  width: 100vw;
+  justify-content: center;
+  position: relative;
+}
+/* 이미지설정 */
+.eximg {
+  display: flex;
+  align-items: center;
+}
+.eximg img {
+  width: 100%;
+  height: 100%;
+}
+.eximg > div {
+  margin: 0;
+}
+.currentImg {
+  position: relative;
+  width: 26.8229vw;
+  height: 27.1354vw;
+  z-index: 9999;
+}
+.preImg {
+  width: 23.4375vw;
+  height: 23.75vw;
+  transform: translateX(11.4583vw);
+  opacity: 50%;
+}
+.postImg {
+  width: 23.4375vw;
+  height: 23.75vw;
+  transform: translateX(-11.4583vw);
+  opacity: 50%;
+}
+.unactive {
+  display: none;
+}
+.noFirstViewImg {
+  width: 23.4375vw;
+  height: 23.75vw;
+  transform: translateX(11.4583vw);
+  opacity: 0;
+}
+.noLastViewImg {
+  width: 23.4375vw;
+  height: 23.75vw;
+  transform: translateX(-11.4583vw);
+  opacity: 0;
+}
+
+.Line {
+  display: flex;
+}
+
+/* 좌우버튼 설정 */
+.moveBtn {
+  display: flex;
+  position: absolute;
+  z-index: 99999;
+  width: 35vw;
+  height: fit-content;
+  margin-top: 12.0833vw;
+  justify-content: space-between;
+  color: white;
+}
+
+/* 슬라이더 설정 */
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.0417vw;
+}
+.page {
+  width: 0.7813vw;
+  height: 0.7813vw;
+  background-color: white;
+  border-radius: 50%;
+  margin: 0.5vw;
+  opacity: 70%;
+}
+.sliderActive {
+  width: 1.6667vw;
+  height: 1.6667vw;
+  opacity: 100%;
+}

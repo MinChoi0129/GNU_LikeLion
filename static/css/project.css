@@ -1,54 +1,54 @@
 @font-face {
-	font-weight: 300;
-	font-family: "Pretendard-Thin";
-	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
-	format("woff");
+  font-weight: 300;
+  font-family: "Pretendard-Thin";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
+    format("woff");
 }
 @font-face {
-	font-weight: 300;
-	font-family: "Pretendard-Light";
-	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
-	format("woff");
+  font-weight: 300;
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
+    format("woff");
 }
 @font-face {
-	font-weight: 400;
-	font-family: "Pretendard-Regular";
-	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-	format("woff");
+  font-weight: 400;
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
 }
 @font-face {
-	font-weight: 500;
-	font-family: "Pretendard-Medium";
-	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff")
-	format("woff");
+  font-weight: 500;
+  font-family: "Pretendard-Medium";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff")
+    format("woff");
 }
 @font-face {
-	font-weight: 600;
-	font-family: "Pretendard-SemiBold";
-	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
-	format("woff");
+  font-weight: 600;
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
+    format("woff");
 }
 @font-face {
-	font-weight: 700;
-	font-family: "Pretendard-Bold";
-	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
-	format("woff");
+  font-weight: 700;
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
 }
 @font-face {
-	font-weight: 800;
-	font-family: "Pretendard-ExtraBold";
-	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff")
-	format("woff");
+  font-weight: 800;
+  font-family: "Pretendard-ExtraBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff")
+    format("woff");
 }
 @font-face {
-	font-weight: 300;
-	font-family: "Pretendard-Black";
-	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff")
-	format("woff");
+  font-weight: 300;
+  font-family: "Pretendard-Black";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff")
+    format("woff");
 }
 
 * {
-	box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 html,
@@ -72,33 +72,33 @@ div,
 h1,
 h2,
 h3 {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 ol,
 ul,
 li {
-	list-style: none;
-	display: inline-block;
-	padding: 0;
-	margin: 0;
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
 }
 
 canvas {
-	display: block;
+  display: block;
 }
 
 a,
 a:visited,
 a:active {
-	/* 상속된 색상 사용 */
-	color: inherit;
-	/* 밑줄 제거 */
-	text-decoration: none;
+  /* 상속된 색상 사용 */
+  color: inherit;
+  /* 밑줄 제거 */
+  text-decoration: none;
 }
 a:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .backGround {
@@ -111,12 +111,12 @@ a:hover {
 }
 
 .container {
-	position: absolute;
-	display: flex;
-	flex-direction: column;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
 
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 
 	top: 0;
 	left: 0;
@@ -160,8 +160,8 @@ a:hover {
 	position: absolute;
 	display: flex;
 
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 
 	top: 15vh;
 
@@ -214,29 +214,29 @@ a:hover {
 	display: flex;
 	flex-direction: row;
 
-	border-radius: 0.75rem 0.75rem 0.75rem 0;
+  border-radius: 0.75rem 0.75rem 0.75rem 0;
 
 	width: 75%;
 	height: 7%;
-
-	background-color: rgba(255, 255, 255, 0.3);
+  
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .firstPageSlideBarIcon {
 	position: relative;
 	display: flex;
 
-	justify-content: center;
-    align-items: center;
-    text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-	border-radius: 0.75rem 0.75rem 0.75rem 0;
+  border-radius: 0.75rem 0.75rem 0.75rem 0;
 
-	width: 15%;
-	height: 100%;
+  width: 15%;
+  height: 100%;
 
-	background-color: rgba(255, 255, 255, 0.5);
-	font-size: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 2.5rem;
 }
 
 #penIcon {
@@ -246,22 +246,22 @@ a:hover {
 }
 
 .firstPageSlideBarTxt {
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
 
-	justify-content: center;
-    align-items: center;
-    text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 
 	font-size: 1.5rem;
 	font-family: "Pretendard-Thin";
 }
 
 .firstPageSlideBarTxt1 {
-	font-family: "Pretendard-Light";
+  font-family: "Pretendard-Light";
 }
 
 .fistPageBlank {
