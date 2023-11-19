@@ -53,15 +53,19 @@
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
+	margin: 0;
+	padding: 0;
 
-  font-size: 16px;
+	overflow-x: hidden;
+	-ms-overflow-style: none; /* 인터넷 익스플로러 */
+	scrollbar-width: none; /* 파이어폭스 */
+
+	font-size: 16px;	
 }
+body::-webkit-scrollbar {
+	display: none;
+}
+  
 
 main,
 div,
@@ -97,6 +101,15 @@ a:hover {
   cursor: pointer;
 }
 
+.backGround {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -9999;
+	width: 100%;
+	height: 100%;
+}
+
 .container {
   position: absolute;
   display: flex;
@@ -105,64 +118,113 @@ a:hover {
   justify-content: center;
   align-items: center;
 
-  width: 100%;
-  height: 100%;
+	top: 0;
+	left: 0;
 
-  background-color: rgba(0, 0, 0, 0);
+	width: 100vw;
+
+	background-color: rgba(0, 0, 0, 0);
+	box-shadow: inset 0 0 250px 20px #24586e;
+}
+
+/* -------------------------------------- 1페이지 -------------------------------------- */
+
+.firstPage {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+	top: 0;
+	left: 0;
+	
+	width: 100vw;
+	height: 100vh;
+}
+
+.nav {
+	position: relative;
+	border: solid 1px #24586e;
+	
+	top: 0;
+	
+	width: 100%;
+	height: 10%;
+
+	z-index: 9990;
 }
 
 .lionImg {
-  position: relative;
-  display: flex;
+	position: absolute;
+	display: flex;
 
   justify-content: center;
   align-items: center;
+
+	top: 15vh;
+
+	height: 80%;
+
+	z-index: 9989;
 }
 
 .fistPageContent {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
+	position: relative;
+	display: flex;
+	flex-direction: column;
 
-  justify-content: center;
-  align-items: center;
+    /* justify-content: center; */
+    align-items: center;
 
-  color: #ffffff;
+	margin-top: 15vh;
 
-  font-size: 7rem;
-}
+	height: 75%;
+
+	color: #FFFFFF;
+
+	font-size: 6rem;
+	z-index: 9990;
+}	
 
 .fistPageText1 {
-  font-family: "Pretendard-Black";
+	position: relative;
+	font-family: "Pretendard-Black";
 }
 
 .fistPageText2 {
-  font-family: "Pretendard-Thin";
+	position: relative;
+	font-family: "Pretendard-Thin";
 }
 
 .fistPageText3 {
-  font-family: "Pretendard-Medium";
+	position: relative;
+	font-family: "Pretendard-Medium";
 }
 
 .fistPageText4 {
-  width: 100%;
-  height: 10vh;
+	position: relative;
+	width: 100%;
+	height: 7%;
 }
 
 .firstPageSlideBar {
-  display: flex;
-  flex-direction: row;
+	position: relative;
+	display: flex;
+	flex-direction: row;
 
   border-radius: 0.75rem 0.75rem 0.75rem 0;
 
-  width: 75%;
-  height: 6vh;
-
+	width: 75%;
+	height: 7%;
+  
   background-color: rgba(255, 255, 255, 0.3);
 }
 
 .firstPageSlideBarIcon {
-  display: flex;
+	position: relative;
+	display: flex;
 
   justify-content: center;
   align-items: center;
@@ -177,6 +239,12 @@ a:hover {
   font-size: 2.5rem;
 }
 
+#penIcon {
+	position: relative;
+	
+	font-size: 75%;
+}
+
 .firstPageSlideBarTxt {
   display: flex;
   flex-direction: row;
@@ -188,8 +256,8 @@ a:hover {
   width: 100%;
   height: 100%;
 
-  font-size: 1.8rem;
-  font-family: "Pretendard-Thin";
+	font-size: 1.5rem;
+	font-family: "Pretendard-Thin";
 }
 
 .firstPageSlideBarTxt1 {
@@ -197,95 +265,32 @@ a:hover {
 }
 
 .fistPageBlank {
-  height: 5vh;
+	position: relative;
+	height: 7%;
 }
 .downIcon {
-  font-size: 5rem;
+	position: relative;
+	font-size: 4rem;
 }
-    font-weight: 300;
-    font-family: "Pretendard-Light";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
-      format("woff");
-  }
-  @font-face {
-    font-weight: 400;
-    font-family: "Pretendard-Regular";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-      format("woff");
-  }
-  @font-face {
-    font-weight: 500;
-    font-family: "Pretendard-Medium";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff")
-      format("woff");
-  }
-  @font-face {
-    font-weight: 600;
-    font-family: "Pretendard-SemiBold";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
-      format("woff");
-  }
-  @font-face {
-    font-weight: 700;
-    font-family: "Pretendard-Bold";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
-      format("woff");
-  }
-  @font-face {
-    font-weight: 800;
-    font-family: "Pretendard-ExtraBold";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff")
-      format("woff");
-  }
-  
-  * {
-    box-sizing: content-box;
-  }
-  
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: absolute;
-    
-  }
-  
-  main,
-  div,
-  h1,
-  h2,
-  h3 {
-    margin: 0;
-    padding: 0;
-  }
-  
-  ol,
-  ul,
-  li {
-    list-style: none;
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-  }
-  
-  canvas {
-    display: block;
-  }
-  
-  a,
-  a:visited,
-  a:active {
-    /* 상속된 색상 사용 */
-    color: inherit;
-    /* 밑줄 제거 */
-    text-decoration: none;
-  }
-  a:hover {
-    cursor: pointer;
-  }
-  .title {
-    color: white;
-  }
+
+.fistPageBlank1 {
+	position: relative;
+	height: 10vh;
+}
+
+/* -------------------------------------- 2페이지 -------------------------------------- */
+
+.secondPage {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+	top: 0;
+	left: 0;
+	
+	width: 100vw;
+	height: 100vh;
+}

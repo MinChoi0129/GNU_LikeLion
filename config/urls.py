@@ -30,4 +30,5 @@ urlpatterns = [
     path("planPage/", views_page.planPage, name="planPage"),
     path("projectDetail/", views_page.projectDetail, name="projectDetail"),
     path("FAQ/", views_page.FAQ, name="FAQ"),
+    path("introduce/", views_page.introduce, name="introduce"),
 ]
