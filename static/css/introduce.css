@@ -305,3 +305,7 @@ article {
 
     margin-top: 3%;
 }
+
+#canvas {
+    z-index: 999;
+}
