@@ -47,7 +47,7 @@
     height: 100%;
     /* overflow: hidden; */
     position: absolute;
-    font-size: 16px;
+    font-size: 1rem;
   }
   
   ::-webkit-scrollbar {
@@ -85,6 +85,7 @@
   a:hover {
     cursor: pointer;
   }
+  
   
 
 /* title */
