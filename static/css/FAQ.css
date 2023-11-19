@@ -189,9 +189,15 @@ input:focus {
   height: 100%;
   flex-direction: column;
 }
+
 .faq-content-title {
+  text-align: left;
   font-family: "Pretendard-bold";
+  font-size: 1.5rem;
+  padding-left: 2vw;
+  padding-top: 1vh;
 }
+
 .faq-content {
   margin: 2vh;
   padding: 2vh;
