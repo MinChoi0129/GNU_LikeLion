@@ -126,6 +126,7 @@ const starfield = (function () {
       false
     );
 
+ 
     // 첫 프레임을 그리는 것은 그리기 루프를 시작합니다
     draw_frame();
 
@@ -161,6 +162,15 @@ const starfield = (function () {
       // 무한 루프!
       frame = requestAnimFrame(draw_frame);
       draw_star();
+
+      document.addEventListener('DOMContentLoaded', function () {
+        // body 요소 가져오기
+        var bodyElement = document.body;
+
+        // 캔버스를 배경으로 설정
+        bodyElement.style.background = 'url(' + star_canvas.toDataURL() + ') no-repeat fixed';
+        bodyElement.style.backgroundSize = 'cover';
+    });
     }
   }
 
@@ -233,5 +243,7 @@ const starfield = (function () {
     lets_roll: initialize,
   };
 })();
+
+
 
 starfield.lets_roll();
