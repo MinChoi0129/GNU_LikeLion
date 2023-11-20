@@ -45,10 +45,12 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  /* overflow: hidden; */
+  overflow: hidden;
   position: absolute;
-  font-size: 16px;
+  background-color: #032023;
+  box-shadow: inset 0 0 250px 20px #24586e;
 }
+
 
 ::-webkit-scrollbar {
   display: none;
@@ -99,18 +101,20 @@ a:hover {
   border: 1px solid black;
   margin-left: 34.6rem;
   margin-top: 5rem;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   align-items: center;
-  /* opacity: 32%; */
   color: white;
   background-color: rgba(255, 255, 255, 0.32);
+  font-weight: 550;
 }
 
 .imgbox1 {
   display: flex;
   width: 24rem;
   height: 26rem;
-  margin-left: 13rem;
+  margin-left: 12rem;
+  border-radius: 20px;
+  
 }
 
 .imgbox2 {
@@ -118,6 +122,7 @@ a:hover {
   width: 24rem;
   height: 26rem;
   margin-left: 5rem;
+  border-radius: 20px;
 }
 
 .imgbox3 {
@@ -125,6 +130,7 @@ a:hover {
   width: 24rem;
   height: 26rem;
   margin-left: 5rem;
+  border-radius: 20px;
 }
 
 .textbox {
@@ -132,11 +138,11 @@ a:hover {
   justify-content: center;
   width: 81.5rem;
   height: 11rem;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   color: white;
-  margin-top: 15rem;
-  margin-left: 13rem;
-  font-size: 1rem;
+  margin-top: 3.5rem;
+  margin-left: 12.5rem;
+  font-size: 1.1rem;
   font-weight: 300;
 }
 
@@ -151,14 +157,52 @@ body {
 
 
 .leftarrow {
-  margin-top: -14.5rem;
-  margin-left: 5rem;
- 
+  
+  
+  margin-left: -89rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
   
   
 }
 
 .rightarrow {
-  margin-left: 100rem;
-  margin-top:-3rem;
+  margin-left: 91rem;
+  margin-top: 0rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.etcimg {
+  display: flex;
+  align-items: center;
+  transition: transform 10s ease;
+}
+.etcimg img {
+  width: 100%;
+  height: 100%;
+}
+
+.imgbox1 img,
+.imgbox2 img,
+.imgbox3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지하며 채우기 */
+  border-radius: 20px; /* 테두리 둥글게 설정 */
+}
+
+
+/* 이미지 상자 숨기기 */
+.etcimg > div {
+  display: none;
+}
+
+/* 처음에는 처음 3개의 이미지 상자만 보이기 */
+.etcimg > div:nth-child(-n+3) {
+  display: block;
 }
