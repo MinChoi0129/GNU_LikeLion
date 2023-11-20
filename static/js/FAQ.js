@@ -235,3 +235,11 @@ const starfield = (function () {
 })();
 
 starfield.lets_roll();
+
+const faqItems = document.getElementsByClassName("faq-content-title");
+
+for (let i = 0; i < faqItems.length; i++) {
+  faqItems[i].addEventListener("onclick", function () {
+    faqItems[i].nextElementSibling.hidden = true;
+  });
+}
