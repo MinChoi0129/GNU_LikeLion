@@ -198,9 +198,9 @@ starfield.lets_roll();
 document.addEventListener("DOMContentLoaded", function () {
 	// 이미지 리스트 정의
 	const imageList = [
-		"../static/image/ideathon1.png",
-		"../static/image/ideathon2.png",
-		"../static/image/ideathon3.png"
+		"../static/image/ideathon4.png",
+		"../static/image/ideathon5.png",
+		"../static/image/ideathon6.png"
 	];
 
 	// 현재 이미지의 인덱스
