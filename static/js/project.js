@@ -14,7 +14,7 @@ window.requestAnimFrame = (function () {
 
 const starfield = (function () {
 	let stars = [],
-		star_density = 50,
+		star_density = 100,
 		velocity = { x: 0, y: 0 },
 		star_colors = ["rgba(0,0,0,.5)", "#ffe9c4", "#d4fbff"],
 		star_canvas,
