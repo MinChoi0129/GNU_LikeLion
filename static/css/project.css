@@ -1,150 +1,150 @@
 @font-face {
-  font-weight: 300;
-  font-family: "Pretendard-Thin";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
-    format("woff");
-}
-@font-face {
-  font-weight: 300;
-  font-family: "Pretendard-Light";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
-    format("woff");
-}
-@font-face {
-  font-weight: 400;
-  font-family: "Pretendard-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
-}
-@font-face {
-  font-weight: 500;
-  font-family: "Pretendard-Medium";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff")
-    format("woff");
-}
-@font-face {
-  font-weight: 600;
-  font-family: "Pretendard-SemiBold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
-    format("woff");
-}
-@font-face {
-  font-weight: 700;
-  font-family: "Pretendard-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
-    format("woff");
-}
-@font-face {
-  font-weight: 800;
-  font-family: "Pretendard-ExtraBold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff")
-    format("woff");
-}
-@font-face {
-  font-weight: 300;
-  font-family: "Pretendard-Black";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff")
-    format("woff");
-}
-
+	font-weight: 300;
+	font-family: "Pretendard-Thin";
+	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
+	format("woff");
+ }
+ @font-face {
+	font-weight: 300;
+	font-family: "Pretendard-Light";
+	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
+	format("woff");
+ }
+ @font-face {
+	font-weight: 400;
+	font-family: "Pretendard-Regular";
+	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+	format("woff");
+ }
+ @font-face {
+	font-weight: 500;
+	font-family: "Pretendard-Medium";
+	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff")
+	format("woff");
+ }
+ @font-face {
+	font-weight: 600;
+	font-family: "Pretendard-SemiBold";
+	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
+	format("woff");
+ }
+ @font-face {
+	font-weight: 700;
+	font-family: "Pretendard-Bold";
+	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+	format("woff");
+ }
+ @font-face {
+	font-weight: 800;
+	font-family: "Pretendard-ExtraBold";
+	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff")
+	format("woff");
+ }
+ @font-face {
+	font-weight: 300;
+	font-family: "Pretendard-Black";
+	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff")
+	format("woff");
+ }
+ 
 * {
-  box-sizing: content-box;
+	box-sizing: content-box;
 }
-
+ 
 html,
 body {
 	margin: 0;
 	padding: 0;
-
+ 
 	overflow-x: hidden;
 	-ms-overflow-style: none; /* 인터넷 익스플로러 */
 	scrollbar-width: none; /* 파이어폭스 */
-
-	font-size: 16px;	
+ 
+	font-size: 16px;   
 }
 body::-webkit-scrollbar {
 	display: none;
 }
-  
-
+   
+ 
 main,
 div,
 h1,
 h2,
 h3 {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
-
+ 
 ol,
 ul,
 li {
-  list-style: none;
-  display: inline-block;
-  padding: 0;
-  margin: 0;
+	list-style: none;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
 }
-
-canvas {
-  display: block;
-}
-
+ 
 a,
 a:visited,
 a:active {
-  /* 상속된 색상 사용 */
-  color: inherit;
-  /* 밑줄 제거 */
-  text-decoration: none;
-}
-a:hover {
-  cursor: pointer;
-}
-
-.backGround {
+	/* 상속된 색상 사용 */
+	color: inherit;
+	/* 밑줄 제거 */
+	text-decoration: none;
+ }
+ a:hover {
+	cursor: pointer;
+ }
+ 
+ canvas {
+	display: block;
+ }
+ 
+ .backGround {
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: -9999;
 	width: 100%;
 	height: 100%;
-}
-
-.container {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-
-  justify-content: center;
-  align-items: center;
-
+ }
+ 
+ .container {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+ 
+	 justify-content: center;
+	 align-items: center;
+ 
 	top: 0;
 	left: 0;
-
+ 
 	width: 100vw;
-
+ 
 	background-color: rgba(0, 0, 0, 0);
 	box-shadow: inset 0 0 250px 20px #24586e;
-}
-
-/* -------------------------------------- 1페이지 -------------------------------------- */
-
-.firstPage {
+ }
+ 
+ /* -------------------------------------- 1페이지 -------------------------------------- */
+ 
+ .firstPage {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-
+ 
+	justify-content: center;
+	align-items: center;
+ 
 	top: 0;
 	left: 0;
 	
 	width: 100vw;
 	height: 100vh;
-}
-
-.nav {
+ }
+ 
+ .nav {
 	position: relative;
 	border: solid 1px #24586e;
 	
@@ -152,145 +152,381 @@ a:hover {
 	
 	width: 100%;
 	height: 10%;
-
+ 
 	z-index: 9990;
-}
-
-.lionImg {
+ }
+ 
+ .lionImg {
 	position: absolute;
 	display: flex;
-
-  justify-content: center;
-  align-items: center;
-
+ 
+	justify-content: center;
+	align-items: center;
+ 
 	top: 15vh;
-
+ 
 	height: 80%;
-
+ 
 	z-index: 9989;
-}
-
-.fistPageContent {
+ }
+ 
+ .fistPageContent {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-
-    /* justify-content: center; */
-    align-items: center;
-
+ 
+	 /* justify-content: center; */
+	 align-items: center;
+ 
 	margin-top: 15vh;
-
+ 
 	height: 75%;
-
+ 
 	color: #FFFFFF;
-
+ 
 	font-size: 6rem;
 	z-index: 9990;
-}	
-
-.fistPageText1 {
+ }   
+ 
+ .fistPageText1 {
 	position: relative;
 	font-family: "Pretendard-Black";
-}
-
-.fistPageText2 {
+ }
+ 
+ .fistPageText2 {
 	position: relative;
 	font-family: "Pretendard-Thin";
-}
-
-.fistPageText3 {
+ }
+ 
+ .fistPageText3 {
 	position: relative;
 	font-family: "Pretendard-Medium";
-}
-
-.fistPageText4 {
+ }
+ 
+ .fistPageText4 {
 	position: relative;
 	width: 100%;
 	height: 7%;
-}
-
-.firstPageSlideBar {
+ }
+ 
+ .firstPageSlideBar {
 	position: relative;
 	display: flex;
 	flex-direction: row;
-
-  border-radius: 0.75rem 0.75rem 0.75rem 0;
-
+ 
+	border-radius: 0.75rem 0.75rem 0.75rem 0;
+ 
 	width: 75%;
 	height: 7%;
-  
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.firstPageSlideBarIcon {
+ 
+	background-color: rgba(255, 255, 255, 0.3);
+ }
+ 
+ .firstPageSlideBarIcon {
 	position: relative;
 	display: flex;
-
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  border-radius: 0.75rem 0.75rem 0.75rem 0;
-
-  width: 15%;
-  height: 100%;
-
-  background-color: rgba(255, 255, 255, 0.5);
-  font-size: 2.5rem;
-}
-
-#penIcon {
+ 
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+ 
+	border-radius: 0.75rem 0.75rem 0.75rem 0;
+ 
+	width: 15%;
+	height: 100%;
+ 
+	background-color: rgba(255, 255, 255, 0.5);
+	font-size: 2.5rem;
+ }
+ 
+ #penIcon {
 	position: relative;
 	
 	font-size: 75%;
-}
-
-.firstPageSlideBarTxt {
-  display: flex;
-  flex-direction: row;
-
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  width: 100%;
-  height: 100%;
-
+ }
+ 
+ .firstPageSlideBarTxt {
+	display: flex;
+	flex-direction: row;
+ 
+	justify-content: center;
+	 align-items: center;
+	 text-align: center;
+ 
+	width: 100%;
+	height: 100%;
+ 
 	font-size: 1.5rem;
 	font-family: "Pretendard-Thin";
-}
-
-.firstPageSlideBarTxt1 {
-  font-family: "Pretendard-Light";
-}
-
-.fistPageBlank {
+ }
+ 
+ .firstPageSlideBarTxt1 {
+	font-family: "Pretendard-Light";
+ }
+ 
+ .fistPageBlank {
 	position: relative;
 	height: 7%;
-}
-.downIcon {
+ }
+ .downIcon {
 	position: relative;
 	font-size: 4rem;
-}
-
-.fistPageBlank1 {
-	position: relative;
-	height: 10vh;
-}
-
-/* -------------------------------------- 2페이지 -------------------------------------- */
-
-.secondPage {
+ }
+ 
+ 
+ /* -------------------------------------- 2페이지 -------------------------------------- */
+ 
+.secondPage, .thirdPage {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 
-    justify-content: center;
-    align-items: center;
+		align-items: center;
 
 	top: 0;
 	left: 0;
-	
+
 	width: 100vw;
 	height: 100vh;
+}
+
+/* 옵션 & 타이틀 */
+.optionTitle {
+	position: relative;
+	display: flex;
+
+	height: 15%;
+
+	margin-top: 10vh;
+	margin-right: 55%;
+
+	color: #FFFFFF;
+	font-size: 4rem;
+	font-family: "Pretendard-ExtraBold";
+}
+
+.dropDownBar {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+}
+
+.dropDownBarTxt {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	margin-left: 5%;
+}
+
+.menu_wrap .dep1 {
+	position: relative;
+	display: flex;
+
+	flex-grow: 1;
+
+	margin-right: 2.5vw;
+	
+	color: white;
+	font-size: 0;
+}
+.menu_wrap .dep1 > li{
+	display: inline-block;
+
+	white-space: nowrap;
+	vertical-align: top;
+	text-align: center;
+
+	width: fit-content;
+	margin: 0.26vw;
+	border-bottom: 0.2rem solid white;
+	
+	background-color: rgb(255, 255, 255, 0);
+	font-size: 4rem;
+}
+.menu_wrap .dep2 {
+	position: absolute;
+	display: none;
+
+	text-align: center;
+
+	padding: 0;
+	margin-top: 0.2rem;
+
+	max-width: fit-content;
+	max-height: 20vh;
+	width: fit-content;
+
+	overflow-y: auto;
+	background-color: #323232;   
+}
+.menu_wrap .dep2 li{
+	display: block;
+
+	text-align: center;
+
+	width: 100%;
+
+	font-size: 2rem;
+}
+.menu_wrap .dep2 .dep2Year{
+	display: block;
+
+	padding: 1rem 2rem;
+}
+.menu_wrap .dep1 > li:hover > .dep2 {
+	display: block;
+}
+.menu_wrap .dep2 > li:hover > .dep2Year {
+	width: fit-content;
+}
+
+/* 본문설정 */
+.mainBox, .mainBox2 {
+	position: relative;
+	display: flex;
+
+	justify-content: center;
+
+	width: 100vw;
+	margin-top: 5vh;
+}
+/* 이미지설정 */
+.eximg, .eximg2 {
+	display: flex;
+	align-items: center;
+	margin-right: 3rem;
+	margin-left: 3rem;
+}
+.eximg img , .eximg2 img{
+	width: 100%;
+	height: 100%;
+	border-radius: 4rem;
+}
+.eximg > div , .eximg2 > div{
+	margin: 0;
+}
+.currentImg, .currentImg2 {
+	position: relative;
+	width: 22.7vw;
+	height: 40vh; /* height를 원하는 값으로 설정 */
+	z-index: 9999;
+}
+.preImg, .preImg2{
+	width: 14.4375vw;
+	height: 28.85vh;
+	opacity: 50%;
+}
+.postImg , .postImg2{
+	width: 14.4375vw;
+	height: 28.85vh;
+	opacity: 50%;
+}
+
+/* 추가된 부분 */
+.eximg > div:not(:last-child) {
+	margin-right: 2rem; /* 각 이미지 간격 조절 */
+}
+.eximg2 > div:not(:last-child) {
+	margin-right: 2rem; /* 각 이미지 간격 조절 */
+}
+
+.unactive {
+	display: none;
+}
+.noFirstViewImg {
+	width: 23.4375vw;
+	height: 41.56vh;
+
+	transform: translateX(11.4583vw);
+	opacity: 0;
+}
+.noLastViewImg {
+	width: 23.4375vw;
+	height: 41.56vh;
+
+	transform: translateX(-11.4583vw);
+	opacity: 0;
+}
+
+.Line {
+	display: flex;
+}
+
+/* 좌우버튼 설정 */
+.moveBtn, .moveBtn2 {
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	width: 30vw;
+	height: fit-content;
+	margin-top: 10.0833vw;
+	margin-left: -2rem;
+	color: white;
+	z-index: 99999;
+}
+
+.explanation, .explanation2{
+	color: white;
+	margin-top: 4.5rem;
+	text-align: center; /* 텍스트 가운데 정렬 */
+}
+/*100vh    100vw */
+
+.account, .account2{
+	font-family: "Pretendard-Light";
+	font-size: 2rem;
+}
+
+.name, .name2 {
+	font-family: "Pretendard-Black";
+	font-size: 6rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.view , .view2{
+	font-family: "Pretendard-Medium";
+	font-size: 1.5rem;
+	display: flex;
+	align-items: center; /* 수직 가운데 정렬 */
+	justify-content: center; /* 수평 가운데 정렬 추가 */
+}
+
+.more, .more2{
+	height: 2.5rem;
+	margin-left: 0.5vw;
+}
+ 
+/* -------------------------------------- 4페이지 -------------------------------------- */
+
+.fourthPage {
+	margin-top: 40vh;
+}
+
+.bottom {
+	text-align: center; /* 텍스트 가운데 정렬 */
+	position: relative;
+}
+
+.lets {
+	font-size: 4rem;
+	font-family: "Pretendard-Bold";
+	position: absolute;
+	top: 60%; /* 부모 요소 중앙을 기준으로 50% 위로 이동 */
+	left: 50%; /* 부모 요소 중앙을 기준으로 50% 왼쪽으로 이동 */
+	transform: translate(-50%, -50%); /* 요소의 중심을 중앙으로 이동 */
+}
+.click {
+	width: 6%;
+	position: absolute;
+	top: 65%; /* 부모 요소 중앙을 기준으로 50% 위로 이동 */
+	left: 51%; /* 부모 요소 중앙을 기준으로 50% 왼쪽으로 이동 */
+	margin-left: 12rem;
+	/* 추가적인 스타일을 필요에 따라 여기에 추가하세요. */
+}
+.moremake {
+	width: 100vw; /* 원하는 너비로 조절 */
+	height: 30vh; /* 종횡비 유지 */
+	/* 추가적인 스타일을 필요에 따라 여기에 추가하세요. */
 }
