@@ -235,3 +235,41 @@ const starfield = (function () {
 })();
 
 starfield.lets_roll();
+
+
+
+
+
+
+// activities js
+function fadeIn(event) {
+  let target = event.currentTarget;
+  let dropContent = target.nextElementSibling;
+  let boxes = dropContent.querySelectorAll('div.box');
+
+  boxes.forEach(box => {
+      box.style.opacity = '0';
+  });
+
+  let delay = 0;
+  boxes.forEach(box => {
+      setTimeout(() => {
+          box.style.opacity = '1';
+      }, delay);
+      delay += 100;
+  });
+
+  boxes.forEach(box => {
+      box.addEventListener('mouseover', function () {
+          this.style.opacity = "0.5";
+      });
+      box.addEventListener('mouseout', function () {
+          this.style.opacity = '1';
+      });
+  });
+}
+
+document.querySelector('.ideathon .dropdown').addEventListener('mouseover', fadeIn);
+document.querySelector('.MT .dropdown').addEventListener('mouseover', fadeIn);
+document.querySelector('.hackathon .dropdown').addEventListener('mouseover', fadeIn);
+document.querySelector('.session .dropdown').addEventListener('mouseover', fadeIn);
