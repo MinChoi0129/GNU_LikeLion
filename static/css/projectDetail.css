@@ -162,9 +162,9 @@ nav {
 }
 .titleText {
   font-family: "Pretendard-ExtraBold";
-  font-size: 5vw;
+  margin-top: 1.5vw;
+  font-size: 3.5vw;
   color: #ffffff;
-  margin: 0;
   padding: 0;
 }
 .titleLine {

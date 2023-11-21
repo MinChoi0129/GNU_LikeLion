@@ -1,4 +1,4 @@
-{% load static %}
+{% extends 'nav.html' %}{% load static %}{% block content %}
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -27,7 +27,7 @@
   </head>
   <body>
 
-    <nav>
+    {% comment %} <nav>
       <div class="logo">
         <img class="logoImg" src="/static/image/logo.png" />
         <div class="logoText1"><a href="#">멋쟁이사자처럼</a></div>
@@ -40,7 +40,9 @@
         <div class="menuProfile"><a href="#">프로필</a></div>
         <div class="menuQnA"><a href="#">QnA</a></div>
       </div>
-    </nav>
+    </nav> {% endcomment %}
+
+    
     <hr class="navLine">
 
     <div class="container">
@@ -92,3 +94,4 @@
     </div>
   </body>
 </html>
+{% endblock %}
