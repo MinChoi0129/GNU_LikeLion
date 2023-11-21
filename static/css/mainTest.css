@@ -85,6 +85,17 @@ footer {
   /* background-color: rgb(38, 103, 62); */
 }
 
+.gnu_character_blue {
+  position: absolute;
+  left: 40vh;
+  margin-top: 5rem;
+}
+
+.gnu_character_yellow {
+  position: absolute;
+  right: 40vh;
+  margin-top: -12rem;
+}
 .twelveth_likelion {
   text-decoration: underline;
   font-size: 4rem;
