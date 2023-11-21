@@ -180,7 +180,7 @@ body {
 .etcimg {
   display: flex;
   align-items: center;
-  transition: transform 10s ease;
+  /* transition: transform 10s ease; */
 }
 .etcimg img {
   width: 100%;
