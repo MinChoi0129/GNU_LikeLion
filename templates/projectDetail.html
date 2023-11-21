@@ -1,4 +1,4 @@
-{% load static %}
+{% extends 'nav.html' %}{% load static %}{% block content %}
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -26,7 +26,8 @@
     <script src="{% static 'js/projectDetail.js' %}" defer></script>
   </head>
   <body>
-    <nav>
+
+    {% comment %} <nav>
       <div class="logo">
         <img class="logoImg" src="/static/image/logo.png" />
         <div class="logoText1"><a href="#">멋쟁이사자처럼</a></div>
@@ -39,8 +40,10 @@
         <div class="menuProfile"><a href="#">프로필</a></div>
         <div class="menuQnA"><a href="#">QnA</a></div>
       </div>
-    </nav>
-    <hr class="navLine" />
+    </nav> {% endcomment %}
+
+    
+    <hr class="navLine">
 
     <div class="container">
       <div class="title">
@@ -56,30 +59,20 @@
         </div>
       </div>
 
-      <div class="mainBox">
-        <div class="eximg">
-          <div class="preImg">
-            <img src="{% static 'image/exImg1.png' %}" />
-          </div>
-          <div class="currentImg">
-            <img src="{% static 'image/exImg2.png' %}" />
-          </div>
-          <div class="postImg">
-            <img src="{% static 'image/exImg3.png' %}" />
-          </div>
-          <div class="unactive">
-            <img src="{% static 'image/exImg4.png' %}" />
-          </div>
-        </div>
-        {% comment %}
-        <div class="eximg">
-          preImg
-          <img class="preImg img1" src="/static/image/exImg1.png" />
-          <img class="currentImg img2" src="/static/image/exImg2.png" />
-          <img class="postImg img3" src="/static/image/exImg3.png" />
-          <img class="unactive img4" src="/static/image/exImg4.png" />
-        </div>
-        {% endcomment %}
+        <div class= "mainBox">
+            <div class="eximg">
+                <div class="preImg"><img src="{% static 'image/exImg1.png'%}"></div>
+                <div class="currentImg"><img src="{% static 'image/exImg2.png'%}"></div>
+                <div class="postImg"><img src="{% static 'image/exImg3.png'%}"></div>
+                <div class="unactive"><img src="{% static 'image/exImg4.png'%}"></div>
+            </div>           
+            {% comment %} <div class="eximg">
+                preImg
+                <img class="preImg img1" src="/static/image/exImg1.png">
+                <img class="currentImg img2" src="/static/image/exImg2.png">
+                <img class="postImg img3" src="/static/image/exImg3.png">
+                <img class="unactive img4" src="/static/image/exImg4.png">
+            </div> {% endcomment %}
 
         <div class="moveBtn">
           <i
@@ -101,3 +94,4 @@
     </div>
   </body>
 </html>
+{% endblock %}
