@@ -119,12 +119,16 @@ const starfield = (function () {
 			draw_star();
 		}
 	}
+	
 
 	function resize_canvas() {
 		viewport_width = window.innerWidth;
 		viewport_height = window.innerHeight * 4;
 		star_canvas.width = viewport_width;
 		star_canvas.height = viewport_height;
+		
+		
+		// window.addEventListener("resize", resize_container){}
 	}
 
 	const star = function (rad) {

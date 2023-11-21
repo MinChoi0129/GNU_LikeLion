@@ -1,24 +1,18 @@
-{% extends 'nav.html' %} {% load static %} {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GNU 멋쟁이사자처럼</title>
-  <link rel="shortcut icon" href="{% static 'image/favicon.ico' %}" type="image/x-icon" />
-  <link rel="icon" href="{% static 'image/favicon.ico' %}" type="image/x-icon" />
+{% extends 'background.html' %} 
+{% load static %}
+  {% block backgroundHeader %}
   <link rel="stylesheet" href="{% static 'css/FAQ.css' %}" />
   <script src="{% static 'js/FAQ.js' %}" defer></script>
-</head>
+  {% endblock %}
 
-<body>
+{% block content2 %}
+
   <div>
     <h1 class="faq-title">FAQ</h1>
     <h3 class="faq-description">Frequently Asked Questions</h3>
     <div class="underbar"></div>
     <div class="faq">
-      <div class="container">
+      <div id="container1">
         <div class="block"></div>
         <div class="content">
           <div class="search-content">
@@ -31,7 +25,4 @@
         </div>
         <div class="block"></div>
       </div>
-</body>
-
-</html>
 {% endblock %}
