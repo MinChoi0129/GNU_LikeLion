@@ -1,4 +1,4 @@
-{% load static %}
+{% extends 'nav.html' %} {% load static %} {% block content %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,7 +10,20 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="titlebox">아기사자 OT</div>
+    <div class="container">
+      <div class="title">
+        <div class="Line">
+          <div class="titleLine leftLine"></div>
+          <div class="titleCircle leftCircle"></div>
+        </div>
+        
+        <div class="titleText">아기사자 OT</div>
+        <div class="Line">
+          <div class="titleCircle rightCircle"></div>
+          <div class="titleLine rightLine"></div>
+        </div>
+      </div>
+
     <div class="detail">
       <div class="etcimg">
         <div class="imgbox1"><img src="{% static 'image/OT.png' %}" /></div>
@@ -36,3 +49,4 @@
    
   </body>
 </html>
+{% endblock %}

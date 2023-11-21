@@ -90,23 +90,7 @@ a:hover {
 
 /* 개별Css */
 
-.titlebox {
-  display: flex;
-  justify-content: center;
-  height: 3rem;
-  width: 37rem;
-  color: black;
-  background-color: #ffffff;
-  border-radius: 12px;
-  border: 1px solid black;
-  margin-left: 34.6rem;
-  margin-top: 5rem;
-  font-size: 1.4rem;
-  align-items: center;
-  color: white;
-  background-color: rgba(255, 255, 255, 0.32);
-  font-weight: 550;
-}
+
 
 .imgbox1 {
   display: flex;
@@ -205,4 +189,41 @@ body {
 /* 처음에는 처음 3개의 이미지 상자만 보이기 */
 .etcimg > div:nth-child(-n+3) {
   display: block;
+}
+
+/* 메인컨텐츠 */
+.container {
+  width: 100vw;
+}
+
+/* 작품 제목부분 */
+.title {
+  display: flex;
+  height: 6.0417vw;
+  margin-top: 5.2083vw;
+  justify-content: space-between;
+}
+.titleText {
+  font-family: "Pretendard-ExtraBold";
+  font-size: 5vw;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+.titleLine {
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 0.0521vw solid white;
+  height: 3.125vw;
+  width: 30.2083vw;
+  margin: 0;
+}
+.titleCircle {
+  padding: 0px;
+  margin: 0px;
+  width: 0.7813vw;
+  height: 0.7813vw;
+  border-radius: 50%;
+  background-color: white;
+  margin-top: 2.7083vw;
 }
