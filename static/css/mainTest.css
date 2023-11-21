@@ -5,27 +5,30 @@ body {
 }
 
 body {
-  background-color: black;
+  /* background-color: black; */
+  background-image: url("../image/space-star.png");
   color: white;
+
+  background-size: cover;
 }
 
 /******************** 헤더 ********************/
 header {
-  background-color: rgb(15, 104, 74);
+  /* background-color: rgb(15, 104, 74); */
   height: 3.6rem;
 }
 
 /******************** 푸터 ********************/
 footer {
-  background-color: rgb(218, 255, 243);
-  height: 15rem;
+  background-color: rgb(255, 255, 255, 0.5);
+  height: 13rem;
   text-align: center;
   color: black;
 }
 
 .about {
   font-family: "Pretendard";
-  font-size: 3.125rem;
+  font-size: 2rem;
   padding: 1.56rem;
 }
 
@@ -35,7 +38,7 @@ footer {
   margin: 1rem;
 }
 
-.about_link > img {
+.about_link img {
   border-radius: 50%;
   width: 2rem;
 }
@@ -53,7 +56,7 @@ footer {
   font-family: "Pretendard";
   text-align: center;
   padding-top: 25vh;
-  background-color: rgb(38, 103, 103);
+  /* background-color: rgb(38, 103, 103); */
 }
 
 .likelion_eng {
@@ -79,7 +82,7 @@ footer {
   font-family: "Pretendard";
   text-align: center;
   padding-top: 10vh;
-  background-color: rgb(38, 103, 62);
+  /* background-color: rgb(38, 103, 62); */
 }
 
 .twelveth_likelion {
@@ -134,13 +137,13 @@ footer {
   font-family: "Pretendard";
   text-align: center;
   padding-top: 20vh;
-  background-color: rgb(103, 101, 38);
+  /* background-color: rgb(103, 101, 38); */
 }
 
 .text_box {
-  padding-top: 17vh;
+  padding-top: 10vh;
   padding-bottom: 3vh;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 .who_we_are_orange {
@@ -161,7 +164,7 @@ footer {
   font-family: "Pretendard";
   text-align: center;
   padding-top: 20vh;
-  background-color: rgb(89, 38, 103);
+  /* background-color: rgb(89, 38, 103); */
   position: relative;
 }
 
@@ -202,7 +205,7 @@ footer {
 }
 
 .session:hover div {
-  display: inlin-block;
+  display: inline-block;
 }
 
 .dropContent {
