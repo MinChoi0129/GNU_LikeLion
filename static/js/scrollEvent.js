@@ -16,10 +16,9 @@ export class ScrollEvent{
 
             let MonSectiontemp = [...database.MonSection];
             let temp;
-
             if(wheelValue < 0){
                 database.Num++;
-                if(database.Num > database.MaxNum){
+                if(database.Num >= database.MaxNum){
                     database.Num--;
                 }
                 else{
