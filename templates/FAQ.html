@@ -1,52 +1,37 @@
 {% extends 'nav.html' %} {% load static %} {% block content %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GNU 멋쟁이사자처럼</title>
-    <link
-      rel="shortcut icon"
-      href="{% static 'image/favicon.ico' %}"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="{% static 'image/favicon.ico' %}"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="{% static 'css/FAQ.css' %}" />
-    <script src="{% static 'js/FAQ.js' %}" defer></script>
-  </head>
-  <body>
-    <div>
-      <h1 class="faq-title">FAQ</h1>
-      <h3 class="faq-description">Frequently Asked Questions</h3>
-      <div class="underbar"></div>
-      <div class="faq">
-        <div class="container">
-          <div class="block"></div>
-          <div class="content">
-            <div class="search-content">
-              <input
-                type="text"
-                class="search"
-                id="search"
-                name="search"
-                autocomplete="off"
-                placeholder="검색어를 입력하시오."
-              />
-              <div class="SearchBtn" id="SearchBtn">검색</div>
-            </div>
-            <div class="crossbar"></div>
-            <div class="faq-list">
-              <div class="faq-content">진짜?</div>
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GNU 멋쟁이사자처럼</title>
+  <link rel="shortcut icon" href="{% static 'image/favicon.ico' %}" type="image/x-icon" />
+  <link rel="icon" href="{% static 'image/favicon.ico' %}" type="image/x-icon" />
+  <link rel="stylesheet" href="{% static 'css/FAQ.css' %}" />
+  <script src="{% static 'js/FAQ.js' %}" defer></script>
+</head>
+
+<body>
+  <div>
+    <h1 class="faq-title">FAQ</h1>
+    <h3 class="faq-description">Frequently Asked Questions</h3>
+    <div class="underbar"></div>
+    <div class="faq">
+      <div class="container">
+        <div class="block"></div>
+        <div class="content">
+          <div class="search-content">
+            <input type="text" class="search" id="search" name="search" autocomplete="off" placeholder="검색어를 입력하시오." />
+            <div class="SearchBtn" id="SearchBtn" onclick="search()">검색</div>
           </div>
-          <div class="block"></div>
+          <div class="crossbar"></div>
+          <div class="faq-list">
+          </div>
         </div>
+        <div class="block"></div>
       </div>
-    </div>
-  </body>
+</body>
+
 </html>
 {% endblock %}
