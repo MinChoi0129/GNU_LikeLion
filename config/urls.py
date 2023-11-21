@@ -22,7 +22,8 @@ from GNU_LikeLion.views_page import post_list
 urlpatterns = [
     path("", views_page.main, name="main"),
     path("admin/", admin.site.urls),
-    path("activity/", views_page.activity, name="activity"),
+    # path("activity/", views_page.activity, name="activity"),
+    path('activity/', post_list, name='post_list'),
     path("mainTest/", views_page.mainTest, name="mainTest"),
     path("project/", views_page.project, name="project"),
     path("planPage/", views_page.planPage, name="planPage"),
