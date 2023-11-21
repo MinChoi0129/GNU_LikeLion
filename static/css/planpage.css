@@ -169,3 +169,14 @@ body {
   
 }
 
+.blurCircle{
+  width: 15rem;
+  height: 15rem;
+  background-color: #ffffff;
+  border-radius: 80%;
+  position: fixed;
+  left: 50rem;
+  top: 15rem;
+  filter: blur(9rem);
+  -webkit-filter: blur(9rem);
+}
