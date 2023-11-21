@@ -16,7 +16,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/main_test.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/mainTest.css' %}" />
   </head>
 
   <header>누군가의 헤더</header>
@@ -27,19 +27,26 @@
       <div class="likelion_eng">LIKELION</div>
       <div class="likelion_kor">멋쟁이사자처럼</div>
       <div class="gnu_kor">경상국립대학교</div>
-      <a href="#level2"><button>ㅅ</button></a>
+      <a class="bounce" href="#level2"
+        ><button class="arrow_btn">
+          <img src="{% static 'image/arrow.png' %}" /></button
+      ></a>
     </div>
 
     <a name="level2"></a>
     <div class="recruit">
       <div></div>
-      <div class="twelveth_likelion">세모 12th 멋쟁이사자처럼</div>
+      <div></div>
+      <div class="twelveth_likelion">12th 멋쟁이사자처럼</div>
       <div class="baby_lion_orange">아기사자&nbsp;</div>
       <div class="baby_lion_white">모집 중</div>
       <div class="goto_submit_resume">지원하러 가기</div>
       <div class="goto_faq">자주 묻는 질문</div>
       <div class="likelion_question">경상국립대학교 멋쟁이사자처럼?</div>
-      <a href="#level3"><button>ㅅ</button></a>
+      <a class="bounce" href="#level3"
+        ><button class="arrow_btn">
+          <img src="{% static 'image/arrow.png' %}" /></button
+      ></a>
     </div>
 
     <a name="level3"></a>
@@ -47,7 +54,6 @@
       <div class="who_we_are_white">Who&nbsp;</div>
       <div class="who_we_are_orange">WE&nbsp;</div>
       <div class="who_we_are_white">are :</div>
-
       <div class="text_box">
         <div>
           우리는 뭐하는 사람이고 뭐하는 사람이며 나는 누구고 뭐하는 사람이다.
@@ -60,11 +66,53 @@
           우리나라만세
         </div>
       </div>
-      <a href="#level4"><button>ㅅ</button></a>
+      <a class="bounce" href="#level4"
+        ><button class="arrow_btn">
+          <img src="{% static 'image/arrow.png' %}" /></button
+      ></a>
     </div>
 
     <a name="level4"></a>
-    <div class="activities">여러 활동들</div>
+    <div class="activities">
+      <div class="dropdownContainer">
+        <div class="ideathon">
+          <p class="dropdown">아이디어톤</p>
+          <div class="dropContent">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="more"></div>
+          </div>
+        </div>
+        <div class="MT">
+          <p class="dropdown">MT</p>
+          <div class="dropContent">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="more">more</div>
+          </div>
+        </div>
+        <div class="hackathon">
+          <p class="dropdown">해커톤</p>
+          <div class="dropContent">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="more">more</div>
+          </div>
+        </div>
+        <div class="session">
+          <p class="dropdown">세션</p>
+          <div class="dropContent">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="more">more</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 
   <footer>
