@@ -42,11 +42,17 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  position: absolute;
-  background-color: #032023;
-  box-shadow: inset 0 0 250px 20px #24586e;
+  position: absolute; 
+  box-shadow: inset 0 0 250px 220px rgb(36,88,110,0.35);
 }
 
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* 캔버스가 마우스 이벤트를 캡처하지 않도록 설정 */
+  z-index: -1; /* 캔버스를 다른 요소 뒤로 이동 */
+}
 main,
 h1,
 h2,
@@ -153,9 +159,9 @@ nav {
 }
 .titleText {
   font-family: "Pretendard-ExtraBold";
-  font-size: 5vw;
+  margin-top: 1.5vw;
+  font-size: 3.5vw;
   color: #ffffff;
-  margin: 0;
   padding: 0;
 }
 .titleLine {
@@ -175,94 +181,103 @@ nav {
   background-color: white;
   margin-top: 2.7083vw;
 }
+.mainBox.transition {
+  transition: transform 0.5s ease-in-out; /* 필요에 따라 지속 시간 및 이징 조절 */
+}
 
-/* 본문설정 */
-.mainBox {
-  display: flex;
-  margin-top: 3.9583vw;
-  width: 100vw;
-  justify-content: center;
-  position: relative;
-}
-/* 이미지설정 */
-.eximg {
-  display: flex;
-  align-items: center;
-}
-.eximg img {
-  width: 100%;
-  height: 100%;
-}
-.eximg > div {
-  margin: 0;
-}
-.currentImg {
-  position: relative;
-  width: 26.8229vw;
-  height: 27.1354vw;
-  z-index: 9999;
-}
-.preImg {
-  width: 23.4375vw;
-  height: 23.75vw;
-  transform: translateX(11.4583vw);
-  opacity: 50%;
-}
-.postImg {
-  width: 23.4375vw;
-  height: 23.75vw;
-  transform: translateX(-11.4583vw);
-  opacity: 50%;
-}
-.unactive {
-  display: none;
-}
-.noFirstViewImg {
-  width: 23.4375vw;
-  height: 23.75vw;
-  transform: translateX(11.4583vw);
-  opacity: 0;
-}
-.noLastViewImg {
-  width: 23.4375vw;
-  height: 23.75vw;
-  transform: translateX(-11.4583vw);
-  opacity: 0;
-}
+    /* 본문설정 */
+    .mainBox{
+        display: flex;
+        margin-top:3.9583vw;
+        width: 100vw;
+        justify-content: center;
+        position: relative;
+    }
+        /* 이미지설정 */
+        .eximg{
+            display:flex;
+            align-items: center;
+        }
+        .eximg img{
+            width: 100%;
+            height: 100%;
+        }
+        .eximg >div{
+            margin:0;
+        }
+        .currentImg{
+            position: relative;
+            width: 26.8229vw;
+            height: 27.1354vw;
+            z-index: 9999;
+        }
+        .preImg{
+            width: 23.4375vw;
+            height: 23.7500vw;
+            transform:translateX(11.4583vw);
+            opacity: 50%;
+
+        }
+        .postImg{
+            width: 23.4375vw;
+            height: 23.7500vw;
+            transform:translateX(-11.4583vw);
+            opacity: 50%;
+        }
+        .unactive{
+            display: none;
+        }
+        .noFirstViewImg{
+            width: 23.4375vw;
+            height: 23.7500vw;
+            transform:translateX(11.4583vw);
+            opacity: 0;
+        }
+        .noLastViewImg{
+            width: 23.4375vw;
+            height: 23.7500vw;
+            transform:translateX(-11.4583vw);
+            opacity: 0;
+        }
 
 .Line {
   display: flex;
 }
 
-/* 좌우버튼 설정 */
-.moveBtn {
-  display: flex;
-  position: absolute;
-  z-index: 99999;
-  width: 35vw;
-  height: fit-content;
-  margin-top: 12.0833vw;
-  justify-content: space-between;
-  color: white;
-}
+        /* 좌우버튼 설정 */
+        .moveBtn{
+            display: flex;
+            position: absolute;
+            z-index: 99999;
+            width: 35vw;
+            height: fit-content;
+            margin-top:12.0833vw;
+            justify-content: space-between; 
+            color:white;
 
-/* 슬라이더 설정 */
-.slider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1.0417vw;
-}
-.page {
-  width: 0.7813vw;
-  height: 0.7813vw;
-  background-color: white;
-  border-radius: 50%;
-  margin: 0.5vw;
-  opacity: 70%;
-}
-.sliderActive {
-  width: 1.6667vw;
-  height: 1.6667vw;
-  opacity: 100%;
-}
+        }
+
+        
+        /* 슬라이더 설정 */
+        .slider{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top:1.0417vw;
+        }
+        .page{
+            width:0.7813vw ;
+            height: 0.7813vw;
+            background-color: white;
+            border-radius: 50%;
+            margin:0.5vw;
+            opacity: 70%;
+
+        }
+        .sliderActive{
+            width: 1.6667vw;
+            height: 1.6667vw;
+            opacity: 100%;
+        }
+
+        
