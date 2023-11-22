@@ -51,13 +51,8 @@ body {
 
 
 section {
-    width: 75rem;
     margin: 0 auto;
     margin-bottom: 5%;
-}
-
-article {
-    width: 70rem;
 }
 
 main,
@@ -107,37 +102,39 @@ a:hover {
 }
 
 .miniLion {
-    font-size: 20px;
+    font-size: 1.9rem;
     margin-top: 5px;
 }
 
 .bigLion {
-    font-size: 24px;
+    font-size: 2rem;
 }
 
 .intro {
     border: 2px solid #0099D9;
     border-radius: 10px;
+    background-color: black;
 
     width: 60vw;
+    height: 7vh;
 
     margin-top: 0.7%;
-    padding: 1.3%;
+    padding-top: 2%;
 
     font-family: 'Pretendard-Bold';
-    font-size: 15px;
+    font-size: 1.2rem;
     color: white;
 
     text-align: center;
 
-    line-height: 145%;
+    line-height: 150%;
 }
 
 /* adultLion */
 
 .year {
     font-family: 'Pretendard-Bold';
-    font-size: 23px;
+    font-size: 2rem;
 
     color: white;
 
@@ -151,10 +148,13 @@ a:hover {
 .box3,
 .box4,
 .box5 {
-    border: 2px solid #0099D9;
+    border: 1px solid #0099D9;
     border-radius: 10px;
+    box-shadow: 0 0 8px #0099D9;
 
-    width: 23rem;
+    background-color: black;
+
+    width: 28rem;
 
     padding: 1%;
 
@@ -165,25 +165,32 @@ a:hover {
 
 .box1 {
     margin-top: 5rem;
+
+    right: 7rem;
 }
 
 .box2 {
-    top: 4.5rem;
-    left: 43.3rem;
-}
-
-.box3 {
-    top: 9rem;
-    left: 5rem;
-}
-
-.box4 {
-    top: 13.5rem;
+    margin-top: 2rem;
+    top: 5rem;
     left: 43rem;
 }
 
+.box3 {
+    margin-top: 5rem;
+    top: 9rem;
+    left: 6rem;
+}
+
+.box4 {
+    margin-top: 5rem;
+    top: 13.5rem;
+    left: 50rem;
+}
+
 .box5 {
+    margin-top: 5rem;
     top: 18rem;
+    margin-bottom: 7rem;
 }
 
 .curveCanvas {
@@ -195,6 +202,7 @@ a:hover {
 .profile {
     width: 7vw;
 
+    margin-top: 1%;
     margin-bottom: 4%;
     margin-left: 3%;
 }
@@ -204,13 +212,13 @@ a:hover {
 
     width: 150%;
 
-    padding-top: 13%;
+    padding-top: 8%;
     padding-left: 15%;
 }
 
 .position1 {
     font-family: 'Pretendard-Bold';
-    font-size: 15px;
+    font-size: 1.3rem;
 
     color: rgba(255, 255, 255, 70%);
 }
@@ -218,7 +226,7 @@ a:hover {
 
 .name {
     font-family: 'Pretendard-Bold';
-    font-size: 15px;
+    font-size: 1.3rem;
 
     color: white;
 
@@ -227,7 +235,7 @@ a:hover {
 
 .position2 {
     font-family: 'Pretendard-SemiBold';
-    font-size: 12px;
+    font-size: 1rem;
 
     color: #0099D9;
 
@@ -237,7 +245,7 @@ a:hover {
 
 .introduce {
     font-family: 'Pretendard-Regular';
-    font-size: 12px;
+    font-size: 0.9rem;
 
     color: white;
 
@@ -258,14 +266,16 @@ a:hover {
 
 .babyLion {
     margin-top: 30%;
+    text-align: center;
 }
 
 .card {
     border: 2px solid #0099D9;
     border-radius: 10px;
+    background-color: black;
 
     width: 15vw;
-    height: 35vh;
+    height: 34vh;
 
     text-align: center;
 
@@ -274,7 +284,7 @@ a:hover {
 
 .babyPosition1 {
     font-family: 'Pretendard-Bold';
-    font-size: 15px;
+    font-size: 1.3rem;
 
     color: rgba(255, 255, 255, 70%);
 
@@ -284,7 +294,7 @@ a:hover {
 .profile2 {
     width: 9.5vw;
 
-    margin-top: 3%;
+    margin-top: 7%;
 }
 
 .bigName {
@@ -296,14 +306,14 @@ a:hover {
 
 .babyName {
     font-family: 'Pretendard-Bold';
-    font-size: 15px;
+    font-size: 1.3rem;
 
     color: white;
 }
 
 .babyPosition2 {
     font-family: 'Pretendard-SemiBold';
-    font-size: 12px;
+    font-size: 1rem;
 
     color: #0099D9;
 
@@ -313,16 +323,14 @@ a:hover {
 
 .major {
     font-family: 'Pretendard-Regular';
-    font-size: 12px;
-
-    color: white;
-
     margin-top: 3%;
+    color: white;
 }
 
 .wrap {
     display: flex;
     justify-content: space-around;
+    margin: 0 auto;
 
     margin-top: 3%;
 }
@@ -332,7 +340,8 @@ a:hover {
     overflow: visible;
 }
 
-#canvas, #canvas3 {
+#canvas,
+#canvas3 {
     overflow: visible;
 }
 
@@ -358,4 +367,9 @@ a:hover {
     position: relative;
     top: 1rem;
     right: 0.5hrem;
+}
+
+hr {
+    position: relative;
+    top: 15rem;
 }
