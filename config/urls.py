@@ -27,4 +27,6 @@ urlpatterns = [
     path("project/", views_page.project, name="project"),
     path("planPage/", views_page.planPage, name="planPage"),
     path("projectDetail/", views_page.projectDetail, name="projectDetail"),
+    path("FAQ/", views_page.FAQ, name="FAQ"),
+    path("background/", views_page.background, name="background"),
 ]

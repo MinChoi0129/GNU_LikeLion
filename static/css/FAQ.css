@@ -1,0 +1,130 @@
+.faq-title {
+  position: absolute;
+  margin-top: 12vh;
+  display: block;
+  font-family: "Pretendard-Bold";
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.faq-description {
+  position: absolute;
+  margin-top: 19vh;
+  display: block;
+  font-family: "Pretendard-regular";
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.underbar {
+  position: absolute;
+  margin-top: 28vh;
+  display: block;
+  font-family: "Pretendard-regular";
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  width: 70%;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+input:focus {
+  outline: none;
+}
+.faq {
+  /* position: absolute; */
+  display: block;
+  font-family: "Pretendard-regular";
+  font-size: 1rem;
+  text-align: center;
+  width: 100vw;
+  height: 120vh;
+  top: 0;
+  margin-top: 32vh;
+  display: block;
+  font-family: "Pretendard-regular";
+  font-size: 1rem;
+  background-color: white;
+}
+
+#container1 {
+  display: flex;
+}
+
+.block {
+  flex: 1;
+  background-color: aliceblue;
+}
+.content {
+  display: block;
+  flex: 4;
+  height: 100vh;
+}
+.search-content {
+  display: flex;
+  width: 30vw;
+  margin: 0 auto;
+  margin-top: 2vh;
+}
+
+.search {
+  flex-grow: 5; /* 너비 비율 4:1 설정 */
+  height: 5vh;
+  border: 2px solid #24586e;
+  font-family: "Pretendard-Regular";
+}
+
+.SearchBtn {
+  flex-grow: 1; /* 너비 비율 4:1 설정 */
+  height: 5vh;
+  border: 3px solid #24586e;
+  background-color: #24586e;
+  color: white;
+  line-height: 300%;
+}
+
+.crossbar {
+  margin-top: 2vh;
+  display: block;
+  font-family: "Pretendard-regular";
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  border-bottom: 2.5px solid #24586e;
+}
+
+.faq-list {
+  height: 100%;
+  flex-direction: column;
+}
+
+.faq-content-title {
+  text-align: left;
+  font-family: "Pretendard-bold";
+  font-size: 1.5rem;
+  padding-left: 2vw;
+  padding-top: 1vh;
+}
+
+.faq-content {
+  margin: 2vh;
+  padding: 2vh;
+  background-color: #afc3c524;
+  height: fit-content;
+  border-left: #d9d9d970 0.5vw solid;
+  border-right: #d9d9d970 0.5vw solid;
+}
