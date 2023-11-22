@@ -15,7 +15,7 @@ function downPage() {
 document.addEventListener("DOMContentLoaded", function () {
     // 이미지 리스트 정의
     const imageList = {
-        10: ["../static/image/ideathon1.png", "../static/image/ideathon2.png"],
+        10: ["../static/image/ideathon6.png", "../static/image/ideathon5.png"],
         11: [
             "../static/image/ideathon4.png",
             "../static/image/ideathon5.png",
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const clickedYear = button.textContent.replace(/\D+/g, ''); // 클릭한 버튼의 텍스트에서 숫자만 추출
             selectedYear = clickedYear; // 클릭한 년도로 설정
             currentIndex = 0; // 선택된 년도로 변경될 때 초기 인덱스 0으로 설정
-            currentYearElement.textContent = clickedYear + "th."; // 현재 년도 업데이트
+            currentYearElement.textContent = clickedYear + "th"; // 현재 년도 업데이트
             updateImageState(); // 이미지와 설명 업데이트
         });
     });
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	  button.addEventListener("click", function () {
 		selectedYear2 = button.textContent.replace(/\D+/g, ""); // 클릭한 버튼의 텍스트에서 숫자만 추출
 		currentIndex2 = 0; // 선택된 년도로 변경될 때 초기 인덱스 0으로 설정
-		currentYearElement2.textContent = selectedYear2 + "th."; // 현재 년도 업데이트
+		currentYearElement2.textContent = selectedYear2 + "th"; // 현재 년도 업데이트
 		updateImageState(); // 이미지와 설명 업데이트
 	  });
 	});
