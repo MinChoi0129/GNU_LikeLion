@@ -1,84 +1,6 @@
-@font-face {
-  font-weight: 300;
-  font-family: "Pretendard-Light";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
-    format("woff");
-}
-@font-face {
-  font-weight: 400;
-  font-family: "Pretendard-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
-}
-@font-face {
-  font-weight: 500;
-  font-family: "Pretendard-Medium";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff")
-    format("woff");
-}
-@font-face {
-  font-weight: 600;
-  font-family: "Pretendard-SemiBold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
-    format("woff");
-}
-@font-face {
-  font-weight: 700;
-  font-family: "Pretendard-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
-    format("woff");
-}
-@font-face {
-  font-weight: 800;
-  font-family: "Pretendard-ExtraBold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff")
-    format("woff");
-}
-
-* {
-  box-sizing: content-box;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  /* overflow: hidden; */
-  position: absolute;
-  font-size: 16px;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-main,
-div,
-h1,
-h2,
-h3 {
-  margin: 0;
-  padding: 0;
-}
-
-ol,
-ul,
-li {
-  list-style: none;
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-}
-
-canvas {
-  display: block;
-}
-
 .faq-title {
   position: absolute;
-  margin-top: 9rem;
+  margin-top: 12vh;
   display: block;
   font-family: "Pretendard-Bold";
   font-size: 3rem;
@@ -92,7 +14,7 @@ canvas {
 
 .faq-description {
   position: absolute;
-  margin-top: 13rem;
+  margin-top: 19vh;
   display: block;
   font-family: "Pretendard-regular";
   font-size: 1rem;
@@ -105,7 +27,7 @@ canvas {
 }
 .underbar {
   position: absolute;
-  margin-top: 19rem;
+  margin-top: 28vh;
   display: block;
   font-family: "Pretendard-regular";
   font-size: 1rem;
@@ -118,24 +40,26 @@ canvas {
   text-align: center;
   border-bottom: 1px solid white;
 }
-
+input:focus {
+  outline: none;
+}
 .faq {
-  position: absolute;
+  /* position: absolute; */
   display: block;
   font-family: "Pretendard-regular";
   font-size: 1rem;
   text-align: center;
-  width: 120rem;
-  height: 60rem;
+  width: 100vw;
+  height: 120vh;
   top: 0;
-  margin-top: 22rem;
+  margin-top: 32vh;
   display: block;
   font-family: "Pretendard-regular";
   font-size: 1rem;
   background-color: white;
 }
 
-.container {
+#container1 {
   display: flex;
 }
 
@@ -146,24 +70,25 @@ canvas {
 .content {
   display: block;
   flex: 4;
-  height: 100rem;
+  height: 100vh;
 }
 .search-content {
   display: flex;
-  width: 36rem;
+  width: 30vw;
   margin: 0 auto;
-  margin-top: 3rem;
+  margin-top: 2vh;
 }
 
 .search {
   flex-grow: 5; /* 너비 비율 4:1 설정 */
-  height: 3rem;
+  height: 5vh;
   border: 2px solid #24586e;
+  font-family: "Pretendard-Regular";
 }
 
 .SearchBtn {
   flex-grow: 1; /* 너비 비율 4:1 설정 */
-  height: 3rem;
+  height: 5vh;
   border: 3px solid #24586e;
   background-color: #24586e;
   color: white;
@@ -171,7 +96,7 @@ canvas {
 }
 
 .crossbar {
-  margin-top: 2rem;
+  margin-top: 2vh;
   display: block;
   font-family: "Pretendard-regular";
   font-size: 1rem;
@@ -179,9 +104,27 @@ canvas {
   text-align: center;
   width: 100%;
   top: 0;
-  text-align: center;
   border-bottom: 2.5px solid #24586e;
 }
 
 .faq-list {
+  height: 100%;
+  flex-direction: column;
+}
+
+.faq-content-title {
+  text-align: left;
+  font-family: "Pretendard-bold";
+  font-size: 1.5rem;
+  padding-left: 2vw;
+  padding-top: 1vh;
+}
+
+.faq-content {
+  margin: 2vh;
+  padding: 2vh;
+  background-color: #afc3c524;
+  height: fit-content;
+  border-left: #d9d9d970 0.5vw solid;
+  border-right: #d9d9d970 0.5vw solid;
 }
