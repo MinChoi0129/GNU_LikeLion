@@ -42,6 +42,8 @@ html,
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
     /* overflow: hidden; */
     position: absolute;
     font-size: 1rem;
@@ -49,7 +51,7 @@ body {
 
 
 section {
-    width: 70rem;
+    width: 75rem;
     margin: 0 auto;
     margin-bottom: 5%;
 }
@@ -96,6 +98,7 @@ a:hover {
 
 
 /* title */
+
 .lion {
     display: flex;
     justify-content: center;
@@ -158,8 +161,6 @@ a:hover {
     display: flex;
 
     position: relative;
-
-    box-shadow: 0 0 8px #0099D9;
 }
 
 .box1 {
@@ -264,7 +265,7 @@ a:hover {
     border-radius: 10px;
 
     width: 15vw;
-    height: 32vh;
+    height: 35vh;
 
     text-align: center;
 
@@ -290,7 +291,7 @@ a:hover {
     display: flex;
     justify-content: center;
 
-    margin-top: 11%;
+    margin-top: 10%;
 }
 
 .babyName {
@@ -331,12 +332,30 @@ a:hover {
     overflow: visible;
 }
 
-#canvas,
-#canvas3 {
+#canvas, #canvas3 {
     overflow: visible;
 }
 
 #canvas3 {
     position: relative;
-    left: 20rem;
+    top: 4.4rem;
+    left: 30rem;
+}
+
+#canvas4 {
+    position: relative;
+    bottom: 2rem;
+    left: 11.25rem;
+}
+
+#canvas5 {
+    position: relative;
+    bottom: 13.3rem;
+    left: 9rem;
+}
+
+#canvas6 {
+    position: relative;
+    top: 1rem;
+    right: 0.5hrem;
 }
