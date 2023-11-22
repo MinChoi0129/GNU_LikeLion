@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
   yearButtons2.forEach(function (button) {
     button.addEventListener("click", function () {
       changeYear(button);
+      updateImageState();
     });
   });
 
@@ -170,8 +171,11 @@ document.addEventListener("DOMContentLoaded", function () {
   yearButtons.forEach(function (button) {
     button.addEventListener("click", function () {
       changeYear(button);
+      updateImageState();
     });
   });
+  // 초기 상태 설정
+  updateImageState();
 
   // 이미지 상태 업데이트 함수
   function updateImageState() {
@@ -210,7 +214,8 @@ document.addEventListener("DOMContentLoaded", function () {
     accountElement2.textContent =
       currentDescriptionList2[currentIndex2].account2;
     nameElement2.textContent = currentDescriptionList2[currentIndex2].name2;
-  }
+	currentYearElement2.textContent = selectedYear2 + "th";
+}
 
   // .moveBtn2 내부에서 오른쪽 버튼 클릭 이벤트
   const moveBtn2 = document.querySelector(".moveBtn2");
