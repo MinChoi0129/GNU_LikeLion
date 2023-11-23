@@ -167,7 +167,8 @@
 	position: relative;
 	display: flex;
 	flex-direction: row;
-	align-items: center; /* Optional: Align items in the center vertically */
+	align-items: center;
+	/* Optional: Align items in the center vertically */
 }
 
 .dropDownBarTxt {
@@ -175,15 +176,17 @@
 	display: flex;
 	flex-direction: row;
 	/* 변경된 부분 */
-	align-items: center; /* Optional: Align items in the center vertically */
+	align-items: center;
+	/* Optional: Align items in the center vertically */
 	margin-left: 5%;
 }
+
 /* 아이콘, 텍스트 등 각 요소에 마진 조절 */
 
 .menu_wrap .dep1 {
 	position: relative;
 	display: flex;
-    align-items: center;
+	align-items: center;
 	flex-grow: 1;
 
 	margin-right: 2.5vw;
