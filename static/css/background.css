@@ -134,7 +134,7 @@ canvas {
     font-family: "Pretendard-Bold";
     position: fixed;
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: space-around;
     align-items: center;
     z-index: 150;

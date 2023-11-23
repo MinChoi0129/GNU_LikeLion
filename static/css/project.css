@@ -332,12 +332,15 @@
 	overflow: hidden;
 	transition: transform 1s ease-out;
 	padding: 10px;
+	flex: 0 0 33.33%;
+	max-width: 33.33%;
+	transition: transform 0.5s ease;
 }
 
 .item img {
 	width: 100%;
-	height: auto;
-	object-fit: cover;
+	height: 100%;
+	object-fit: contain;
 }
 
 /* 추가된 부분 */
@@ -347,11 +350,6 @@
 	flex-wrap: nowrap;
 }
 
-.item {
-	flex: 0 0 33.33%;
-	max-width: 33.33%;
-	transition: transform 0.5s ease;
-}
 
 
 /* 좌우버튼 설정 */
@@ -401,9 +399,9 @@
 .name,
 .name2 {
 	font-family: "Pretendard-Black";
-	font-size: 6rem;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+	font-size: 4rem;
+	margin-top: 0.7rem;
+	margin-bottom: 0.7rem;
 }
 
 .view,
