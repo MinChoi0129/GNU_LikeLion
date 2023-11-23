@@ -85,19 +85,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         setInterval(() => {
             box.style.transition = "transform 8s ease"; // 부드러운 이동을 위한 transition 설정
-            box.style.transform = `translate(${direction * 2.5}rem, ${direction * 2.5}rem)`;
+            box.style.transform = `translate(${direction * 3}rem, ${direction * 3}rem)`;
 
             setTimeout(() => {
-                box.style.transition = "transform 3s"; // transition 초기화
+                box.style.transition = "transform 8s"; // transition 초기화
                 box.style.transform = "translate(0, 0)";
             }, 1000); // 지속 시간 조정
         }, 2000); // 간격 조정
     }
 
-    // 마지막 상자의 위치를 첫 번째 상자와 동일하게 설정
-    setInterval(() => {
-        const lastBox = boxes[boxes.length];
-        lastBox.style.transition = "transform 3s";
-        lastBox.style.transform = "translate(0, 0)";
-    }, 2000);
 });
