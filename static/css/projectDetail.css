@@ -171,6 +171,7 @@ nav {
   height: 3.125vw;
   width: 30.2083vw;
   margin: 0;
+  opacity: 50%;
 }
 .titleCircle {
   padding: 0px;
@@ -180,6 +181,7 @@ nav {
   border-radius: 50%;
   background-color: white;
   margin-top: 2.7083vw;
+  opacity: 50%;
 }
 .mainBox.transition {
   transition: transform 0.5s ease-in-out; /* 필요에 따라 지속 시간 및 이징 조절 */
