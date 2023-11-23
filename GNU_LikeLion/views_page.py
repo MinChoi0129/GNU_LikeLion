@@ -39,3 +39,15 @@ def projectDetail(request):
 
 def FAQ(request):
     return render(request, "FAQ.html")
+
+
+def projectDetail(request):
+    return render(request, "projectDetail.html")
+
+
+def FAQ(request):
+    return render(request, "FAQ.html")
+
+
+def background(request):
+    return render(request, "background.html")
