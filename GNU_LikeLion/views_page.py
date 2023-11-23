@@ -47,3 +47,7 @@ def projectDetail(request):
 
 def FAQ(request):
     return render(request, "FAQ.html")
+
+
+def background(request):
+    return render(request, "background.html")
