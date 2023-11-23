@@ -150,7 +150,7 @@ a:hover {
 .box5 {
     border: 1px solid #0099D9;
     border-radius: 10px;
-    box-shadow: 0 0 8px #0099D9;
+    box-shadow: 0 0 8px #0099D9; /* 그라데이션 */
 
     background-color: black;
 
@@ -340,34 +340,7 @@ a:hover {
     overflow: visible;
 }
 
-#canvas,
-#canvas3 {
-    overflow: visible;
-}
 
-#canvas3 {
-    position: relative;
-    top: 4.4rem;
-    left: 30rem;
-}
-
-#canvas4 {
-    position: relative;
-    bottom: 2rem;
-    left: 11.25rem;
-}
-
-#canvas5 {
-    position: relative;
-    bottom: 13.3rem;
-    left: 9rem;
-}
-
-#canvas6 {
-    position: relative;
-    top: 1rem;
-    right: 0.5hrem;
-}
 
 hr {
     position: relative;
