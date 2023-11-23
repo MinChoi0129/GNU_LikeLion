@@ -76,3 +76,66 @@ document.addEventListener("DOMContentLoaded", function () {
   // 초기화 함수 호출
   showImage(index);
 });
+
+var currentYear = 11; // 초기 선택 학년
+    var imageList = {
+        10: ["../static/image/ideathon1.png", "../static/image/ideathon2.png", "../static/image/ideathon3.png"],
+        11: ["../static/image/ideathon4.png", "../static/image/ideathon5.png", "../static/image/ideathon6.png"],
+        12: ["../static/image/ideathon1.png", "../static/image/ideathon2.png", "../static/image/ideathon3.png"],
+        13: ["../static/image/ideathon4.png", "../static/image/ideathon5.png", "../static/image/ideathon6.png"],
+    };
+
+    var descriptionList = {
+        10: [{ account: "예시", name: "예시" }, { account: "예시", name: "예시" }, { account: "예시", name: "예시" }],
+        11: [
+            { account: "더 나은 건강, 더 행복한 삶", name: "RE : BORN" },
+            { account: "필요한 약을 클릭 한번으로", name: "PHAMPHAM" },
+            { account: "도대체 가능한 날이 언제야", name: "이때 어때" },
+        ],
+        12: [{ account: "예시", name: "예시" }, { account: "예시", name: "예시" }, { account: "예시", name: "예시" }],
+        13: [{ account: "예시", name: "예시" }, { account: "예시", name: "예시" }, { account: "예시", name: "예시" }],
+    };
+
+    function toggleDropdown(event) {
+        var dropdownList = document.getElementById('dropdownList');
+        dropdownList.classList.toggle('open');
+
+        // 클릭 이벤트가 이벤트 버블링을 방지하도록 합니다.
+        event.stopPropagation();
+    }
+
+    function changeYear(year) {
+        currentYear = year;
+        updateContent();
+        toggleDropdown(event);
+    }
+
+    function updateContent() {
+        var imageBox = document.getElementById('imageBox');
+        var descriptionBox = document.getElementById('descriptionBox');
+
+        // 이미지 업데이트
+        imageBox.innerHTML = "";
+        for (var i = 0; i < imageList[currentYear].length; i++) {
+            var img = document.createElement('img');
+            img.src = imageList[currentYear][i];
+            imageBox.appendChild(img);
+        }
+
+        // 설명 업데이트
+        descriptionBox.innerHTML = "";
+        for (var j = 0; j < descriptionList[currentYear].length; j++) {
+            var accountName = descriptionList[currentYear][j].account;
+            var projectName = descriptionList[currentYear][j].name;
+            var description = document.createElement('div');
+            description.textContent = accountName + ": " + projectName;
+            descriptionBox.appendChild(description);
+        }
+
+        // 현재 년도 업데이트
+        var currentYearElement = document.getElementById('currentYear');
+        currentYearElement.textContent = currentYear + 'th';
+    }
+
+    // 초기 로딩 시 컨텐츠 업데이트
+    updateContent();
