@@ -210,7 +210,7 @@ body {
   margin: 0;
   padding: 0;
 }
-.titleLine {
+.titleLine  {
   margin: 0px;
   padding: 0px;
   border-bottom: 0.0521vw solid white;
@@ -226,4 +226,8 @@ body {
   border-radius: 50%;
   background-color: white;
   margin-top: 2.7083vw;
+}
+
+.Line {
+  display: flex;
 }

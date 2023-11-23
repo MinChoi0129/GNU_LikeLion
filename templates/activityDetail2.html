@@ -1,0 +1,52 @@
+{% load static %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/activityDetail.css' %}" />
+    <script src="{% static 'js/activityDetail.js' %}" defer></script>
+    
+    <title>Document</title>
+  </head>
+  <body>
+   
+    <div class="container">
+      <div class="title">
+        <div class="Line">
+          <div class="titleLine leftLine"></div>
+          <div class="titleCircle leftCircle"></div>
+        </div>
+        <div class="titleText">아이디어톤</div>
+        <div class="Line">
+          <div class="titleCircle rightCircle"></div>
+          <div class="titleLine rightLine"></div>
+        </div>
+      </div>
+
+    <div class="detail">
+      <div class="etcimg">
+        <div class="imgbox1"><img src="{% static 'image/OT.png' %}" /></div>
+        <div class="imgbox2"><img src="{% static 'image/OT.png' %}"/></div>
+        <div class="imgbox3"><img src="{% static 'image/OT.png' %}"/></div>
+        <!-- <div class="imgbox4"><img src="{% static 'image/OT.png' %}"/></div> -->
+      </div>
+        <button class="leftarrow"><img src="{% static 'image/arrow3.png' %}" /></button>
+        <button class="rightarrow"><img src="{% static 'image/arrow2.png' %}" /></button>
+      
+    </div>
+    {% comment %}
+        <div class="etcimg">
+          <img class="img1" src="/static/image/OT.png" />
+          <img class="img2" src="/static/image/hackathon.png" />
+          <img class="img3" src="/static/image/OT.png" />
+          <!-- <img class="img4" src="/static/image/hackathon.png" /> -->
+        </div>
+    {% endcomment %}
+    
+    <div class="textbox">여기는 관련 글 작성</div>
+
+   
+  </body>
+</html>
+{% endblock %}

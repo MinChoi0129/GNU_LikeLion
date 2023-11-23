@@ -3,10 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
   var imageList = [
     "../static/image/hackathon.png",
     "../static/image/OT.png",
-    "../static/image/hackathon2.png",
+    "../static/image/hackathon2111.png",
     "../static/image/lion.png",
-    // "../static/image/hackathon2.png",
-    // "../static/image/OT.png",
+    
   ];
 
   // 중복된 항목 제거
