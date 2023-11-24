@@ -215,7 +215,7 @@
 .menu_wrap .dep2 {
 	position: absolute;
 	display: none;
-
+	z-index : 1;
 	text-align: center;
 
 	padding: 0;

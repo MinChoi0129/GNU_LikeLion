@@ -80,4 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
 function changeYear(year) {
   // currentYear 엘리먼트에 year의 내용을 설정
   document.getElementById('currentYear').innerText = year;
+
+  /* 기수마다 사진과 설명  추가*/
 }
