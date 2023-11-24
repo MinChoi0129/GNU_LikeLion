@@ -241,7 +241,7 @@
 
 .menu_wrap .dep1>li .dep2 li {
 	color: #ffffff;
-	display: none;
+
 	/* 드롭다운 텍스트 색을 흰색으로 지정 */
 }
 
@@ -261,13 +261,15 @@
 }
 
 .menu_wrap .dep1>li.show .dep2 {
-    display: block;
+	display: block;
 }
+
 .menu_wrap .dep1:hover .dep2 {
-    display: block;
+	display: block;
 }
+
 .menu_wrap .dep1.show .dep2 {
-    display: block;
+	display: block;
 }
 
 /* 본문설정 */
