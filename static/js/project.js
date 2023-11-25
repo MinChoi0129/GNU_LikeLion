@@ -302,12 +302,12 @@ var images2 = {
     "../static/image/ideathon6.png",
   ],
   '11th': [
-    "../static/image/ideathon1.png",
-    "../static/image/ideathon2.png",
+    "../static/image/hakathon3.png",
+    "../static/image/hakathon4.png",
+    "../static/image/ideathon5.png",
     "../static/image/ideathon3.png",
-    "../static/image/ideathon1.png",
-    "../static/image/ideathon2.png",
-    "../static/image/ideathon3.png",
+    "../static/image/ideathon4.png",
+    "../static/image/ideathon5.png",
   ],
   '12th': [
     "../static/image/hakathon1.png",
@@ -329,20 +329,20 @@ var images2 = {
 
 var imageDescriptions2 = {
   '10th': [
-    { account: "해커톤1", name: "해커톤1" },
-    { account: "해커톤2", name: "해커톤2" },
+    { account: "누구든지 쉬운 디자인", name: "레터링 케이크 레시피" },
+    { account: "경험을 사고 팔 수 있는", name: "당신의 경험" },
     { account: "해커톤4", name: "해커톤4" },
     { account: "해커톤5", name: "해커톤5" },
     { account: "아이디어톤5", name: "아이디어톤5" },
     { account: "아이디어톤6", name: "아이디어톤6" },
   ],
   '11th': [
-    { account: "더 나은 건강, 더 행복한 삶", name: "RE : BORN" },
-    { account: "필요한 약을 클릭 한번으로", name: "PHAMPHAM" },
-    { account: "도대체 가능한 날이 언제야", name: "이때 어때" },
-    { account: "더 나은 건강, 더 행복한 삶", name: "RE : BORN" },
-    { account: "필요한 약을 클릭 한번으로", name: "PHAMPHAM" },
-    { account: "도대체 가능한 날이 언제야", name: "이때 어때" },
+    { account: "선생님을 위한 커뮤니티", name: "아낌없이 주는 나무" },
+    { account: "수어 학습의 시작", name: "핸디" },
+    { account: "휠체어와 함께 어디든지", name: "WHEEL WE GO" },
+    { account: "선생님을 위한 커뮤니티", name: "아낌없이 주는 나무" },
+    { account: "수어 학습의 시작", name: "핸디" },
+    { account: "휠체어와 함께 어디든지", name: "WHEEL WE GO" },
   ],
   '12th': [
     { account: "해커톤1", name: "해커톤1" },
