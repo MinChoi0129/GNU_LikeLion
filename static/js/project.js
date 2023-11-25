@@ -76,65 +76,68 @@ document.addEventListener("DOMContentLoaded", function () {
   // 초기화 함수 호출
   showImage(index);
 });
+// Variable to track the current image index
+var currentIndex = 0;
 
+// Function to change the year and reset images to the first one
 function changeYear(year) {
   // currentYear 엘리먼트에 year의 내용을 설정
   document.getElementById("currentYear").innerText = year;
 
-  /* 기수마다 사진과 설명  추가*/
+  // 객체에서 선택한 연도에 해당하는 이미지 배열 가져오기
+  var images = {
+    '10th': [
+      "../static/image/hakathon1.png",
+      "../static/image/hakathon2.png",
+      "../static/image/hakathon4.png",
+      "../static/image/hakathon5.png",
+      "../static/image/ideathon5.png",
+      "../static/image/ideathon6.png",
+    ],
+    '11th': [
+      "../static/image/ideathon1.png",
+      "../static/image/ideathon2.png",
+      "../static/image/ideathon3.png",
+      "../static/image/ideathon1.png",
+      "../static/image/ideathon2.png",
+      "../static/image/ideathon3.png",
+    ],
+    '12th': [
+      "../static/image/hakathon1.png",
+      "../static/image/hakathon2.png",
+      "../static/image/hakathon4.png",
+      "../static/image/hakathon5.png",
+      "../static/image/ideathon5.png",
+      "../static/image/ideathon6.png",
+    ],
+    '13th': [
+      "../static/image/hakathon1.png",
+      "../static/image/hakathon2.png",
+      "../static/image/hakathon4.png",
+      "../static/image/hakathon5.png",
+      "../static/image/ideathon5.png",
+      "../static/image/ideathon6.png",
+    ],
+  };
+
+  // Reset currentIndex to 0
+  currentIndex = 0;
+
+  // dtimgBox의 각 이미지 엘리먼트에 소스 업데이트
+  var imgElements = document.querySelectorAll(".dtimgBox .item img");
+  for (var i = 0; i < imgElements.length; i++) {
+    imgElements[i].src = images[year][i];
+  }
+
+  // Scroll back to the leftmost position
+  var imageContainer = document.querySelector(".dtimgBox");
+  imageContainer.scrollLeft = 0;
 }
 
-// Array to store image paths
-var imagePaths = [
-  "../static/image/ideathon1.png",
-  "../static/image/ideathon2.png",
-  "../static/image/ideathon3.png",
-  "../static/image/ideathon1.png",
-  "../static/image/ideathon2.png",
-  "../static/image/ideathon3.png",
-];
-
-// Array to store descriptions for each image
-var imageDescriptions = [
-  { account: "더 나은 건강, 더 행복한 삶", name: "RE : BORN" },
-  { account: "필요한 약을 클릭 한번으로", name: "PHAMPHAM" },
-  { account: "도대체 가능한 날이 언제야", name: "이때 어때" },
-  { account: "더 나은 건강, 더 행복한 삶", name: "RE : BORN" },
-  { account: "필요한 약을 클릭 한번으로", name: "PHAMPHAM" },
-  { account: "도대체 가능한 날이 언제야", name: "이때 어때" },
-];
-
-// Variable to track the current image index
-var currentIndex = 0;
-
-var staticURL = "/static/image/more.png"; // 정적 파일의 실제 경로로 수정
-
-// Function to change the description based on the selected image index
-function changeDescription(index) {
-  var descriptionElement = document.querySelector(".explanation .account");
-  var currentDescription = imageDescriptions[index];
-
-  descriptionElement.innerHTML = `
-      <div class="account">${currentDescription.account}
-          <div class="name">${currentDescription.name}</div>
-          <div class="view">VIEW MORE 
-                <img class="more" src="${staticURL}" />
-          </div>    
-      </div>`;
-}
-
-// Event listeners for left and right buttons to change image and description
-document.getElementById("leftBtn").addEventListener("click", function () {
-  // Decrease the current index (looping back to the last image if at the first image)
-  currentIndex = (currentIndex - 1 + imagePaths.length) % imagePaths.length;
-  changeDescription(currentIndex);
+// Add an event listener to the dropdown to reset images and scroll back when clicked
+var dropdownBar = document.querySelector(".dropDownBar");
+dropdownBar.addEventListener("click", function () {
+  // Call the changeYear function with the current selected year
+  var currentYear = document.getElementById("currentYear").innerText;
+  changeYear(currentYear);
 });
-
-document.getElementById("rightBtn").addEventListener("click", function () {
-  // Increase the current index (looping back to the first image if at the last image)
-  currentIndex = (currentIndex + 1) % imagePaths.length;
-  changeDescription(currentIndex);
-});
-
-// Initial call to display the first image description
-changeDescription(currentIndex);
