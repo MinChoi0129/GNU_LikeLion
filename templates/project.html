@@ -1,71 +1,155 @@
+{% extends 'background.html' %} 
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>GNU 멋쟁이사자처럼</title>
-		<link
-		rel="shortcut icon"
-		href="{% static 'image/favicon.ico' %}"
-		type="image/x-icon"
-		/>
-		<link
-		rel="icon"
-		href="{% static 'image/favicon.ico' %}"
-		type="image/x-icon"
-		/>
-		<link rel="stylesheet" href="{% static 'css/project.css' %}" />
-		<script src="{% static 'js/project.js' %}" defer></script>
-		<script src="https://kit.fontawesome.com/214b8f17c4.js" crossorigin="anonymous"></script>
-	</head>
-	<body>
-		<div class="backGround">
+	{% block backgroundHeader %}
+	<link rel="stylesheet" href="{% static 'css/project.css' %}" />
+	<script src="{% static 'js/project.js' %}" defer></script>
+	{% endblock %}
+
+	{% block project %}
+
+		<!-- ************************************ 1페이지 ************************************  -->
+		<div class="firstPage">
+			<img class="lionImg" src="{% static 'image/lion.png' %}">
+			<div class="fistPageContent">
+				<div class="fistPageText1">IDEATHON</div>
+				<div class="fistPageText2">AND</div>
+				<div class="fistPageText1">HACKATHON</div>
+				<div class="fistPageText3">PROJECT</div>
+				<div class="fistPageText4"></div>
+				<div class="firstPageSlideBar">
+					<div class="firstPageSlideBarIcon">
+						<i class="fa-solid fa-pen" id="penIcon"></i>
+					</div>
+					<div class="firstPageSlideBarTxt">
+						지금까지의&nbsp
+						<div class="firstPageSlideBarTxt1">멋쟁이사자 작품 </div>
+						&nbsp모아보기
+					</div>
+				</div>
+				<div class="fistPageBlank"></div>
+				<div class="downIcon" onclick="downPage()">
+					<i class="fa-solid fa-angles-down"></i>
+				</div>
+			</div>
+		</div>
+
+		<!-- ************************************ 2페이지 ************************************  -->
+		<div class="secondPage">
+			<div class="optionTitle">
+			<div class="dropDownBar">
+				<i class="fa-solid fa-caret-down"></i>
+				<div class="dropDownBarTxt">
+					<div class="menu_wrap">
+						<ul class="dep1">
+							<li>
+								<span id="currentYear">11th</span>
+								<ul class="dep2">
+									<li><div class="dep2Year" onclick="changeYear(this)">10th</div></li>
+									<li><div class="dep2Year" onclick="changeYear(this)">11th</div></li>
+									<li><div class="dep2Year" onclick="changeYear(this)">12th</div></li>
+									<li><div class="dep2Year" onclick="changeYear(this)">13th</div></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="dropDownBarTxt2">IDEATHON</div>
+				</div>
+			</div>
+			</div>
+			<div class="mainBox">
+				<div class="eximg">
+					<div class="preImg">
+						<img src="{% static 'image/ideathon4.png' %}" />
+					</div>
+					<div class="currentImg">
+						<img src="{% static 'image/ideathon5.png' %}" />
+					</div>
+					<div class="postImg">
+						<img src="{% static 'image/ideathon6.png' %}" />
+					</div>
+				</div>
 			
-		</div>
-		<div class="container">
-
-			<div class="firstPage">
-				<div class="nav">
-
+				<div class="moveBtn">
+					<i
+						class="fa-solid fa-circle-chevron-left fa-3x"
+						style="color: #ffffff"
+					></i>
+					<i
+						class="fa-solid fa-circle-chevron-right fa-3x"
+						style="color: #ffffff"
+					></i>
 				</div>
-				<img class="lionImg" src="{% static 'image/lion.png' %}">
-				<div class="fistPageContent">
-					<div class="fistPageText1">IDEATHON</div>
-					<div class="fistPageText2">AND</div>
-					<div class="fistPageText1">HACKATHON</div>
-					<div class="fistPageText3">PROJECT</div>
-					<div class="fistPageText4"></div>
-					<div class="firstPageSlideBar">
-						<div class="firstPageSlideBarIcon">
-							<i class="fa-solid fa-pen" id="penIcon"></i>
+			</div>
+			<div class="explanation">
+			<div class="account">휠체어와 함께 개선하는 세상</div>
+				<div class="name">WHEELWEGO</div>
+				<div class="view">VIEW MORE <img class="more" src="{% static 'image/more.png' %}" /></div>    
+			</div>
+		</div>
+
+		<!-- ************************************ 3페이지 ************************************  -->
+		<div class="thirdPage">
+			<div class="optionTitle">
+				<div class="dropDownBar">
+					<i class="fa-solid fa-caret-down"></i>
+					<div class="dropDownBarTxt">
+						<div class="menu_wrap">
+						<ul class="dep1">
+							<li>
+								<span id="currentYear2">11th</span>
+								<ul class="dep2">
+									<li><div class="dep2Year" onclick="changeYear(this)">10th</div></li>
+									<li><div class="dep2Year" onclick="changeYear(this)">11th</div></li>
+									<li><div class="dep2Year" onclick="changeYear(this)">12th</div></li>
+									<li><div class="dep2Year" onclick="changeYear(this)">13th</div></li>
+								</ul>
+							</li>
+						</ul>
 						</div>
-						<div class="firstPageSlideBarTxt">
-							지금까지의&nbsp
-							<div class="firstPageSlideBarTxt1">멋쟁이사자 작품 </div>
-							&nbsp모아보기
-						</div>
-					</div>
-					<div class="fistPageBlank"></div>
-					<div class="downIcon">
-						<i class="fa-solid fa-angles-down"></i>
+						<div class="dropDownBarTxt2">HACKATHON</div>
 					</div>
 				</div>
 			</div>
+			<div class="mainBox2">
+				<div class="eximg2">
+					<div class="preImg2">
+						<img src="{% static 'image/hakathon3.png' %}" />
+					</div>
+					<div class="currentImg2">
+						<img src="{% static 'image/hakathon4.png' %}" />
+					</div>
+					<div class="postImg2">
+						<img src="{% static 'image/hakathon5.png' %}" />
+					</div>
+				</div>
 
-			<div class="secondPage">
-
+				<div class="moveBtn2">
+					<i
+						class="fa-solid fa-circle-chevron-left fa-3x"
+						style="color: #ffffff"
+					></i>
+					<i
+						class="fa-solid fa-circle-chevron-right fa-3x"
+						style="color: #ffffff"
+					></i>
+				</div>
 			</div>
-
-			<div class="fistPageBlank1"></div>
-			<div class="fistPageBlank1"></div>
-			<div class="fistPageBlank1"></div>
-			<div class="fistPageBlank1"></div>
-			<div class="fistPageBlank1"></div>
-			<div class="fistPageBlank1"></div>
-			<div class="fistPageBlank1"></div>
-			<div class="fistPageBlank1"></div>
-
+			<div class="explanation2">
+				<div class="account2">휠체어와 함께 개선하는 세상</div>
+					<div class="name2">WHEELWEGO</div>
+					<div class="view2">VIEW MORE <img class="more2" src="{% static 'image/more.png' %}" /></div>    
+			</div>
+		</div>	
+		
+	
+		<!-- ************************************ 4페이지 ************************************  -->
+		<div class="fourthPage">
+			<div class="bottom">
+				<div class="lets">함께 멋진 작품 만들기<br>
+					CONTACT LINK </div> 
+					<img  class="click" src="{% static 'image/click.png' %}" />
+				<img class="forthBackground"  src="{% static 'image/moremake.png' %}" />
+			</div>
 		</div>
-	</body>
-</html>
+		
+	{% endblock %}
