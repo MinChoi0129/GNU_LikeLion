@@ -304,10 +304,10 @@ var images2 = {
   '11th': [
     "../static/image/hakathon3.png",
     "../static/image/hakathon4.png",
-    "../static/image/ideathon5.png",
-    "../static/image/ideathon3.png",
-    "../static/image/ideathon4.png",
-    "../static/image/ideathon5.png",
+    "../static/image/hakathon5.png",
+    "../static/image/hakathon3.png",
+    "../static/image/hakathon4.png",
+    "../static/image/hakathon5.png",
   ],
   '12th': [
     "../static/image/hakathon1.png",
@@ -374,7 +374,7 @@ function changeYear2(year2) {
   // Update the images
   var imgElements2 = document.querySelectorAll('.dtimgBox2 .item2 img');
   for (var i = 0; i < imgElements2.length; i++) {
-    imgElements2[i].src = images[year2][i];
+    imgElements2[i].src = images2[year2][i];
   }
 
   // Update the description
