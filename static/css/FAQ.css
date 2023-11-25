@@ -53,7 +53,7 @@
 
 /* dtText = 프로젝트 타이틀 div */
 .dtText {
-  font-family: "Pretendard-ExtraBold";
+  font-family: "Pretencontainer1dard-ExtraBold";
   font-size: 3.5rem;
   color: #ffffff;
   margin-top: 2vh;
@@ -104,15 +104,13 @@ input:focus {
   display: block;
   flex: 4;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 1);
-  border-radius: 2vw;
 }
 
 .search-content {
   display: flex;
   width: 30vw;
   margin: 0 auto;
-  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 .search {
@@ -123,7 +121,6 @@ input:focus {
   border: 2px solid #24586e;
   font-family: "Pretendard-Regular";
   border-radius: 2vw 0 0 2vw;
-
 }
 
 .SearchBtn {
@@ -140,6 +137,7 @@ input:focus {
 
 .crossbar {
   margin-top: 2vh;
+  margin-bottom: 0.5rem;
   display: block;
   font-family: "Pretendard-regular";
   font-size: 1rem;
@@ -151,7 +149,10 @@ input:focus {
 }
 
 #faq-list {
+  border-radius: 2vw;
+  background-color: rgba(255, 255, 255, 1);
   height: 100%;
+  padding-top: 2vh;
   flex-direction: column;
 }
 
@@ -170,4 +171,13 @@ input:focus {
   height: fit-content;
   border-left: #d9d9d970 0.5vw solid;
   border-right: #d9d9d970 0.5vw solid;
+}
+
+.triangle {
+  display: inline;
+  width: 0;
+  height: 100%;
+  border-left: 0.5vw solid transparent;
+  border-right: 0.5vw solid transparent;
+  border-top: 1vh solid black; /* 원하는 배경색으로 변경하십시오. */
 }

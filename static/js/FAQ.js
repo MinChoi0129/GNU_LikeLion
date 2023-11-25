@@ -12,7 +12,7 @@ const answer = [
 function show_faqs() {
   for (let i = 0; i < question.length; i++) {
     if (i == 0) {
-      html = `<div class="faq-content-title">
+      html = `<div class="faq-content-title"><div class="triangle"></div>
               &nbsp;
               ${question[i]}
             </div>
@@ -50,7 +50,6 @@ function addfaqEvent() {
   const faqItems = document.getElementsByClassName("faq-content-title");
 
   for (let i = 0; i < faqItems.length; i++) {
-    faqItems[i].nextElementSibling.hidden = true;
     faqItems[i].addEventListener("click", function () {
       if (faqItems[i].nextElementSibling.hidden === true) {
         faqItems[i].nextElementSibling.hidden = false;
@@ -83,4 +82,14 @@ function search() {
 
 show_faqs();
 addfaqEvent();
+
+window.addEventListener('scroll', function() {
+  var scrollPosition = window.scrollY;
+  console.log(scrollPosition);
+  if (scrollPosition >= 100) {
+    document.getElementById('nav').style.backgroundColor = 'black';
+  } else {
+    document.getElementById('nav').style.backgroundColor = '';
+  }
+});
 // 애니메이션 추가(내려오는 거, + - 등 추가적인 것들), 이미지Path수정, 검색 시 이벤트 리스너 추가(or 다른 방법), 검색 창 비울 시 전체 목록 보여주기
