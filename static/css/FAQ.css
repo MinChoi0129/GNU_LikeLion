@@ -1,48 +1,80 @@
-.faq-title {
+#faq-scene {
   position: absolute;
-  margin-top: 12vh;
-  display: block;
-  font-family: "Pretendard-Bold";
-  font-size: 3rem;
-  color: white;
-  text-align: center;
+  justify-content: center;
   top: 0;
   left: 0;
-  right: 0;
+  margin-top: 5vh;
+  width: 100vw;
+  height: 100vh;
+}
+
+/*               프로젝트 이름 BOX               */
+/* dtBox전체 div  */
+.dtBox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100vw;
+  margin-top: 5vh;
+}
+
+/* dtLines = 타이틀 옆 왼쪽 전체div */
+.dtLines {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/*dtLine = 하나의 라인 */
+.dtLine {
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 0.0521vw solid white;
+  height: 5vh;
+  width: 40vw;
+  opacity: 50%;
+}
+
+/*dtCircle = 하나의 동그라미 */
+.dtCircle {
+  padding: 0px;
+  margin: 0px;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: white;
+  margin-top: 5vh;
+  opacity: 50%;
+
+}
+
+/* dtText = 프로젝트 타이틀 div */
+.dtText {
+  font-family: "Pretendard-ExtraBold";
+  font-size: 3.5rem;
+  color: #ffffff;
+  margin-top: 2vh;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+#faq-description {
+  font-family: "Pretendard-regular";
+  font-size: 1.05rem;
+  color: #ffffff;
+  margin-top: 1vh;
+  padding: 0;
   text-align: center;
 }
 
-.faq-description {
-  position: absolute;
-  margin-top: 19vh;
-  display: block;
-  font-family: "Pretendard-regular";
-  font-size: 1rem;
-  color: white;
-  text-align: center;
-  top: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-.underbar {
-  position: absolute;
-  margin-top: 28vh;
-  display: block;
-  font-family: "Pretendard-regular";
-  font-size: 1rem;
-  color: white;
-  text-align: center;
-  width: 70%;
-  top: 0;
-  left: 15%;
-  right: 15%;
-  text-align: center;
-  border-bottom: 1px solid white;
-}
 input:focus {
   outline: none;
 }
+
 .faq {
   /* position: absolute; */
   display: block;
@@ -52,26 +84,30 @@ input:focus {
   width: 100vw;
   height: 120vh;
   top: 0;
-  margin-top: 32vh;
+  margin-top: 5vh;
   display: block;
   font-family: "Pretendard-regular";
-  font-size: 1rem;
-  background-color: white;
-}
+ }
 
 #container1 {
   display: flex;
 }
 
-.block {
+#block {
+  z-index: 1;
   flex: 1;
-  background-color: aliceblue;
+  background-color: None;
+  color: None;
 }
-.content {
+
+#content1 {
   display: block;
   flex: 4;
   height: 100vh;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 2vw;
 }
+
 .search-content {
   display: flex;
   width: 30vw;
@@ -80,19 +116,26 @@ input:focus {
 }
 
 .search {
-  flex-grow: 5; /* 너비 비율 4:1 설정 */
+  flex-grow: 7;
+  /* 너비 비율 4:1 설정 */
   height: 5vh;
+  padding-left: 1vw;
   border: 2px solid #24586e;
   font-family: "Pretendard-Regular";
+  border-radius: 2vw 0 0 2vw;
+
 }
 
 .SearchBtn {
-  flex-grow: 1; /* 너비 비율 4:1 설정 */
+  flex-grow: 1;
+  /* 너비 비율 4:1 설정 */
   height: 5vh;
   border: 3px solid #24586e;
   background-color: #24586e;
   color: white;
   line-height: 300%;
+  border-radius: 0 2vw 2vw 0;
+  padding-right: 0.5vw;
 }
 
 .crossbar {
@@ -107,7 +150,7 @@ input:focus {
   border-bottom: 2.5px solid #24586e;
 }
 
-.faq-list {
+#faq-list {
   height: 100%;
   flex-direction: column;
 }
