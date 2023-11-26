@@ -1,0 +1,60 @@
+{% extends 'background.html' %} 
+{% load static %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/activityDetail.css' %}" />
+    <script src="{% static 'js/activityDetail4.js' %}" defer></script>
+    
+    <title>Document</title>
+  </head>
+  <body>
+   
+    <div class="container">
+      <div class="title">
+        <div class="Line">
+          <div class="titleLine leftLine"></div>
+          <div class="titleCircle leftCircle"></div>
+        </div>
+        <div class="titleText">중앙해커톤</div>
+        <div class="Line">
+          <div class="titleCircle rightCircle"></div>
+          <div class="titleLine rightLine"></div>
+        </div>
+      </div>
+
+    <div class="detail">
+      <div class="etcimg">
+        <div class="imgbox1"><img src="{% static 'image/OT.png' %}" /></div>
+        <div class="imgbox2"><img src="{% static 'image/OT.png' %}"/></div>
+        <div class="imgbox3"><img src="{% static 'image/OT.png' %}"/></div>
+        <!-- <div class="imgbox4"><img src="{% static 'image/OT.png' %}"/></div> -->
+      </div>
+        <button class="leftarrow"><img src="{% static 'image/arrow3.png' %}" /></button>
+        <button class="rightarrow"><img src="{% static 'image/arrow2.png' %}" /></button>
+      
+    </div>
+    {% comment %}
+        <div class="etcimg">
+          <img class="img1" src="/static/image/OT.png" />
+          <img class="img2" src="/static/image/hackathon.png" />
+          <img class="img3" src="/static/image/OT.png" />
+          <!-- <img class="img4" src="/static/image/hackathon.png" /> -->
+        </div>
+    {% endcomment %}
+    
+    <div class="textbox">
+      지난 8월 18-19일 여러 대학들이 모여 멋쟁이사자처럼 11기 해커톤을 진행하였습니다! <br>
+      올해 경상국립대 멋사 11기 아기사자들도 이번 해커톤에 참여했는데요! <br>
+      포토존에서 사진도 찍고, 여러 이벤트 부스에서 체험도 하는 등 즐겁고 재밌는 시간이었습니다. <br>
+      또한 뭐라캐쌌노팀이 개발한 서비스인 “핸디”가 동상을 수상했습니다! 축하드립니다🎉 <br>
+      올해 해커톤에 참여한 스팸김치찌개팀, Wheel We Go팀, 뭐라캐쌌노팀 모두모두 수고많았습니다🔥 <br>
+      
+    </div>
+
+   
+  </body>
+</html>
+{% endblock %}
