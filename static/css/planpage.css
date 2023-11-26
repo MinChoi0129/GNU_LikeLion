@@ -98,7 +98,7 @@ body {
 
 .leftSide {
   position: absolute;
-  top: 18rem;
+  top: 28rem;
   left: 13rem;
 }
 .leftYear {
@@ -113,6 +113,10 @@ body {
 }
 
 /* rightSide */
+.rightSide{
+  margin-left: -10rem;
+  margin-top: 5rem;
+}
 .Mon{
   display: inline-block;
   display: flex;
@@ -195,7 +199,7 @@ body {
   border-radius: 50%;
   position: fixed;
   filter: blur(50px);
-  top: 17rem;
+  top: 22rem;
   left: 50rem;
   opacity: 50%;
 }
