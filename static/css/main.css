@@ -284,7 +284,7 @@ a:hover {
   width: 70vw;
 }
 
-.titleBox{
+.titleBox {
   position: relative;
   line-height: 200%;
   color: white;
@@ -292,12 +292,12 @@ a:hover {
   top: 15vh;
   width: fit-content;
 }
-.title{
+.title {
   font-weight: bold;
   font-size: 1.6rem;
 }
 
-.intro{
+.intro {
   display: flex;
   position: relative;
   top: 20vh;
@@ -306,24 +306,24 @@ a:hover {
   scroll-snap-type: x mandatory;
 }
 
-.imgBox{
+.imgBox {
   width: 60vw;
   height: 50vh;
   border-radius: 40px;
 }
 
-.slideBox{
+.slideBox {
   text-align: center;
   width: 70vw;
   flex: none;
   scroll-snap-align: center;
 }
-.slideBox div{
+.slideBox div {
   text-align: left;
   line-height: 170%;
   color: white;
 }
-.slideBox>div div{
+.slideBox > div div {
   text-align: left;
   display: inline-block;
   margin-left: 8vw;
@@ -331,22 +331,42 @@ a:hover {
   margin-top: 3vh;
   margin-bottom: 20vh;
 }
-.session{
+.session {
   margin-left: 100vw;
 }
-.hackathon{
+.hackathon {
   margin-right: 100vw;
 }
 
-.titleName{
+.titleName {
   font-weight: bold;
   font-size: 1.2rem;
 }
-.more{
+.more {
   text-decoration: underline;
 }
-.more:hover{
+.more:hover {
   cursor: pointer;
+  font-weight: bold;
+}
+
+.go_write_resume {
+  color: white;
+
+  position: relative;
+  text-align: center;
+}
+
+.go_write_resume div {
+  position: absolute;
+  width: 16rem;
+  height: 5rem;
+  background: #24586e;
+  border-radius: 60px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
