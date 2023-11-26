@@ -7,6 +7,10 @@ def main(request):
     return render(request, "main.html")
 
 
+def introduce(request):
+    return render(request, "introduce.html")
+
+
 def planPage(request):
     return render(request, "planPage.html")
 
@@ -25,6 +29,9 @@ def mainTest(request):
 
 def activity(request):
     return render(request, "activity.html")
+
+def introduce(request):
+    return render(request, "introduce.html")
 
 
 # activity record 게시글

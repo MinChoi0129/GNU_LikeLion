@@ -1,0 +1,285 @@
+{% extends 'background.html' %}
+{% load static %}
+{% block backgroundHeader %}
+
+<link rel="stylesheet" href="{% static 'css/introduce.css' %}">
+<script src="https://kit.fontawesome.com/32afc995e9.js" crossorigin="anonymous"></script>
+<script src="{% static 'js/introduce.js' %}" defer></script>
+
+{% endblock %}
+
+{% block introduce %}
+
+<section class="all">
+    <div class="lion">
+        <div class="miniLion">🦁</div>
+        <div class="miniLion">🦁</div>
+        <div class="bigLion">🦁</div>
+        <div class="miniLion">🦁</div>
+        <div class="miniLion">🦁</div>
+    </div>
+
+    <div class="intro">Possibility To Reality. 내 아이디어를 내 손으로 실현할 수 있는 이곳!
+        <br>개발 및 창업 동아리 멋쟁이사자처럼입니다.
+    </div>
+
+    <section class="adultLion">
+        <div class="year">11th</div>
+
+        <div class="canvasBox1">
+
+            <div class="box1">
+                <img class="profile" src="{% static 'image/king.png' %}" alt="profile">
+
+                <div class="text">
+                    <div class="nameTitle">
+                        <div class="position1">회장</div>
+                        <div class="name">이선호</div>
+                        <div class="position2">프론트</div>
+                    </div>
+
+                    <div class="introduce">
+                        <div class="position3">11기 회장</div>
+                        <div class="major">항공우주및소프트웨어공학부</div>
+                        <div class="etc">그 외 기입하고 싶은 정보</div>
+                    </div>
+                </div>
+            </div>
+
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <div class="canvasBox1">
+
+            <div class="box2">
+                <img class="profile" src="{% static 'image/kang.png' %}" alt="profile">
+
+                <div class="text">
+                    <div class="nameTitle">
+                        <div class="position1">운영진</div>
+                        <div class="name">강경아</div>
+                        <div class="position2">백엔드</div>
+                    </div>
+
+                    <div class="introduce">
+                        <div class="position3">11기 운영진</div>
+                        <div class="major">전자공학부</div>
+                        <div class="etc">그 외 기입하고 싶은 정보</div>
+                    </div>
+                </div>
+            </div>
+
+            <canvas id="canvas2"></canvas>
+
+        </div>
+
+        <div class="canvasBox1">
+
+            <div class="box3">
+                <img class="profile" src="{% static 'image/hee.png' %}" alt="profile">
+
+                <div class="text">
+                    <div class="nameTitle">
+                        <div class="position1">운영진</div>
+                        <div class="name">강지희</div>
+                        <div class="position2">프론트</div>
+                    </div>
+
+                    <div class="introduce">
+                        <div class="position3">11기 운영진</div>
+                        <div class="major">컴퓨터과학부</div>
+                        <div class="etc">그 외 기입하고 싶은 정보</div>
+                    </div>
+                </div>
+            </div>
+
+            <canvas id="canvas3"></canvas>
+        </div>
+
+        <div class="canvasBox1">
+            <div class="box4">
+                <img class="profile" src="{% static 'image/minji.png' %}" alt="profile">
+
+                <div class="text">
+                    <div class="nameTitle">
+                        <div class="position1">운영진</div>
+                        <div class="name">김민지</div>
+                        <div class="position2">백엔드</div>
+                    </div>
+
+                    <div class="introduce">
+                        <div class="position3">11기 운영진</div>
+                        <div class="major">항공우주및소프트웨어공학부</div>
+                        <div class="etc">그 외 기입하고 싶은 정보</div>
+                    </div>
+                </div>
+            </div>
+
+            <canvas id="canvas4"></canvas>
+        </div>
+
+        <div class="canvasBox1">
+            <div class="box5">
+                <img class="profile" src="{% static 'image/parkk.png' %}" alt="profile">
+
+                <div class="text">
+                    <div class="nameTitle">
+                        <div class="position1">운영진</div>
+                        <div class="name">박경훈</div>
+                        <div class="position2">프론트</div>
+                    </div>
+
+                    <div class="introduce">
+                        <div class="position3">11기 운영진</div>
+                        <div class="major">산업시스템공학부</div>
+                        <div class="etc">그 외 기입하고 싶은 정보</div>
+                    </div>
+                </div>
+            </div>
+            <canvas id="canvas6"></canvas>
+        </div>
+
+        <canvas id="canvas5"></canvas>
+
+    </section>
+
+    <hr color="#0099D9" />
+
+    <section class="babyLion">
+        <div class="year">아기사자</div>
+
+        <article class="wrap">
+            <div class="card">
+                <div class="babyPosition1">아기사자</div>
+                <img class="profile2" src="{% static 'image/yeon.png' %}" alt="profile">
+                <div class="bigName">
+                    <div class="babyName">김수연</div>
+                    <div class="babyPosition2">프론트</div>
+                </div>
+                <div class="major">경영학부</div>
+            </div>
+
+            <div class="card">
+                <div class="babyPosition1">아기사자</div>
+                <img class="profile2" src="{% static 'image/kim.png' %}" alt="profile">
+                <div class="bigName">
+                    <div class="babyName">김재용</div>
+                    <div class="babyPosition2">백엔드</div>
+                </div>
+                <div class="major">경영정보학과</div>
+            </div>
+
+            <div class="card">
+                <div class="babyPosition1">아기사자</div>
+                <img class="profile2" src="{% static 'image/young.png' %}" alt="profile">
+                <div class="bigName">
+                    <div class="babyName">박선영</div>
+                    <div class="babyPosition2">프론트</div>
+                </div>
+                <div class="major">경영정보학과</div>
+            </div>
+
+        </article>
+
+        <article class="wrap">
+            <div class="card">
+                <div class="babyPosition1">아기사자</div>
+                <img class="profile2" src="{% static 'image/back.png' %}" alt="profile">
+                <div class="bigName">
+                    <div class="babyName">백종화</div>
+                    <div class="babyPosition2">백엔드</div>
+                </div>
+                <div class="major">컴퓨터과학부</div>
+            </div>
+
+            <div class="card">
+                <div class="babyPosition1">아기사자</div>
+                <img class="profile2" src="{% static 'image/sinu.png' %}" alt="profile">
+                <div class="bigName">
+                    <div class="babyName">변신우</div>
+                    <div class="babyPosition2">프론트</div>
+                </div>
+                <div class="major">컴퓨터과학부</div>
+            </div>
+
+            <div class="card">
+                <div class="babyPosition1">아기사자</div>
+                <img class="profile2" src="{% static 'image/one.png' %}" alt="profile">
+                <div class="bigName">
+                    <div class="babyName">서지원</div>
+                    <div class="babyPosition2">백엔드</div>
+                </div>
+                <div class="major">제어로봇공학과</div>
+            </div>
+
+        </article>
+
+        <article class="wrap">
+            <div class="card">
+                <div class="babyPosition1">아기사자</div>
+                <img class="profile2" src="{% static 'image/jiji.png' %}" alt="profile">
+                <div class="bigName">
+                    <div class="babyName">서지혜</div>
+                    <div class="babyPosition2">백엔드</div>
+                </div>
+                <div class="major">컴퓨터과학부</div>
+            </div>
+
+            <div class="card">
+                <div class="babyPosition1">아기사자</div>
+                <img class="profile2" src="{% static 'image/hoho.png' %}" alt="profile">
+                <div class="bigName">
+                    <div class="babyName">서현호</div>
+                    <div class="babyPosition2">백엔드</div>
+                </div>
+                <div class="major">항공우주및소프트웨어공학부</div>
+            </div>
+
+            <div class="card">
+                <div class="babyPosition1">아기사자</div>
+                <img class="profile2" src="{% static 'image/shinjia.png' %}" alt="profile">
+                <div class="bigName">
+                    <div class="babyName">신지아</div>
+                    <div class="babyPosition2">프론트</div>
+                </div>
+                <div class="major">항공우주및소프트웨어공학부</div>
+            </div>
+
+        </article>
+
+        <article class="wrap">
+            <div class="card">
+                <div class="babyPosition1">아기사자</div>
+                <img class="profile2" src="{% static 'image/cat.png' %}" alt="profile">
+                <div class="bigName">
+                    <div class="babyName">이민재</div>
+                    <div class="babyPosition2">백엔드</div>
+                </div>
+                <div class="major">컴퓨터과학부</div>
+            </div>
+
+            <div class="card">
+                <div class="babyPosition1">아기사자</div>
+                <img class="profile2" src="{% static 'image/jisang.png' %}" alt="profile">
+                <div class="bigName">
+                    <div class="babyName">이지상</div>
+                    <div class="babyPosition2">백엔드</div>
+                </div>
+                <div class="major">정보통계학과</div>
+            </div>
+
+            <div class="card">
+                <div class="babyPosition1">아기사자</div>
+                <img class="profile2" src="{% static 'image/sidong.png' %}" alt="profile">
+                <div class="bigName">
+                    <div class="babyName">정시은</div>
+                    <div class="babyPosition2">프론트</div>
+                </div>
+                <div class="major">산업시스템공학부</div>
+            </div>
+
+        </article>
+    </section>
+</section>
+
+{% endblock %}
