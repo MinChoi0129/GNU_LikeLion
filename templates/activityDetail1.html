@@ -1,11 +1,12 @@
-{% load static %} {% block content %}
+{% extends 'background.html' %} 
+{% load static %} {% block content %} 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'css/activityDetail.css' %}" />
-    <script src="{% static 'js/activityDetail.js' %}" defer></script>
+    <script src="{% static 'js/activityDetail1.js' %}" defer></script>
     
     <title>Document</title>
   </head>
@@ -40,7 +41,7 @@
           <img class="img1" src="/static/image/OT.png" />
           <img class="img2" src="/static/image/hackathon.png" />
           <img class="img3" src="/static/image/OT.png" />
-          <!-- <img class="img4" src="/static/image/hackathon.png" /> -->
+          <img class="img4" src="/static/image/hackathon.png" />
         </div>
     {% endcomment %}
     

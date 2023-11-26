@@ -1,15 +1,13 @@
 //사진 넘기는 기능
 document.addEventListener("DOMContentLoaded", function () {
   var imageList = [
-    "../static/image/hackathon.png",
     "../static/image/OT.png",
-    "../static/image/hackathon2111.png",
+    "../static/image/lion.png",
+    "../static/image/lion.png",
     "../static/image/lion.png",
     
   ];
 
-  // 중복된 항목 제거
-  imageList = Array.from(new Set(imageList));
 
   var currentIndex = 0;
   var imageContainers = document.querySelectorAll(".etcimg img");

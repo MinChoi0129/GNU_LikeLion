@@ -96,7 +96,7 @@ a:hover {
   display: flex;
   width: 24rem;
   height: 26rem;
-  margin-left: 12rem;
+  margin-left: 6rem;
   border-radius: 20px;
   
 }
@@ -121,11 +121,11 @@ a:hover {
   display: flex;
   justify-content: center;
   width: 81.5rem;
-  height: 11rem;
+  height: 8rem;
   /* border: 1px solid white; */
   color: white;
   margin-top: 3.5rem;
-  margin-left: 12.5rem;
+  margin-left: -1rem;
   font-size: 1.1rem;
   font-weight: 300;
 }
@@ -200,23 +200,28 @@ body {
 .title {
   display: flex;
   height: 6.0417vw;
-  margin-top: 5.2083vw;
+  margin-top: 6.2083vw;
   justify-content: space-between;
 }
 .titleText {
   font-family: "Pretendard-ExtraBold";
-  font-size: 5vw;
+  font-size: 4.5rem;
   color: #ffffff;
   margin: 0;
   padding: 0;
+  /* margin-left: 1rem;
+  margin-right: 1rem; */
 }
 .titleLine  {
   margin: 0px;
   padding: 0px;
   border-bottom: 0.0521vw solid white;
   height: 3.125vw;
-  width: 30.2083vw;
+  width: 37vw;
   margin: 0;
+  
+  
+ 
 }
 .titleCircle {
   padding: 0px;
@@ -226,8 +231,34 @@ body {
   border-radius: 50%;
   background-color: white;
   margin-top: 2.7083vw;
+  
 }
 
 .Line {
   display: flex;
+  
+}
+
+.titleLine.leftLine {
+  display: flex;
+  position: relative;
+  left: -5.1rem;
+}
+
+.titleLine.rightLine{
+  display: flex;
+ position: relative;
+ right: -5.2rem;
+}
+
+.titleCircle.leftCircle {
+  display: flex;
+  position: relative;
+  right: 5.2rem;
+}
+
+.titleCircle.rightCircle {
+  display: flex;
+  position: relative;
+  left: 5.2rem;
 }
