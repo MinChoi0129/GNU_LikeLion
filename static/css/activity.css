@@ -1,234 +1,132 @@
-@font-face {
-    font-weight: 300;
-    font-family: "Pretendard-Light";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
-}
-
-@font-face {
-    font-weight: 400;
-    font-family: "Pretendard-Regular";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
-}
-
-@font-face {
-    font-weight: 500;
-    font-family: "Pretendard-Medium";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff") format("woff");
-}
-
-@font-face {
-    font-weight: 600;
-    font-family: "Pretendard-SemiBold";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
-}
-
-@font-face {
-    font-weight: 700;
-    font-family: "Pretendard-Bold";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
-}
-
-@font-face {
-    font-weight: 800;
+/* 옵션 & 타이틀 */
+.optionTitle {
+    position: relative;
+    display: flex;
+    height: 4rem;
+    margin-top: 15vh;
+    margin-right: 55%;
+    color: #FFFFFF;
+    font-size: 2rem;
     font-family: "Pretendard-ExtraBold";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff") format("woff");
 }
 
-* {
-    box-sizing: content-box;
+.dropDownBar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Optional: Align items in the center vertically */
 }
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    /* overflow: hidden; */
+.dropDownBarTxt {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    /* 변경된 부분 */
+    align-items: center;
+    /* Optional: Align items in the center vertically */
+    margin-left: 5%;
+}
+
+/* 아이콘, 텍스트 등 각 요소에 마진 조절 */
+
+.menu_wrap .dep1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    margin-right: 2.5vw;
+
+    color: white;
+    font-size: 0;
+}
+
+.menu_wrap .dep1>li {
+    display: inline-block;
+
+    white-space: nowrap;
+    vertical-align: top;
+    text-align: center;
+
+    width: fit-content;
+    margin: 0.26vw;
+    border-bottom: 0.2rem solid white;
+
+    background-color: rgb(255, 255, 255, 0);
+    font-size: 3rem;
+    color: #40BCCB;
+
+}
+
+.menu_wrap .dep2 {
     position: absolute;
-    font-size: 16px;
-    background-color: #032023;
-    box-shadow: inset 0 0 250px 20px #24586e;
-}
-
-::-webkit-scrollbar {
     display: none;
-}
 
-
-
-.firstPage {
     text-align: center;
-}
 
-
-.lion_img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
     padding: 0;
-    margin: 0;
+    margin-top: 0.2rem;
 
+    max-width: fit-content;
+    max-height: 20vh;
+    width: fit-content;
+
+    overflow-y: auto;
+    background-color: #323232;
 }
 
-.text {
-    position: relative;
-    /* 부모 요소를 relative로 설정 */
-    z-index: 5;
-    /* 텍스트는 앞에 위치 */
-    font-weight: bolder;
-    padding-top: 5rem;
-}
-
-
-.GNU {
-    font-size: 2rem;
-    color: #ffffff;
-}
-
-.likelion {
-    font-size: 2rem;
-    color: #ffffff;
-}
-
-.title {
-    font-size: 6rem;
-    color: #ffffff;
-    text-decoration: underline 0.2rem;
-}
-
-.firstPageSlideBar {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-
-    border-radius: 0.75rem 0.75rem 0.75rem 0;
-
-    width: 30rem;
-    height: 7%;
-
-    background-color: rgba(255, 255, 255, 0.3);
-
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    margin: 0;
-}
-
-.firstPageSlideBarIcon {
-    position: relative;
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    border-radius: 0.75rem 0.75rem 0.75rem 0;
-
-    width: 15%;
-    height: 100%;
-
-    background-color: rgba(255, 255, 255, 0.5);
-    font-size: 2.5rem;
-}
-
-#penIcon {
-    position: relative;
-
-    font-size: 75%;
-}
-
-.firstPageSlideBarTxt {
-    display: flex;
-    flex-direction: row;
-
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    width: 100%;
-    height: 100%;
-
-    font-size: 1.5rem;
-    font-family: "Pretendard-Thin";
-}
-
-.firstPageSlideBarTxt1 {
-    font-family: "Pretendard-Light";
-}
-
-.downIcon {
-    position: relative;
-    font-size: 2rem;
-    color: #ffffff;
-    padding-top: 5rem;
-}
-
-/* --- */
-/* 추가된 코드 */
-.secondPage {
+.menu_wrap .dep2 li {
     display: block;
-    transform: translateY(100%);
-    margin-top: 5rem;
+
+    text-align: center;
+
+    width: 100%;
+
+    font-size: 2rem;
 }
 
-/* 추가된 코드: 첫 번째 페이지가 hidden 클래스를 가질 때만 보이도록 설정 */
-.firstPage.hidden {
-    display: none;
-
-}
-
-/* 추가된 코드: 두 번째 페이지가 hidden 클래스를 가질 때만 보이도록 설정 */
-.secondPage.hidden {
-    display: none;
-    transition: transform 3s ease-in-out;
-    transform: translateY(100%);
-}
-
-.firstPage {
-    margin-top: 5rem;
-    transition: transform 3s ease-in-out;
-}
-
-.secondPage.visible {
-    transform: translateY(0);
-}
-
-/* 기존 스타일 유지하면서 버튼들을 세로로 정렬하고 간격을 주기 */
-.page_move {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* 가운데에서 왼쪽으로 정렬로 변경 */
-    gap: 10px;
-    /* 원하는 간격 값으로 조정 */
-}
-
-/* 버튼 스타일 추가 (예시) */
-.page_move button {
-    padding: 10px;
+.menu_wrap .dep1>li .dep2 li {
     color: #ffffff;
-    border: none;
-    cursor: pointer;
-    margin-left: 7rem;
-    /* 원하는 여백 값을 지정하세요 */
+    /* 드롭다운 텍스트 색을 흰색으로 지정 */
+}
+
+
+.menu_wrap .dep2 .dep2Year {
+    display: block;
+
+    padding: 1rem 2rem;
+}
+
+.menu_wrap .dep1>li:hover>.dep2 {
+    display: block;
+}
+
+.menu_wrap .dep2>li:hover>.dep2Year {
+    width: fit-content;
 }
 
 .post-list {
     display: flex;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
+    padding-left: 15rem;
 }
 
 .post-item {
     flex: 0 0 calc(25% - 10px);
-    margin-right: 10px;
     box-sizing: border-box;
     transition: opacity 0.3s ease-in-out;
     cursor: pointer;
     color: #ffffff;
+    border: 1px solid #ffffff;
+    /* border은 나중에 삭제할 예정 */
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 15rem;
+    margin-bottom: 20px;
+    margin-right: 2rem;
+    margin-top: 2rem;
 }
 
 .post-item.hidden {
@@ -248,32 +146,40 @@ body {
 }
 
 .post-container {
-    padding-left: 30rem;
+    position: absolute;
+    padding: 30rem;
+    padding-top: 20px;
+
 }
 
-.semiTitle {
-    gap: 5px;
-    display: flex;
-    font-weight: bold;
+.post_img {
+    padding: 10px;
+    width: 10rem;
+    height: auto;
+    border: #FFFFFF 1px;
+
 }
 
-.secondPageTitle {
-    padding-left: 5rem;
+.post_img img {
+    max-width: 100%;
+    height: auto;
 }
 
-.year {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #ffffff;
-    opacity: 50%;
+
+#nextButton {
+    cursor: pointer;
+    background-color: #40BCCB;
+    color: #FFFFFF;
+    padding: 10px 30px;
+    border: none;
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    bottom: 40%
+    /* 예를 들어, post 컨테이너의 하단에 위치하도록 설정 */
 }
 
-.semiTitle1 {
-    font-size: 4rem;
-    color: #40BCCB;
-}
-
-.semiTitle2 {
-    font-size: 4rem;
-    color: #ffffff;
+#nextButton:hover {
+    background-color: #32767b;
+    /* 마우스 호버 시 배경색 변경 */
 }

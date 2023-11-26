@@ -1,88 +1,65 @@
-{% extends 'nav.html' %}
+{% extends 'background.html' %}
 {% load static %}
-{% block content %}
+{% block backgroundHeader %}
+<link rel="stylesheet" href="{% static 'css/activity.css' %}" />
+<script src="{% static 'js/activity.js' %}" defer></script>
+{% endblock %}
 
+{% block activity %}
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GNU 멋쟁이사자처럼</title>
-    <link rel="shortcut icon" href="{% static 'image/favicon.ico' %}" type="image/x-icon" />
-    <link rel="icon" href="{% static 'image/favicon.ico' %}" type="image/x-icon" />
-    <link rel="stylesheet" href="{% static 'css/activity.css' %}" />
-    <script src="{% static 'js/activity.js' %}" defer></script>
-    <script src="https://kit.fontawesome.com/214b8f17c4.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-    <div class="container">
-
-        <div class="firstPage">
-
-            <div class="text">
-                <div class="GNU">Gyeongsang National University</div>
-                <div class="likelion">LKELION</div>
-                <div class="title">RECORD ACTIVITY</div>
+<div class="optionTitle">
+    <div class="dropDownBar">
+        <i class="fa-solid fa-caret-down"></i>
+        <div class="dropDownBarTxt">
+            <div class="menu_wrap">
+                <ul class="dep1">
+                    <li>
+                        <span id="currentYear">11th</span>
+                        <ul class="dep2">
+                            <li>
+                                <div class="dep2Year" onclick="changeYear(this)">10th</div>
+                            </li>
+                            <li>
+                                <div class="dep2Year" onclick="changeYear(this)">11th</div>
+                            </li>
+                            <li>
+                                <div class="dep2Year" onclick="changeYear(this)">12th</div>
+                            </li>
+                            <li>
+                                <div class="dep2Year" onclick="changeYear(this)">13th</div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-
-            <div class="lion_img">
-                <img src="{% static 'image/lion.png' %}" />
-            </div>
-
-            <div>
-                <div class="firstPageSlideBar">
-                    <div class="firstPageSlideBarIcon">
-                        <i class="fa-solid fa-pen" id="penIcon"></i>
-                    </div>
-                    <div class="firstPageSlideBarTxt">
-                        지금까지의&nbsp
-                        <div class="firstPageSlideBarTxt1">멋쟁이사자 활동 </div>
-                        &nbsp모아보기
-                    </div>
-                </div>
-
-                <div class="downIcon">
-                    <i class="fa-solid fa-angles-down"></i>
-                </div>
-            </div>
-
+            <div class="dropDownBarTxt2">RECORD</div>
         </div>
+    </div>
+</div>
 
-
-        <div class="secondPage">
-            <div class="secondPageTitle">
-                <div class="year">2023</div>
-                <div class="semiTitle">
-                    <div class="semiTitle1"> -- th</div>
-                    <br>
-                    <div class="semiTitle2">RECORD</div>
+<div class="post">
+    <div class="post_container">
+        <div class="post-list">
+            {% for post in posts %}
+            <div class="post-item">
+                <div class="post_title">{{ post.title }}</div>
+                <!-- <p>{{ post.content }}</p> -->
+                <div class="post_img">
+                    {% if post.image %}
+                    <img src="{{ post.image.url }}" alt="{{ post.title }}">
                 </div>
+                {% endif %}
             </div>
+            {% endfor %}
 
-            <div class="page_move">
-                <button class="main1"> - </button>
-                <button class="main0"> - </button>
-                <button class="main-1"> - </button>
-            </div>
-
-            <div class="post_container">
-                <div class="post-list">
-                    {% for post in posts %}
-                    <div class="post-item">
-                        <h2>{{ post.title }}</h2>
-                        <!-- <p>{{ post.content }}</p> -->
-                        {% if post.image %}
-                        <img src="{{ post.image.url }}" alt="{{ post.title }}">
-                        {% endif %}
-                    </div>
-                    {% endfor %}
-
-                </div>
-            </div>
-
-            <div id="nextButton"> > </div>
         </div>
     </div>
 
-</body>
+    <div id="nextButton"> > </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+
 {% endblock %}
