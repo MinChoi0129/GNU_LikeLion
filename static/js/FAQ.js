@@ -3,7 +3,7 @@ const question = [
   "세션은 어떻게 진행되나요?",
   "세션을 통해 뭘 얻을 수 있나요?",
 ];
-console.log("faq입니다")
+console.log("faq입니다");
 const answer = [
   "네, 매주 세션 하나씩 진행됩니다.",
   "세션은 2시간 동안 진행됩니다.",
