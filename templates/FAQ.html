@@ -28,9 +28,10 @@
             id="search"
             name="search"
             autocomplete="off"
-            placeholder="검색어를 입력하시오."
+            placeholder="검색어를 입력해주세요"
+            onkeypress="if(event.keyCode==13){search();}"
           />
-          <div class="SearchBtn" id="SearchBtn" onclick="search()">검색</div>
+          <div id="SearchBtn" onclick="search()">검색</div>
         </div>
         <div id="faq-list"></div>
       </div>
