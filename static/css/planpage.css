@@ -48,6 +48,13 @@ body {
   overflow: hidden;
   position: absolute;
   font-size: 16px;
+  z-index: -99999;
+  display: block;
+}
+
+html {
+  overflow: hidden;
+  overflow-y: hidden;
 }
 
 main,
@@ -103,82 +110,92 @@ body {
   color: #ffffff;
   font-size: 50px;
   font-family: "Pretendard-Bold";
-  display: flex;
-  flex-direction: row;
 }
 
 /* rightSide */
-.April,
-.May,
-.June,
-.July {
+.Mon{
+  display: inline-block;
   display: flex;
   flex-direction: row;
+  position: absolute;
+  align-items: center;
 }
-.April {
-  transform: rotate(-20deg);
-  margin-top: -6rem;
-  margin-left: -2rem;
-}
-.May {
-  margin-top: 8.5rem;
-  margin-left: 1rem;
-}
-.June {
-  transform: rotate(12deg);
-  margin-top: 6rem;
-}
-.July {
-  transform: rotate(25deg);
-  margin-top: 6rem;
-  margin-left: -4rem;
-}
+
 .Month {
-  margin-left: 45rem;
-  margin-top: 5rem;
+  position: relative;
+  top: 23rem;
+  /* left: 45rem; */
+  /* margin-left: 45rem;
+  margin-top: -70rem; */
+  white-space: nowrap;
 }
 .monthNum {
-  font-size: 32px;
+  font-size: 2rem;
   font-family: "Pretendard-SemiBold";
   color: #ffffff;
+  margin-right: 1rem;
+  width: 2.125rem;
 }
 .monthText {
-  font-size: 25px;
+  font-size: 1.5rem;
   font-family: "Pretendard-SemiBold";
   color: #40bccb;
-  margin-left: 1rem;
-  margin-top: 2.3rem;
+  margin-right: 1rem;
+  width: 3.5rem;
 }
 .circle {
-  width: 20px;
-  height: 20px;
-  border-radius: 50px;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
   background-color: #ffffff;
   opacity: 80%;
-  margin-left: 3rem;
-  margin-top: 2.5rem;
-  /* flex-direction: column;
-  align-items: center; */
+  margin-right: 1rem;
 }
 .content {
   font-family: "Pretendard-Regular";
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #ffffff;
-  margin-left: 3rem;
-  margin-top: 2.3rem;
+  margin: 0;
+}
+.view{
+  font-family: "Pretendard-Regular";
+  font-size: 1rem;
+  color: #ffffff;
+}
+.contentView {
+  position: relative;
+  top: 0.6rem;
+}
+.view{
+  margin: 0;
+  margin-top: 0.7rem;
+  margin-left: 0.3rem;
+  cursor: pointer;
 }
 
-.mainLine {
-  width: 1px;
-  height: 700px;
-  background-color: #ffffff;
-  border-radius: 100%;
+
+
+
+.mainCircle {
+  position: absolute;
+  width: 78rem;
+  height: 80rem;
+  border-radius: 100rem;
+  border: solid white;
+  margin-left: -70rem;
+  margin-top: -10rem;
+  overflow: hidden;
 }
+
 
 .blurCircle {
-  width: 20px;
-  height: 20px;
-  border-radius: 50px;
-  color: #ffffff;
-  /* filter: blur(5px); */
+  width: 18rem;
+  height: 18rem;
+  background-color: #ffff;
+  border-radius: 50%;
+  position: fixed;
+  filter: blur(50px);
+  top: 17rem;
+  left: 50rem;
+  opacity: 50%;
 }

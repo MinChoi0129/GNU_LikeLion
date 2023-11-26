@@ -7,12 +7,8 @@ def main(request):
     return render(request, "main.html")
 
 
-def introduce(request):
-    return render(request, "introduce.html")
-
-
-def planPage(request):
-    return render(request, "planPage.html")
+def planpage(request):
+    return render(request, "planpage.html")
 
 
 def projectDetail(request):
@@ -48,13 +44,8 @@ def FAQ(request):
     return render(request, "FAQ.html")
 
 
-def projectDetail(request):
-    return render(request, "projectDetail.html")
-
-
-def FAQ(request):
-    return render(request, "FAQ.html")
-
-
 def background(request):
     return render(request, "background.html")
+
+def profile(request):
+    return render(request, "profile.html")
