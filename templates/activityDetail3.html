@@ -1,0 +1,56 @@
+{% extends 'background.html' %} 
+{% load static %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/activityDetail.css' %}" />
+    <script src="{% static 'js/activityDetail3.js' %}" defer></script>
+    
+    <title>Document</title>
+  </head>
+  <body>
+   
+    <div class="container">
+      <div class="title">
+        <div class="Line">
+          <div class="titleLine leftLine"></div>
+          <div class="titleCircle leftCircle"></div>
+        </div>
+        <div class="titleText">여름 MT</div>
+        <div class="Line">
+          <div class="titleCircle rightCircle"></div>
+          <div class="titleLine rightLine"></div>
+        </div>
+      </div>
+
+    <div class="detail">
+      <div class="etcimg">
+        <div class="imgbox1"><img src="{% static 'image/OT.png' %}" /></div>
+        <div class="imgbox2"><img src="{% static 'image/OT.png' %}"/></div>
+        <div class="imgbox3"><img src="{% static 'image/OT.png' %}"/></div>
+        <!-- <div class="imgbox4"><img src="{% static 'image/OT.png' %}"/></div> -->
+      </div>
+        <button class="leftarrow"><img src="{% static 'image/arrow3.png' %}" /></button>
+        <button class="rightarrow"><img src="{% static 'image/arrow2.png' %}" /></button>
+      
+    </div>
+    {% comment %}
+        <div class="etcimg">
+          <img class="img1" src="/static/image/OT.png" />
+          <img class="img2" src="/static/image/hackathon.png" />
+          <img class="img3" src="/static/image/OT.png" />
+          <!-- <img class="img4" src="/static/image/hackathon.png" /> -->
+        </div>
+    {% endcomment %}
+    
+    <div class="textbox">
+      본격적인 해커톤 전 아기사자들의 단합력을 기르기위해 <br>
+      7월 23일 - 24일, 1박 2일 간 여름 MT를 진행하였습니다 🍉 <br>
+      다양한 활동을 통해 11기 사자들 모두 즐거운 추억을 쌓을 수 있었답니다 🦁 </div>
+
+   
+  </body>
+</html>
+{% endblock %}
