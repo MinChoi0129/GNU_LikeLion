@@ -11,8 +11,8 @@ def introduce(request):
     return render(request, "introduce.html")
 
 
-def planPage(request):
-    return render(request, "planPage.html")
+def planpage(request):
+    return render(request, "planpage.html")
 
 
 def projectDetail(request):
