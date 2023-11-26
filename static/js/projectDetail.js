@@ -1,12 +1,47 @@
 document.addEventListener("DOMContentLoaded", function () {
   const imgList = [
-    "../static/image/exImg1.png",
-    "../static/image/exImg2.png",
-    "../static/image/exImg3.png",
-    "../static/image/exImg4.png",
-    "../static/image/exImg4.png",
-    "../static/image/exImg4.png",
+    // "{% static 'image/exImg1.png' %}",
+    // "{% static 'image/exImg2.png' %}",
+    // "{% static 'image/exImg3.png' %}",
+    // "{% static 'image/exImg3.png' %}",
+    // "{% static 'image/exImg4.png' %}",
+    // "{% static 'image/exImg2.png' %}",
+     "../static/image/exImg1.png",
+     "../static/image/exImg2.png",
+     "../static/image/exImg3.png",
+     "../static/image/exImg4.png",
+     "../static/image/exImg4.png",
+     "../static/image/exImg4.png",
   ];
+
+  const dtimgBox = document.querySelector('.dtimgBox');
+  const fisrtItem = document.createElement('div');
+  fisrtItem.classList.add('item');
+  fisrtItem.setAttribute('data-index',0)
+  dtimgBox.appendChild(fisrtItem);
+
+
+  imgList.forEach((imgSrc, index) => {
+    const item = document.createElement('div');
+    item.classList.add('item');
+    item.setAttribute('data-index', index+1); // 인덱스 + 1 할당(data-index의 0은 항상 비어있어야하기때문에)
+    
+    if (index !== 0) { // 첫 번째 이미지는 비어있는 div로 유지
+      const imgElement = document.createElement('img');
+      imgElement.src = imgSrc;
+      item.appendChild(imgElement);
+    }
+
+    dtimgBox.appendChild(item);
+  });
+
+  //마지막data-index에는 비어잇는거할당
+   const lastItem = document.createElement('div');
+   lastItem.classList.add('item');
+   lastItem.setAttribute('data-index',imgList.length+1)
+   dtimgBox.appendChild(lastItem);
+
+
   let index = 0;
   const lastImgNum = imgList.length;
   const items = document.querySelectorAll('.item');
@@ -61,12 +96,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Marker 업데이트 함수
+  // Slider설정
   function updateMarker(index) {
-    // 기존 marker 삭제
+    //슬라이더 초기화( 동적개수를 위해 )
     markerContainer.innerHTML = '';
-
-    // 동적으로 marker 추가
+    //동적 슬라이더 개수 설정 후 page에 삽입
     for (let i = 0; i < lastImgNum; i++) {
       const page = document.createElement('div');
       page.classList.add('page');
@@ -77,7 +111,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // 초기화 함수 호출
   showImage(index);
   updateMarker(index);
 });
