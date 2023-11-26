@@ -422,7 +422,7 @@
 .explanation,
 .explanation2 {
 	color: white;
-	margin-top: 4.5rem;
+	margin-top: 1rem;
 	text-align: center;
 	/* 텍스트 가운데 정렬 */
 }
@@ -432,15 +432,15 @@
 .account,
 .account2 {
 	font-family: "Pretendard-Light";
-	font-size: 2rem;
+	font-size: 1.3rem;
 }
 
 .name,
 .name2 {
 	font-family: "Pretendard-Black";
-	font-size: 5rem;
-	margin-top: 0.7rem;
-	margin-bottom: 0.7rem;
+	font-size: 3.5rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 .view,
@@ -452,11 +452,12 @@
 	/* 수직 가운데 정렬 */
 	justify-content: center;
 	/* 수평 가운데 정렬 추가 */
+	z-index: 1;
 }
 
 .more,
 .more2 {
-	height: 2.5rem;
+	height: 1.5rem;
 	margin-left: 0.5vw;
 }
 
