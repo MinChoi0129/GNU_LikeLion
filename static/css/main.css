@@ -160,7 +160,75 @@ a:hover {
   height: 100vh;
   font-family: "Pretendard";
   text-align: center;
-  padding-top: 10vh;
+  padding-top: 12vh;
+  background-color: brown;
+  width: 70vw;
+}
+
+.titleBox{
+  position: relative;
+  line-height: 200%;
+  color: white;
+  left: 22vw;
+  top: 15vh;
+  width: fit-content;
+}
+.title{
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.intro{
+  display: flex;
+  position: relative;
+  top: 20vh;
+  width: 100vw;
+  overflow: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.imgBox{
+  width: 60vw;
+  height: 50vh;
+  border-radius: 40px;
+}
+
+.slideBox{
+  text-align: center;
+  width: 70vw;
+  flex: none;
+  scroll-snap-align: center;
+}
+.slideBox div{
+  text-align: left;
+  line-height: 170%;
+  color: white;
+}
+.slideBox>div div{
+  text-align: left;
+  display: inline-block;
+  margin-left: 8vw;
+  margin-right: 0vw;
+  margin-top: 3vh;
+  margin-bottom: 20vh;
+}
+.session{
+  margin-left: 100vw;
+}
+.hackathon{
+  margin-right: 100vw;
+}
+
+.titleName{
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.more{
+  text-decoration: underline;
+}
+.more:hover{
+  cursor: pointer;
+  font-weight: bold;
 }
 
 /********************* Footer *********************/
@@ -170,6 +238,7 @@ footer {
   height: 20vh;
   text-align: center;
   color: black;
+  margin-top: 20vh;
   padding-top: 8rem;
   padding-bottom: 3rem;
 }
