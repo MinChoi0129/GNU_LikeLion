@@ -1,58 +1,139 @@
+{% extends 'background.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GNU 멋쟁이사자처럼</title>
-    <link
-      rel="shortcut icon"
-      href="{% static 'image/favicon.ico' %}"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="{% static 'image/favicon.ico' %}"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="{% static 'css/planPage.css' %}" />
-    <script src="{% static 'js/planPage.js' %}" defer></script>
-  </head>
-  <body>
+  {% block backgroundHeader %}
+  <link rel="stylesheet" href="{% static 'css/planpage.css' %}" />
+  <script type="module" src="{% static 'js/planpage.js' %}" defer></script>
+  {% endblock %}
+
+{% block planpage %}
+
     <div class="Wrap">
       <div class="leftSide">
         <div class="leftYear">2023</div>
         <div class="leftText">연간일정</div>
+        
       </div>
+      <div class="mainCircle"></div>
       <div class="rightSide">
         <div class="Month">
-          <div class="April">
+          <!-- 1월 -->
+          <div class="Mon">
+            <p class="monthNum">01</p>
+            <p class="monthText">Jan</p>
+            <p class="circle"></p>
+            <p class="content">세션준비(프론트엔드)</p>
+          </div>
+          <!-- 2월 -->
+          <div class="Mon">
+            <p class="monthNum">02</p>
+            <p class="monthText">Feb</p>
+            <p class="circle"></p>
+            <p class="content">세션준비(백엔드)</p>
+          </div>
+          <!-- 3월 -->
+          <div class="Mon">
+            <p class="monthNum">03</p>
+            <p class="monthText">Mar</p>
+            <p class="circle"></p>
+            <div class="contentView">
+              <p class="content">OT</p>
+              <p class="view" onclick="location.href='activityDetail1'">자세히보기</p>
+            </div>
+          </div>
+          <!-- 4월 -->
+          <div class="Mon">
             <p class="monthNum">04</p>
             <p class="monthText">Apr</p>
             <p class="circle"></p>
             <p class="content">세션활동(프론트엔드)</p>
           </div>
-          <div class="May">
+          
+          <!-- 5월 -->
+          <div class="Mon">
             <p class="monthNum">05</p>
             <p class="monthText">May</p>
             <p class="circle"></p>
             <p class="content">세션활동(백엔드)</p>
-            <p class="blurCircle"></p>
           </div>
-          <div class="June">
+          <!-- 6월 -->
+          <div class="Mon">
             <p class="monthNum">06</p>
             <p class="monthText">June</p>
             <p class="circle"></p>
-            <p class="content">아이디어톤</p>
+            <div class="contentView">
+              <p class="content">아이디어톤</p>
+              <p class="view" onclick="location.href='activityDetail2'">자세히보기</p>
+            </div>
           </div>
-          <div class="July">
+          <!-- 7월 -->
+          <div class="Mon">
             <p class="monthNum">07</p>
             <p class="monthText">July</p>
             <p class="circle"></p>
-            <p class="content">해커톤 준비</p>
+            <div class="contentView">
+              <p class="content">하계MT</p>
+              <p class="view" onclick="location.href='activityDetail3'">자세히보기</p>
+            </div>
           </div>
+          <!-- 8월 -->
+          <div class="Mon">
+            <p class="monthNum">08</p>
+            <p class="monthText">Aug</p>
+            <p class="circle"></p>
+            <div class="contentView">
+              <p class="content">중앙해커톤</p>
+              <p class="view" onclick="location.href='activityDetail4'">자세히보기</p>
+            </div>
+          </div>
+          <!-- 9월 -->
+          <div class="Mon">
+          <p class="monthNum">09</p>
+          <p class="monthText">Sep</p>
+          <p class="circle"></p>
+          <p class="content">카드뉴스 제작</p>
+          </div>
+          <!-- 10월 -->
+          <div class="Mon">
+            <p class="monthNum">10</p>
+            <p class="monthText">Oct</p>
+            <p class="circle"></p>
+            <p class="content">외주활동</p>
+          </div>
+          <!-- 11월 -->
+          <div class="Mon">
+            <p class="monthNum">11</p>
+            <p class="monthText">Nov</p>
+            <p class="circle"></p>
+            <p class="content">멋사 홈페이지 제작</p>
+          </div>
+          <!-- 12월 -->
+          <div class="Mon">
+            <p class="monthNum">12</p>
+            <p class="monthText">Dec</p>
+            <p class="circle"></p>
+            <p class="content">동계MT</p>
+          </div>
+          <div class="Mon">
+
+            <p class="monthNum"></p>
+            <p class="monthText"></p>
+            <div class="contentView">
+              <p class="content"></p>
+              <p class="view"></p>
+            </div>
+          </div>
+          <div class="Mon">
+            <p class="monthNum"></p>
+            <p class="monthText"></p>
+            <div class="contentView">
+              <p class="content"></p>
+              <p class="view"></p>
+            </div>
+          </div>
+          
         </div>
+        <div class="blurCircle"></div>
       </div>
     </div>
-  </body>
-</html>
+  
+{% endblock %}
