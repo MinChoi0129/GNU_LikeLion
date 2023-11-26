@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 
 <head>
   <meta charset="UTF-8" />
@@ -52,3 +53,56 @@
 </body>
 
 </html>
+=======
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GNU 멋쟁이사자처럼</title>
+    <link
+      rel="shortcut icon"
+      href="{% static 'image/favicon.ico' %}"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="{% static 'image/favicon.ico' %}"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="{% static 'css/background.css' %}" />
+    <script src="{% static 'js/background.js' %}" defer></script>
+    <script
+      src="https://kit.fontawesome.com/214b8f17c4.js"
+      crossorigin="anonymous"
+    ></script>
+    {% block backgroundHeader %} {% endblock %}
+  </head>
+  <body>
+    <div class="backGround"></div>
+
+    <div id="nav">
+      <div id="nav-title">
+        <img
+          id="logo"
+          src="{% static 'image/LikeLion_logo.svg' %}"
+          alt="로고없음"
+        />
+        <span id="first-title">멋쟁이사자처럼</span> &nbsp;
+        <span id="second-title">경상국립대</span>
+      </div>
+      <ul>
+        <li><a href="/">홈</a></li>
+        <li><a href="/project">프로젝트</a></li>
+        <li><a href="/activity">활동</a></li>
+        <li><a href="/planpage">일정</a></li>
+        <li><a href="/profile">프로필</a></li>
+        <li><a href="/FAQ">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      {% block content %} {% endblock %} {% block faq %} {% endblock %} {% block
+      project %} {% endblock %} {% block projectDetail %} {% endblock %}
+    </div>
+  </body>
+</html>
+>>>>>>> 110b4c76ebe439b1089d382798d5763707c5d1b1
