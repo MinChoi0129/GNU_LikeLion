@@ -152,7 +152,8 @@
 }
 
 /* 옵션 & 타이틀 */
-.optionTitle,.optionTitle2 {
+.optionTitle,
+.optionTitle2 {
 	position: relative;
 	display: flex;
 	height: 15%;
@@ -163,7 +164,8 @@
 	font-family: "Pretendard-ExtraBold";
 }
 
-.dropDownBar,.dropDownBar2 {
+.dropDownBar,
+.dropDownBar2 {
 	position: relative;
 	display: flex;
 	flex-direction: row;
@@ -171,7 +173,8 @@
 	/* Optional: Align items in the center vertically */
 }
 
-.dropDownBarTxt, .dropDownBarTxt2 {
+.dropDownBarTxt,
+.dropDownBarTxt2 {
 	position: relative;
 	display: flex;
 	flex-direction: row;
@@ -183,7 +186,8 @@
 
 /* 아이콘, 텍스트 등 각 요소에 마진 조절 */
 
-.menu_wrap .dep1, .menu_wrap2 .dep12 {
+.menu_wrap .dep1,
+.menu_wrap2 .dep12 {
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -195,7 +199,8 @@
 	font-size: 0;
 }
 
-.menu_wrap .dep1>li, .menu_wrap2 .dep12>li {
+.menu_wrap .dep1>li,
+.menu_wrap2 .dep12>li {
 	display: inline-block;
 
 	white-space: nowrap;
@@ -212,10 +217,11 @@
 
 }
 
-.menu_wrap .dep2,.menu_wrap2 .dep22 {
+.menu_wrap .dep2,
+.menu_wrap2 .dep22 {
 	position: absolute;
 	display: none;
-	z-index : 1;
+	z-index: 1;
 	text-align: center;
 
 	padding: 0;
@@ -229,7 +235,8 @@
 	background-color: #323232;
 }
 
-.menu_wrap .dep2 li,.menu_wrap2 .dep22 li {
+.menu_wrap .dep2 li,
+.menu_wrap2 .dep22 li {
 	display: block;
 
 	text-align: center;
@@ -239,41 +246,49 @@
 	font-size: 2rem;
 }
 
-.menu_wrap .dep1>li .dep2 li,.menu_wrap2 .dep12>li .dep22 li {
+.menu_wrap .dep1>li .dep2 li,
+.menu_wrap2 .dep12>li .dep22 li {
 	color: #ffffff;
 
 	/* 드롭다운 텍스트 색을 흰색으로 지정 */
 }
 
 
-.menu_wrap .dep2 .dep2Year, .menu_wrap2 .dep22 .dep2Year2  {
+.menu_wrap .dep2 .dep2Year,
+.menu_wrap2 .dep22 .dep2Year2 {
 	display: block;
 
 	padding: 1rem 2rem;
 }
 
-.menu_wrap .dep1>li:hover>.dep2,.menu_wrap2 .dep12>li:hover>.dep22 {
+.menu_wrap .dep1>li:hover>.dep2,
+.menu_wrap2 .dep12>li:hover>.dep22 {
 	display: block;
 }
 
-.menu_wrap .dep2>li:hover>.dep2Year, .menu_wrap2 .dep22>li:hover>.dep22Year{
+.menu_wrap .dep2>li:hover>.dep2Year,
+.menu_wrap2 .dep22>li:hover>.dep22Year {
 	width: fit-content;
 }
 
-.menu_wrap .dep1>li.show .dep2,.menu_wrap2 .dep12>li.show .dep22  {
+.menu_wrap .dep1>li.show .dep2,
+.menu_wrap2 .dep12>li.show .dep22 {
 	display: block;
 }
 
-.menu_wrap .dep1:hover .dep2,.menu_wrap2 .dep12:hover .dep22  {
+.menu_wrap .dep1:hover .dep2,
+.menu_wrap2 .dep12:hover .dep22 {
 	display: block;
 }
 
-.menu_wrap .dep1.show .dep2,.menu_wrap2 .dep12.show .dep22 {
+.menu_wrap .dep1.show .dep2,
+.menu_wrap2 .dep12.show .dep22 {
 	display: block;
 }
 
 /* 본문설정 */
-.dtBox,.dtBox2 {
+.dtBox,
+.dtBox2 {
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
@@ -283,7 +298,8 @@
 }
 
 /* dtLines = 타이틀 옆 왼쪽 전체div */
-.dtLines,.dtLines2 {
+.dtLines,
+.dtLines2 {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -292,7 +308,8 @@
 }
 
 /*dtLine = 하나의 라인 */
-.dtLine,.dtLine2 {
+.dtLine,
+.dtLine2 {
 	margin: 0px;
 	padding: 0px;
 	border-bottom: 0.0521vw solid white;
@@ -302,7 +319,8 @@
 }
 
 /*dtCircle = 하나의 동그라미 */
-.dtCircle,.dtCircle2 {
+.dtCircle,
+.dtCircle2 {
 	padding: 0px;
 	margin: 0px;
 	width: 0.5rem;
@@ -315,7 +333,8 @@
 }
 
 /* dtText = 프로젝트 타이틀 div */
-.dtText,.dtText2 {
+.dtText,
+.dtText2 {
 	font-family: "Pretendard-ExtraBold";
 	font-size: 3.5rem;
 	color: #ffffff;
@@ -326,7 +345,8 @@
 }
 
 /*               작품사진 BOX               */
-.cContainer,.cContainer2 {
+.cContainer,
+.cContainer2 {
 	display: flex;
 	width: 100vw;
 	height: 50vw;
@@ -334,12 +354,14 @@
 	margin: auto;
 }
 
-.dtimgBox,.dtimgBox2 {
+.dtimgBox,
+.dtimgBox2 {
 	display: flex;
 	transition: transform 5s ease-out;
 }
 
-.item,.item2 {
+.item,
+.item2 {
 	width: 33.33%;
 	box-sizing: border-box;
 	overflow: hidden;
@@ -350,14 +372,16 @@
 	transition: transform 0.5s ease;
 }
 
-.item img, .item2 img {
+.item img,
+.item2 img {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
 }
 
 /* 추가된 부분 */
-.dtimgBox,.dtimgBox2 {
+.dtimgBox,
+.dtimgBox2 {
 	transform: translateX(0);
 	display: flex;
 	flex-wrap: nowrap;
@@ -366,7 +390,8 @@
 
 
 /* 좌우버튼 설정 */
-#rightBtn, #rightBtn2 {
+#rightBtn,
+#rightBtn2 {
 	display: flex;
 	position: absolute;
 	z-index: 99999;
@@ -379,7 +404,8 @@
 	scale: 80%
 }
 
-#leftBtn,#leftBtn2 {
+#leftBtn,
+#leftBtn2 {
 	display: flex;
 	position: absolute;
 	z-index: 99999;

@@ -77,11 +77,11 @@ document.addEventListener("DOMContentLoaded", function () {
   showImage(index);
 });
 
-var currentYear = '11th'; // 초기 선택 학년
+var currentYear = "11th"; // 초기 선택 학년
 var currentIndex = 0; // 초기 이미지 인덱스
 
 var images = {
-  '10th': [
+  "10th": [
     "../static/image/hakathon1.png",
     "../static/image/hakathon2.png",
     "../static/image/hakathon4.png",
@@ -89,7 +89,7 @@ var images = {
     "../static/image/ideathon5.png",
     "../static/image/ideathon6.png",
   ],
-  '11th': [
+  "11th": [
     "../static/image/ideathon1.png",
     "../static/image/ideathon2.png",
     "../static/image/ideathon3.png",
@@ -97,7 +97,7 @@ var images = {
     "../static/image/ideathon2.png",
     "../static/image/ideathon3.png",
   ],
-  '12th': [
+  "12th": [
     "../static/image/hakathon1.png",
     "../static/image/hakathon2.png",
     "../static/image/hakathon4.png",
@@ -105,7 +105,7 @@ var images = {
     "../static/image/ideathon5.png",
     "../static/image/ideathon6.png",
   ],
-  '13th': [
+  "13th": [
     "../static/image/hakathon1.png",
     "../static/image/hakathon2.png",
     "../static/image/hakathon4.png",
@@ -116,7 +116,7 @@ var images = {
 };
 
 var imageDescriptions = {
-  '10th': [
+  "10th": [
     { account: "해커톤1", name: "해커톤1" },
     { account: "해커톤2", name: "해커톤2" },
     { account: "해커톤4", name: "해커톤4" },
@@ -124,7 +124,7 @@ var imageDescriptions = {
     { account: "아이디어톤5", name: "아이디어톤5" },
     { account: "아이디어톤6", name: "아이디어톤6" },
   ],
-  '11th': [
+  "11th": [
     { account: "더 나은 건강, 더 행복한 삶", name: "RE : BORN" },
     { account: "필요한 약을 클릭 한번으로", name: "PHAMPHAM" },
     { account: "도대체 가능한 날이 언제야", name: "이때 어때" },
@@ -132,7 +132,7 @@ var imageDescriptions = {
     { account: "필요한 약을 클릭 한번으로", name: "PHAMPHAM" },
     { account: "도대체 가능한 날이 언제야", name: "이때 어때" },
   ],
-  '12th': [
+  "12th": [
     { account: "해커톤1", name: "해커톤1" },
     { account: "해커톤2", name: "해커톤2" },
     { account: "해커톤4", name: "해커톤4" },
@@ -140,7 +140,7 @@ var imageDescriptions = {
     { account: "해커톤5", name: "해커톤5" },
     { account: "해커톤6", name: "해커톤6" },
   ],
-  '13th': [
+  "13th": [
     { account: "해커톤1", name: "해커톤1" },
     { account: "해커톤2", name: "해커톤2" },
     { account: "해커톤4", name: "해커톤4" },
@@ -156,12 +156,11 @@ function changeYear(year) {
   // Update the current year
   currentYear = year;
 
-
   // Update the displayed year in the dropdown
   document.getElementById("currentYear").innerText = year;
 
   // Update the images
-  var imgElements = document.querySelectorAll('.dtimgBox .item img');
+  var imgElements = document.querySelectorAll(".dtimgBox .item img");
   for (var i = 0; i < imgElements.length; i++) {
     imgElements[i].src = images[year][i];
   }
@@ -191,7 +190,7 @@ yearDropdown.addEventListener("change", function () {
   var selectedYear = yearDropdown.value;
 
   // Update the images
-  var imgElements = document.querySelectorAll('.dtimgBox .item img');
+  var imgElements = document.querySelectorAll(".dtimgBox .item img");
   for (var i = 0; i < imgElements.length; i++) {
     imgElements[i].src = images[selectedYear][i];
   }
@@ -206,7 +205,9 @@ yearDropdown.addEventListener("change", function () {
 // Event listeners for left and right buttons to change image and description
 document.getElementById("leftBtn").addEventListener("click", function () {
   // Decrease the current index (looping back to the last image if at the first image)
-  currentIndex = (currentIndex - 1 + images[currentYear].length) % images[currentYear].length;
+  currentIndex =
+    (currentIndex - 1 + images[currentYear].length) %
+    images[currentYear].length;
   changeDescription(currentIndex);
 });
 
@@ -218,10 +219,7 @@ document.getElementById("rightBtn").addEventListener("click", function () {
 
 changeDescription(currentIndex);
 
-
-
 /* 3페이지 js */
-
 
 /*지혜js */
 document.addEventListener("DOMContentLoaded", function () {
@@ -288,12 +286,11 @@ document.addEventListener("DOMContentLoaded", function () {
   showImage(index2);
 });
 
-
-var currentYear2 = '11th'; // 초기 선택 학년
+var currentYear2 = "11th"; // 초기 선택 학년
 var currentIndex2 = 0; // 초기 이미지 인덱스
 
 var images2 = {
-  '10th': [
+  "10th": [
     "../static/image/hakathon1.png",
     "../static/image/hakathon2.png",
     "../static/image/hakathon4.png",
@@ -301,7 +298,7 @@ var images2 = {
     "../static/image/ideathon5.png",
     "../static/image/ideathon6.png",
   ],
-  '11th': [
+  "11th": [
     "../static/image/hakathon3.png",
     "../static/image/hakathon4.png",
     "../static/image/hakathon5.png",
@@ -309,7 +306,7 @@ var images2 = {
     "../static/image/hakathon4.png",
     "../static/image/hakathon5.png",
   ],
-  '12th': [
+  "12th": [
     "../static/image/hakathon1.png",
     "../static/image/hakathon2.png",
     "../static/image/hakathon4.png",
@@ -317,7 +314,7 @@ var images2 = {
     "../static/image/ideathon5.png",
     "../static/image/ideathon6.png",
   ],
-  '13th': [
+  "13th": [
     "../static/image/hakathon1.png",
     "../static/image/hakathon2.png",
     "../static/image/hakathon4.png",
@@ -328,7 +325,7 @@ var images2 = {
 };
 
 var imageDescriptions2 = {
-  '10th': [
+  "10th": [
     { account: "누구든지 쉬운 디자인", name: "레터링 케이크 레시피" },
     { account: "경험을 사고 팔 수 있는", name: "당신의 경험" },
     { account: "해커톤4", name: "해커톤4" },
@@ -336,7 +333,7 @@ var imageDescriptions2 = {
     { account: "아이디어톤5", name: "아이디어톤5" },
     { account: "아이디어톤6", name: "아이디어톤6" },
   ],
-  '11th': [
+  "11th": [
     { account: "선생님을 위한 커뮤니티", name: "아낌없이 주는 나무" },
     { account: "수어 학습의 시작", name: "핸디" },
     { account: "휠체어와 함께 어디든지", name: "WHEEL WE GO" },
@@ -344,7 +341,7 @@ var imageDescriptions2 = {
     { account: "수어 학습의 시작", name: "핸디" },
     { account: "휠체어와 함께 어디든지", name: "WHEEL WE GO" },
   ],
-  '12th': [
+  "12th": [
     { account: "해커톤1", name: "해커톤1" },
     { account: "해커톤2", name: "해커톤2" },
     { account: "해커톤4", name: "해커톤4" },
@@ -352,7 +349,7 @@ var imageDescriptions2 = {
     { account: "해커톤5", name: "해커톤5" },
     { account: "해커톤6", name: "해커톤6" },
   ],
-  '13th': [
+  "13th": [
     { account: "해커톤1", name: "해커톤1" },
     { account: "해커톤2", name: "해커톤2" },
     { account: "해커톤4", name: "해커톤4" },
@@ -372,7 +369,7 @@ function changeYear2(year2) {
   document.getElementById("currentYear2").innerText = year2;
 
   // Update the images
-  var imgElements2 = document.querySelectorAll('.dtimgBox2 .item2 img');
+  var imgElements2 = document.querySelectorAll(".dtimgBox2 .item2 img");
   for (var i = 0; i < imgElements2.length; i++) {
     imgElements2[i].src = images2[year2][i];
   }
@@ -402,7 +399,7 @@ yearDropdown2.addEventListener("change", function () {
   var selectedYear2 = yearDropdown2.value;
 
   // Update the images
-  var imgElements2 = document.querySelectorAll('.dtimgBox2 .item2 img');
+  var imgElements2 = document.querySelectorAll(".dtimgBox2 .item2 img");
   for (var i = 0; i < imgElements2.length; i++) {
     imgElements2[i].src = images2[selectedYear2][i];
   }
@@ -417,7 +414,9 @@ yearDropdown2.addEventListener("change", function () {
 // Event listeners for left and right buttons to change image and description
 document.getElementById("leftBtn2").addEventListener("click", function () {
   // Decrease the current index (looping back to the last image if at the first image)
-  currentIndex2 = (currentIndex2 - 1 + images2[currentYear2].length) % images2[currentYear2].length;
+  currentIndex2 =
+    (currentIndex2 - 1 + images2[currentYear2].length) %
+    images2[currentYear2].length;
   changeDescription2(currentIndex2);
 });
 
