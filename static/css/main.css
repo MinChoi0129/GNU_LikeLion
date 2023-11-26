@@ -45,7 +45,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  /* overflow: hidden; */
+  scroll-behavior: smooth;
   position: absolute;
   font-size: 16px;
 }
@@ -84,4 +84,109 @@ a:active {
 }
 a:hover {
   cursor: pointer;
+}
+
+/******************** 광범위 이동 화살표 ********************/
+.arrow_btn {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+
+/********************* 섹션1 (Main) *********************/
+.likelion {
+  height: 100vh;
+  font-family: "Pretendard";
+  text-align: center;
+  padding-top: 25vh;
+  color: white;
+}
+
+.lionImg {
+  position: absolute;
+  right: 33%;
+  height: 40rem;
+  top: 5%;
+  z-index: -9989;
+}
+
+.likelion_eng {
+  color: rgb(255, 143, 0);
+  font-weight: bolder;
+  font-size: 6.75rem;
+}
+
+.likelion_kor {
+  font-weight: 400;
+  font-size: 6.75rem;
+}
+
+.gnu_kor {
+  font-weight: 300;
+  font-size: 4.375rem;
+  color: rgba(255, 255, 255, 0.54);
+}
+
+/********************* 섹션2 (Tech) *********************/
+.recruit {
+  height: 100vh;
+  font-family: "Pretendard";
+  text-align: center;
+  padding-top: 10vh;
+  /* background-color: rgb(38, 103, 62); */
+}
+
+.twelveth_likelion {
+  text-decoration: underline;
+  font-size: 3rem;
+  margin-top: 1rem;
+  color: white;
+}
+
+.baby_lion_orange {
+  font-weight: bold;
+  color: rgba(255, 143, 0, 1);
+  display: inline-block;
+  font-size: 3rem;
+}
+
+.baby_lion_white {
+  font-weight: bold;
+  font-size: 3rem;
+  display: inline-block;
+  color: white;
+}
+/********************* 섹션3 (Histroy) *********************/
+.histroy {
+  height: 100vh;
+  font-family: "Pretendard";
+  text-align: center;
+  padding-top: 10vh;
+}
+
+/********************* Footer *********************/
+footer {
+  background-image: url("../image/moremake.png");
+  width: 100vw;
+  height: 20vh;
+  text-align: center;
+  color: black;
+  padding-top: 8rem;
+  padding-bottom: 3rem;
+}
+
+.about {
+  font-family: "Pretendard";
+  font-size: 2rem;
+  padding: 1.56rem;
+}
+
+.about_link {
+  font-family: "Pretendard";
+  display: inline-block;
+  margin: 1rem;
+}
+
+.about_link img {
+  border-radius: 50%;
+  width: 2rem;
 }
