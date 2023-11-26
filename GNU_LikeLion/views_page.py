@@ -27,14 +27,14 @@ def mainTest(request):
     return render(request, "mainTest.html")
 
 
-def activity(request):
-    return render(request, "activity.html")
+# def activity(request):
+#     return render(request, "activity.html")
 
 def introduce(request):
     return render(request, "introduce.html")
 
 
-# activity record 게시글
+# activity 페이지 POSTS
 def post_list(request):
     posts = Post.objects.all()
     return render(request, "activity.html", {"posts": posts})
