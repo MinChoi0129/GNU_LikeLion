@@ -1,48 +1,79 @@
-.faq-title {
+#faq-scene {
   position: absolute;
-  margin-top: 12vh;
-  display: block;
-  font-family: "Pretendard-Bold";
-  font-size: 3rem;
-  color: white;
-  text-align: center;
+  justify-content: center;
   top: 0;
   left: 0;
-  right: 0;
+  margin-top: 5vh;
+  width: 100%;
+  height: 100%;
+}
+
+/*               프로젝트 이름 BOX               */
+/* dtBox전체 div  */
+.dtBox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100vw;
+  margin-top: 5vh;
+}
+
+/* dtLines = 타이틀 옆 왼쪽 전체div */
+.dtLines {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/*dtLine = 하나의 라인 */
+.dtLine {
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 0.0521vw solid white;
+  height: 5vh;
+  width: 40vw;
+  opacity: 50%;
+}
+
+/*dtCircle = 하나의 동그라미 */
+.dtCircle {
+  padding: 0px;
+  margin: 0px;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: white;
+  margin-top: 5vh;
+  opacity: 50%;
+}
+
+/* dtText = 프로젝트 타이틀 div */
+.dtText {
+  font-family: "Pretencontainer1dard-ExtraBold";
+  font-size: 3.5rem;
+  color: #ffffff;
+  margin-top: 2vh;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+#faq-description {
+  font-family: "Pretendard-regular";
+  font-size: 1.05rem;
+  color: #ffffff;
+  margin-top: 1vh;
+  padding: 0;
   text-align: center;
 }
 
-.faq-description {
-  position: absolute;
-  margin-top: 19vh;
-  display: block;
-  font-family: "Pretendard-regular";
-  font-size: 1rem;
-  color: white;
-  text-align: center;
-  top: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-.underbar {
-  position: absolute;
-  margin-top: 28vh;
-  display: block;
-  font-family: "Pretendard-regular";
-  font-size: 1rem;
-  color: white;
-  text-align: center;
-  width: 70%;
-  top: 0;
-  left: 15%;
-  right: 15%;
-  text-align: center;
-  border-bottom: 1px solid white;
-}
 input:focus {
   outline: none;
 }
+
 .faq {
   /* position: absolute; */
   display: block;
@@ -50,53 +81,62 @@ input:focus {
   font-size: 1rem;
   text-align: center;
   width: 100vw;
-  height: 120vh;
   top: 0;
-  margin-top: 32vh;
+  margin-top: 5vh;
   display: block;
   font-family: "Pretendard-regular";
-  font-size: 1rem;
-  background-color: white;
 }
 
 #container1 {
   display: flex;
 }
 
-.block {
+#block {
+  z-index: 1;
   flex: 1;
-  background-color: aliceblue;
+  background-color: None;
+  color: None;
 }
-.content {
+
+#content1 {
   display: block;
   flex: 4;
-  height: 100vh;
 }
+
 .search-content {
   display: flex;
   width: 30vw;
   margin: 0 auto;
-  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
-.search {
-  flex-grow: 5; /* 너비 비율 4:1 설정 */
+#search {
+  flex-grow: 7;
+  /* 너비 비율 4:1 설정 */
   height: 5vh;
+  padding-left: 1vw;
   border: 2px solid #24586e;
   font-family: "Pretendard-Regular";
+  border-radius: 1vw 0 0 1vw;
 }
 
-.SearchBtn {
-  flex-grow: 1; /* 너비 비율 4:1 설정 */
+#SearchBtn {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
   height: 5vh;
   border: 3px solid #24586e;
   background-color: #24586e;
   color: white;
   line-height: 300%;
+  border-radius: 0 1vw 1vw 0;
+  padding: 0 0.5vw 0 0;
+  align-items: center;
 }
 
 .crossbar {
   margin-top: 2vh;
+  margin-bottom: 0.5rem;
   display: block;
   font-family: "Pretendard-regular";
   font-size: 1rem;
@@ -107,24 +147,62 @@ input:focus {
   border-bottom: 2.5px solid #24586e;
 }
 
-.faq-list {
-  height: 100%;
+#faq-list {
+  overflow: auto;
+  border-radius: 2vw;
+  background-color: rgba(255, 255, 255, 1);
+  height: 60vh;
+  padding-top: 2vh;
   flex-direction: column;
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+body {
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .faq-content-title {
   text-align: left;
   font-family: "Pretendard-bold";
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   padding-left: 2vw;
   padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 
 .faq-content {
-  margin: 2vh;
+  margin: 1vh 2vw 1vh 2vw;
   padding: 2vh;
+  font-size: 1.2rem;
+  text-align: left;
   background-color: #afc3c524;
   height: fit-content;
   border-left: #d9d9d970 0.5vw solid;
   border-right: #d9d9d970 0.5vw solid;
+  animation: fadeInDown 1s forwards;
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+.triangle {
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  border-left: 0.6vw solid transparent;
+  border-right: 0.6vw solid transparent;
+  border-top: 1.5vh solid black; /* 원하는 배경색으로 변경하십시오. */
+  margin-left: 1vw;
+  rotate: 180deg;
 }

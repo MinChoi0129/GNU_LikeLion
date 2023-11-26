@@ -1,0 +1,185 @@
+/* 옵션 & 타이틀 */
+.optionTitle {
+    position: relative;
+    display: flex;
+    height: 4rem;
+    margin-top: 15vh;
+    margin-right: 55%;
+    color: #FFFFFF;
+    font-size: 2rem;
+    font-family: "Pretendard-ExtraBold";
+}
+
+.dropDownBar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Optional: Align items in the center vertically */
+}
+
+.dropDownBarTxt {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    /* 변경된 부분 */
+    align-items: center;
+    /* Optional: Align items in the center vertically */
+    margin-left: 5%;
+}
+
+/* 아이콘, 텍스트 등 각 요소에 마진 조절 */
+
+.menu_wrap .dep1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    margin-right: 2.5vw;
+
+    color: white;
+    font-size: 0;
+}
+
+.menu_wrap .dep1>li {
+    display: inline-block;
+
+    white-space: nowrap;
+    vertical-align: top;
+    text-align: center;
+
+    width: fit-content;
+    margin: 0.26vw;
+    border-bottom: 0.2rem solid white;
+
+    background-color: rgb(255, 255, 255, 0);
+    font-size: 3rem;
+    color: #40BCCB;
+
+}
+
+.menu_wrap .dep2 {
+    position: absolute;
+    display: none;
+
+    text-align: center;
+
+    padding: 0;
+    margin-top: 0.2rem;
+
+    max-width: fit-content;
+    max-height: 20vh;
+    width: fit-content;
+
+    overflow-y: auto;
+    background-color: #323232;
+}
+
+.menu_wrap .dep2 li {
+    display: block;
+
+    text-align: center;
+
+    width: 100%;
+
+    font-size: 2rem;
+}
+
+.menu_wrap .dep1>li .dep2 li {
+    color: #ffffff;
+    /* 드롭다운 텍스트 색을 흰색으로 지정 */
+}
+
+
+.menu_wrap .dep2 .dep2Year {
+    display: block;
+
+    padding: 1rem 2rem;
+}
+
+.menu_wrap .dep1>li:hover>.dep2 {
+    display: block;
+}
+
+.menu_wrap .dep2>li:hover>.dep2Year {
+    width: fit-content;
+}
+
+.post-list {
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    padding-left: 15rem;
+}
+
+.post-item {
+    flex: 0 0 calc(25% - 10px);
+    box-sizing: border-box;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    /* border은 나중에 삭제할 예정 */
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 15rem;
+    margin-bottom: 20px;
+    margin-right: 2rem;
+    margin-top: 2rem;
+}
+
+.post-item.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0);
+    /* 추가: 불투명도가 0이 되면 크기를 0으로 조정하여 감춤 */
+}
+
+.post-item-more {
+    flex: 0 0 calc(25% - 10px);
+    margin-right: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transform: scale(1);
+    /* 추가: 다시 표시될 때 크기를 원래대로 복원 */
+}
+
+.post-container {
+    position: absolute;
+    padding: 30rem;
+    padding-top: 20px;
+
+}
+
+.post_img {
+    padding: 10px;
+    width: 10rem;
+    height: auto;
+    border: #FFFFFF 1px;
+
+}
+
+.post_img img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+#nextButton {
+    cursor: pointer;
+    background-color: #40BCCB;
+    color: #FFFFFF;
+    padding: 10px 30px;
+    border: none;
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    bottom: 40%
+    /* 예를 들어, post 컨테이너의 하단에 위치하도록 설정 */
+}
+
+#nextButton:hover {
+    background-color: #32767b;
+    /* 마우스 호버 시 배경색 변경 */
+}

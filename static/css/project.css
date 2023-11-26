@@ -152,38 +152,45 @@
 }
 
 /* 옵션 & 타이틀 */
-.optionTitle {
+.optionTitle,
+.optionTitle2 {
 	position: relative;
 	display: flex;
-
 	height: 15%;
-
 	margin-top: 10vh;
 	margin-right: 55%;
-
 	color: #FFFFFF;
 	font-size: 4rem;
 	font-family: "Pretendard-ExtraBold";
 }
 
-.dropDownBar {
+.dropDownBar,
+.dropDownBar2 {
 	position: relative;
 	display: flex;
 	flex-direction: row;
+	align-items: center;
+	/* Optional: Align items in the center vertically */
 }
 
-.dropDownBarTxt {
+.dropDownBarTxt,
+.dropDownBarTxt2 {
 	position: relative;
 	display: flex;
-	flex-direction: column;
-
+	flex-direction: row;
+	/* 변경된 부분 */
+	align-items: center;
+	/* Optional: Align items in the center vertically */
 	margin-left: 5%;
 }
 
-.menu_wrap .dep1 {
+/* 아이콘, 텍스트 등 각 요소에 마진 조절 */
+
+.menu_wrap .dep1,
+.menu_wrap2 .dep12 {
 	position: relative;
 	display: flex;
-
+	align-items: center;
 	flex-grow: 1;
 
 	margin-right: 2.5vw;
@@ -192,7 +199,8 @@
 	font-size: 0;
 }
 
-.menu_wrap .dep1>li {
+.menu_wrap .dep1>li,
+.menu_wrap2 .dep12>li {
 	display: inline-block;
 
 	white-space: nowrap;
@@ -204,13 +212,16 @@
 	border-bottom: 0.2rem solid white;
 
 	background-color: rgb(255, 255, 255, 0);
-	font-size: 4rem;
+	font-size: 5rem;
+	color: #40BCCB;
+
 }
 
-.menu_wrap .dep2 {
+.menu_wrap .dep2,
+.menu_wrap2 .dep22 {
 	position: absolute;
 	display: none;
-
+	z-index: 1;
 	text-align: center;
 
 	padding: 0;
@@ -224,7 +235,8 @@
 	background-color: #323232;
 }
 
-.menu_wrap .dep2 li {
+.menu_wrap .dep2 li,
+.menu_wrap2 .dep22 li {
 	display: block;
 
 	text-align: center;
@@ -234,123 +246,177 @@
 	font-size: 2rem;
 }
 
-.menu_wrap .dep2 .dep2Year {
+.menu_wrap .dep1>li .dep2 li,
+.menu_wrap2 .dep12>li .dep22 li {
+	color: #ffffff;
+
+	/* 드롭다운 텍스트 색을 흰색으로 지정 */
+}
+
+
+.menu_wrap .dep2 .dep2Year,
+.menu_wrap2 .dep22 .dep2Year2 {
 	display: block;
 
 	padding: 1rem 2rem;
 }
 
-.menu_wrap .dep1>li:hover>.dep2 {
+.menu_wrap .dep1>li:hover>.dep2,
+.menu_wrap2 .dep12>li:hover>.dep22 {
 	display: block;
 }
 
-.menu_wrap .dep2>li:hover>.dep2Year {
+.menu_wrap .dep2>li:hover>.dep2Year,
+.menu_wrap2 .dep22>li:hover>.dep22Year {
 	width: fit-content;
 }
 
+.menu_wrap .dep1>li.show .dep2,
+.menu_wrap2 .dep12>li.show .dep22 {
+	display: block;
+}
+
+.menu_wrap .dep1:hover .dep2,
+.menu_wrap2 .dep12:hover .dep22 {
+	display: block;
+}
+
+.menu_wrap .dep1.show .dep2,
+.menu_wrap2 .dep12.show .dep22 {
+	display: block;
+}
+
 /* 본문설정 */
-.mainBox,
-.mainBox2 {
-	position: relative;
+.dtBox,
+.dtBox2 {
 	display: flex;
-
-	justify-content: center;
-
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
 	width: 100vw;
 	margin-top: 5vh;
 }
 
-/* 이미지설정 */
-.eximg,
-.eximg2 {
+/* dtLines = 타이틀 옆 왼쪽 전체div */
+.dtLines,
+.dtLines2 {
 	display: flex;
+	flex-direction: row;
 	align-items: center;
-	margin-right: 3rem;
-	margin-left: 3rem;
+	margin: 0;
+	padding: 0;
 }
 
-.eximg img,
-.eximg2 img {
+/*dtLine = 하나의 라인 */
+.dtLine,
+.dtLine2 {
+	margin: 0px;
+	padding: 0px;
+	border-bottom: 0.0521vw solid white;
+	height: 5vh;
+	width: 30vw;
+	opacity: 50%;
+}
+
+/*dtCircle = 하나의 동그라미 */
+.dtCircle,
+.dtCircle2 {
+	padding: 0px;
+	margin: 0px;
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: white;
+	margin-top: 5vh;
+	opacity: 50%;
+
+}
+
+/* dtText = 프로젝트 타이틀 div */
+.dtText,
+.dtText2 {
+	font-family: "Pretendard-ExtraBold";
+	font-size: 3.5rem;
+	color: #ffffff;
+	margin-top: 2vh;
+	padding: 0;
+	align-items: center;
+	justify-content: center;
+}
+
+/*               작품사진 BOX               */
+.cContainer,
+.cContainer2 {
+	display: flex;
+	width: 100vw;
+	height: 50vw;
+	overflow-x: hidden;
+	margin: auto;
+}
+
+.dtimgBox,
+.dtimgBox2 {
+	display: flex;
+	transition: transform 5s ease-out;
+}
+
+.item,
+.item2 {
+	width: 33.33%;
+	box-sizing: border-box;
+	overflow: hidden;
+	transition: transform 1s ease-out;
+	padding: 10px;
+	flex: 0 0 33.33%;
+	max-width: 33.33%;
+	transition: transform 0.5s ease;
+}
+
+.item img,
+.item2 img {
 	width: 100%;
 	height: 100%;
-	border-radius: 4rem;
-}
-
-.eximg>div,
-.eximg2>div {
-	margin: 0;
-}
-
-.currentImg,
-.currentImg2 {
-	position: relative;
-	width: 22.7vw;
-	height: 40vh;
-	/* height를 원하는 값으로 설정 */
-	z-index: 9999;
-}
-
-.preImg,
-.preImg2 {
-	width: 14.4375vw;
-	height: 28.85vh;
-	opacity: 50%;
-}
-
-.postImg,
-.postImg2 {
-	width: 14.4375vw;
-	height: 28.85vh;
-	opacity: 50%;
+	object-fit: contain;
 }
 
 /* 추가된 부분 */
-.eximg>div:not(:last-child) {
-	margin-right: 2rem;
-	/* 각 이미지 간격 조절 */
-}
-
-.eximg2>div:not(:last-child) {
-	margin-right: 2rem;
-	/* 각 이미지 간격 조절 */
-}
-
-.unactive {
-	display: none;
-}
-
-.noFirstViewImg {
-	width: 23.4375vw;
-	height: 41.56vh;
-
-	transform: translateX(11.4583vw);
-	opacity: 0;
-}
-
-.noLastViewImg {
-	width: 23.4375vw;
-	height: 41.56vh;
-
-	transform: translateX(-11.4583vw);
-	opacity: 0;
-}
-
-.Line {
+.dtimgBox,
+.dtimgBox2 {
+	transform: translateX(0);
 	display: flex;
+	flex-wrap: nowrap;
 }
+
+
 
 /* 좌우버튼 설정 */
-.moveBtn,
-.moveBtn2 {
-	position: absolute;
+#rightBtn,
+#rightBtn2 {
 	display: flex;
-	justify-content: space-between;
-	width: 30vw;
-	height: fit-content;
-	margin-top: 10.0833vw;
-	margin-left: -2rem;
-	color: white;
+	position: absolute;
 	z-index: 99999;
+	width: 100vw;
+	height: fit-content;
+	justify-content: space-between;
+	color: white;
+	top: 45vh;
+	left: 55%;
+	scale: 80%
+}
+
+#leftBtn,
+#leftBtn2 {
+	display: flex;
+	position: absolute;
+	z-index: 99999;
+	width: 100vw;
+	height: fit-content;
+	justify-content: space-between;
+	color: white;
+	top: 45vh;
+	scale: 80%;
+	left: 22.5%;
+
 }
 
 .explanation,
@@ -372,9 +438,9 @@
 .name,
 .name2 {
 	font-family: "Pretendard-Black";
-	font-size: 6rem;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+	font-size: 5rem;
+	margin-top: 0.7rem;
+	margin-bottom: 0.7rem;
 }
 
 .view,
@@ -409,7 +475,7 @@
 
 .lets {
 	position: absolute;
-	
+
 	top: 60%;
 	/* 부모 요소 중앙을 기준으로 50% 위로 이동 */
 	left: 50%;

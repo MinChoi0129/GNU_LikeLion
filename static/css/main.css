@@ -45,7 +45,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  /* overflow: hidden; */
+  scroll-behavior: smooth;
   position: absolute;
   font-size: 16px;
 }
@@ -84,4 +84,317 @@ a:active {
 }
 a:hover {
   cursor: pointer;
+}
+
+/******************** 광범위 이동 화살표 ********************/
+.arrow_btn {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+
+/********************* 섹션1 (Main) *********************/
+.likelion {
+  height: 100vh;
+  font-family: "Pretendard";
+  text-align: center;
+  padding-top: 25vh;
+  color: white;
+}
+
+.lionImg {
+  position: absolute;
+  right: 33%;
+  height: 40rem;
+  top: 5%;
+  z-index: -9989;
+}
+
+.likelion_eng {
+  color: rgb(255, 143, 0);
+  font-weight: bolder;
+  font-size: 6.75rem;
+}
+
+.likelion_kor {
+  font-weight: 400;
+  font-size: 6.75rem;
+}
+
+.gnu_kor {
+  font-weight: 300;
+  font-size: 4.375rem;
+  color: rgba(255, 255, 255, 0.54);
+}
+
+/********************* 섹션2 (Course) *********************/
+.recruit {
+  height: 100vh;
+  font-family: "Pretendard";
+  text-align: center;
+  padding-top: 10vh;
+  /* background-color: rgb(38, 103, 62); */
+}
+
+.twelveth_likelion {
+  text-decoration: underline;
+  font-size: 3rem;
+  margin-top: 1rem;
+  color: white;
+}
+
+.baby_lion_orange {
+  font-weight: bold;
+  color: rgba(255, 143, 0, 1);
+  display: inline-block;
+  font-size: 3rem;
+}
+
+.baby_lion_white {
+  font-weight: bold;
+  font-size: 3rem;
+  display: inline-block;
+  color: white;
+}
+
+.recruit_left {
+  color: white;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 10vh;
+}
+
+.recruit_right {
+  color: white;
+  display: inline-block;
+  margin-left: 10rem;
+  margin-top: 5rem;
+}
+
+.recruit_right > img {
+  border-radius: 30px;
+}
+
+.course_img:hover {
+  filter: blur(5px);
+}
+
+.recruit_course {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5rem;
+}
+.recruit_course_kor {
+  margin-right: 1.5rem;
+  font-size: 5rem;
+  font-weight: bolder;
+  margin-bottom: 2rem;
+}
+.recruit_course_eng {
+  margin-right: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.course_explain {
+  letter-spacing: 110%;
+  line-height: 40px;
+  margin-top: 1.5rem;
+  text-align: left;
+  font-size: 1.3rem;
+}
+
+.slider {
+  margin-top: -3rem;
+}
+
+.slider_item {
+  margin: 0.5rem;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: rgb(135, 135, 135);
+  border-radius: 100%;
+}
+
+.slider_active {
+  background-color: rgb(64, 188, 203);
+  border-radius: 100%;
+}
+
+/********************* 섹션2.5 (Session) *********************/
+.calendar {
+  height: 100vh;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.calendar_left {
+  color: white;
+  display: inline-block;
+  margin-top: 8rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
+  margin-bottom: 3rem;
+  padding-left: 0;
+}
+.calendar_right {
+  color: white;
+  display: inline-block;
+  margin-top: 8rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
+  margin-bottom: 3rem;
+}
+
+.calendar_session {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5rem;
+  text-align: left;
+}
+.calendar_every {
+  font-size: 5rem;
+  font-weight: bolder;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.calendar_tue_thu {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.calendar_dinner {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.calendar_small_text {
+  text-align: right;
+}
+
+/********************* 섹션3 (Histroy) *********************/
+.histroy {
+  height: 100vh;
+  font-family: "Pretendard";
+  text-align: center;
+  padding-top: 12vh;
+  background-color: brown;
+  width: 70vw;
+}
+
+.titleBox {
+  position: relative;
+  line-height: 200%;
+  color: white;
+  left: 22vw;
+  top: 15vh;
+  width: fit-content;
+}
+.title {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.intro {
+  display: flex;
+  position: relative;
+  top: 20vh;
+  width: 100vw;
+  overflow: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.imgBox {
+  width: 60vw;
+  height: 50vh;
+  border-radius: 40px;
+}
+
+.slideBox {
+  text-align: center;
+  width: 70vw;
+  flex: none;
+  scroll-snap-align: center;
+}
+.slideBox div {
+  text-align: left;
+  line-height: 170%;
+  color: white;
+}
+.slideBox > div div {
+  text-align: left;
+  display: inline-block;
+  margin-left: 8vw;
+  margin-right: 0vw;
+  margin-top: 3vh;
+  margin-bottom: 20vh;
+}
+.session {
+  margin-left: 100vw;
+}
+.hackathon {
+  margin-right: 100vw;
+}
+
+.titleName {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.more {
+  text-decoration: underline;
+}
+.more:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.go_write_resume {
+  color: white;
+
+  position: relative;
+  text-align: center;
+}
+
+.go_write_resume div {
+  position: absolute;
+  width: 16rem;
+  height: 5rem;
+  background: #24586e;
+  border-radius: 60px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/********************* Footer *********************/
+footer {
+  background-image: url("../image/footer_image.svg");
+  width: 100vw;
+  height: 20vh;
+  text-align: center;
+  color: black;
+  margin-top: 20vh;
+  padding-top: 8rem;
+  padding-bottom: 3rem;
+}
+
+.about {
+  font-family: "Pretendard";
+  font-size: 2rem;
+  padding: 1.56rem;
+}
+
+.about_link {
+  font-family: "Pretendard";
+  display: inline-block;
+  margin: 1rem;
+}
+
+.about_link img {
+  border-radius: 50%;
+  width: 2rem;
 }

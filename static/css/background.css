@@ -134,13 +134,16 @@ canvas {
     font-family: "Pretendard-Bold";
     position: fixed;
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: space-around;
     align-items: center;
     z-index: 150;
     border-bottom: #ffffff 1px solid;
 }
 
+#nav:hover {
+    cursor: pointer;
+}
 #nav ul {
     list-style-type: none;
     margin: 0;
@@ -161,22 +164,22 @@ canvas {
     z-index: 150;
 }
 
-.nav-title {
+#nav-title {
     display: flex;
     align-items: center;
     font-size: large;
 }
 
-.nav-title #logo {
+#nav-title #logo {
     width: 60px;
     height: 60px;
 }
 
-.nav-title #first-title {
+#nav-title #first-title {
     color: #ffffff;
 }
 
-.nav-title #second-title {
+#nav-title #second-title {
     color: #40bccb;
 }
 
