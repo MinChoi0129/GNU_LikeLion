@@ -115,3 +115,5 @@ window.addEventListener("scroll", function () {
     document.getElementById("nav").style.backgroundColor = "";
   }
 });
+
+window.addEventListener("resize", function () {});

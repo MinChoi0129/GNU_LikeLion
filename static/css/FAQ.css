@@ -48,7 +48,6 @@
   background-color: white;
   margin-top: 5vh;
   opacity: 50%;
-
 }
 
 /* dtText = 프로젝트 타이틀 div */
@@ -86,7 +85,7 @@ input:focus {
   margin-top: 5vh;
   display: block;
   font-family: "Pretendard-regular";
- }
+}
 
 #container1 {
   display: flex;
@@ -122,15 +121,17 @@ input:focus {
 }
 
 #SearchBtn {
+  display: flex;
+  justify-content: center;
   flex-grow: 1;
-  /* 너비 비율 4:1 설정 */
   height: 5vh;
   border: 3px solid #24586e;
   background-color: #24586e;
   color: white;
   line-height: 300%;
   border-radius: 0 1vw 1vw 0;
-  padding-right: 0.5vw;
+  padding: 0 0.5vw 0 0;
+  align-items: center;
 }
 
 .crossbar {
@@ -156,13 +157,13 @@ input:focus {
   -ms-overflow-style: none; /* 인터넷 익스플로러 */
   scrollbar-width: none; /* 파이어폭스 */
 }
-body{
+body {
   -ms-overflow-style: none;
-  }
-  
- ::-webkit-scrollbar {
-   display: none;
- }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
 
 .faq-content-title {
   text-align: left;
@@ -193,7 +194,6 @@ body{
     opacity: 1;
     transform: translateZ(0);
   }
-
 }
 
 .triangle {
