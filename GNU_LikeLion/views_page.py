@@ -7,6 +7,10 @@ def main(request):
     return render(request, "main.html")
 
 
+def introduce(request):
+    return render(request, "introduce.html")
+
+
 def planPage(request):
     return render(request, "planPage.html")
 
@@ -23,11 +27,14 @@ def mainTest(request):
     return render(request, "mainTest.html")
 
 
-def activity(request):
-    return render(request, "activity.html")
+# def activity(request):
+#     return render(request, "activity.html")
+
+def introduce(request):
+    return render(request, "introduce.html")
 
 
-# activity record 게시글
+# activity 페이지 POSTS
 def post_list(request):
     posts = Post.objects.all()
     return render(request, "activity.html", {"posts": posts})
@@ -41,13 +48,8 @@ def FAQ(request):
     return render(request, "FAQ.html")
 
 
-def projectDetail(request):
-    return render(request, "projectDetail.html")
-
-
-def FAQ(request):
-    return render(request, "FAQ.html")
-
-
 def background(request):
     return render(request, "background.html")
+
+def profile(request):
+    return render(request, "profile.html")

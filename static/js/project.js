@@ -11,297 +11,419 @@ function downPage() {
   });
 }
 // -------------------------------------- 2페이지 moveBtn 관련 --------------------------------------
-// DOMContentLoaded 이벤트가 발생하면 실행되는 함수
+
+/*지혜js */
 document.addEventListener("DOMContentLoaded", function () {
-  // 이미지 리스트 정의
-  const imageList = {
-    10: ["../static/image/ideathon6.png", "../static/image/ideathon5.png"],
-    11: [
-      "../static/image/ideathon4.png",
-      "../static/image/ideathon5.png",
-      "../static/image/ideathon6.png",
-    ],
-  };
+  const imgList = [
+    "../static/image/exImg1.png",
+    "../static/image/exImg2.png",
+    "../static/image/exImg3.png",
+    "../static/image/exImg4.png",
+    "../static/image/exImg4.png",
+    "../static/image/exImg4.png",
+  ];
+  let index = 0;
+  const lastImgNum = imgList.length;
+  const items = document.querySelectorAll(".item");
 
-  const descriptionLists = {
-    10: [
-      { account: "예시", name: "예시" },
-      { account: "예시", name: "예시" },
-    ],
-    11: [
-      { account: "더 나은 건강, 더 행복한 삶", name: "RE : BORN" },
-      { account: "필요한 약을 클릭 한번으로", name: "PHAMPHAM" },
-      { account: "도대체 가능한 날이 언제야", name: "이때 어때" },
-    ],
-  };
+  // 좌측버튼 클릭시 changeImg 함수 사용
+  document.getElementById("leftBtn").addEventListener("click", function () {
+    index = (index - 1 + lastImgNum) % lastImgNum;
+    showImage(index);
+  });
 
-  // 초기 이미지 상태 설정
-  let currentIndex = 0;
-  let selectedYear = "11"; // 초기 선택된 년도
+  // 우측버튼 클릭시 changeImg 함수 사용
+  document.getElementById("rightBtn").addEventListener("click", function () {
+    index = (index + 1) % lastImgNum;
+    showImage(index);
+  });
 
-  // 이미지 컨테이너와 슬라이더 컨테이너 가져오기
-  const imageContainers = document.querySelectorAll(".secondPage .eximg img");
-  const accountElement = document.querySelector(".secondPage .account");
-  const nameElement = document.querySelector(".secondPage .name");
-  const currentYearElement = document.getElementById("currentYear"); // 현재 년도 엘리먼트
+  // 초기화 함수
+  function showImage(index) {
+    const dtimgBox = document.querySelector(".dtimgBox");
+    const itemWidth = document.querySelector(".item").offsetWidth;
+    const newPosition = -itemWidth * index;
+    dtimgBox.style.transition = "transform 0.5s ease";
+    dtimgBox.style.transform = `translateX(${newPosition}px)`;
 
-  // 드롭다운 클릭 시 년도 변경 함수
-  function changeYear(element) {
-    selectedYear = element.textContent.replace(/\D+/g, "");
-    currentYearElement.textContent = selectedYear + "th";
-    currentIndex = 0; // Reset the index
-    updateImageState();
-  }
-
-  // 10th, 11th 버튼 클릭 이벤트
-  const yearButtons2 = document.querySelectorAll(".dep2Year");
-  yearButtons2.forEach(function (button) {
-    button.addEventListener("click", function () {
-      changeYear(button);
-      updateImageState();
+    items.forEach((item) => {
+      let dataIndex = parseInt(item.getAttribute("data-index"));
+      if (dataIndex === index) {
+        item.style.opacity = 0.55;
+        item.style.transform = "scale(0.65) translateX(20vw)";
+        item.style.zIndex = "-999";
+      } else if (dataIndex === index + 1) {
+        item.style.opacity = 1;
+        item.style.transform = "scale(0.9)";
+        item.style.zIndex = "999";
+      } else if (dataIndex === index + 2) {
+        item.style.opacity = 0.55;
+        item.style.transform = "scale(0.65) translateX(-20vw)";
+        item.style.zIndex = "-999";
+      } else if (dataIndex < index - 1) {
+        item.style.display = 0;
+        item.style.transform = "scale(0.65) translateX(-20vw)";
+      } else if (dataIndex > index + 2) {
+        item.style.opacity = 0;
+        item.style.transform = "scale(0.65) translateX(20vw)";
+      } else {
+        item.style.opacity = 0;
+        item.style.transform = "scale(0.65)";
+      }
     });
-  });
-
-  // 초기 상태 설정
-  updateImageState();
-
-  // 이미지 상태 업데이트 함수
-  function updateImageState() {
-    // 가운데 이미지 업데이트
-    const currentImageList = imageList[selectedYear];
-    const currentDescriptionList = descriptionLists[selectedYear];
-
-    imageContainers[1].src = currentImageList[currentIndex];
-    imageContainers[1].classList.remove("noFirstViewImg");
-    imageContainers[1].classList.remove("noLastViewImg");
-
-    // 이전, 다음 이미지의 인덱스 계산
-    const prevIndex =
-      (currentIndex - 1 + currentImageList.length) % currentImageList.length;
-    const nextIndex = (currentIndex + 1) % currentImageList.length;
-
-    // 양 옆 이미지 업데이트
-    imageContainers[0].src = currentImageList[prevIndex];
-    imageContainers[2].src = currentImageList[nextIndex];
-
-    // 첫 번째 이미지일 때 클래스 추가
-    if (currentIndex === 0) {
-      imageContainers[0].classList.add("noFirstViewImg");
-    } else {
-      imageContainers[0].classList.remove("noFirstViewImg");
-    }
-
-    // 마지막 이미지일 때 클래스 추가
-    if (currentIndex === currentImageList.length - 1) {
-      imageContainers[2].classList.add("noLastViewImg");
-    } else {
-      imageContainers[2].classList.remove("noLastViewImg");
-    }
-    // 설명 엘리먼트 업데이트
-    accountElement.textContent = currentDescriptionList[currentIndex].account;
-    nameElement.textContent = currentDescriptionList[currentIndex].name;
-
-    // 선택된 년도 업데이트
-    currentYearElement.textContent = selectedYear + "th";
   }
 
-  // .moveBtn2 내부에서 오른쪽 버튼 클릭 이벤트
-  const moveBtn = document.querySelector(".moveBtn");
-
-  // 오른쪽 버튼 클릭 이벤트
-  const rightButton = moveBtn.querySelector(".fa-circle-chevron-right");
-  rightButton.addEventListener("click", function () {
-    currentIndex = (currentIndex + 1) % imageList[selectedYear].length;
-    updateImageState();
-  });
-
-  // 왼쪽 버튼 클릭 이벤트
-  const leftButton = moveBtn.querySelector(".fa-circle-chevron-left");
-  leftButton.addEventListener("click", function () {
-    currentIndex =
-      (currentIndex - 1 + imageList[selectedYear].length) %
-      imageList[selectedYear].length;
-    updateImageState();
-  });
+  // 초기화 함수 호출
+  showImage(index);
 });
 
-// -------------------------------------- 3페이지 moveBtn 관련 --------------------------------------
-document.addEventListener("DOMContentLoaded", function () {
-  const imageLists2 = {
-    10: ["../static/image/hakathon1.png", "../static/image/hakathon2.png"],
-    11: [
-      "../static/image/hakathon3.png",
-      "../static/image/hakathon4.png",
-      "../static/image/hakathon5.png",
-    ],
-  };
+var currentYear = "11th"; // 초기 선택 학년
+var currentIndex = 0; // 초기 이미지 인덱스
 
-  const descriptionLists2 = {
-    10: [
-      { account2: "누구나 손 쉽게 디자인", name2: "레터링 케이크 레시피" },
-      { account2: "Dream Sketch", name2: "당신의 경험" },
-    ],
-    11: [
-      { account2: "교사들을 위한 커뮤니티", name2: "아낌없이 주는 나무" },
-      { account2: "수어 학습의 시작", name2: "핸디" },
-      { account2: "우리와 함께 나만의 모빌리티", name2: "WHEEL WE GO" },
-    ],
-  };
+var images = {
+  "10th": [
+    "../static/image/hakathon1.png",
+    "../static/image/hakathon2.png",
+    "../static/image/hakathon4.png",
+    "../static/image/hakathon5.png",
+    "../static/image/ideathon5.png",
+    "../static/image/ideathon6.png",
+  ],
+  "11th": [
+    "../static/image/ideathon1.png",
+    "../static/image/ideathon2.png",
+    "../static/image/ideathon3.png",
+    "../static/image/ideathon1.png",
+    "../static/image/ideathon2.png",
+    "../static/image/ideathon3.png",
+  ],
+  "12th": [
+    "../static/image/hakathon1.png",
+    "../static/image/hakathon2.png",
+    "../static/image/hakathon4.png",
+    "../static/image/hakathon5.png",
+    "../static/image/ideathon5.png",
+    "../static/image/ideathon6.png",
+  ],
+  "13th": [
+    "../static/image/hakathon1.png",
+    "../static/image/hakathon2.png",
+    "../static/image/hakathon4.png",
+    "../static/image/hakathon5.png",
+    "../static/image/ideathon5.png",
+    "../static/image/ideathon6.png",
+  ],
+};
 
-  // 초기 이미지 상태 설정
-  let currentIndex2 = 0;
-  let selectedYear2 = "11"; // 초기 선택된 년도
+var imageDescriptions = {
+  "10th": [
+    { account: "해커톤1", name: "해커톤1" },
+    { account: "해커톤2", name: "해커톤2" },
+    { account: "해커톤4", name: "해커톤4" },
+    { account: "해커톤5", name: "해커톤5" },
+    { account: "아이디어톤5", name: "아이디어톤5" },
+    { account: "아이디어톤6", name: "아이디어톤6" },
+  ],
+  "11th": [
+    { account: "더 나은 건강, 더 행복한 삶", name: "RE : BORN" },
+    { account: "필요한 약을 클릭 한번으로", name: "PHAMPHAM" },
+    { account: "도대체 가능한 날이 언제야", name: "이때 어때" },
+    { account: "더 나은 건강, 더 행복한 삶", name: "RE : BORN" },
+    { account: "필요한 약을 클릭 한번으로", name: "PHAMPHAM" },
+    { account: "도대체 가능한 날이 언제야", name: "이때 어때" },
+  ],
+  "12th": [
+    { account: "해커톤1", name: "해커톤1" },
+    { account: "해커톤2", name: "해커톤2" },
+    { account: "해커톤4", name: "해커톤4" },
+    { account: "해커톤5", name: "해커톤5" },
+    { account: "해커톤5", name: "해커톤5" },
+    { account: "해커톤6", name: "해커톤6" },
+  ],
+  "13th": [
+    { account: "해커톤1", name: "해커톤1" },
+    { account: "해커톤2", name: "해커톤2" },
+    { account: "해커톤4", name: "해커톤4" },
+    { account: "해커톤5", name: "해커톤5" },
+    { account: "해커톤5", name: "해커톤5" },
+    { account: "해커톤6", name: "해커톤6" },
+  ],
+};
 
-  // DOM 요소 가져오기
-  const imageContainers2 = document.querySelectorAll(".thirdPage .eximg2 img");
-  const accountElement2 = document.querySelector(".thirdPage .account2");
-  const nameElement2 = document.querySelector(".thirdPage .name2");
-  const currentYearElement2 = document.getElementById("currentYear2"); // 현재 년도 엘리먼트
+var staticURL = "/static/image/more.png"; // 정적 파일의 실제 경로로 수정
 
-  // 드롭다운 클릭 시 년도 변경 함수
-  function changeYear(element) {
-    selectedYear2 = element.textContent.replace(/\D+/g, "");
-    currentYearElement2.textContent = selectedYear2 + "th";
-    currentIndex2 = 0; // Reset the index
-    updateImageState();
+function changeYear(year) {
+  // Update the current year
+  currentYear = year;
+
+  // Update the displayed year in the dropdown
+  document.getElementById("currentYear").innerText = year;
+
+  // Update the images
+  var imgElements = document.querySelectorAll(".dtimgBox .item img");
+  for (var i = 0; i < imgElements.length; i++) {
+    imgElements[i].src = images[year][i];
   }
 
-  // 10th, 11th 버튼 클릭 이벤트
-  const yearButtons = document.querySelectorAll(".dep2Year");
-  yearButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      changeYear(button);
-      updateImageState();
-    });
-  });
-  // 초기 상태 설정
-  updateImageState();
-
-  // 이미지 상태 업데이트 함수
-  function updateImageState() {
-    // 가운데 이미지 업데이트
-    const currentImageList2 = imageLists2[selectedYear2];
-    const currentDescriptionList2 = descriptionLists2[selectedYear2];
-
-    imageContainers2[1].src = currentImageList2[currentIndex2];
-    imageContainers2[1].classList.remove("noFirstViewImg");
-    imageContainers2[1].classList.remove("noLastViewImg");
-
-    // 이전, 다음 이미지의 인덱스 계산
-    const prevIndex2 =
-      (currentIndex2 - 1 + currentImageList2.length) % currentImageList2.length;
-    const nextIndex2 = (currentIndex2 + 1) % currentImageList2.length;
-
-    // 양 옆 이미지 업데이트
-    imageContainers2[0].src = currentImageList2[prevIndex2];
-    imageContainers2[2].src = currentImageList2[nextIndex2];
-
-    // 첫 번째 이미지일 때 클래스 추가
-    if (currentIndex2 === 0) {
-      imageContainers2[0].classList.add("noFirstViewImg");
-    } else {
-      imageContainers2[0].classList.remove("noFirstViewImg");
-    }
-
-    // 마지막 이미지일 때 클래스 추가
-    if (currentIndex2 === currentImageList2.length - 1) {
-      imageContainers2[2].classList.add("noLastViewImg");
-    } else {
-      imageContainers2[2].classList.remove("noLastViewImg");
-    }
-
-    // 설명 엘리먼트 업데이트
-    accountElement2.textContent =
-      currentDescriptionList2[currentIndex2].account2;
-    nameElement2.textContent = currentDescriptionList2[currentIndex2].name2;
-    currentYearElement2.textContent = selectedYear2 + "th";
-  }
-
-  // .moveBtn2 내부에서 오른쪽 버튼 클릭 이벤트
-  const moveBtn2 = document.querySelector(".moveBtn2");
-
-  // 오른쪽 버튼 클릭 이벤트
-  const rightButton = moveBtn2.querySelector(".fa-circle-chevron-right");
-  rightButton.addEventListener("click", function () {
-    currentIndex2 = (currentIndex2 + 1) % imageLists2[selectedYear2].length;
-    updateImageState();
-  });
-
-  // 왼쪽 버튼 클릭 이벤트
-  const leftButton = moveBtn2.querySelector(".fa-circle-chevron-left");
-  leftButton.addEventListener("click", function () {
-    currentIndex2 =
-      (currentIndex2 - 1 + imageLists2[selectedYear2].length) %
-      imageLists2[selectedYear2].length;
-    updateImageState();
-  });
-});
-
-//한번에 100vh씩 내려감
-// 휠 이벤트 리스너 등록
-window.addEventListener("wheel", function (event) {
-  // deltaY 값이 음수이면 위로 스크롤, 양수이면 아래로 스크롤
-  if (event.deltaY < 0) {
-    upPage();
-  } else {
-    downPage();
-  }
-});
-
-// downPage 함수 정의
-function downPage() {
-  // 현재 스크롤 위치 계산
-  const currentScroll = window.scrollY || document.documentElement.scrollTop;
-
-  // 다음 위치 계산 (현재 위치에서 100vh만큼 이동)
-  const destination = currentScroll + window.innerHeight;
-
-  // 부드러운 스크롤
-  window.scrollTo({
-    top: destination,
-    behavior: "smooth",
-  });
+  // Update the description
+  changeDescription(currentIndex);
 }
 
-// upPage 함수 정의
-function upPage() {
-  // 현재 스크롤 위치 계산
-  const currentScroll = window.scrollY || document.documentElement.scrollTop;
+// Function to change the description based on the selected image index
+function changeDescription(index) {
+  var descriptionElement = document.querySelector(".explanation .account");
+  var currentDescription = imageDescriptions[currentYear][index];
 
-  // 다음 위치 계산 (현재 위치에서 100vh만큼 이동)
-  const destination = currentScroll - window.innerHeight;
+  descriptionElement.innerHTML = `
+      <div class="account">${currentDescription.account}
+          <div class="name">${currentDescription.name}</div>
+          <div class="view">VIEW MORE 
+                <img class="more" src="${staticURL}" />
+          </div>    
+      </div>`;
+}
+// Event listener for year dropdown changes
+var yearDropdown = document.getElementById("currentYear");
 
-  // 부드러운 스크롤
-  window.scrollTo({
-    top: destination,
-    behavior: "smooth",
+yearDropdown.addEventListener("change", function () {
+  // Get the selected year from the dropdown
+  var selectedYear = yearDropdown.value;
+
+  // Update the images
+  var imgElements = document.querySelectorAll(".dtimgBox .item img");
+  for (var i = 0; i < imgElements.length; i++) {
+    imgElements[i].src = images[selectedYear][i];
+  }
+
+  // Reset currentIndex to 0
+  currentIndex = 0;
+
+  // Update the description for the first image
+  changeDescription(currentIndex);
+});
+
+// Event listeners for left and right buttons to change image and description
+document.getElementById("leftBtn").addEventListener("click", function () {
+  // Decrease the current index (looping back to the last image if at the first image)
+  currentIndex =
+    (currentIndex - 1 + images[currentYear].length) %
+    images[currentYear].length;
+  changeDescription(currentIndex);
+});
+
+document.getElementById("rightBtn").addEventListener("click", function () {
+  // Increase the current index (looping back to the first image if at the last image)
+  currentIndex = (currentIndex + 1) % images[currentYear].length;
+  changeDescription(currentIndex);
+});
+
+changeDescription(currentIndex);
+
+/* 3페이지 js */
+
+/*지혜js */
+document.addEventListener("DOMContentLoaded", function () {
+  const imgList2 = [
+    "../static/image/exImg1.png",
+    "../static/image/exImg2.png",
+    "../static/image/exImg3.png",
+    "../static/image/exImg4.png",
+    "../static/image/exImg4.png",
+    "../static/image/exImg4.png",
+  ];
+  let index2 = 0;
+  const lastImgNum2 = imgList2.length;
+  const items2 = document.querySelectorAll(".item2");
+
+  // 좌측버튼 클릭시 changeImg 함수 사용
+  document.getElementById("leftBtn2").addEventListener("click", function () {
+    index2 = (index2 - 1 + lastImgNum2) % lastImgNum2;
+    showImage(index2);
   });
+
+  // 우측버튼 클릭시 changeImg 함수 사용
+  document.getElementById("rightBtn2").addEventListener("click", function () {
+    index2 = (index2 + 1) % lastImgNum2;
+    showImage(index2);
+  });
+
+  // 초기화 함수
+  function showImage(index2) {
+    const dtimgBox2 = document.querySelector(".dtimgBox2");
+    const itemWidth2 = document.querySelector(".item2").offsetWidth;
+    const newPosition2 = -itemWidth2 * index2;
+    dtimgBox2.style.transition = "transform 0.5s ease";
+    dtimgBox2.style.transform = `translateX(${newPosition2}px)`;
+
+    items2.forEach((item2) => {
+      let dataIndex = parseInt(item2.getAttribute("data-index"));
+      if (dataIndex === index2) {
+        item2.style.opacity = 0.55;
+        item2.style.transform = "scale(0.65) translateX(20vw)";
+        item2.style.zIndex = "-999";
+      } else if (dataIndex === index2 + 1) {
+        item2.style.opacity = 1;
+        item2.style.transform = "scale(0.9)";
+        item2.style.zIndex = "999";
+      } else if (dataIndex === index2 + 2) {
+        item2.style.opacity = 0.55;
+        item2.style.transform = "scale(0.65) translateX(-20vw)";
+        item2.style.zIndex = "-999";
+      } else if (dataIndex < index2 - 1) {
+        item2.style.display = 0;
+        item2.style.transform = "scale(0.65) translateX(-20vw)";
+      } else if (dataIndex > index2 + 2) {
+        item2.style.opacity = 0;
+        item2.style.transform = "scale(0.65) translateX(20vw)";
+      } else {
+        item2.style.opacity = 0;
+        item2.style.transform = "scale(0.65)";
+      }
+    });
+  }
+
+  // 초기화 함수 호출
+  showImage(index2);
+});
+
+var currentYear2 = "11th"; // 초기 선택 학년
+var currentIndex2 = 0; // 초기 이미지 인덱스
+
+var images2 = {
+  "10th": [
+    "../static/image/hakathon1.png",
+    "../static/image/hakathon2.png",
+    "../static/image/hakathon4.png",
+    "../static/image/hakathon5.png",
+    "../static/image/ideathon5.png",
+    "../static/image/ideathon6.png",
+  ],
+  "11th": [
+    "../static/image/hakathon3.png",
+    "../static/image/hakathon4.png",
+    "../static/image/hakathon5.png",
+    "../static/image/hakathon3.png",
+    "../static/image/hakathon4.png",
+    "../static/image/hakathon5.png",
+  ],
+  "12th": [
+    "../static/image/hakathon1.png",
+    "../static/image/hakathon2.png",
+    "../static/image/hakathon4.png",
+    "../static/image/hakathon5.png",
+    "../static/image/ideathon5.png",
+    "../static/image/ideathon6.png",
+  ],
+  "13th": [
+    "../static/image/hakathon1.png",
+    "../static/image/hakathon2.png",
+    "../static/image/hakathon4.png",
+    "../static/image/hakathon5.png",
+    "../static/image/ideathon5.png",
+    "../static/image/ideathon6.png",
+  ],
+};
+
+var imageDescriptions2 = {
+  "10th": [
+    { account: "누구든지 쉬운 디자인", name: "레터링 케이크 레시피" },
+    { account: "경험을 사고 팔 수 있는", name: "당신의 경험" },
+    { account: "해커톤4", name: "해커톤4" },
+    { account: "해커톤5", name: "해커톤5" },
+    { account: "아이디어톤5", name: "아이디어톤5" },
+    { account: "아이디어톤6", name: "아이디어톤6" },
+  ],
+  "11th": [
+    { account: "선생님을 위한 커뮤니티", name: "아낌없이 주는 나무" },
+    { account: "수어 학습의 시작", name: "핸디" },
+    { account: "휠체어와 함께 어디든지", name: "WHEEL WE GO" },
+    { account: "선생님을 위한 커뮤니티", name: "아낌없이 주는 나무" },
+    { account: "수어 학습의 시작", name: "핸디" },
+    { account: "휠체어와 함께 어디든지", name: "WHEEL WE GO" },
+  ],
+  "12th": [
+    { account: "해커톤1", name: "해커톤1" },
+    { account: "해커톤2", name: "해커톤2" },
+    { account: "해커톤4", name: "해커톤4" },
+    { account: "해커톤5", name: "해커톤5" },
+    { account: "해커톤5", name: "해커톤5" },
+    { account: "해커톤6", name: "해커톤6" },
+  ],
+  "13th": [
+    { account: "해커톤1", name: "해커톤1" },
+    { account: "해커톤2", name: "해커톤2" },
+    { account: "해커톤4", name: "해커톤4" },
+    { account: "해커톤5", name: "해커톤5" },
+    { account: "해커톤5", name: "해커톤5" },
+    { account: "해커톤6", name: "해커톤6" },
+  ],
+};
+
+var staticURL2 = "/static/image/more.png"; // 정적 파일의 실제 경로로 수정
+
+function changeYear2(year2) {
+  // Update the current year
+  currentYear2 = year2;
+
+  // Update the displayed year in the dropdown
+  document.getElementById("currentYear2").innerText = year2;
+
+  // Update the images
+  var imgElements2 = document.querySelectorAll(".dtimgBox2 .item2 img");
+  for (var i = 0; i < imgElements2.length; i++) {
+    imgElements2[i].src = images2[year2][i];
+  }
+
+  // Update the description
+  changeDescription2(currentIndex2);
 }
 
-// 드롭다운 상태를 저장할 변수
-let isDropDownOpen = false;
+// Function to change the description based on the selected image index
+function changeDescription2(index2) {
+  var descriptionElement2 = document.querySelector(".explanation2 .account2");
+  var currentDescription2 = imageDescriptions2[currentYear2][index2];
 
-// 클릭 이벤트 리스너 등록
-document.querySelector(".dropDownBar").addEventListener("click", function () {
-  // 드롭다운 상태 업데이트
-  isDropDownOpen = !isDropDownOpen;
+  descriptionElement2.innerHTML = `
+      <div class="account2">${currentDescription2.account}
+          <div class="name2">${currentDescription2.name}</div>
+          <div class="view2">VIEW MORE 
+                <img class="more2" src="${staticURL2}" />
+          </div>    
+      </div>`;
+}
+// Event listener for year dropdown changes
+var yearDropdown2 = document.getElementById("currentYear2");
 
-  // 드롭다운 메뉴 보이기 또는 숨기기
-  document.querySelector(".dep2").style.display = isDropDownOpen
-    ? "block"
-    : "none";
-});
+yearDropdown2.addEventListener("change", function () {
+  // Get the selected year from the dropdown
+  var selectedYear2 = yearDropdown2.value;
 
-// 문서 클릭 이벤트 리스너 등록
-document.addEventListener("click", function (event) {
-  // 클릭된 요소가 드롭다운 바나 드롭다운 메뉴 안에 있는지 확인
-  const isClickedInsideDropDown =
-    document.querySelector(".dropDownBar").contains(event.target) ||
-    document.querySelector(".dep2").contains(event.target);
-
-  // 클릭된 요소가 드롭다운 바나 드롭다운 메뉴 바깥에 있고, 드롭다운이 열려있다면 드롭다운 닫기
-  if (!isClickedInsideDropDown && isDropDownOpen) {
-    isDropDownOpen = false;
-    document.querySelector(".dep2").style.display = "none";
+  // Update the images
+  var imgElements2 = document.querySelectorAll(".dtimgBox2 .item2 img");
+  for (var i = 0; i < imgElements2.length; i++) {
+    imgElements2[i].src = images2[selectedYear2][i];
   }
+
+  // Reset currentIndex to 0
+  currentIndex2 = 0;
+
+  // Update the description for the first image
+  changeDescription2(currentIndex2);
 });
+
+// Event listeners for left and right buttons to change image and description
+document.getElementById("leftBtn2").addEventListener("click", function () {
+  // Decrease the current index (looping back to the last image if at the first image)
+  currentIndex2 =
+    (currentIndex2 - 1 + images2[currentYear2].length) %
+    images2[currentYear2].length;
+  changeDescription2(currentIndex2);
+});
+
+document.getElementById("rightBtn2").addEventListener("click", function () {
+  // Increase the current index (looping back to the first image if at the last image)
+  currentIndex2 = (currentIndex2 + 1) % images2[currentYear2].length;
+  changeDescription2(currentIndex2);
+});
+
+changeDescription2(currentIndex2);

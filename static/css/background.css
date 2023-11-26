@@ -125,7 +125,7 @@ canvas {
     left: 0;
 
     width: 100vw;
-
+    
     background-color: rgba(0, 0, 0, 0);
     box-shadow: inset 0 0 250px 20px #24586e;
 }
@@ -134,13 +134,16 @@ canvas {
     font-family: "Pretendard-Bold";
     position: fixed;
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: space-around;
     align-items: center;
     z-index: 150;
     border-bottom: #ffffff 1px solid;
 }
 
+#nav:hover {
+    cursor: pointer;
+}
 #nav ul {
     list-style-type: none;
     margin: 0;
@@ -161,22 +164,22 @@ canvas {
     z-index: 150;
 }
 
-.nav-title {
+#nav-title {
     display: flex;
     align-items: center;
     font-size: large;
 }
 
-.nav-title #logo {
+#nav-title #logo {
     width: 60px;
     height: 60px;
 }
 
-.nav-title #first-title {
+#nav-title #first-title {
     color: #ffffff;
 }
 
-.nav-title #second-title {
+#nav-title #second-title {
     color: #40bccb;
 }
 
