@@ -131,6 +131,7 @@
 .downIcon {
 	position: relative;
 	font-size: 4rem;
+	z-index: 9991;
 }
 
 
@@ -150,6 +151,13 @@
 	width: 100vw;
 	height: 100vh;
 }
+#page2 {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+}
 
 /* 옵션 & 타이틀 */
 .optionTitle,
@@ -157,7 +165,8 @@
 	position: relative;
 	display: flex;
 	height: 15%;
-	margin-top: 10vh;
+	margin-left: 10vw;
+	margin-top: 2vh;
 	margin-right: 55%;
 	color: #FFFFFF;
 	font-size: 4rem;
@@ -349,9 +358,9 @@
 .cContainer2 {
 	display: flex;
 	width: 100vw;
-	height: 50vw;
+	height: 55vh;
 	overflow-x: hidden;
-	margin: auto;
+	margin: 3vh 0;
 }
 
 .dtimgBox,
@@ -443,6 +452,16 @@
 	margin-bottom: 1.5rem;
 }
 
+/* .viewProjectDetail{
+	position: relative;
+	display: flex;
+
+	align-items: center;
+	justify-items: center;	
+	
+	z-index: 9992;
+} */
+
 .view,
 .view2 {
 	font-family: "Pretendard-Medium";
@@ -464,14 +483,19 @@
 /* -------------------------------------- 4페이지 -------------------------------------- */
 
 .fourthPage {
-	margin-top: 40vh;
-}
-
-.bottom {
 	position: relative;
 
 	text-align: center;
-	/* 텍스트 가운데 정렬 */
+
+	width: 100vw;
+	height: 20vh;
+
+	margin-top: 20vh;
+	padding-top: 8rem;
+	padding-bottom: 3rem;
+
+	background-image: url("../image/footer_image.svg");
+	/* background-color: rgba(255, 255, 255, 0.5); */
 }
 
 .lets {
@@ -484,17 +508,18 @@
 	transform: translate(-50%, -50%);
 	/* 요소의 중심을 중앙으로 이동 */
 
-	font-size: 4rem;
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 3.7rem;
 	font-family: "Pretendard-Bold";
 }
 
 .click {
 	position: absolute;
 
-	width: 6%;
+	width: 3%;
 	top: 65%;
 	/* 부모 요소 중앙을 기준으로 50% 위로 이동 */
-	left: 51%;
+	left: 51.5%;
 	/* 부모 요소 중앙을 기준으로 50% 왼쪽으로 이동 */
 	margin-left: 12rem;
 	/* 추가적인 스타일을 필요에 따라 여기에 추가하세요. */
