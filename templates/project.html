@@ -1,222 +1,195 @@
 {% extends 'background.html' %} {% load static %} {% block backgroundHeader %}
 <link rel="stylesheet" href="{% static 'css/project.css' %}" />
 <script src="{% static 'js/project.js' %}" defer></script>
-{% endblock %} {% block project %}
+{% endblock %} 
+{% block project %}
 
-<!-- ************************************ 1페이지 ************************************  -->
-<div class="firstPage">
-  <img class="lionImg" src="{% static 'image/lion.png' %}" />
-  <div class="fistPageContent">
-    <div class="fistPageText1">IDEATHON</div>
-    <div class="fistPageText2">AND</div>
-    <div class="fistPageText1">HACKATHON</div>
-    <div class="fistPageText3">PROJECT</div>
-    <div class="fistPageText4"></div>
-    <div class="firstPageSlideBar">
-      <div class="firstPageSlideBarIcon">
-        <i class="fa-solid fa-pen" id="penIcon"></i>
-      </div>
-      <div class="firstPageSlideBarTxt">
-        지금까지의&nbsp
-        <div class="firstPageSlideBarTxt1">멋쟁이사자 작품</div>
-        &nbsp모아보기
-      </div>
-    </div>
-    <div class="fistPageBlank"></div>
-    <div class="downIcon" onclick="downPage()">
-      <i class="fa-solid fa-angles-down"></i>
-    </div>
-  </div>
-</div>
+	<!-- ************************************ 1페이지 ************************************  -->
+	<div class="firstPage">
+		<img class="lionImg" src="{% static 'image/lion.png' %}" />
+		<div class="fistPageContent">
+			<div class="fistPageText1">IDEATHON</div>
+			<div class="fistPageText2">AND</div>
+			<div class="fistPageText1">HACKATHON</div>
+			<div class="fistPageText3">PROJECT</div>
+			<div class="fistPageText4"></div>
+			<div class="firstPageSlideBar">
+				<div class="firstPageSlideBarIcon">
+					<i class="fa-solid fa-pen" id="penIcon"></i>
+				</div>
+				<div class="firstPageSlideBarTxt">
+					지금까지의&nbsp
+					<div class="firstPageSlideBarTxt1">멋쟁이사자 작품</div>
+					&nbsp모아보기
+				</div>
+			</div>
+			<div class="fistPageBlank"></div>
+			<a href="#page2">
+				<div class="downIcon" onclick="downPage()">
+					<i class="fa-solid fa-angles-down"></i>
+				</div>
+			</a>
+		</div>
+	</div>
 
-<!-- ************************************ 2페이지 ************************************  -->
-<div class="secondPage">
-  <div class="optionTitle">
-    <div class="dropDownBar">
-      <i class="fa-solid fa-caret-down"></i>
-      <div class="dropDownBarTxt">
-        <div class="menu_wrap">
-          <ul class="dep1">
-            <li>
-              <span id="currentYear">11th</span>
-              <ul class="dep2">
-                <li>
-                  <div class="dep2Year" onclick="changeYear('10th')">10th</div>
-                </li>
-                <li>
-                  <div class="dep2Year" onclick="changeYear('11th')">11th</div>
-                </li>
-                <li>
-                  <div class="dep2Year" onclick="changeYear('12th')">12th</div>
-                </li>
-                <li>
-                  <div class="dep2Year" onclick="changeYear('13th')">13th</div>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="dropDownBarTxt2">IDEATHON</div>
-      </div>
-    </div>
-  </div>
+	<!-- ************************************ 2페이지 ************************************  -->
+	<div class="secondPage">
+		<a name="page2" id="page2">
+			<div class="optionTitle">
+				<div class="dropDownBar">
+					<i class="fa-solid fa-caret-down"></i>
+					<div class="dropDownBarTxt">
+						<div class="menu_wrap">
+							<ul class="dep1">
+								<li>
+									<span id="currentYear">11th</span>
+									<ul class="dep2">
+										<li>
+											<div class="dep2Year" onclick="changeYear('10th')">10th</div>
+										</li>
+										<li>
+											<div class="dep2Year" onclick="changeYear('11th')">11th</div>
+										</li>
+										<li>
+											<div class="dep2Year" onclick="changeYear('12th')">12th</div>
+										</li>
+										<li>
+											<div class="dep2Year" onclick="changeYear('13th')">13th</div>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="dropDownBarTxt2">IDEATHON</div>
+					</div>
+				</div>
+			</div>
 
-  <!--                       사진 Box                                  -->
-  <div class="cContainer">
-    <div class="dtimgBox">
-      <div class="item" data-index="0"></div>
-      <div class="item" data-index="1">
-        <img src="{% static 'image/ideathon1.png' %}" />
-      </div>
-      <div class="item" data-index="2">
-        <img src="{% static 'image/ideathon2.png' %}" />
-      </div>
-      <div class="item" data-index="3">
-        <img src="{% static 'image/ideathon3.png' %}" />
-      </div>
-      <div class="item" data-index="4">
-        <img src="{% static 'image/ideathon1.png' %}" />
-      </div>
-      <div class="item" data-index="5">
-        <img src="{% static 'image/ideathon2.png' %}" />
-      </div>
-      <div class="item" data-index="6">
-        <img src="{% static 'image/ideathon3.png' %}" />
-      </div>
+			<!--                       사진 Box                                  -->
+			<div class="cContainer">
+				<div class="dtimgBox">
+					<div class="item" data-index="0"></div>
+					<div class="item" data-index="1">
+						<img src="{% static 'image/ideathon1.png' %}" />
+					</div>
+					<div class="item" data-index="2">
+						<img src="{% static 'image/ideathon2.png' %}" />
+					</div>
+					<div class="item" data-index="3">
+						<img src="{% static 'image/ideathon3.png' %}" />
+					</div>
+					<div class="item" data-index="4">
+						<img src="{% static 'image/ideathon1.png' %}" />
+					</div>
+					<div class="item" data-index="5">
+						<img src="{% static 'image/ideathon2.png' %}" />
+					</div>
+					<div class="item" data-index="6">
+						<img src="{% static 'image/ideathon3.png' %}" />
+					</div>
 
-      <div class="item" data-index="7"></div>
-    </div>
-  </div>
+					<div class="item" data-index="7"></div>
+				</div>
+			</div>
 
-  <!--                       페이지 넘기기 버튼 Box                           -->
-  <div class="moveBtn">
-    <i
-      id="leftBtn"
-      class="fa-solid fa-circle-chevron-left fa-3x"
-      style="color: #ffffff"
-    ></i>
-    <i
-      id="rightBtn"
-      class="fa-solid fa-circle-chevron-right fa-3x"
-      style="color: #ffffff"
-    ></i>
-  </div>
+			<!--                       페이지 넘기기 버튼 Box                           -->
+			<div class="moveBtn">
+				<i id="leftBtn" class="fa-solid fa-circle-chevron-left fa-3x" style="color: #ffffff"></i>
+				<i id="rightBtn" class="fa-solid fa-circle-chevron-right fa-3x" style="color: #ffffff"></i>
+			</div>
 
-  <div class="explanation">
-    <div class="account">
-      휠체어와 함께 개선하는 세상
-      <div class="name">WHEELWEGO</div>
-      <div class="view">
-        VIEW MORE
-        <img class="more" src="{% static 'image/more.png' %}" />
-      </div>
-    </div>
-  </div>
-</div>
-<!-- ************************************ 3페이지 ************************************  -->
+			<div class="explanation">
+				<div class="account">
+					휠체어와 함께 개선하는 세상
+					<div class="name">WHEELWEGO</div>
+					<a href="/projectDetail">
+						<div class="view">
+							VIEW MORE
+							<img class="more" src="{% static 'image/more.png' %}" />	
+						</div>
+					</a>
+				</div>
+			</div>
+		</a>
+	</div>
+	<!-- ************************************ 3페이지 ************************************  -->
+	<div class="thirdPage">
+		<div class="optionTitle2">
+			<div class="dropDownBar2">
+				<i class="fa-solid fa-caret-down"></i>
+				<div class="dropDownBarTxt2">
+					<div class="menu_wrap2">
+						<ul class="dep12">
+							<li>
+								<span id="currentYear2">11th</span>
+								<ul class="dep22">
+									<li>
+										<div class="dep2Year2" onclick="changeYear2('10th')">10th</div>
+									</li>
+									<li>
+										<div class="dep2Year2" onclick="changeYear2('11th')">11th</div>
+									</li>
+									<li>
+										<div class="dep2Year2" onclick="changeYear2('12th')">12th</div>
+									</li>
+									<li>
+										<div class="dep2Year2" onclick="changeYear2('13th')">13th</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="dropDownBarTxt22">HAKATHON</div>
+				</div>
+			</div>
+		</div>
 
-<div class="thirdPage">
-  <div class="optionTitle2">
-    <div class="dropDownBar2">
-      <i class="fa-solid fa-caret-down"></i>
-      <div class="dropDownBarTxt2">
-        <div class="menu_wrap2">
-          <ul class="dep12">
-            <li>
-              <span id="currentYear2">11th</span>
-              <ul class="dep22">
-                <li>
-                  <div class="dep2Year2" onclick="changeYear2('10th')">
-                    10th
-                  </div>
-                </li>
-                <li>
-                  <div class="dep2Year2" onclick="changeYear2('11th')">
-                    11th
-                  </div>
-                </li>
-                <li>
-                  <div class="dep2Year2" onclick="changeYear2('12th')">
-                    12th
-                  </div>
-                </li>
-                <li>
-                  <div class="dep2Year2" onclick="changeYear2('13th')">
-                    13th
-                  </div>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="dropDownBarTxt22">HAKATHON</div>
-      </div>
-    </div>
-  </div>
+		<!--                       사진 Box                                  -->
+		<div class="cContainer2">
+			<div class="dtimgBox2">
+				<div class="item2" data-index="0"></div>
+				<div class="item2" data-index="1">
+					<img src="{% static 'image/hakathon3.png' %}">
+				</div>
+				<div class="item2" data-index="2">
+					<img src="{% static 'image/hakathon4.png' %}">
+				</div>
+				<div class="item2" data-index="3">
+					<img src="{% static 'image/hakathon5.png' %}">
+				</div>
+				<div class="item2" data-index="4">
+					<img src="{% static 'image/hakathon3.png' %}">
+				</div>
+				<div class="item2" data-index="5">
+					<img src="{% static 'image/hakathon4.png' %}">
+				</div>
+				<div class="item2" data-index="6">
+					<img src="{% static 'image/hakathon5.png' %}">
+				</div>
 
-  <!--                       사진 Box                                  -->
-  <div class="cContainer2">
-    <div class="dtimgBox2">
-      <div class="item2" data-index="0"></div>
-      <div class="item2" data-index="1">
-        <img src="{% static 'image/hakathon3.png' %}" />
-      </div>
-      <div class="item2" data-index="2">
-        <img src="{% static 'image/hakathon4.png' %}" />
-      </div>
-      <div class="item2" data-index="3">
-        <img src="{% static 'image/hakathon5.png' %}" />
-      </div>
-      <div class="item2" data-index="4">
-        <img src="{% static 'image/hakathon3.png' %}" />
-      </div>
-      <div class="item2" data-index="5">
-        <img src="{% static 'image/hakathon4.png' %}" />
-      </div>
-      <div class="item2" data-index="6">
-        <img src="{% static 'image/hakathon5.png' %}" />
-      </div>
+				<div class="item2" data-index="7"></div>
+			</div>
+		</div>
 
-      <div class="item2" data-index="7"></div>
-    </div>
-  </div>
+		<!--                       페이지 넘기기 버튼 Box                           -->
+		<div class="moveBtn2">
+			<i id="leftBtn2" class="fa-solid fa-circle-chevron-left fa-3x" style="color: #ffffff"></i>
+			<i id="rightBtn2" class="fa-solid fa-circle-chevron-right fa-3x" style="color: #ffffff"></i>
+		</div>
 
-  <!--                       페이지 넘기기 버튼 Box                           -->
-  <div class="moveBtn2">
-    <i
-      id="leftBtn2"
-      class="fa-solid fa-circle-chevron-left fa-3x"
-      style="color: #ffffff"
-    ></i>
-    <i
-      id="rightBtn2"
-      class="fa-solid fa-circle-chevron-right fa-3x"
-      style="color: #ffffff"
-    ></i>
-  </div>
-
-  <div class="explanation2">
-    <div class="account2">
-      선생님을 위한 커뮤니티
-      <div class="name2">아낌없이 주는 나무</div>
-      <div class="view2">
-        VIEW MORE
-        <img class="more2" src="{% static 'image/more.png' %}" />
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ************************************ 4페이지 ************************************  -->
-<div class="fourthPage">
-  <div class="bottom">
-    <div class="lets">
-      함께 멋진 작품 만들기<br />
-      CONTACT LINK
-    </div>
-    <img class="click" src="{% static 'image/click.png' %}" />
-    <img class="forthBackground" src="{% static 'image/moremake.png' %}" />
-  </div>
-</div>
-
+		<div class="explanation2">
+			<div class="account2">선생님을 위한 커뮤니티
+				<div class="name2">아낌없이 주는 나무</div>
+				<div class="view2"><a href="/projectDetail">VIEW MORE
+						<img class="more2" src="{% static 'image/more.png' %}" /></a></div>
+			</div>
+		</div>
+	</div>
+	<!-- ************************************ 4페이지 ************************************  -->
+	<div class="fourthPage">
+		<div class="lets">함께 멋진 작품 만들기<br>
+			CONTACT LINK
+		</div>
+		<img class="click" src="{% static 'image/click.png' %}" />
+	</div>
 {% endblock %}

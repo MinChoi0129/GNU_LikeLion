@@ -35,10 +35,10 @@
 
       <div class="recruit_left">
         <div class="recruit_course">Course</div>
-        <span class="recruit_course_kor">서버</span>
-        <span class="recruit_course_eng">Server</span>
+        <span class="recruit_course_kor" id="course_kor">서버</span>
+        <span class="recruit_course_eng" id="course_eng">Server</span>
         <br />
-        <div class="course_explain">
+        <div class="course_explain" id="course_explain">
           필요한 정보를 신속 정확하게 제공하는 서버.<br />
           비교적 쉬워 개발이 빠른 Django 서버를<br />
           직접 만들어보며 서버가 필요한 이유를 느껴봅시다.
@@ -52,8 +52,27 @@
           height="400px"
           src="{% static 'image/ideathon4.png' %}"
         />
-
-        <div class=""></div>
+        <div
+          id="overlay"
+          style="
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          "
+        >
+          <p
+            style="
+              color: white;
+              font-size: 24px;
+              text-align: center;
+              cursor: pointer;
+            "
+          >
+            영상 시청
+          </p>
+        </div>
       </div>
 
       <br />
@@ -66,6 +85,7 @@
         <div class="slider_item">&nbsp;</div>
         <div class="slider_item">&nbsp;</div>
       </div>
+
       <a href="#level2.5">
         <button class="arrow_btn">
           <img src="{% static 'image/arrow.png' %}" />
@@ -169,7 +189,11 @@
         </div>
       </div>
       <div class="go_write_resume">
-        <div>지원서 작성</div>
+        <a
+          target="_blank"
+          href="https://m.blog.naver.com/saraminapp/221962431259"
+          ><div>지원서 작성</div></a
+        >
       </div>
     </div>
 
