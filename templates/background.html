@@ -1,7 +1,34 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 
+=======
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GNU 멋쟁이사자처럼</title>
+    <link
+      rel="shortcut icon"
+      href="{% static 'image/favicon.ico' %}"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="{% static 'image/favicon.ico' %}"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="{% static 'css/background.css' %}" />
+    <script src="{% static 'js/background.js' %}" defer></script>
+    <script
+      src="https://kit.fontawesome.com/214b8f17c4.js"
+      crossorigin="anonymous"
+    ></script>
+    {% block backgroundHeader %} {% endblock %}
+  </head>
+  <body>
+    <div class="backGround"></div>
+>>>>>>> b168d73e78f1ed7f6a5d7014ee344089ed77c95b
     <div id="nav">
       <div id="nav-title">
         <img

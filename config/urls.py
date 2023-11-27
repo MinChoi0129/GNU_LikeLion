@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from GNU_LikeLion import views_page
+from django.conf.urls.static import static
+from . import settings
 
 urlpatterns = [
     path("", views_page.main, name="main"),
@@ -34,3 +36,5 @@ urlpatterns = [
     path("activityDetail4/", views_page.activityDetail4, name="activityDetail4"),
     path("background/", views_page.background, name="background"),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
