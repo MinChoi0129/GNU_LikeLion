@@ -1,15 +1,15 @@
 // -------------------------------------- 1페이지 다운화살표 --------------------------------------
-function downPage() {
-  // 위치 계산
-  const windowHeight = window.innerHeight;
-  const destination = windowHeight;
+// function downPage() {
+//   // 위치 계산
+//   const windowHeight = window.innerHeight;
+//   const destination = windowHeight;
 
-  // 부드러운 스크롤
-  window.scrollTo({
-    top: destination,
-    behavior: "smooth",
-  });
-}
+//   // 부드러운 스크롤
+//   window.scrollTo({
+//     top: destination,
+//     behavior: "smooth",
+//   });
+// }
 // -------------------------------------- 2페이지 moveBtn 관련 --------------------------------------
 
 /*지혜js */
