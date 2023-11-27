@@ -28,5 +28,9 @@ urlpatterns = [
     path("projectDetail/", views_page.projectDetail, name="projectDetail"),
     path("FAQ/", views_page.FAQ, name="FAQ"),
     path("introduce/", views_page.introduce, name="introduce"),
+    path("activityDetail1/", views_page.activityDetail1, name="activityDetail1"),
+    path("activityDetail2/", views_page.activityDetail2, name="activityDetail2"),
+    path("activityDetail3/", views_page.activityDetail3, name="activityDetail3"),
+    path("activityDetail4/", views_page.activityDetail4, name="activityDetail4"),
     path("background/", views_page.background, name="background"),
 ]

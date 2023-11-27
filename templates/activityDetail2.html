@@ -1,0 +1,58 @@
+{% extends 'background.html' %} 
+{% load static %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/activityDetail.css' %}" />
+    <script src="{% static 'js/activityDetail2.js' %}" defer></script>
+    
+    <title>Document</title>
+  </head>
+  <body>
+   
+    <div class="container">
+      <div class="title">
+        <div class="Line">
+          <div class="titleLine leftLine"></div>
+          <div class="titleCircle leftCircle"></div>
+        </div>
+        <div class="titleText">아이디어톤</div>
+        <div class="Line">
+          <div class="titleCircle rightCircle"></div>
+          <div class="titleLine rightLine"></div>
+        </div>
+      </div>
+
+    <div class="detail">
+      <div class="etcimg">
+        <div class="imgbox1"><img src="{% static 'image/OT.png' %}" /></div>
+        <div class="imgbox2"><img src="{% static 'image/OT.png' %}"/></div>
+        <div class="imgbox3"><img src="{% static 'image/OT.png' %}"/></div>
+        <!-- <div class="imgbox4"><img src="{% static 'image/OT.png' %}"/></div> -->
+      </div>
+        <button class="leftarrow"><img src="{% static 'image/arrow3.png' %}" /></button>
+        <button class="rightarrow"><img src="{% static 'image/arrow2.png' %}" /></button>
+      
+    </div>
+    {% comment %}
+        <div class="etcimg">
+          <img class="img1" src="/static/image/OT.png" />
+          <img class="img2" src="/static/image/hackathon.png" />
+          <img class="img3" src="/static/image/OT.png" />
+          <!-- <img class="img4" src="/static/image/hackathon.png" /> -->
+        </div>
+    {% endcomment %}
+    
+    <div class="textbox">
+      💡2023 멋사 여름 아이디어톤💡 <br>
+      시니어 온라인 건강 관리 서비스 💪RE:BORN💪 <br>
+      약국 찾기 웹서비스 💊팜팜💊 <br>
+      사진 하나로 만드는 우리 모임 ⏰이때?어때!⏰ <br>
+    </div>
+
+   
+  </body>
+</html>
+{% endblock %}

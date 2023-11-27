@@ -2,6 +2,10 @@ import{
     database
 }from './planpage.js';
 
+document.addEventListener("DOMContentLoaded", function() {
+    database.changeSection();
+});
+
 export class ScrollEvent{
     constructor(){
         this.MonSection = database.MonSection;
