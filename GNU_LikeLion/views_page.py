@@ -15,6 +15,7 @@ def planpage(request):
     return render(request, "planpage.html")
 
 
+
 def projectDetail(request):
     return render(request, "projectDetail.html")
 
