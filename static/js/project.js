@@ -1,15 +1,3 @@
-// -------------------------------------- 1페이지 다운화살표 --------------------------------------
-// function downPage() {
-//   // 위치 계산
-//   const windowHeight = window.innerHeight;
-//   const destination = windowHeight;
-
-//   // 부드러운 스크롤
-//   window.scrollTo({
-//     top: destination,
-//     behavior: "smooth",
-//   });
-// }
 // -------------------------------------- 2페이지 moveBtn 관련 --------------------------------------
 
 /*지혜js */
@@ -175,12 +163,16 @@ function changeDescription(index) {
   var currentDescription = imageDescriptions[currentYear][index];
 
   descriptionElement.innerHTML = `
-      <div class="account">${currentDescription.account}
-          <div class="name">${currentDescription.name}</div>
-          <div class="view">VIEW MORE 
-                <img class="more" src="${staticURL}" />
-          </div>    
-      </div>`;
+  <div class="account">
+    ${currentDescription.account}
+    <div class="name">${currentDescription.name}</div>
+    <a class="viewProjectDetail" href="/projectDetail">
+      <div class="view">
+        VIEW MORE 
+        <img class="more" src="${staticURL}" />
+      </div>
+    </a>
+  </div>`;
 }
 // Event listener for year dropdown changes
 var yearDropdown = document.getElementById("currentYear");
@@ -384,12 +376,16 @@ function changeDescription2(index2) {
   var currentDescription2 = imageDescriptions2[currentYear2][index2];
 
   descriptionElement2.innerHTML = `
-      <div class="account2">${currentDescription2.account}
-          <div class="name2">${currentDescription2.name}</div>
-          <div class="view2">VIEW MORE 
-                <img class="more2" src="${staticURL2}" />
-          </div>    
-      </div>`;
+  <div class="account2">
+    ${currentDescription2.account}
+    <div class="name2">${currentDescription2.name}</div>
+    <a class="viewProjectDetail" href="/projectDetail">
+      <div class="view2">
+        VIEW MORE 
+        <img class="more2" src="${staticURL2}" />
+      </div>
+    </a>
+  </div>`;
 }
 // Event listener for year dropdown changes
 var yearDropdown2 = document.getElementById("currentYear2");
