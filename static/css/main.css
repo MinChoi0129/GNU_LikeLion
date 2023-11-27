@@ -161,21 +161,30 @@ a:hover {
   display: inline-block;
   text-align: left;
   margin-bottom: 10vh;
+  width: 700px; /* 고정된 너비로 지정 */
 }
 
 .recruit_right {
+  position: relative;
   color: white;
   display: inline-block;
   margin-left: 10rem;
   margin-top: 5rem;
+  width: 400px; /* 고정된 너비로 지정 */
 }
 
-.recruit_right > img {
+.course_explain {
+  letter-spacing: 110%;
+  line-height: 40px;
+  margin-top: 1.5rem;
+  text-align: left;
+  font-size: 1.3rem;
+  max-height: 150px; /* 최대 높이 지정 */
+  overflow: hidden;
+}
+
+.recruit_right img {
   border-radius: 30px;
-}
-
-.course_img:hover {
-  filter: blur(5px);
 }
 
 .recruit_course {
@@ -219,6 +228,11 @@ a:hover {
 .slider_active {
   background-color: rgb(64, 188, 203);
   border-radius: 100%;
+}
+
+.course_video_link {
+  display: flex;
+  margin-left: 10rem;
 }
 
 /********************* 섹션2.5 (Session) *********************/
@@ -292,6 +306,7 @@ a:hover {
   top: 15vh;
   width: fit-content;
 }
+
 .title {
   font-weight: bold;
   font-size: 1.6rem;
@@ -318,11 +333,13 @@ a:hover {
   flex: none;
   scroll-snap-align: center;
 }
+
 .slideBox div {
   text-align: left;
   line-height: 170%;
   color: white;
 }
+
 .slideBox > div div {
   text-align: left;
   display: inline-block;
@@ -331,9 +348,11 @@ a:hover {
   margin-top: 3vh;
   margin-bottom: 20vh;
 }
+
 .session {
   margin-left: 100vw;
 }
+
 .hackathon {
   margin-right: 100vw;
 }
@@ -352,22 +371,23 @@ a:hover {
 
 .go_write_resume {
   color: white;
-
-  position: relative;
   text-align: center;
+  margin: 0 auto;
+  width: 12rem;
+  height: 4rem;
+  background: #24586e;
+  border-radius: 60px;
+  margin-top: 2rem;
+  position: relative;
 }
 
 .go_write_resume div {
   position: absolute;
-  width: 16rem;
-  height: 5rem;
-  background: #24586e;
-  border-radius: 60px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /********************* Footer *********************/
