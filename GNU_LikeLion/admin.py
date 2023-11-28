@@ -27,3 +27,4 @@ class PostAdmin(admin.ModelAdmin):
         )
 
     display_image.short_description = "Image"
+    

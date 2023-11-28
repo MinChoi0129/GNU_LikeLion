@@ -13,4 +13,5 @@ class Post(models.Model):
         return self.title
     
 
-
+class Project(models.Model):
+    
