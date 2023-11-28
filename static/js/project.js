@@ -177,8 +177,8 @@ function changeDescription(index) {
   descriptionElement.innerHTML = `
       <div class="account">${currentDescription.account}
           <div class="name">${currentDescription.name}</div>
-          <div class="view">VIEW MORE 
-                <img class="more" src="${staticURL}" />
+          <div class="view">VIEW MORE <a href="/projectDetail>
+                <img class="more" src="./projectDetail" /></a>
           </div>    
       </div>`;
 }

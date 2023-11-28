@@ -441,6 +441,8 @@
 	font-size: 5rem;
 	margin-top: 0.7rem;
 	margin-bottom: 0.7rem;
+	z-index: 9999999;
+
 }
 
 .view,
@@ -451,6 +453,7 @@
 	align-items: center;
 	/* 수직 가운데 정렬 */
 	justify-content: center;
+	z-index: 9999999;
 	/* 수평 가운데 정렬 추가 */
 }
 
