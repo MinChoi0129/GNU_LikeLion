@@ -1,0 +1,181 @@
+
+
+.pageC {
+	position: absolute;
+
+	justify-content: center;
+
+	top: 0;
+	left: 0;
+  margin-top: 5vh;
+	width: 100vw;
+  height: 100vh;
+}
+
+
+/*               프로젝트 이름 BOX               */
+/* dtBox전체 div  */
+.dtBox{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100vw;
+  margin-top:5vh;
+}
+
+      /* dtLines = 타이틀 옆 왼쪽 전체div */
+      .dtLines{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin:0;
+        padding:0;
+      }
+
+          /*dtLine = 하나의 라인 */
+          .dtLine{
+            margin: 0px;
+            padding: 0px;
+            border-bottom: 0.0521vw solid white;
+            height: 5vh;
+            width: 30vw;
+            opacity: 50%;
+          }
+          /*dtCircle = 하나의 동그라미 */
+          .dtCircle{
+            padding: 0px;
+            margin: 0px;
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background-color: white;
+            margin-top: 5vh;
+            opacity: 50%;
+
+          }
+      /* dtText = 프로젝트 타이틀 div */
+      .dtText{
+        font-family: "Pretendard-ExtraBold";
+        font-size: 3.5rem;
+        color: #ffffff;
+        margin-top:2vh;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+      }
+
+/*               작품사진 BOX               */
+.cContainer {
+  display: flex;
+  width: 100vw;
+  height: 50vw;
+  overflow-x: hidden;
+  margin: auto;
+}
+
+.dtimgBox {
+  display: flex;
+  transition: transform 5s ease-out;
+}
+
+.item {
+  width: 33.33%;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: transform 1s ease-out;
+  padding: 10px;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* 추가된 부분 */
+.dtimgBox {
+  transform: translateX(0);
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.item {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  transition: transform 0.5s ease;
+}
+     
+
+        /* 좌우버튼 설정 */
+        #rightBtn{
+            display: flex;
+            position: absolute;
+            z-index: 99999;
+            width: 100vw;
+            height: fit-content;
+            justify-content: space-between; 
+            color:white;
+            top:40vh;
+            left:55%;
+            scale:80%
+
+        }
+        #leftBtn{
+          display: flex;
+          position: absolute;
+          z-index: 99999;
+          width: 100vw;
+          height: fit-content;
+          justify-content: space-between; 
+          color:white;
+          top:40%;
+          scale:80%;
+          left:22.5%;
+
+        }
+        
+        /* 슬라이더 설정 */
+        .marker{
+            display: flex;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            top:75vh;
+            left:44.5vw
+        }
+        .page{
+            width:0.7813vw ;
+            height: 0.7813vw;
+            background-color: white;
+            border-radius: 50%;
+            margin:0.5vw;
+            opacity: 70%;
+            top:80%
+
+        }
+        .markerActive{
+            width: 1.6667vw;
+            height: 1.6667vw;
+            opacity: 100%;
+        }
+.back {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 87vh;
+  left: 46vw;
+  background-color: white;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 10rem;
+  font-family: 'Pretendard-medium';
+  font-size: large;
+  align-items: center;
+  justify-content: center;
+  transform: scale(90%);
+}
+.back{
+  transform:translateX(-5px);
+}

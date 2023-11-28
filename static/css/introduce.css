@@ -1,0 +1,380 @@
+@font-face {
+    font-weight: 300;
+    font-family: "Pretendard-Light";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+}
+
+@font-face {
+    font-weight: 400;
+    font-family: "Pretendard-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-weight: 500;
+    font-family: "Pretendard-Medium";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-weight: 600;
+    font-family: "Pretendard-SemiBold";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+}
+
+@font-face {
+    font-weight: 700;
+    font-family: "Pretendard-Bold";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-weight: 800;
+    font-family: "Pretendard-ExtraBold";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff") format("woff");
+}
+
+* {
+    box-sizing: content-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    position: absolute;
+    font-size: 1rem;
+}
+
+
+section {
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+
+main,
+div,
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+canvas {
+    display: block;
+}
+
+a,
+a:visited,
+a:active {
+    /* 상속된 색상 사용 */
+    color: inherit;
+    /* 밑줄 제거 */
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+
+
+/* title */
+
+.lion {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 10%;
+}
+
+.miniLion {
+    font-size: 1.9rem;
+    margin-top: 5px;
+}
+
+.bigLion {
+    font-size: 2rem;
+}
+
+.intro {
+    border: 2px solid #0099D9;
+    border-radius: 10px;
+    background-color: black;
+
+    width: 60vw;
+    height: 7vh;
+
+    margin-top: 0.7%;
+    padding-top: 2%;
+
+    font-family: 'Pretendard-Bold';
+    font-size: 1.2rem;
+    color: white;
+
+    text-align: center;
+
+    line-height: 150%;
+}
+
+/* adultLion */
+
+.year {
+    font-family: 'Pretendard-Bold';
+    font-size: 2rem;
+
+    color: white;
+
+    margin: 5%;
+
+    text-align: center;
+}
+
+.line1, .line2, .line3, .line4 {
+    position: absolute;
+}
+
+.line1 {
+    margin-top: 8rem;
+    margin-left: 22.5rem;
+}
+
+.line2 {
+    margin-top: 26rem;
+}
+
+.line3 {
+    margin-top: 36rem;
+    margin-left: 30rem;
+}
+
+.line4 {
+    margin-top: 37rem;
+    margin-left: 5rem;
+}
+
+.box1,
+.box2,
+.box3,
+.box4,
+.box5 {
+    border: 1px solid #0099D9;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #0099D9; /* 그라데이션 */
+
+    background-color: black;
+
+    width: 28rem;
+
+    padding: 1%;
+
+    display: flex;
+
+    position: relative;
+
+    z-index: 99;
+}
+
+.box1 {
+    margin-top: 5rem;
+
+    right: 7rem;
+}
+
+.box2 {
+    margin-top: 2rem;
+    top: 15rem;
+    left: 40rem;
+}
+
+.box3 {
+    margin-top: 5rem;
+    top: 20rem;
+    left: 6rem;
+}
+
+.box4 {
+    margin-top: 5rem;
+    top: 28rem;
+    left: 35rem;
+}
+
+.box5 {
+    top: 37rem;
+    margin-left: 8rem;
+    margin-bottom: 7rem;
+}
+
+.curveCanvas {
+    position: relative;
+    bottom: 25rem;
+    left: 2.6rem;
+}
+
+.profile {
+    width: 7vw;
+
+    margin-top: 1%;
+    margin-bottom: 4%;
+    margin-left: 3%;
+}
+
+.nameTitle {
+    display: flex;
+
+    width: 150%;
+
+    padding-top: 8%;
+    padding-left: 15%;
+}
+
+.position1 {
+    font-family: 'Pretendard-Bold';
+    font-size: 1.3rem;
+
+    color: rgba(255, 255, 255, 70%);
+}
+
+
+.name {
+    font-family: 'Pretendard-Bold';
+    font-size: 1.3rem;
+
+    color: white;
+
+    margin-left: 5px;
+}
+
+.position2 {
+    font-family: 'Pretendard-SemiBold';
+    font-size: 1rem;
+
+    color: #0099D9;
+
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+.introduce {
+    font-family: 'Pretendard-Regular';
+    font-size: 0.9rem;
+
+    color: white;
+
+    width: 150%;
+
+    padding-top: 7%;
+    padding-left: 15%;
+
+    line-height: 140%;
+}
+
+.text {
+    position: relative;
+    top: 1rem;
+}
+
+/* babyLion */
+
+.babyLion {
+    margin-top: 10rem;
+    text-align: center;
+}
+
+.card {
+    border: 2px solid #0099D9;
+    border-radius: 10px;
+    background-color: black;
+
+    width: 15vw;
+    height: 38vh;
+
+    text-align: center;
+
+    margin-top: 3%;
+}
+
+.babyPosition1 {
+    font-family: 'Pretendard-Bold';
+    font-size: 1.3rem;
+
+    color: rgba(255, 255, 255, 70%);
+
+    margin-top: 10%;
+}
+
+.profile2 {
+    width: 9.5vw;
+
+    margin-top: 3%;
+}
+
+.bigName {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 10%;
+}
+
+.babyName {
+    font-family: 'Pretendard-Bold';
+    font-size: 1.3rem;
+
+    color: white;
+}
+
+.babyPosition2 {
+    font-family: 'Pretendard-SemiBold';
+    font-size: 1rem;
+
+    color: #0099D9;
+
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+.major {
+    font-family: 'Pretendard-Regular';
+    margin-top: 3%;
+    color: white;
+}
+
+.major2 {
+    font-family: 'Pretendard-Regular';
+    margin-top: 3%;
+    margin-bottom: 5rem;
+    color: white;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+
+    margin-top: 3%;
+}
+
+.canvasBox1 {
+    display: flex;
+    overflow: visible;
+}
+
+
+
+hr {
+    position: relative;
+    margin-top: 30rem;
+}

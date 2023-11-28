@@ -1,0 +1,42 @@
+{% extends 'background.html' %} {% load static %} {% block backgroundHeader %}
+<link rel="stylesheet" href="{% static 'css/FAQ.css' %}" />
+<script src="{% static 'js/FAQ.js' %}" defer></script>
+{% endblock %} {% block faq %}
+
+<div id="faq-scene">
+  <div class="dtBox">
+    <div class="dtLines">
+      <div class="dtLine leftLine"></div>
+      <div class="dtCircle leftCircle"></div>
+    </div>
+    <div class="dtText">FAQ</div>
+
+    <div class="dtLines">
+      <div class="dtCircle rightCircle"></div>
+      <div class="dtLine rightLine"></div>
+    </div>
+  </div>
+  <div id="faq-description">자주 묻는 질문</div>
+  <div class="faq">
+    <div id="container1">
+      <div id="block"></div>
+      <div id="content1">
+        <div class="search-content">
+          <input
+            type="text"
+            class="search"
+            id="search"
+            name="search"
+            autocomplete="off"
+            placeholder="검색어를 입력해주세요"
+            onkeypress="if(event.keyCode==13){search();}"
+          />
+          <div id="SearchBtn" onclick="search()">검색</div>
+        </div>
+        <div id="faq-list"></div>
+      </div>
+      <div id="block"></div>
+    </div>
+    {% endblock %}
+  </div>
+</div>

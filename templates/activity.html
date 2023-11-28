@@ -1,0 +1,65 @@
+{% extends 'background.html' %}
+{% load static %}
+{% block backgroundHeader %}
+<link rel="stylesheet" href="{% static 'css/activity.css' %}" />
+<script src="{% static 'js/activity.js' %}" defer></script>
+{% endblock %}
+
+{% block activity %}
+
+<div class="optionTitle">
+    <div class="dropDownBar">
+        <i class="fa-solid fa-caret-down"></i>
+        <div class="dropDownBarTxt">
+            <div class="menu_wrap">
+                <ul class="dep1">
+                    <li>
+                        <span id="currentYear">11th</span>
+                        <ul class="dep2">
+                            <li>
+                                <div class="dep2Year" onclick="changeYear(this)">10th</div>
+                            </li>
+                            <li>
+                                <div class="dep2Year" onclick="changeYear(this)">11th</div>
+                            </li>
+                            <li>
+                                <div class="dep2Year" onclick="changeYear(this)">12th</div>
+                            </li>
+                            <li>
+                                <div class="dep2Year" onclick="changeYear(this)">13th</div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropDownBarTxt2">RECORD</div>
+        </div>
+    </div>
+</div>
+
+<div class="post">
+    <div class="post_container">
+        <div class="post-list">
+            {% for post in posts %}
+            <div class="post-item">
+                <div class="post_title">{{ post.title }}</div>
+                <!-- <p>{{ post.content }}</p> -->
+                <div class="post_img">
+                    {% if post.image %}
+                    <img src="{{ post.image.url }}" alt="{{ post.title }}">
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    <div id="nextButton"> > </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}

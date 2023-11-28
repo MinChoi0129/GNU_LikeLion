@@ -1,0 +1,72 @@
+{% extends 'background.html'%}
+{% load static %}
+  {% block backgroundHeader %}
+  <link rel="stylesheet" href="{% static 'css/projectDetail.css' %}" />
+  <script src="{% static 'js/projectDetail.js' %}" defer></script>
+  {% endblock %}
+
+  {% block projectDetail %}
+
+  <div class="pageC">
+
+
+    <!--                       프로젝트 이름 Box                           -->
+    <div class ="dtBox">
+
+      <div class="dtLines">
+        <div class="dtLine leftLine"></div>
+        <div class="dtCircle leftCircle"></div>
+      </div>
+      <div class="dtText">WheelWeGo</div>
+
+      <div class="dtLines">
+        <div class="dtCircle rightCircle"></div>
+        <div class="dtLine rightLine"></div>
+      </div>
+
+    </div>
+
+
+    <!--                       사진 Box                                  -->
+    <div class="cContainer">
+    <div class="dtimgBox">
+        {% comment %} <div class="item" data-index="0"></div>
+        <div class="item" data-index="1"><img src="{% static 'image/exImg1.png' %}"></div>
+        <div class="item" data-index="2"><img src="{% static 'image/exImg2.png' %}"></div>
+        <div class="item" data-index="3"><img src="{% static 'image/exImg3.png' %}"></div>
+        <div class="item" data-index="4"><img src="{% static 'image/exImg4.png' %}"></div>
+        <div class="item" data-index="5"><img src="{% static 'image/exImg4.png' %}"></div>
+        <div class="item" data-index="6"><img src="{% static 'image/exImg4.png' %}"></div>
+
+        <div class="item" data-index="7"></div> {% endcomment %}
+    </div>
+   </div>  
+    <!--                       페이지 넘기기 버튼 Box                           -->
+        <div class="moveBtn">
+          <i
+            id="leftBtn"
+            class="fa-solid fa-circle-chevron-left fa-3x"
+            style="color: #ffffff"
+          ></i>
+          <i
+            id="rightBtn"
+            class="fa-solid fa-circle-chevron-right fa-3x"
+            style="color: #ffffff"
+          ></i>
+        </div>
+
+
+
+
+    <!--                       아래쪽슬라이더 Box                           -->
+      <div class="marker">
+        <div class="page page1 markerAcitve"></div>
+        <div class="page page2"></div>
+        <div class="page page3"></div>
+      </div>
+    </div>
+
+    <!--                       뒤로가기                                     -->
+    <div class="back"><i id ="back" class="fa-solid fa-angles-left"></i>
+      <a href="/project">돌아가기</a></div>
+{% endblock %}
