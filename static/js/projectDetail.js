@@ -38,11 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+
   });
 
 
   let index = 0;
-  const lastImgNum = imgList.length;
+  const lastImgNum = imgList.length-1;
   const items = document.querySelectorAll('.item');
   const markerContainer = document.querySelector('.marker');
 
@@ -101,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //슬라이더 초기화( 동적개수를 위해 )
     markerContainer.innerHTML = '';
     //동적 슬라이더 개수 설정 후 page에 삽입
-    for (let i = 0; i < lastImgNum-1; i++) {
+    for (let i = 0; i < lastImgNum; i++) {
       const page = document.createElement('div');
       page.classList.add('page');
       if (i === index) {
