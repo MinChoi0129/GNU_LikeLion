@@ -125,12 +125,12 @@ a:hover {
   /* border: 1px solid white; */
   color: white;
   margin-top: 2rem;
-  margin-left: -1rem;
+  margin-left: 6rem;
   font-size: 1.1rem;
   font-family: "Pretendard-Regular";
   line-height: 1.3; /* 문장 간 간격 조절 */
   text-align : center;
-
+ 
   
  
 }
@@ -154,6 +154,7 @@ body {
   padding: 0;
   cursor: pointer;
   margin-top: -3rem;
+  
   
 }
 
@@ -199,9 +200,9 @@ body {
 }
 
 /* 메인컨텐츠 */
-.container {
-  width: 100vw;
- 
+.container1 {
+margin-left: 3rem;
+  
 }
 
 /* 작품 제목부분 */
@@ -217,8 +218,10 @@ body {
   color: #ffffff;
   margin: 0;
   padding: 0;
+  margin-left: -2rem;
   /* margin-left: 1rem;
   margin-right: 1rem; */
+
  
 }
 .titleLine  {
@@ -226,7 +229,7 @@ body {
   padding: 0px;
   border-bottom: 0.0521vw solid white;
   height: 3.125vw;
-  width: 37vw;
+  width: 37.5vw;
   margin: 0;
   
   
@@ -251,23 +254,28 @@ body {
 .titleLine.leftLine {
   display: flex;
   position: relative;
-  left: -5.1rem;
+  left: -6.5rem;
 }
 
 .titleLine.rightLine{
   display: flex;
  position: relative;
  right: -5.2rem;
+
 }
 
 .titleCircle.leftCircle {
   display: flex;
   position: relative;
-  right: 5.2rem;
+  right: 6.5rem;
 }
 
 .titleCircle.rightCircle {
   display: flex;
   position: relative;
   left: 5.2rem;
+}
+
+.container2 {
+  margin-left: 1rem;
 }

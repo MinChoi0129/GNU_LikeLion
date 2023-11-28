@@ -1,18 +1,19 @@
 {% extends 'background.html' %} 
-{% load static %} {% block content %} 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/activityDetail.css' %}" />
-    <script src="{% static 'js/activityDetail1.js' %}" defer></script>
+{% load static %} 
+{% block backgroundHeader %}
+<link rel="stylesheet" href="{% static 'css/activityDetail.css' %}" />
+<script src="{% static 'js/activityDetail1.js' %}" defer></script>
+
+
+    {% endblock %}
+
+    {% block activityDetail %}    
     
-    <title>Document</title>
-  </head>
-  <body>
    
-    <div class="container">
+
+  
+   
+    <div class="container1">
       <div class="title">
         <div class="Line">
           <div class="titleLine leftLine"></div>
@@ -53,6 +54,5 @@
     </div>
 
    
-  </body>
-</html>
+ 
 {% endblock %}
