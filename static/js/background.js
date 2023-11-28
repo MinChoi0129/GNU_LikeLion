@@ -234,7 +234,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   let navTitle = document.getElementById("nav-title")
-  console.log(navTitle)
   navTitle.addEventListener("click", function (event) {
 	window.location.href = "/";
   });
