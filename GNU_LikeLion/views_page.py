@@ -7,10 +7,6 @@ def main(request):
     return render(request, "main.html")
 
 
-def introduce(request):
-    return render(request, "introduce.html")
-
-
 def planpage(request):
     return render(request, "planpage.html")
 
