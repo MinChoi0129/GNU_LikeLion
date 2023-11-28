@@ -383,3 +383,23 @@ startAnimation();
 // })();
 
 // starfield.lets_roll();
+
+document.getElementById('preBtn').addEventListener('click', function () {
+  const intro = document.getElementById('intro');
+  const slideWidth = document.querySelector('.slideBox').offsetWidth;
+  intro.scrollBy({
+      top: 0,
+      left: -slideWidth,
+      behavior: 'smooth'
+  });
+});
+
+document.getElementById('nextBtn').addEventListener('click', function () {
+  const intro = document.getElementById('intro');
+  const slideWidth = document.querySelector('.slideBox').offsetWidth;
+  intro.scrollBy({
+      top: 0,
+      left: slideWidth,
+      behavior: 'smooth'
+  });
+});

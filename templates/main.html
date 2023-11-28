@@ -1,223 +1,195 @@
 {% extends 'background.html' %} {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% block backgroundHeader %}
-    <title>GNU 멋쟁이사자처럼</title>
-    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
-    <script src="{% static 'js/main.js' %}" defer="defer"></script>
-    {% endblock %}
-  </head>
 
-  <body>
-    {% block content %}
-    <a name="level1"></a>
-    <div class="likelion">
-      <img class="lionImg" src="{% static 'image/lion.png' %}" />
-      <div class="likelion_eng">LIKELION</div>
-      <div class="likelion_kor">멋쟁이사자처럼</div>
-      <div class="gnu_kor">경상국립대학교</div>
-      <a href="#level2">
-        <button class="arrow_btn">
-          <img src="{% static 'image/arrow.png' %}" />
-        </button>
-      </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% block backgroundHeader %}
+  <title>GNU 멋쟁이사자처럼</title>
+  <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+  <script src="{% static 'js/main.js' %}" defer="defer"></script>
+  {% endblock %}
+</head>
+
+<body>
+  {% block content %}
+  <a name="level1"></a>
+  <div class="likelion">
+    <img class="lionImg" src="{% static 'image/lion.png' %}" />
+    <div class="likelion_eng">LIKELION</div>
+    <div class="likelion_kor">멋쟁이사자처럼</div>
+    <div class="gnu_kor">경상국립대학교</div>
+    <a href="#level2">
+      <button class="arrow_btn">
+        <img src="{% static 'image/arrow.png' %}" />
+      </button>
+    </a>
+  </div>
+
+  <a name="level2"></a>
+  <div class="recruit">
+    <div class="twelveth_likelion">12th 멋쟁이사자처럼</div>
+    <div class="baby_lion_orange">아기사자&nbsp;</div>
+    <div class="baby_lion_white">모집 중</div>
+    <br />
+
+    <div class="recruit_left">
+      <div class="recruit_course">Course</div>
+      <span class="recruit_course_kor" id="course_kor">서버</span>
+      <span class="recruit_course_eng" id="course_eng">Server</span>
+      <br />
+      <div class="course_explain" id="course_explain">
+        필요한 정보를 신속 정확하게 제공하는 서버.<br />
+        비교적 쉬워 개발이 빠른 Django 서버를<br />
+        직접 만들어보며 서버가 필요한 이유를 느껴봅시다.
+      </div>
+      <br />
     </div>
 
-    <a name="level2"></a>
-    <div class="recruit">
-      <div class="twelveth_likelion">12th 멋쟁이사자처럼</div>
-      <div class="baby_lion_orange">아기사자&nbsp;</div>
-      <div class="baby_lion_white">모집 중</div>
-      <br />
-
-      <div class="recruit_left">
-        <div class="recruit_course">Course</div>
-        <span class="recruit_course_kor" id="course_kor">서버</span>
-        <span class="recruit_course_eng" id="course_eng">Server</span>
-        <br />
-        <div class="course_explain" id="course_explain">
-          필요한 정보를 신속 정확하게 제공하는 서버.<br />
-          비교적 쉬워 개발이 빠른 Django 서버를<br />
-          직접 만들어보며 서버가 필요한 이유를 느껴봅시다.
-        </div>
-        <br />
-      </div>
-
-      <div class="recruit_right">
-        <img
-          class="course_img"
-          height="400px"
-          src="{% static 'image/ideathon4.png' %}"
-        />
-        <div
-          id="overlay"
-          style="
+    <div class="recruit_right">
+      <img class="course_img" height="400px" src="{% static 'image/ideathon4.png' %}" />
+      <div id="overlay" style="
             display: none;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-          "
-        >
-          <p
-            style="
+          ">
+        <p style="
               color: white;
               font-size: 24px;
               text-align: center;
               cursor: pointer;
-            "
-          >
-            영상 시청
-          </p>
-        </div>
+            ">
+          영상 시청
+        </p>
       </div>
-
-      <br />
-
-      <div class="slider">
-        <div class="slider_item">&nbsp;</div>
-        <div class="slider_item">&nbsp;</div>
-        <div class="slider_item">&nbsp;</div>
-        <div class="slider_item slider_active">&nbsp;</div>
-        <div class="slider_item">&nbsp;</div>
-        <div class="slider_item">&nbsp;</div>
-      </div>
-
-      <a href="#level2.5">
-        <button class="arrow_btn">
-          <img src="{% static 'image/arrow.png' %}" />
-        </button>
-      </a>
     </div>
 
-    <a name="level2.5"></a>
-    <div class="calendar">
-      <div class="calendar_left">
-        <div class="calendar_session">Session</div>
-        <div class="calendar_every">매주</div>
+    <br />
+
+    <div class="slider">
+      <div class="slider_item">&nbsp;</div>
+      <div class="slider_item">&nbsp;</div>
+      <div class="slider_item">&nbsp;</div>
+      <div class="slider_item slider_active">&nbsp;</div>
+      <div class="slider_item">&nbsp;</div>
+      <div class="slider_item">&nbsp;</div>
+    </div>
+
+    <a href="#level2.5">
+      <button class="arrow_btn">
+        <img src="{% static 'image/arrow.png' %}" />
+      </button>
+    </a>
+  </div>
+
+  <a name="level2.5"></a>
+  <div class="calendar">
+    <div class="calendar_left">
+      <div class="calendar_session">Session</div>
+      <div class="calendar_every">매주</div>
+      <br />
+      <div class="calendar_tue_thu">화, 목</div>
+      <div class="calendar_dinner">저녁 이후</div>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+    </div>
+    <div class="calendar_right">
+      <img height="500px" src="{% static 'image/calendar.svg' %}" />
+
+      <div class="calendar_small_text">
         <br />
-        <div class="calendar_tue_thu">화, 목</div>
-        <div class="calendar_dinner">저녁 이후</div>
-        <br /><br /><br /><br /><br /><br /><br /><br />
+        시험 기간에는 학습 여건을 보장하기 위해 2주~3주 정도 세션이 진행되지
+        않습니다. <br />세션 시간은 당일 여건에 따라 약간의 차이가 있을 수
+        있습니다.
       </div>
-      <div class="calendar_right">
-        <img height="500px" src="{% static 'image/calendar.svg' %}" />
+    </div>
+    <br />
+    <a href="#level3">
+      <button class="arrow_btn">
+        <img src="{% static 'image/arrow.png' %}" />
+      </button>
+    </a>
+  </div>
 
-        <div class="calendar_small_text">
-          <br />
-          시험 기간에는 학습 여건을 보장하기 위해 2주~3주 정도 세션이 진행되지
-          않습니다. <br />세션 시간은 당일 여건에 따라 약간의 차이가 있을 수
-          있습니다.
+  <a name="level3"></a>
+  <div class="history">
+    <div class="titleBox">
+      <div class="title">HISTORY</div>
+      <div>11기의 흔적</div>
+    </div>
+    <div class="intro">
+      <div class="session slideBox">
+        <img class="imgBox" src="{% static 'image/ideathon6.png' %}" alt="image" />
+        <div>
+          <div><span class="titleName">SESSION</span><br />2023.09.12</div>
+          <div class="coment">
+            1학기에 매주 2회 세션을 진행하였습니다.<br /><a href="" class="more">더 알아보기</a>
+          </div>
         </div>
       </div>
-      <br />
-      <a href="#level3">
-        <button class="arrow_btn">
-          <img src="{% static 'image/arrow.png' %}" />
-        </button>
+      <div class="ideaton slideBox">
+        <img class="imgBox" src="{% static 'image/ideathon1.png' %}" alt="image" />
+        <div>
+          <div><span class="titleName">IDEATHON</span><br />2023.09.12</div>
+          <div class="coment">
+            ideathon을 했어예<br /><a href="/activityDetail2" class="more">더 알아보기</a>
+          </div>
+        </div>
+      </div>
+      <div class="mt slideBox">
+        <img class="imgBox" src="{% static 'image/ideathon1.png' %}" alt="image" />
+        <div>
+          <div><span class="titleName">MT</span><br />2023.09.12</div>
+          <div class="coment">
+            2023년 여름, 펜션으로 여름 MT를 떠났습니다.<br /><a href="/activityDetail3" class="more">더 알아보기</a>
+          </div>
+        </div>
+      </div>
+      <div class="hackathon slideBox">
+        <img class="imgBox" src="{% static 'image/exImg1.png' %}" alt="image" />
+        <div>
+          <div><span class="titleName">HACKATHON</span><br />2023.09.12</div>
+          <div class="coment">
+            해커톤 나갔어예 3등 해부렀죠<br /><a href="/activityDetail4" class="more">더 알아보기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form class="slideBtn">
+      <input id="preBtn" class="pnBtn" type="button" value="이전">
+      <input id="nextBtn" class="pnBtn" type="button" value="다음">
+    </form>
+    <div class="go_write_resume">
+      <a target="_blank" href="https://m.blog.naver.com/saraminapp/221962431259">
+        <div>지원서 작성</div>
       </a>
     </div>
+  </div>
 
-    <a name="level3"></a>
-    <div class="history">
-      <div class="titleBox">
-        <div class="title">HISTORY</div>
-        <div>11기의 흔적</div>
-      </div>
-      <div class="intro">
-        <div class="session slideBox">
-          <img
-            class="imgBox"
-            src="{% static 'image/ideathon6.png' %}"
-            alt="image"
-          />
-          <div>
-            <div><span class="titleName">SESSION</span><br />2023.09.12</div>
-            <div class="coment">
-              1학기에 매주 2회 세션을 진행하였습니다.<br /><span class="more"
-                >더 알아보기</span
-              >
-            </div>
-          </div>
-        </div>
-        <div class="ideaton slideBox">
-          <img
-            class="imgBox"
-            src="{% static 'image/ideathon1.png' %}"
-            alt="image"
-          />
-          <div>
-            <div><span class="titleName">IDEATHON</span><br />2023.09.12</div>
-            <div class="coment">
-              ideathon을 했어예<br /><span class="more">더 알아보기</span>
-            </div>
-          </div>
-        </div>
-        <div class="mt slideBox">
-          <img
-            class="imgBox"
-            src="{% static 'image/ideathon1.png' %}"
-            alt="image"
-          />
-          <div>
-            <div><span class="titleName">MT</span><br />2023.09.12</div>
-            <div class="coment">
-              2023년 여름, 펜션으로 여름 MT를 떠났습니다.<br /><span
-                class="more"
-                >더 알아보기</span
-              >
-            </div>
-          </div>
-        </div>
-        <div class="hackathon slideBox">
-          <img
-            class="imgBox"
-            src="{% static 'image/exImg1.png' %}"
-            alt="image"
-          />
-          <div>
-            <div><span class="titleName">HACKATHON</span><br />2023.09.12</div>
-            <div class="coment">
-              해커톤 나갔어예 3등 해부렀죠<br /><span class="more"
-                >더 알아보기</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="go_write_resume">
-        <a
-          target="_blank"
-          href="https://m.blog.naver.com/saraminapp/221962431259"
-          ><div>지원서 작성</div></a
-        >
-      </div>
+  <footer>
+    <div class="about">About</div>
+    <div class="about_link">
+      <a href="https://www.instagram.com/likelion_gnu/" target="_blank">
+        <img src="{% static 'image/about_logo/instagram.png' %}" />
+      </a>
+      <div>Instagram</div>
     </div>
+    <div class="about_link">
+      <a href="https://github.com/MinChoi0129" target="_blank">
+        <img src="{% static 'image/about_logo/github.png' %}" />
+      </a>
+      <div>Github</div>
+    </div>
+    <div class="about_link">
+      <a href="https://www.instagram.com/likelion_gnu/" target="_blank">
+        <img src="{% static 'image/about_logo/meta.png' %}" />
+      </a>
+      <div>Meta</div>
+    </div>
+  </footer>
+  {% endblock %}
+</body>
 
-    <footer>
-      <div class="about">About</div>
-      <div class="about_link">
-        <a href="https://www.instagram.com/likelion_gnu/" target="_blank">
-          <img src="{% static 'image/about_logo/instagram.png' %}" />
-        </a>
-        <div>Instagram</div>
-      </div>
-      <div class="about_link">
-        <a href="https://github.com/MinChoi0129" target="_blank">
-          <img src="{% static 'image/about_logo/github.png' %}" />
-        </a>
-        <div>Github</div>
-      </div>
-      <div class="about_link">
-        <a href="https://www.instagram.com/likelion_gnu/" target="_blank">
-          <img src="{% static 'image/about_logo/meta.png' %}" />
-        </a>
-        <div>Meta</div>
-      </div>
-    </footer>
-    {% endblock %}
-  </body>
 </html>
