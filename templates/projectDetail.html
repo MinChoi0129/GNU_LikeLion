@@ -3,6 +3,7 @@
   {% block backgroundHeader %}
   <link rel="stylesheet" href="{% static 'css/projectDetail.css' %}" />
   <script src="{% static 'js/projectDetail.js' %}" defer></script>
+
   {% endblock %}
 
   {% block projectDetail %}
@@ -17,7 +18,7 @@
         <div class="dtLine leftLine"></div>
         <div class="dtCircle leftCircle"></div>
       </div>
-      <div class="dtText">WheelWeGo</div>
+      <div class="dtText">{{ project.title }}</div>
 
       <div class="dtLines">
         <div class="dtCircle rightCircle"></div>
