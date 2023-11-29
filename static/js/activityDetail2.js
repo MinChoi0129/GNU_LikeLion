@@ -58,6 +58,28 @@ document.addEventListener("DOMContentLoaded", function () {
       updateImageState();
     });
   });
+
+  
+
+
+// activityDetail2.js 파일
+
+const restApiData = require('./restApiData');
+
+const apiUrl = 'http://127.0.0.1:8000/activityDetail2/';
+
+// fetchData 함수 사용
+restApiData.fetchData(apiUrl);
+
+// postData 함수 사용
+const postData = {
+    // 포스트할 데이터 객체
+    key1: 'value1',
+    key2: 'value2',
+};
+
+restApiData.postData(apiUrl, postData);
+
   
   
   

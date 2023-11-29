@@ -300,7 +300,7 @@ a:hover {
   text-align: center;
   padding-top: 12vh;
   background-color: brown;
-  width: 70vw;
+  z-index: 90;
 }
 
 .titleBox {
@@ -325,7 +325,7 @@ a:hover {
   overflow: scroll;
   scroll-snap-type: x mandatory;
 }
-
+/* ㅇㄹㄴㄹㄴ */
 .imgBox {
   width: 60vw;
   height: 50vh;
@@ -373,6 +373,22 @@ a:hover {
   cursor: pointer;
   font-weight: bold;
 }
+
+.slideBtn{
+  width: 10vw;
+  height: 10vh;
+  position: relative;
+  left: 70vw;
+  top: -3vh;
+  z-index: 100;
+}
+
+.pnBtn{
+  border-style: none;
+  background-color: red;
+  z-index: 150;
+}
+
 
 .go_write_resume {
   color: white;
