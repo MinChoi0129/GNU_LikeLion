@@ -21,14 +21,14 @@ const answer = [
 function show_faqs() {
   for (let i = 0; i < question.length; i++) {
     if (i == 0) {
-      html = `<div class="faq-content-title"><div class="triangle"></div>
+      html = `<div class="faq-content-title"><div class="line-box"><div class="fixed_line"></div><div class="line untouched"></div></div>
               &nbsp;
               ${question[i]}
             </div>
             <div class="faq-content" hidden>${answer[i]}</div>`;
       document.getElementById("faq-list").innerHTML += html;
     } else {
-      html = `<hr><div class="faq-content-title"><div class="triangle"></div>
+      html = `<hr><div class="faq-content-title"><div class="line-box"><div class="fixed_line"></div><div class="line untouched"></div></div>
               &nbsp;
               ${question[i]}
             </div>
@@ -39,14 +39,14 @@ function show_faqs() {
 }
 function show_faq(n, i) {
   if (i == 0) {
-    html = `<div class="faq-content-title"><div class="triangle"></div>
+    html = `<div class="faq-content-title"><div class="line-box"><div class="fixed_line"></div><div class="line"></div></div>
             &nbsp;
             ${question[n]}
           </div>
           <div class="faq-content" hidden>${answer[n]}</div>`;
     document.getElementById("faq-list").innerHTML += html;
   } else {
-    html = `<hr><div class="faq-content-title"><div class="triangle"></div>
+    html = `<hr><div class="faq-content-title"><div class="line-box"><div class="fixed_line"></div><div class="line"></div></div>
                 &nbsp;
                 ${question[n]}
               </div>
@@ -57,15 +57,17 @@ function show_faq(n, i) {
 
 function addfaqEvent() {
   const faqItems = document.getElementsByClassName("faq-content-title");
-  const faqArrow = document.getElementsByClassName("triangle");
+  const faqArrow = document.getElementsByClassName("line");
   for (let i = 0; i < faqItems.length; i++) {
     faqItems[i].addEventListener("click", function () {
       if (faqItems[i].nextElementSibling.hidden === true) {
         faqItems[i].nextElementSibling.hidden = false;
-        faqArrow[i].style.transform = "rotate(180deg)";
+        faqArrow[i].classList.remove("untouched");
+        faqArrow[i].classList.add("touched");
       } else {
         faqItems[i].nextElementSibling.hidden = true;
-        faqArrow[i].style.transform = "rotate(0deg)";
+        faqArrow[i].classList.remove("touched");
+        faqArrow[i].classList.add("untouched");
       }
     });
   }
