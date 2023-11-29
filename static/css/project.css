@@ -1,517 +1,536 @@
+html {
+	scroll-behavior: smooth;
+}
+
 /* -------------------------------------- 1페이지 -------------------------------------- */
 
 .firstPage {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+	position: relative;
+	display: flex;
+	flex-direction: column;
 
-  justify-content: center;
-  align-items: center;
+	justify-content: center;
+	align-items: center;
 
-  top: 0;
-  left: 0;
+	top: 0;
+	left: 0;
 
-  width: 100vw;
-  height: 100vh;
+	width: 100vw;
+	height: 100vh;
 }
 
 .lionImg {
-  position: absolute;
-  display: flex;
+	position: absolute;
+	display: flex;
 
-  justify-content: center;
-  align-items: center;
+	justify-content: center;
+	align-items: center;
 
-  top: 15vh;
+	top: 15vh;
 
-  height: 80%;
+	height: 80%;
 
-  z-index: 9989;
+	z-index: 9989;
 }
 
-.fistPageContent {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+.firstPageContent {
+	position: relative;
+	display: flex;
+	flex-direction: column;
 
-  /* justify-content: center; */
-  align-items: center;
+	/* justify-content: center; */
+	align-items: center;
 
-  margin-top: 15vh;
+	margin-top: 20vh;
 
-  height: 75%;
+	height: 75%;
 
-  color: #ffffff;
+	color: #ffffff;
 
-  font-size: 6rem;
-  z-index: 9990;
+	font-size: 6rem;
+	z-index: 9990;
 }
 
-.fistPageText1 {
-  position: relative;
-  font-family: "Pretendard-Black";
+.firstPageText1 {
+	position: relative;
+	font-family: "Pretendard-Black";
 }
 
-.fistPageText2 {
-  position: relative;
-  font-family: "Pretendard-Thin";
+.firstPageText2 {
+	position: relative;
+	font-family: "Pretendard-Thin";
 }
 
-.fistPageText3 {
-  position: relative;
-  font-family: "Pretendard-Medium";
+.firstPageText3 {
+	position: relative;
+	font-family: "Pretendard-Medium";
 }
 
-.fistPageText4 {
-  position: relative;
-  width: 100%;
-  height: 7%;
+.firstPageText4 {
+	position: relative;
+	width: 100%;
+	height: 7%;
 }
 
 .firstPageSlideBar {
-  position: relative;
-  display: flex;
-  flex-direction: row;
+	position: relative;
+	display: flex;
+	flex-direction: row;
 
-  border-radius: 0.75rem 0.75rem 0.75rem 0;
+	border-radius: 0.75rem 0.75rem 0.75rem 0;
 
-  width: 75%;
-  height: 7%;
+	width: 75%;
+	height: 7%;
 
-  background-color: rgba(255, 255, 255, 0.3);
+	background-color: rgba(255, 255, 255, 0.3);
 }
 
 .firstPageSlideBarIcon {
-  position: relative;
-  display: flex;
+	position: relative;
+	display: flex;
 
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 
-  border-radius: 0.75rem 0.75rem 0.75rem 0;
+	border-radius: 0.75rem 0.75rem 0.75rem 0;
 
-  width: 15%;
-  height: 100%;
+	width: 15%;
+	height: 100%;
 
-  background-color: rgba(255, 255, 255, 0.5);
-  font-size: 2.5rem;
+	background-color: rgba(255, 255, 255, 0.5);
+	font-size: 2.5rem;
 }
 
 #penIcon {
-  position: relative;
+	position: relative;
 
-  font-size: 75%;
+	font-size: 75%;
 }
 
 .firstPageSlideBarTxt {
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	flex-direction: row;
 
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 
-  width: 100%;
-  height: 100%;
+	width: 100%;
+	height: 100%;
 
-  font-size: 1.5rem;
-  font-family: "Pretendard-Thin";
+	font-size: 1.5rem;
+	font-family: "Pretendard-Thin";
 }
 
 .firstPageSlideBarTxt1 {
-  font-family: "Pretendard-Light";
+	font-family: "Pretendard-Light";
 }
 
-.fistPageBlank {
-  position: relative;
-  height: 7%;
+.firstPageBlank {
+	position: relative;
+	height: 7%;
 }
 
 .downIcon {
-  position: relative;
-  font-size: 4rem;
-  z-index: 9991;
+	position: relative;
+	font-size: 4rem;
+	z-index: 9991;
 }
 
 /* -------------------------------------- 2,3페이지 -------------------------------------- */
 
 .secondPage,
 .thirdPage {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+	position: relative;
+	display: flex;
+	flex-direction: column;
 
-  align-items: center;
+	align-items: center;
+	justify-content: center;
 
-  top: 0;
-  left: 0;
+	top: 0;
+	left: 0;
 
-  width: 100vw;
-  height: 100vh;
-}
-#page2 {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-
-  width: 100%;
+	width: 100vw;
+	height: 100vh;
 }
 
 /* 옵션 & 타이틀 */
 .optionTitle,
 .optionTitle2 {
-  position: relative;
-  display: flex;
-  height: 15%;
-  margin-left: 10vw;
-  margin-top: 2vh;
-  margin-right: 55%;
-  color: #ffffff;
-  font-size: 4rem;
-  font-family: "Pretendard-ExtraBold";
+	position: relative;
+	display: flex;
+	height: 15%;
+	margin-left: 10vw;
+	margin-top: 2vh;
+	margin-right: 55%;
+	color: #ffffff;
+	font-size: 4rem;
+	font-family: "Pretendard-ExtraBold";
 }
 
 .dropDownBar,
 .dropDownBar2 {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  /* Optional: Align items in the center vertically */
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	/* Optional: Align items in the center vertically */
 }
 
 .dropDownBarTxt,
 .dropDownBarTxt2 {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  /* 변경된 부분 */
-  align-items: center;
-  /* Optional: Align items in the center vertically */
-  margin-left: 5%;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	/* 변경된 부분 */
+	align-items: center;
+	/* Optional: Align items in the center vertically */
+	margin-left: 5%;
 }
 
 /* 아이콘, 텍스트 등 각 요소에 마진 조절 */
 
 .menu_wrap .dep1,
 .menu_wrap2 .dep12 {
-  position: relative;
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
 
-  margin-right: 2.5vw;
+	margin-right: 2.5vw;
 
-  color: white;
-  font-size: 0;
+	color: white;
+	font-size: 0;
 }
 
-.menu_wrap .dep1 > li,
-.menu_wrap2 .dep12 > li {
-  display: inline-block;
+.menu_wrap .dep1>li,
+.menu_wrap2 .dep12>li {
+	display: inline-block;
 
-  white-space: nowrap;
-  vertical-align: top;
-  text-align: center;
+	white-space: nowrap;
+	vertical-align: top;
+	text-align: center;
 
-  width: fit-content;
-  margin: 0.26vw;
-  border-bottom: 0.2rem solid white;
+	width: fit-content;
+	margin: 0.26vw;
+	border-bottom: 0.2rem solid white;
 
-  background-color: rgb(255, 255, 255, 0);
-  font-size: 5rem;
-  color: #40bccb;
+	background-color: rgb(255, 255, 255, 0);
+	font-size: 5rem;
+	color: #40bccb;
 }
 
 .menu_wrap .dep2,
 .menu_wrap2 .dep22 {
-  position: absolute;
-  display: none;
-  z-index: 1;
-  text-align: center;
+	position: absolute;
+	display: none;
+	z-index: 1;
+	text-align: center;
 
-  padding: 0;
-  margin-top: 0.2rem;
+	padding: 0;
+	margin-top: 0.2rem;
 
-  max-width: fit-content;
-  max-height: 20vh;
-  width: fit-content;
+	max-width: fit-content;
+	max-height: 20vh;
+	width: fit-content;
 
-  overflow-y: auto;
-  background-color: #323232;
+	overflow-y: auto;
+	background-color: #323232;
+
+	cursor: pointer;
+}
+
+/* 스크롤바 없애기 */
+.menu_wrap .dep2::-webkit-scrollbar {
+	display: none;
+}
+
+.menu_wrap2 .dep22::-webkit-scrollbar {
+	display: none;
+}
+
+.menu_wrap .dep2,
+.menu_wrap2 .dep22 {
+	-ms-overflow-style: none;
+	/* 인터넷 익스플로러 */
+	scrollbar-width: none;
+	/* 파이어폭스 */
 }
 
 .menu_wrap .dep2 li,
 .menu_wrap2 .dep22 li {
-  display: block;
+	display: block;
 
-  text-align: center;
+	text-align: center;
 
-  width: 100%;
+	width: 100%;
 
-  font-size: 2rem;
+	font-size: 2rem;
 }
 
-.menu_wrap .dep1 > li .dep2 li,
-.menu_wrap2 .dep12 > li .dep22 li {
-  color: #ffffff;
+.menu_wrap .dep1>li .dep2 li,
+.menu_wrap2 .dep12>li .dep22 li {
+	color: #ffffff;
 
-  /* 드롭다운 텍스트 색을 흰색으로 지정 */
+	/* 드롭다운 텍스트 색을 흰색으로 지정 */
 }
 
 .menu_wrap .dep2 .dep2Year,
 .menu_wrap2 .dep22 .dep2Year2 {
-  display: block;
+	display: block;
 
-  padding: 1rem 2rem;
+	padding: 1rem 2rem;
 }
 
-.menu_wrap .dep1 > li:hover > .dep2,
-.menu_wrap2 .dep12 > li:hover > .dep22 {
-  display: block;
+.menu_wrap .dep1>li:hover>.dep2,
+.menu_wrap2 .dep12>li:hover>.dep22 {
+	display: block;
 }
 
-.menu_wrap .dep2 > li:hover > .dep2Year,
-.menu_wrap2 .dep22 > li:hover > .dep22Year {
-  width: fit-content;
+.menu_wrap .dep2>li:hover>.dep2Year,
+.menu_wrap2 .dep22>li:hover>.dep22Year {
+	width: fit-content;
 }
 
-.menu_wrap .dep1 > li.show .dep2,
-.menu_wrap2 .dep12 > li.show .dep22 {
-  display: block;
+.menu_wrap .dep1>li.show .dep2,
+.menu_wrap2 .dep12>li.show .dep22 {
+	display: block;
 }
 
 .menu_wrap .dep1:hover .dep2,
 .menu_wrap2 .dep12:hover .dep22 {
-  display: block;
+	display: block;
 }
 
 .menu_wrap .dep1.show .dep2,
 .menu_wrap2 .dep12.show .dep22 {
-  display: block;
+	display: block;
 }
+
 
 /* 본문설정 */
 .dtBox,
 .dtBox2 {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 100vw;
-  margin-top: 5vh;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	width: 100vw;
+	margin-top: 5vh;
 }
 
 /* dtLines = 타이틀 옆 왼쪽 전체div */
 .dtLines,
 .dtLines2 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 0;
+	padding: 0;
 }
 
 /*dtLine = 하나의 라인 */
 .dtLine,
 .dtLine2 {
-  margin: 0px;
-  padding: 0px;
-  border-bottom: 0.0521vw solid white;
-  height: 5vh;
-  width: 30vw;
-  opacity: 50%;
+	margin: 0px;
+	padding: 0px;
+	border-bottom: 0.0521vw solid white;
+	height: 5vh;
+	width: 30vw;
+	opacity: 50%;
 }
 
 /*dtCircle = 하나의 동그라미 */
 .dtCircle,
 .dtCircle2 {
-  padding: 0px;
-  margin: 0px;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background-color: white;
-  margin-top: 5vh;
-  opacity: 50%;
+	padding: 0px;
+	margin: 0px;
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: white;
+	margin-top: 5vh;
+	opacity: 50%;
 }
 
 /* dtText = 프로젝트 타이틀 div */
 .dtText,
 .dtText2 {
-  font-family: "Pretendard-ExtraBold";
-  font-size: 3.5rem;
-  color: #ffffff;
-  margin-top: 2vh;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
+	font-family: "Pretendard-ExtraBold";
+	font-size: 3.5rem;
+	color: #ffffff;
+	margin-top: 2vh;
+	padding: 0;
+	align-items: center;
+	justify-content: center;
 }
 
 /*               작품사진 BOX               */
 .cContainer,
 .cContainer2 {
-  display: flex;
-  width: 100vw;
-  height: 55vh;
-  overflow-x: hidden;
-  margin: 3vh 0;
+	display: flex;
+	width: 100vw;
+	height: 55vh;
+	overflow-x: hidden;
+	margin: 3vh 0;
 }
 
 .dtimgBox,
 .dtimgBox2 {
-  display: flex;
-  transition: transform 5s ease-out;
+	display: flex;
+	transition: transform 5s ease-out;
 }
 
 .item,
 .item2 {
-  width: 33.33%;
-  box-sizing: border-box;
-  overflow: hidden;
-  transition: transform 1s ease-out;
-  padding: 10px;
-  flex: 0 0 33.33%;
-  max-width: 33.33%;
-  transition: transform 0.5s ease;
+	width: 33.33%;
+	box-sizing: border-box;
+	overflow: hidden;
+	transition: transform 1s ease-out;
+	padding: 10px;
+	flex: 0 0 33.33%;
+	max-width: 33.33%;
+	transition: transform 0.5s ease;
 }
 
 .item img,
 .item2 img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+	width: 100%;
+	height: 100%;
+	/* object-fit: contain; */
+	border-radius: 2rem;
 }
 
 /* 추가된 부분 */
 .dtimgBox,
 .dtimgBox2 {
-  transform: translateX(0);
-  display: flex;
-  flex-wrap: nowrap;
+	transform: translateX(0);
+	display: flex;
+	flex-wrap: nowrap;
 }
 
 /* 좌우버튼 설정 */
 #rightBtn,
 #rightBtn2 {
-  display: flex;
-  position: absolute;
-  z-index: 99999;
-  width: 100vw;
-  height: fit-content;
-  justify-content: space-between;
-  color: white;
-  top: 45vh;
-  left: 55%;
-  scale: 80%;
+	display: flex;
+	position: absolute;
+	z-index: 99999;
+	width: 100vw;
+	height: fit-content;
+	justify-content: space-between;
+	color: white;
+	top: 45vh;
+	left: 55%;
+	scale: 80%;
 }
 
 #leftBtn,
 #leftBtn2 {
-  display: flex;
-  position: absolute;
-  z-index: 99999;
-  width: 100vw;
-  height: fit-content;
-  justify-content: space-between;
-  color: white;
-  top: 45vh;
-  scale: 80%;
-  left: 22.5%;
+	display: flex;
+	position: absolute;
+	z-index: 99999;
+	width: 100vw;
+	height: fit-content;
+	justify-content: space-between;
+	color: white;
+	top: 45vh;
+	scale: 80%;
+	left: 22.5%;
 }
 
 .explanation,
 .explanation2 {
-  color: white;
-  margin-top: 0.1rem;
-  text-align: center;
-  /* 텍스트 가운데 정렬 */
+	color: white;
+	margin-top: 0.1rem;
+	text-align: center;
+	/* 텍스트 가운데 정렬 */
 }
 
 /*100vh    100vw */
 
 .account,
 .account2 {
-  font-family: "Pretendard-Light";
-  font-size: 1.3rem;
+	font-family: "Pretendard-Light";
+	font-size: 1.3rem;
 }
 
 .name,
 .name2 {
-  font-family: "Pretendard-Black";
-  font-size: 3.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+	font-family: "Pretendard-Black";
+	font-size: 3.5rem;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 
 .view,
 .view2 {
-  font-family: "Pretendard-Medium";
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  /* 수직 가운데 정렬 */
-  justify-content: center;
-  /* 수평 가운데 정렬 추가 */
-  z-index: 1;
+	font-family: "Pretendard-Medium";
+	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+	/* 수직 가운데 정렬 */
+	justify-content: center;
+	/* 수평 가운데 정렬 추가 */
+	z-index: 1;
 }
 
 .more,
 .more2 {
-  height: 1.5rem;
-  margin-left: 0.5vw;
+	height: 1.5rem;
+	margin-left: 0.5vw;
 }
 
 /* -------------------------------------- 4페이지 -------------------------------------- */
 
 .fourthPage {
-  position: relative;
+	position: relative;
 
-  text-align: center;
+	text-align: center;
 
-  width: 100vw;
-  height: 20vh;
+	width: 100vw;
+	height: 20vh;
 
-  margin-top: 20vh;
-  padding-top: 8rem;
-  padding-bottom: 3rem;
+	margin-top: 20vh;
+	padding-top: 8rem;
+	padding-bottom: 3rem;
 
-  background-image: url("../image/footer_image.svg");
-  /* background-color: rgba(255, 255, 255, 0.5); */
+	background-image: url("../image/footer_image.svg");
+	/* background-color: rgba(255, 255, 255, 0.5); */
 }
 
 .lets {
-  position: absolute;
+	position: absolute;
 
-  top: 60%;
-  /* 부모 요소 중앙을 기준으로 50% 위로 이동 */
-  left: 50%;
-  /* 부모 요소 중앙을 기준으로 50% 왼쪽으로 이동 */
-  transform: translate(-50%, -50%);
-  /* 요소의 중심을 중앙으로 이동 */
+	top: 60%;
+	/* 부모 요소 중앙을 기준으로 50% 위로 이동 */
+	left: 50%;
+	/* 부모 요소 중앙을 기준으로 50% 왼쪽으로 이동 */
+	transform: translate(-50%, -50%);
+	/* 요소의 중심을 중앙으로 이동 */
 
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 3.7rem;
-  font-family: "Pretendard-Bold";
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 3.7rem;
+	font-family: "Pretendard-Bold";
 }
 
 .click {
-  position: absolute;
+	position: absolute;
 
-  width: 3%;
-  top: 65%;
-  /* 부모 요소 중앙을 기준으로 50% 위로 이동 */
-  left: 51.5%;
-  /* 부모 요소 중앙을 기준으로 50% 왼쪽으로 이동 */
-  margin-left: 12rem;
-  /* 추가적인 스타일을 필요에 따라 여기에 추가하세요. */
+	width: 3%;
+	top: 65%;
+	/* 부모 요소 중앙을 기준으로 50% 위로 이동 */
+	left: 51.5%;
+	/* 부모 요소 중앙을 기준으로 50% 왼쪽으로 이동 */
+	margin-left: 12rem;
+	/* 추가적인 스타일을 필요에 따라 여기에 추가하세요. */
 }
 
 .moremake {
-  width: 100vw;
-  /* 원하는 너비로 조절 */
-  height: 30vh;
-  /* 종횡비 유지 */
-  /* 추가적인 스타일을 필요에 따라 여기에 추가하세요. */
+	width: 100vw;
+	/* 원하는 너비로 조절 */
+	height: 30vh;
+	/* 종횡비 유지 */
+	/* 추가적인 스타일을 필요에 따라 여기에 추가하세요. */
 }
