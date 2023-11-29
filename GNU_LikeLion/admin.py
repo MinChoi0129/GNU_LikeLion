@@ -4,27 +4,30 @@ from django.contrib import admin
 
 # activity record 게시글
 from django.utils.html import format_html
-from .models import Post
+from .models import Post, ProjectImage,Project,PostImage
 
 
-@admin.register(Post)
+
+  
+# Photo 클래스를 inline으로 나타낸다.
+class ProjectImageInline(admin.TabularInline):
+    model = ProjectImage    
+
+# Post 클래스는 해당하는 Photo 객체를 리스트로 관리하는 한다. 
+class ProjectAdmin(admin.ModelAdmin):
+    inlines = [ProjectImageInline,]
+
+# Register your models here.
+admin.site.register(Project, ProjectAdmin)
+
+
+# Photo 클래스를 inline으로 나타낸다.
+class PostImageInline(admin.TabularInline):
+    model = PostImage    
+
+# Post 클래스는 해당하는 Photo 객체를 리스트로 관리하는 한다. 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ("title", "content_preview", "display_image")
+    inlines = [PostImageInline,]
 
-    def content_preview(self, obj):
-        return obj.content[:50] + "..." if len(obj.content) > 50 else obj.content
-
-    content_preview.short_description = "Content Preview"
-
-    def display_image(self, obj):
-        return (
-            format_html(
-                '<img src="{}" style="max-height: 50px; max-width: 50px;" />',
-                obj.image.url,
-            )
-            if obj.image
-            else None
-        )
-
-    display_image.short_description = "Image"
-    
+# Register your models here.
+admin.site.register(Post, PostAdmin)

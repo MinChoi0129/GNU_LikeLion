@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from GNU_LikeLion import views_page
 from django.conf.urls.static import static
 from . import settings
@@ -23,6 +23,7 @@ from . import settings
 urlpatterns = [
     path("", views_page.main, name="main"),
     path("admin/", admin.site.urls),
+    path("api/",include('GNU_LikeLion.urls')),
     path("activity/", views_page.post_list, name="post_list"),
     path("mainTest/", views_page.mainTest, name="mainTest"),
     path("project/", views_page.project, name="project"),
