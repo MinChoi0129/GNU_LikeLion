@@ -1,26 +1,25 @@
 // -------------------------------------- 2페이지 moveBtn 관련 --------------------------------------
 // RestApiData.js 파일을 가져오기
-import { RestApiData } from './restApiData.js';
+import { getProjectDataById } from './restApiData.js';
 
-// RestApiData 클래스의 인스턴스 생성
-const restApiInstance = new RestApiData();
-
-// getProjectData 메서드 사용 예제
-restApiInstance.getProjectData()
+// 사용 예제
+const projectId = 3; // 원하는 프로젝트의 ID로 설정
+getProjectDataById(projectId)
     .then(data => {
         console.log('프로젝트 데이터:', data);
-		// 주제(아이디어톤 or 해커톤)
-		console.log(data[1].subject);
+		//주제(아이디어톤 or 해커톤)
+		console.log(data.subject);
 		// 제목
-		console.log(data[1].title);
+		console.log(data.title);
 		// 기수
-		console.log(data[1].generation)
+		console.log(data.generation)
 		// 이미지 
-		console.log(data[1].images[0].image);
+		console.log(data.images[0].image);
     })
     .catch(error => {
         console.error('에러 발생:', error);
     });
+
 
 /*지혜js */
 document.addEventListener("DOMContentLoaded", function () {
