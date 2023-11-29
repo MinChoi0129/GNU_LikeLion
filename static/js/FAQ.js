@@ -25,14 +25,14 @@ function show_faqs() {
               &nbsp;
               ${question[i]}
             </div>
-            <div class="faq-content">${answer[i]}</div>`;
+            <div class="faq-content" hidden>${answer[i]}</div>`;
       document.getElementById("faq-list").innerHTML += html;
     } else {
       html = `<hr><div class="faq-content-title"><div class="triangle"></div>
               &nbsp;
               ${question[i]}
             </div>
-            <div class="faq-content">${answer[i]}</div>`;
+            <div class="faq-content" hidden>${answer[i]}</div>`;
       document.getElementById("faq-list").innerHTML += html;
     }
   }
@@ -43,14 +43,14 @@ function show_faq(n, i) {
             &nbsp;
             ${question[n]}
           </div>
-          <div class="faq-content">${answer[n]}</div>`;
+          <div class="faq-content" hidden>${answer[n]}</div>`;
     document.getElementById("faq-list").innerHTML += html;
   } else {
     html = `<hr><div class="faq-content-title"><div class="triangle"></div>
                 &nbsp;
                 ${question[n]}
               </div>
-              <div class="faq-content">${answer[n]}</div>`;
+              <div class="faq-content" hidden>${answer[n]}</div>`;
     document.getElementById("faq-list").innerHTML += html;
   }
 }
@@ -62,18 +62,13 @@ function addfaqEvent() {
     faqItems[i].addEventListener("click", function () {
       if (faqItems[i].nextElementSibling.hidden === true) {
         faqItems[i].nextElementSibling.hidden = false;
-        faqArrow[i].style.transform = "rotate(0deg)";
+        faqArrow[i].style.transform = "rotate(180deg)";
       } else {
         faqItems[i].nextElementSibling.hidden = true;
-        faqArrow[i].style.transform = "rotate(180deg)";
+        faqArrow[i].style.transform = "rotate(0deg)";
       }
     });
   }
-  const faqContent = document.querySelector(".faq-content");
-
-  faqItems.addEventListener("click", () => {
-    faqContent.classList.add("fadeInDown");
-  });
 }
 
 function search() {
