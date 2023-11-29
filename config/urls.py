@@ -36,6 +36,8 @@ urlpatterns = [
     path("activityDetail3/", views_page.activityDetail3, name="activityDetail3"),
     path("activityDetail4/", views_page.activityDetail4, name="activityDetail4"),
     path("background/", views_page.background, name="background"),
+    path('project/<int:project_id>/', views_page.project_detail, name='projectDetail'),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
