@@ -414,14 +414,10 @@ a:hover {
   font-weight: bold;
 }
 
-<<<<<<< HEAD
 
-.slideBtn {
-=======
 .slideBtn {
   width: 10vw;
   height: 10vh;
->>>>>>> 66d16bb0e69a64a8a338a20cf5d47635fef1b675
   position: relative;
   left: 70vw;
   top: -3vh;
@@ -429,15 +425,9 @@ a:hover {
   display: inline-block;
 }
 
-<<<<<<< HEAD
-=======
-.pnBtn {
-  border-style: none;
-  background-color: red;
-  z-index: 150;
+.lrBtn{
+  z-index: 1000;
 }
->>>>>>> 66d16bb0e69a64a8a338a20cf5d47635fef1b675
-
 .go_write_resume {
   color: white;
   text-align: center;

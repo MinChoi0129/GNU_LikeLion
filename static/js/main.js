@@ -119,8 +119,6 @@ overlay.addEventListener("click", function () {
 // Start the animation
 startAnimation();
 
-<<<<<<< HEAD
-
 // let container = document.querySelector(".recruit_right");
 // let animeImg = document.getElementsByClassName("course_img")[0];
 // let overlay = document.getElementById("overlay");
@@ -388,26 +386,6 @@ startAnimation();
 // })();
 
 // starfield.lets_roll();
-
-document.getElementById('preBtn').addEventListener('click', function () {
-  const intro = document.getElementById('intro');
-  const slideWidth = document.querySelector('.slideBox').offsetWidth;
-  intro.scrollBy({
-    top: 0,
-    left: -slideWidth,
-    behavior: 'smooth'
-  });
-});
-
-document.getElementById('nextBtn').addEventListener('click', function () {
-  const intro = document.getElementById('intro');
-  console.log('intro');
-  const slideWidth = document.querySelector('.slideBox').offsetWidth;
-  intro.scrollBy({
-    top: 0,
-    left: slideWidth,
-    behavior: 'smooth'
-=======
 document.getElementById("preBtn").addEventListener("click", function () {
   const intro = document.getElementById("intro");
   const slideWidth = document.querySelector(".slideBox").offsetWidth;
@@ -425,6 +403,5 @@ document.getElementById("nextBtn").addEventListener("click", function () {
     top: 0,
     left: slideWidth,
     behavior: "smooth",
->>>>>>> 66d16bb0e69a64a8a338a20cf5d47635fef1b675
   });
 });
