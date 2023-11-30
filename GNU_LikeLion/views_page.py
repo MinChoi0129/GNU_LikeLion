@@ -63,9 +63,13 @@ def activityDetail4(request):
 
 def background(request):
     return render(request, 'background.html')
+from django.shortcuts import render, get_object_or_404
 
 
-
+def project_detail(request, project_id):
+    project = get_object_or_404(Project, id=project_id)
+    # Add logic to fetch additional data or perform other actions
+    return render(request, 'projectDetail.html', {'project': project})
 # views_page.py
 
 from rest_framework import viewsets

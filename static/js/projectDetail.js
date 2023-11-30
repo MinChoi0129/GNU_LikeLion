@@ -1,107 +1,125 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const imgList = [
-    // "{% static 'image/exImg1.png' %}",
-    // "{% static 'image/exImg2.png' %}",
-    // "{% static 'image/exImg3.png' %}",
-    // "{% static 'image/exImg3.png' %}",
-    // "{% static 'image/exImg4.png' %}",
-    // "{% static 'image/exImg2.png' %}",
-    // 무조건 첫번째 인덱스는 비우고 리스트 채워야 함!!!!!!!
-    "#",
-     "../static/image/exImg1.png",
-     "../static/image/exImg2.png",
-     "../static/image/exImg3.png",
-     "../static/image/exImg4.png",
-     "../static/image/exImg4.png",
-     "../static/image/exImg4.png",
-  ];
+// projectDetail.js
+import { getProjectDataById } from './restApiData.js';
 
-  const dtimgBox = document.querySelector('.dtimgBox');
-  const fisrtItem = document.createElement('div');
-  fisrtItem.classList.add('item');
-  fisrtItem.setAttribute('data-index',0)
-  dtimgBox.appendChild(fisrtItem);
+class ProjectDetail {
+  constructor() {
+    this.currentIndex = 0; // 현재 이미지 인덱스를 저장하는 변수 추가
+    this.init();
+  }
 
-
-  imgList.forEach((imgSrc, index) => {
-    const item = document.createElement('div');
-    item.classList.add('item');
-    item.setAttribute('data-index', index); // 인덱스 + 1 할당(data-index의 0은 항상 비어있어야하기때문에)
-    if (index==0){
-      
+  async init() {
+    const projectId = this.getProjectIdFromUrl();
+    if (projectId !== null) {
+      const projectData = await getProjectDataById(projectId);
+      if (projectData && projectData.images) {
+        const imgList = this.createImgList(projectData.images);
+        this.setupImages(imgList);
+        this.setupImageSlider();
+      }
     }
-    if (index !== 0) { // 첫 번째 이미지는 비어있는 div로 유지
+
+    // 좌우버튼 클릭시에만 setupImageSlider()를 호출
+    document.getElementById('leftBtn').addEventListener('click', () => {
+      this.setupImageSlider(-1);
+    });
+
+    document.getElementById('rightBtn').addEventListener('click', () => {
+      this.setupImageSlider(1);
+    });
+  }
+
+  createImgList(images) {
+    return images.map(img => img.image);
+  }
+
+  getProjectIdFromUrl() {
+    const urlParts = window.location.pathname.split('/');
+    const projectIdIndex = urlParts.indexOf('project') + 1;
+
+    if (projectIdIndex < urlParts.length) {
+      const projectId = parseInt(urlParts[projectIdIndex]);
+      return isNaN(projectId) ? null : projectId;
+    }
+
+    return null;
+  }
+
+  setupImages(imgList) {
+    const dtimgBox = document.querySelector('.dtimgBox');
+
+    // 맨 처음에 # 이미지 추가
+    const hashItem = document.createElement('div');
+    hashItem.classList.add('item', 'empty');
+    dtimgBox.appendChild(hashItem);
+
+    imgList.forEach((imgSrc, index) => {
+      const item = document.createElement('div');
+      item.classList.add('item');
+      item.setAttribute('data-index', index + 1);
+
       const imgElement = document.createElement('img');
-      imgElement.src = (imgSrc);
+      imgElement.src = imgSrc;
+
+      if (index === 0) {
+        // 1번째 인덱스에는 이미지 0번째 인덱스의 이미지 추가
+        imgElement.src = imgList[0];
+      }
+
       item.appendChild(imgElement);
       dtimgBox.appendChild(item);
+    });
+  }
 
-    }
-
-
-  });
-
-
-  let index = 0;
-  const lastImgNum = imgList.length-1;
-  const items = document.querySelectorAll('.item');
-  const markerContainer = document.querySelector('.marker');
-
-  // 좌측버튼 클릭시 changeImg 함수 사용
-  document.getElementById('leftBtn').addEventListener('click', function () {
-    index = (index - 1 + lastImgNum) % lastImgNum;
-    showImage(index);
-    updateMarker(index);
-  });
-
-  // 우측버튼 클릭시 changeImg 함수 사용
-  document.getElementById('rightBtn').addEventListener('click', function () {
-    index = (index + 1) % lastImgNum;
-    showImage(index);
-    updateMarker(index);
-  });
-
-  // 초기화 함수
-  function showImage(index) {
+  showImage(index) {
     const dtimgBox = document.querySelector('.dtimgBox');
     const itemWidth = document.querySelector('.item').offsetWidth;
     const newPosition = -itemWidth * index;
     dtimgBox.style.transition = 'transform 0.5s ease';
     dtimgBox.style.transform = `translateX(${newPosition}px)`;
 
+    const items = document.querySelectorAll('.item');
+
     items.forEach(item => {
       let dataIndex = parseInt(item.getAttribute('data-index'));
-      if (dataIndex === index) {
+
+      if (dataIndex === index || dataIndex === index + 2) {
+        // 맨 왼쪽과 맨 오른쪽에만 opacity 적용
         item.style.opacity = 0.55;
+      } else if (dataIndex === index + 1) {
+        item.style.opacity = 1;
+      } else {
+        item.style.opacity = 0;
+      }
+
+      // 나머지 스타일은 여기에 추가
+      if (dataIndex === index) {
         item.style.transform = 'scale(0.65) translateX(20vw)';
         item.style.zIndex = "-999";
       } else if (dataIndex === index + 1) {
-        item.style.opacity = 1;
         item.style.transform = 'scale(0.9)';
         item.style.zIndex = "999";
       } else if (dataIndex === index + 2) {
-        item.style.opacity = 0.55;
         item.style.transform = 'scale(0.65) translateX(-20vw)';
         item.style.zIndex = "-999";
-      } else if (dataIndex < index - 1) {
-        item.style.display = 0;
-        item.style.transform = 'scale(0.65) translateX(-20vw)';
-      } else if (dataIndex > index + 2) {
-        item.style.opacity = 0;
-        item.style.transform = 'scale(0.65) translateX(20vw)';
-      }
-       else {
-        item.style.opacity = 0;
+      } else if (index === 0 && dataIndex === items.length - 2) {
         item.style.transform = 'scale(0.65)';
+        item.style.zIndex = '-999';
+      } else {
+        item.style.transform = 'scale(0.65)';
+        item.style.display = 'block';
       }
     });
-  }
 
-  // Slider설정
-  function updateMarker(index) {
-    //슬라이더 초기화( 동적개수를 위해 )
+    // 현재 인덱스 업데이트
+    this.currentIndex = index;
+  }
+//dd
+  updateMarker(index) {
+    const markerContainer = document.querySelector('.marker');
+    const lastImgNum = document.querySelectorAll('.item').length-1;
+
     markerContainer.innerHTML = '';
-    //동적 슬라이더 개수 설정 후 page에 삽입
+
     for (let i = 0; i < lastImgNum; i++) {
       const page = document.createElement('div');
       page.classList.add('page');
@@ -112,6 +130,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  showImage(index);
-  updateMarker(index);
+  setupImageSlider(direction) {
+    const items = document.querySelectorAll('.item');
+
+    if (direction === -1) {
+      this.currentIndex = (this.currentIndex - 1 + items.length - 1) % (items.length - 1);
+    } else if (direction === 1) {
+      this.currentIndex = (this.currentIndex + 1) % (items.length - 1);
+    }
+
+    this.showImage(this.currentIndex);
+    this.updateMarker(this.currentIndex);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  new ProjectDetail();
 });
