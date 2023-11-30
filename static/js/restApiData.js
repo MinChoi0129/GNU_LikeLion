@@ -1,6 +1,5 @@
 export async function getProjectDataById(projectId) {
 	const apiUrl = `http://127.0.0.1:8000/api/projects/${projectId}/?format=json`;
-
 	try {
 		const response = await fetch(apiUrl);
 		const data = await response.json();
