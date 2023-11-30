@@ -1,194 +1,200 @@
 @font-face {
-    font-weight: 300;
-    font-family: "Pretendard-Thin";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff") format("woff");
+  font-weight: 300;
+  font-family: "Pretendard-Thin";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
+    format("woff");
 }
 
 @font-face {
-    font-weight: 300;
-    font-family: "Pretendard-Light";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+  font-weight: 300;
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
+    format("woff");
 }
 
 @font-face {
-    font-weight: 400;
-    font-family: "Pretendard-Regular";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
 }
 
 @font-face {
-    font-weight: 500;
-    font-family: "Pretendard-Medium";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff") format("woff");
+  font-weight: 500;
+  font-family: "Pretendard-Medium";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff")
+    format("woff");
 }
 
 @font-face {
-    font-weight: 600;
-    font-family: "Pretendard-SemiBold";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
+    format("woff");
 }
 
 @font-face {
-    font-weight: 700;
-    font-family: "Pretendard-Bold";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+  font-weight: 700;
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
 }
 
 @font-face {
-    font-weight: 800;
-    font-family: "Pretendard-ExtraBold";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-family: "Pretendard-ExtraBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff")
+    format("woff");
 }
 
 @font-face {
-    font-weight: 300;
-    font-family: "Pretendard-Black";
-    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff") format("woff");
+  font-weight: 300;
+  font-family: "Pretendard-Black";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff")
+    format("woff");
 }
 
 * {
-    box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    overflow-x: hidden;
-    -ms-overflow-style: none;
-    /* 인터넷 익스플로러 */
-    scrollbar-width: none;
-    /* 파이어폭스 */
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  /* 인터넷 익스플로러 */
+  scrollbar-width: none;
+  /* 파이어폭스 */
 
-    font-size: 16px;
+  font-size: 16px;
 }
 
 body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-
 
 main,
 div,
 h1,
 h2,
 h3 {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 ol,
 ul,
 li {
-    list-style: none;
-    display: inline-block;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
 }
 
 a,
 a:visited,
 a:active {
-    /* 상속된 색상 사용 */
-    color: inherit;
-    /* 밑줄 제거 */
-    text-decoration: none;
+  /* 상속된 색상 사용 */
+  color: inherit;
+  /* 밑줄 제거 */
+  text-decoration: none;
 }
 
 a:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 canvas {
-    display: block;
+  display: block;
 }
 
 .backGround {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -9999999;
-    width: 100%;
-    height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -9999999;
+  width: 100%;
+  height: 100%;
 }
 
 .container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 
-    top: 0;
-    left: 0;
+  top: 0;
+  left: 0;
 
-    width: 100vw;
-    
-    background-color: rgba(0, 0, 0, 0);
-    box-shadow: inset 0 0 250px 20px #24586e;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: inset 0 0 250px 20px #24586e;
 }
 
 #nav {
-    font-family: "Pretendard-Bold";
-    position: fixed;
-    display: flex;
-    width: 100vw;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 150;
-    border-bottom: #ffffff 1px solid;
+  font-family: "Pretendard-Bold";
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 150;
+  border-bottom: #ffffff 1px solid;
 }
 
 #nav:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 #nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 #nav li {
-    font-family: "pretendard-regular";
-    color: #ffffff;
-    display: inline-block;
+  font-family: "pretendard-regular";
+  color: #ffffff;
+  display: inline-block;
 }
 
 #nav ul li a {
-    display: block;
-    position: relative;
-    padding: 10px 20px;
-    text-decoration: none;
-    z-index: 150;
+  display: block;
+  position: relative;
+  padding: 10px 20px;
+  text-decoration: none;
+  z-index: 150;
 }
 
 #nav-title {
-    display: flex;
-    align-items: center;
-    font-size: large;
+  display: flex;
+  align-items: center;
+  font-size: large;
 }
 
 #nav-title #logo {
-    width: 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
 }
 
 #nav-title #first-title {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 #nav-title #second-title {
-    color: #40bccb;
+  color: #40bccb;
 }
 
 /* 기존의 CSS 코드 */
 
 .box {
-    position: absolute;
-    background-color: #ffffff;
-    opacity: 0.5;
-    border-radius: 25px;
-    z-index: 100;
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 0.5;
+  border-radius: 25px;
+  z-index: 100;
 }
