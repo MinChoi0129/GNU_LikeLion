@@ -1,5 +1,5 @@
 #faq-scene {
-  position: absolute;
+  position: relative;
   justify-content: center;
   top: 0;
   left: 0;
@@ -48,14 +48,14 @@
   background-color: white;
   margin-top: 5vh;
   opacity: 50%;
+
 }
 
 /* dtText = 프로젝트 타이틀 div */
 .dtText {
-  font-family: "Pretencontainer1dard-ExtraBold";
-  font-size: 3.5rem;
+  font-family: "Pretendard-bold";
+  font-size: 4.5rem;
   color: #ffffff;
-  margin-top: 2vh;
   padding: 0;
   align-items: center;
   justify-content: center;
@@ -85,7 +85,7 @@ input:focus {
   margin-top: 5vh;
   display: block;
   font-family: "Pretendard-regular";
-}
+ }
 
 #container1 {
   display: flex;
@@ -114,6 +114,7 @@ input:focus {
   flex-grow: 7;
   /* 너비 비율 4:1 설정 */
   height: 5vh;
+  font-size: 1rem;
   padding-left: 1vw;
   border: 2px solid #24586e;
   font-family: "Pretendard-Regular";
@@ -121,17 +122,15 @@ input:focus {
 }
 
 #SearchBtn {
-  display: flex;
-  justify-content: center;
   flex-grow: 1;
+  /* 너비 비율 4:1 설정 */
   height: 5vh;
   border: 3px solid #24586e;
   background-color: #24586e;
   color: white;
   line-height: 300%;
   border-radius: 0 1vw 1vw 0;
-  padding: 0 0.5vw 0 0;
-  align-items: center;
+  padding-right: 0.5vw;
 }
 
 .crossbar {
@@ -157,12 +156,8 @@ input:focus {
   -ms-overflow-style: none; /* 인터넷 익스플로러 */
   scrollbar-width: none; /* 파이어폭스 */
 }
-body {
+body{
   -ms-overflow-style: none;
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 .faq-content-title {
@@ -175,16 +170,24 @@ body {
 }
 
 .faq-content {
-  margin: 1vh 2vw 1vh 2vw;
-  padding: 2vh;
-  font-size: 1.2rem;
+  font-family: "Pretendard-semiBold";
+  margin: 1vh 2vw 2.5vh 2vw;
+  padding: 3vh;
+  font-size: 1.3rem;
   text-align: left;
   background-color: #afc3c524;
   height: fit-content;
   border-left: #d9d9d970 0.5vw solid;
   border-right: #d9d9d970 0.5vw solid;
-  animation: fadeInDown 1s forwards;
 }
+
+.fadeInUp {
+  animation: fadeInUp 0.2s;
+}
+.fadeInDown {
+  animation: fadeInDown 0.2s;
+}
+
 @keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -196,13 +199,83 @@ body {
   }
 }
 
-.triangle {
+@keyframes fadeInUp {
+  0% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+}
+
+
+.line-box {
+  position: relative;
   display: inline-block;
-  width: 0;
-  height: 100%;
-  border-left: 0.6vw solid transparent;
-  border-right: 0.6vw solid transparent;
-  border-top: 1.5vh solid black; /* 원하는 배경색으로 변경하십시오. */
-  margin-left: 1vw;
-  rotate: 180deg;
+  width: 2vw; /* 원하는 가로 크기로 변경하십시오. */
+  height: 1.5vh; /* 원하는 세로 크기로 변경하십시오. */
+}
+
+.fixed_line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 0.5vh solid black; /* 원하는 배경색으로 변경하십시오. */
+  border-top: 0.4vh solid black; /* 원하는 배경색으로 변경하십시오. */
+  border-right: 0.7vw solid black;
+  border-left: 0.7vw solid black;
+  border-radius: 1vw;
+}
+
+.line {
+  position: absolute;
+  border-bottom: 0.5vh solid black; /* 원하는 배경색으로 변경하십시오. */
+  border-top: 0.4vh solid black; /* 원하는 배경색으로 변경하십시오. */
+  border-right: 0.7vw solid black;
+  border-left: 0.7vw solid black;
+  border-radius: 1vw;
+  transform: rotate(90deg);
+}
+.touched{
+  animation: lineMoveReverse 0.2s;
+  transform: rotate(0deg);
+}
+.untouched{
+  animation: lineMove 0.2s;
+  transform: rotate(90deg);
+}
+@keyframes lineMove {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes lineMoveReverse {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+
+#faq-list::-webkit-scrollbar {
+    width: 0.3vw;
+}
+
+#faq-list::-webkit-scrollbar-thumb {
+    border-radius: 0.5vw; 
+    background: #24586e;  
+    padding: 1vh;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0, 0);
+  margin: 3.25vh;
 }

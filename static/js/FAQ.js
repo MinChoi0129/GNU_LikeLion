@@ -21,59 +21,64 @@ const answer = [
 function show_faqs() {
   for (let i = 0; i < question.length; i++) {
     if (i == 0) {
-      html = `<div class="faq-content-title"><div class="triangle"></div>
+      html = `<div class="faq-content-title"><div class="line-box"><div class="fixed_line"></div><div class="line untouched"></div></div>
               &nbsp;
               ${question[i]}
             </div>
-            <div class="faq-content">${answer[i]}</div>`;
+            <div class="faq-content" hidden>${answer[i]}</div>`;
       document.getElementById("faq-list").innerHTML += html;
     } else {
-      html = `<hr><div class="faq-content-title"><div class="triangle"></div>
+      html = `<hr><div class="faq-content-title"><div class="line-box"><div class="fixed_line"></div><div class="line untouched"></div></div>
               &nbsp;
               ${question[i]}
             </div>
-            <div class="faq-content">${answer[i]}</div>`;
+            <div class="faq-content" hidden>${answer[i]}</div>`;
       document.getElementById("faq-list").innerHTML += html;
     }
   }
 }
 function show_faq(n, i) {
   if (i == 0) {
-    html = `<div class="faq-content-title"><div class="triangle"></div>
+    html = `<div class="faq-content-title"><div class="line-box"><div class="fixed_line"></div><div class="line"></div></div>
             &nbsp;
             ${question[n]}
           </div>
-          <div class="faq-content">${answer[n]}</div>`;
+          <div class="faq-content" hidden>${answer[n]}</div>`;
     document.getElementById("faq-list").innerHTML += html;
   } else {
-    html = `<hr><div class="faq-content-title"><div class="triangle"></div>
+    html = `<hr><div class="faq-content-title"><div class="line-box"><div class="fixed_line"></div><div class="line"></div></div>
                 &nbsp;
                 ${question[n]}
               </div>
-              <div class="faq-content">${answer[n]}</div>`;
+              <div class="faq-content" hidden>${answer[n]}</div>`;
     document.getElementById("faq-list").innerHTML += html;
   }
 }
 
 function addfaqEvent() {
   const faqItems = document.getElementsByClassName("faq-content-title");
-  const faqArrow = document.getElementsByClassName("triangle");
+  const faqArrow = document.getElementsByClassName("line");
   for (let i = 0; i < faqItems.length; i++) {
     faqItems[i].addEventListener("click", function () {
       if (faqItems[i].nextElementSibling.hidden === true) {
         faqItems[i].nextElementSibling.hidden = false;
-        faqArrow[i].style.transform = "rotate(0deg)";
+        faqItems[i].nextElementSibling.classList.remove("fadeInUp");
+        faqItems[i].nextElementSibling.classList.add("fadeInDown");
+        faqArrow[i].classList.remove("untouched");
+        faqArrow[i].classList.add("touched");
       } else {
+        faqItems[i].nextElementSibling.classList.remove("fadeInDown");
+        faqItems[i].nextElementSibling.classList.add("fadeInUp");
+        faqArrow[i].classList.remove("touched");
+        faqArrow[i].classList.add("untouched");
+      }
+    });
+    faqItems[i].nextElementSibling.addEventListener("animationend", function () {
+      if (faqItems[i].nextElementSibling.classList.contains("fadeInUp")) {
         faqItems[i].nextElementSibling.hidden = true;
-        faqArrow[i].style.transform = "rotate(180deg)";
       }
     });
   }
-  const faqContent = document.querySelector(".faq-content");
-
-  faqItems.addEventListener("click", () => {
-    faqContent.classList.add("fadeInDown");
-  });
 }
 
 function search() {
@@ -95,11 +100,11 @@ function search() {
   }
   addfaqEvent();
 }
-const myInput = document.getElementById("search");
-const myButton = document.getElementById("searchBtn");
+const myInput = document.getElementById('search');
+const myButton = document.getElementById('searchBtn');
 
-myInput.addEventListener("keydown", function (event) {
-  if (event.key === "Enter") {
+myInput.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
     myButton.click();
   }
 });
@@ -115,5 +120,3 @@ window.addEventListener("scroll", function () {
     document.getElementById("nav").style.backgroundColor = "";
   }
 });
-
-window.addEventListener("resize", function () {});
