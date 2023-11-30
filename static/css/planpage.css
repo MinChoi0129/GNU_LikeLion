@@ -98,17 +98,18 @@ body {
 
 .leftSide {
   position: absolute;
-  top: 30rem;
+  /* top: 25rem; */
+  top:30rem;
   left: 13rem;
 }
 .leftYear {
   color: #40bccb;
   font-family: "Pretendard-ExtraBold";
-  font-size: 35px;
+  font-size: 50px;
 }
 .leftText {
   color: #ffffff;
-  font-size: 50px;
+  font-size: 60px;
   font-family: "Pretendard-Bold";
 }
 
@@ -201,5 +202,6 @@ body {
   filter: blur(50px);
   top: 22rem;
   left: 50rem;
-  opacity: 50%;
+  /* left: 40rem; */
+  opacity: 35%;
 }

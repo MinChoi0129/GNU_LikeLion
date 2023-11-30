@@ -1,13 +1,12 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 
-=======
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>GNU 멋쟁이사자처럼</title>
+<<<<<<< HEAD
     <link
       rel="shortcut icon"
       href="{% static 'image/favicon.ico' %}"
@@ -25,36 +24,57 @@
       crossorigin="anonymous"
     ></script>
     {% block backgroundHeader %} {% endblock %}
+=======
+    <link rel="shortcut icon" href="{% static 'image/favicon.ico' %}" type="image/x-icon"/>
+    <link rel="icon" href="{% static 'image/favicon.ico' %}" type="image/x-icon"/>
+    <link rel="stylesheet" href="{% static 'css/background.css' %}"/>
+    <script src="{% static 'js/background.js' %}" defer="defer"></script>
+    <script src="https://kit.fontawesome.com/214b8f17c4.js" crossorigin="anonymous"></script>
+    {% block backgroundHeader %}{% endblock %}
+>>>>>>> 329f693069c3be8d540019cd4c3912f3b7a6a5b5
   </head>
+
   <body>
     <div class="backGround"></div>
->>>>>>> b168d73e78f1ed7f6a5d7014ee344089ed77c95b
     <div id="nav">
       <div id="nav-title">
-        <img
-          id="logo"
-          src="{% static 'image/LikeLion_logo.svg' %}"
-          alt="로고없음"
-        />
-        <span id="first-title">멋쟁이사자처럼</span> &nbsp;
+        <img id="logo" src="{% static 'image/LikeLion_logo.svg' %}" alt="로고없음"/>
+        <span id="first-title">멋쟁이사자처럼</span>
+        &nbsp;
         <span id="second-title">경상국립대</span>
       </div>
       <ul>
-        <li><a href="/">홈</a></li>
-        <li><a href="/project">프로젝트</a></li>
-        <li><a href="/activity">활동</a></li>
-        <li><a href="/planpage">일정</a></li>
-        <li><a href="/introduce">프로필</a></li>
-        <li><a href="/FAQ">FAQ</a></li>
+        <li>
+          <a href="/">홈</a>
+        </li>
+        <li>
+          <a href="/project">프로젝트</a>
+        </li>
+        <li>
+          <a href="/activity">활동</a>
+        </li>
+        <li>
+          <a href="/planpage">일정</a>
+        </li>
+        <li>
+          <a href="/introduce">프로필</a>
+        </li>
+        <li>
+          <a href="/FAQ">FAQ</a>
+        </li>
       </ul>
     </div>
 
     <div class="container">
-      {% block content %} {% endblock %} {% block faq %} {% endblock %} 
-      {% block project %} {% endblock %} {% block projectDetail %} {% endblock %} 
-      {% block activityDetail %} {% endblock %} {% block introduce %} {% endblock %} 
-      {% block planpage %} {% endblock %}
-      {% block activity %} {% endblock %}
+      {% block content %}{% endblock %}
+      {% block faq %}{% endblock %}
+      {% block project %}{% endblock %}
+      {% block projectDetail %}{% endblock %}
+      {% block activityDetail %}{% endblock %}
+      {% block introduce %}{% endblock %}
+      {% block planpage %}{% endblock %}
+      {% block activity %}{% endblock %}
     </div>
   </body>
+
 </html>

@@ -103,9 +103,10 @@ a:hover {
 
 .lionImg {
   position: absolute;
-  right: 33%;
-  height: 40rem;
-  top: 5%;
+  height: 100vh;
+  left: 50%;
+  top: 50vh;
+  transform: translate(-50%, -50%);
   z-index: -9989;
 }
 
@@ -164,6 +165,9 @@ a:hover {
   width: 700px; /* 고정된 너비로 지정 */
 }
 
+.recruit_wrapper {
+  margin-top: 5vh;
+}
 .recruit_right {
   position: relative;
   color: white;
@@ -238,10 +242,11 @@ a:hover {
 /********************* 섹션2.5 (Session) *********************/
 .calendar {
   height: 100vh;
-  margin-top: 3rem;
   text-align: center;
 }
-
+.calendar_wrapper {
+  margin-top: 10vh;
+}
 .calendar_left {
   color: white;
   display: inline-block;
@@ -295,7 +300,7 @@ a:hover {
   text-align: center;
   padding-top: 12vh;
   background-color: brown;
-  width: 70vw;
+  z-index: 90;
 }
 
 .titleBox {
@@ -320,7 +325,7 @@ a:hover {
   overflow: scroll;
   scroll-snap-type: x mandatory;
 }
-
+/* ㅇㄹㄴㄹㄴ */
 .imgBox {
   width: 60vw;
   height: 50vh;
@@ -368,6 +373,22 @@ a:hover {
   cursor: pointer;
   font-weight: bold;
 }
+
+.slideBtn{
+  width: 10vw;
+  height: 10vh;
+  position: relative;
+  left: 70vw;
+  top: -3vh;
+  z-index: 100;
+}
+
+.pnBtn{
+  border-style: none;
+  background-color: red;
+  z-index: 150;
+}
+
 
 .go_write_resume {
   color: white;

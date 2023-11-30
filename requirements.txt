@@ -1,2 +1,4 @@
 django
 pillow
+djangorestframework
+drf-yasg
