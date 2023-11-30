@@ -381,6 +381,7 @@ html {
 .dtimgBox2 {
 	display: flex;
 	transition: transform 5s ease-out;
+	width: 100vw;
 }
 
 .item,
