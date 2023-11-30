@@ -117,7 +117,7 @@ class ProjectDetail {
     // 현재 인덱스 업데이트
     this.currentIndex = index;
   }
-
+//dd
   updateMarker(index) {
     const markerContainer = document.querySelector('.marker');
     const lastImgNum = document.querySelectorAll('.item').length-1;
