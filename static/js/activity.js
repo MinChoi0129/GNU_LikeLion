@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    const postList = document.querySelector(".post-list");
+    const postList = document.querySelector(".post");
     const nextButton = document.getElementById("nextButton");
 
     // 다음 포스트로 이동하는 함수
@@ -34,3 +34,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 50);
     });
 });
+

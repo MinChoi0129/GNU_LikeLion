@@ -2,12 +2,15 @@
 .optionTitle {
     position: relative;
     display: flex;
-    height: 4rem;
-    margin-top: 15vh;
-    margin-right: 55%;
+    height: 15%;
+    margin-left: 18vw;
+    margin-top: 7vh;
+    margin-right: 70%;
+    margin-bottom: 5vh;
     color: #FFFFFF;
-    font-size: 2rem;
+    font-size: 4rem;
     font-family: "Pretendard-ExtraBold";
+    z-index: 100;
 }
 
 .dropDownBar {
@@ -35,26 +38,21 @@
     display: flex;
     align-items: center;
     flex-grow: 1;
-
-    margin-right: 2.5vw;
-
+    margin-right: 1.5vw;
     color: white;
     font-size: 0;
 }
 
 .menu_wrap .dep1>li {
     display: inline-block;
-
     white-space: nowrap;
     vertical-align: top;
     text-align: center;
-
     width: fit-content;
     margin: 0.26vw;
     border-bottom: 0.2rem solid white;
-
     background-color: rgb(255, 255, 255, 0);
-    font-size: 3rem;
+    font-size: 5rem;
     color: #40BCCB;
 
 }
@@ -106,80 +104,63 @@
     width: fit-content;
 }
 
-.post-list {
+.post {
+    position: absolute;
     display: flex;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    padding-left: 15rem;
+    left: 18vw;
 }
 
-.post-item {
-    flex: 0 0 calc(25% - 10px);
-    box-sizing: border-box;
-    transition: opacity 0.3s ease-in-out;
-    cursor: pointer;
-    color: #ffffff;
-    border: 1px solid #ffffff;
-    /* border은 나중에 삭제할 예정 */
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    padding-bottom: 15rem;
-    margin-bottom: 20px;
-    margin-right: 2rem;
+
+.post_title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1rem;
+    width: 20rem;
+    margin-bottom: 2rem;
     margin-top: 2rem;
+}
+
+.post-item img {
+    width: 22rem;
+    height: 27rem;
+    border-radius: 20px;
+    margin-right: 5rem;
 }
 
 .post-item.hidden {
     opacity: 0;
     pointer-events: none;
     transform: scale(0);
-    /* 추가: 불투명도가 0이 되면 크기를 0으로 조정하여 감춤 */
 }
 
 .post-item-more {
-    flex: 0 0 calc(25% - 10px);
+    flex: 0 0 calc(25%-10px);
     margin-right: 10px;
     box-sizing: border-box;
     cursor: pointer;
     transform: scale(1);
-    /* 추가: 다시 표시될 때 크기를 원래대로 복원 */
 }
-
-.post-container {
-    position: absolute;
-    padding: 30rem;
-    padding-top: 20px;
-
-}
-
-.post_img {
-    padding: 10px;
-    width: 10rem;
-    height: auto;
-    border: #FFFFFF 1px;
-
-}
-
-.post_img img {
-    max-width: 100%;
-    height: auto;
-}
-
 
 #nextButton {
     cursor: pointer;
-    background-color: #40BCCB;
     color: #FFFFFF;
-    padding: 10px 30px;
     border: none;
-    font-size: 16px;
+    font-size: 5rem;
     position: absolute;
-    right: 0;
-    bottom: 40%
-    /* 예를 들어, post 컨테이너의 하단에 위치하도록 설정 */
+    right: 15%;
+    bottom: 50%;
 }
 
 #nextButton:hover {
-    background-color: #32767b;
-    /* 마우스 호버 시 배경색 변경 */
+    text-align: center;
+
+}
+
+.back-container {
+    width: 100vw;
+    height: 100vh;
 }
