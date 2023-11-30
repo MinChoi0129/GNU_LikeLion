@@ -68,10 +68,6 @@ class ProjectDetail {
       item.appendChild(imgElement);
       dtimgBox.appendChild(item);
     });
-
-    // 맨 뒤에 빈 이미지 추가
-    const lastEmptyItem = document.createElement('div');
-    lastEmptyItem.classList.add('item', 'empty');
   }
 
   showImage(index) {
