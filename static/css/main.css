@@ -1,38 +1,37 @@
 @font-face {
   font-weight: 300;
   font-family: "Pretendard-Light";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
 }
+
 @font-face {
   font-weight: 400;
   font-family: "Pretendard-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
 }
+
 @font-face {
   font-weight: 500;
   font-family: "Pretendard-Medium";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff") format("woff");
 }
+
 @font-face {
   font-weight: 600;
   font-family: "Pretendard-SemiBold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
 }
+
 @font-face {
   font-weight: 700;
   font-family: "Pretendard-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
 }
+
 @font-face {
   font-weight: 800;
   font-family: "Pretendard-ExtraBold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff") format("woff");
 }
 
 * {
@@ -82,6 +81,7 @@ a:active {
   color: inherit;
   text-decoration: none;
 }
+
 a:hover {
   cursor: pointer;
 }
@@ -90,6 +90,10 @@ a:hover {
 .arrow_btn {
   background-color: rgba(0, 0, 0, 0);
   border-color: rgba(0, 0, 0, 0);
+}
+
+.arrow_btn img {
+  width: 7rem;
 }
 
 /********************* 섹션1 (Main) *********************/
@@ -112,19 +116,21 @@ a:hover {
 
 .likelion_eng {
   color: rgb(255, 143, 0);
-  font-weight: bolder;
-  font-size: 6.75rem;
+  font-weight: bold;
+  font-size: 8rem;
 }
 
 .likelion_kor {
   font-weight: 400;
-  font-size: 6.75rem;
+  font-size: 8rem;
+  font-weight: bolder;
 }
 
 .gnu_kor {
   font-weight: 300;
-  font-size: 4.375rem;
+  font-size: 5rem;
   color: rgba(255, 255, 255, 0.54);
+  margin-bottom: 8rem;
 }
 
 /********************* 섹션2 (Course) *********************/
@@ -162,7 +168,8 @@ a:hover {
   display: inline-block;
   text-align: left;
   margin-bottom: 10vh;
-  width: 700px; /* 고정된 너비로 지정 */
+  width: 700px;
+  /* 고정된 너비로 지정 */
 }
 
 .recruit_wrapper {
@@ -174,7 +181,8 @@ a:hover {
   display: inline-block;
   margin-left: 10rem;
   margin-top: 5rem;
-  width: 400px; /* 고정된 너비로 지정 */
+  width: 400px;
+  /* 고정된 너비로 지정 */
 }
 
 .course_explain {
@@ -183,7 +191,8 @@ a:hover {
   margin-top: 1.5rem;
   text-align: left;
   font-size: 1.3rem;
-  max-height: 150px; /* 최대 높이 지정 */
+  max-height: 150px;
+  /* 최대 높이 지정 */
   overflow: hidden;
 }
 
@@ -196,12 +205,14 @@ a:hover {
   font-weight: bold;
   margin-bottom: 5rem;
 }
+
 .recruit_course_kor {
   margin-right: 1.5rem;
   font-size: 5rem;
   font-weight: bolder;
   margin-bottom: 2rem;
 }
+
 .recruit_course_eng {
   margin-right: 2rem;
   font-size: 2rem;
@@ -256,6 +267,7 @@ a:hover {
   margin-bottom: 3rem;
   padding-left: 0;
 }
+
 .calendar_right {
   color: white;
   display: inline-block;
@@ -271,12 +283,14 @@ a:hover {
   margin-bottom: 5rem;
   text-align: left;
 }
+
 .calendar_every {
   font-size: 5rem;
   font-weight: bolder;
   margin-bottom: 2rem;
   text-align: left;
 }
+
 .calendar_tue_thu {
   font-size: 2rem;
   font-weight: bold;
@@ -325,12 +339,7 @@ a:hover {
   overflow: scroll;
   scroll-snap-type: x mandatory;
 }
-/* ㅇㄹㄴㄹㄴ */
-.imgBox {
-  width: 60vw;
-  height: 50vh;
-  border-radius: 40px;
-}
+
 
 .slideBox {
   text-align: center;
@@ -339,20 +348,47 @@ a:hover {
   scroll-snap-align: center;
 }
 
+.imgDiv {
+  width: 60vw;
+  height: 50vh;
+  background-size: cover;
+  overflow: scroll;
+  border-radius: 40px;
+  display: inline-block;
+  margin: auto;
+}
+
+
+.imgBox {
+  width: 100%;
+  text-align: center;
+}
+
+
+
 .slideBox div {
-  text-align: left;
   line-height: 170%;
   color: white;
 }
 
-.slideBox > div div {
+.slideText {
   text-align: left;
+}
+
+.slideBox>div div {
   display: inline-block;
   margin-left: 8vw;
   margin-right: 0vw;
   margin-top: 3vh;
   margin-bottom: 20vh;
+  position: relative;
 }
+
+
+
+
+
+
 
 .session {
   margin-left: 100vw;
@@ -366,37 +402,39 @@ a:hover {
   font-weight: bold;
   font-size: 1.2rem;
 }
+
+
+
 .more {
   text-decoration: underline;
 }
+
 .more:hover {
   cursor: pointer;
   font-weight: bold;
 }
 
-.slideBtn{
+
+.slideBtn {
   width: 10vw;
   height: 10vh;
   position: relative;
   left: 70vw;
   top: -3vh;
   z-index: 100;
+  display: inline-block;
 }
 
-.pnBtn{
-  border-style: none;
-  background-color: red;
-  z-index: 150;
+.lrBtn{
+  z-index: 1000;
 }
-
-
 .go_write_resume {
   color: white;
   text-align: center;
   margin: 0 auto;
   width: 12rem;
   height: 4rem;
-  background: #24586e;
+  background: #ffae00;
   border-radius: 60px;
   margin-top: 2rem;
   position: relative;
@@ -404,7 +442,7 @@ a:hover {
 
 .go_write_resume div {
   position: absolute;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: bold;
   top: 50%;
   left: 50%;

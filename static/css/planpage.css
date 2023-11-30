@@ -100,7 +100,7 @@ body {
 .leftSide {
   position: absolute;
   /* top: 25rem; */
-  top:30rem;
+  top: 30rem;
   left: 13rem;
 }
 .leftYear {
@@ -115,11 +115,11 @@ body {
 }
 
 /* rightSide */
-.rightSide{
+.rightSide {
   margin-left: -10rem;
   margin-top: 5rem;
 }
-.Mon{
+.Mon {
   display: inline-block;
   display: flex;
   flex-direction: row;
@@ -163,7 +163,7 @@ body {
   color: #ffffff;
   margin: 0;
 }
-.view{
+.view {
   font-family: "Pretendard-Regular";
   font-size: 1rem;
   color: #ffffff;
@@ -172,15 +172,12 @@ body {
   position: relative;
   top: 0.6rem;
 }
-.view{
+.view {
   margin: 0;
   margin-top: 0.7rem;
   margin-left: 0.3rem;
   cursor: pointer;
 }
-
-
-
 
 .mainCircle {
   position: absolute;
@@ -192,7 +189,6 @@ body {
   margin-top: -10rem;
   overflow: hidden;
 }
-
 
 .blurCircle {
   width: 18rem;
@@ -207,7 +203,6 @@ body {
   opacity: 35%;
 }
 
-.Wrap{
+.Wrap {
   height: 100vh;
 }
-
