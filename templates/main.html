@@ -119,48 +119,60 @@
       <div class="title">HISTORY</div>
       <div>11기의 흔적</div>
     </div>
-    <div class="intro">
+    <div class="intro" id="intro">
       <div class="session slideBox">
-        <img class="imgBox" src="{% static 'image/ideathon6.png' %}" alt="image" />
-        <div>
-          <div><span class="titleName">SESSION</span><br />2023.09.12</div>
+        <div class="imgDiv">
+          <img class="imgBox" src="{% static 'image/session.jpg' %}" alt="image" />
+        </div>
+        <div class="slideText">
+          <div><span class="titleName">SESSION</span><br />2023.03 ~ 2023.11</div>
           <div class="coment">
-            1학기에 매주 2회 세션을 진행하였습니다.<br /><a href="" class="more">더 알아보기</a>
+            1학기는 주 2회, 2학기는 주 1회 세션을 진행하였습니다.<br /><a href="#level2.5" class="more">더 알아보기</a>
           </div>
         </div>
       </div>
       <div class="ideaton slideBox">
-        <img class="imgBox" src="{% static 'image/ideathon1.png' %}" alt="image" />
-        <div>
-          <div><span class="titleName">IDEATHON</span><br />2023.09.12</div>
+        <div class="imgDiv">
+          <img class="imgBox" src="{% static 'image/ideathon6.png' %}" alt="image" />
+        </div>
+        <div class="slideText">
+          <div><span class="titleName">IDEATHON</span><br />2023.06.20</div>
           <div class="coment">
-            ideathon을 했어예<br /><a href="/activityDetail2" class="more">더 알아보기</a>
+            멋쟁이사자처럼 첫 공식 대회, 아이디어톤을 진행하였습니다.<br /><a href="/activityDetail2" class="more">더 알아보기</a>
           </div>
         </div>
       </div>
       <div class="mt slideBox">
-        <img class="imgBox" src="{% static 'image/ideathon1.png' %}" alt="image" />
-        <div>
-          <div><span class="titleName">MT</span><br />2023.09.12</div>
+        <div class="imgDiv sessionImgBox">
+          <img class="imgBox" src="{% static 'image/MT.jpg' %}" alt="image" />
+        </div>
+        <div class="slideText">
+          <div><span class="titleName">MT</span><br />2023.07.23 ~ 07.24</div>
           <div class="coment">
-            2023년 여름, 펜션으로 여름 MT를 떠났습니다.<br /><a href="/activityDetail3" class="more">더 알아보기</a>
+            2023년 여름, 사천으로 여름 MT를 떠났습니다.<br /><a href="/activityDetail3" class="more">더 알아보기</a>
           </div>
         </div>
       </div>
       <div class="hackathon slideBox">
-        <img class="imgBox" src="{% static 'image/exImg1.png' %}" alt="image" />
-        <div>
-          <div><span class="titleName">HACKATHON</span><br />2023.09.12</div>
+        <div class="imgDiv">
+          <img class="imgBox" src="{% static 'image/exImg1.png' %}" alt="image" />
+        </div>
+        <div class="slideText">
+          <div><span class="titleName">HACKATHON</span><br />2023.08.18 ~ 08.19</div>
           <div class="coment">
-            해커톤 나갔어예 3등 해부렀죠<br /><a href="/activityDetail4" class="more">더 알아보기</a>
+            서울 양재AT센터에서 해커톤을 진행하였습니다. 그리고 3등!! 하였습니다.<br /><a href="/activityDetail4" class="more">더 알아보기</a>
           </div>
         </div>
       </div>
     </div>
-    <form class="slideBtn">
-      <input id="preBtn" class="pnBtn" type="button" value="이전">
-      <input id="nextBtn" class="pnBtn" type="button" value="다음">
-    </form>
+    <div class="slideBtn">
+      <span id="preBtn" class="lrBtn"><img src="/static/image/arrow_left_btn.png" alt="leftArrow"
+          style="filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(85deg) brightness(102%) contrast(101%);"
+          width="30vw" height="30vw" class="slideImg"></span>
+      <span id="nextBtn" class="lrBtn"><img src="/static/image/arrow_right_btn.png" alt="rightArrow"
+          style="filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(85deg) brightness(102%) contrast(101%);"
+          width="30vw" height="30vw" class="slideImg"></span>
+    </div>
     <div class="go_write_resume">
       <a target="_blank" href="https://m.blog.naver.com/saraminapp/221962431259">
         <div>지원서 작성</div>
