@@ -167,6 +167,13 @@ body {
   font-family: "Pretendard-Regular";
   font-size: 1rem;
   color: #ffffff;
+  z-index: 1;
+}
+a:visited{
+  color: #ffffff;
+}
+a:active{
+  color: #ffffff;
 }
 .contentView {
   position: relative;
@@ -201,6 +208,7 @@ body {
   left: 50rem;
   /* left: 40rem; */
   opacity: 35%;
+  z-index: -999;
 }
 
 .Wrap {
