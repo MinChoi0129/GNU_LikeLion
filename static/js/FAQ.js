@@ -62,12 +62,20 @@ function addfaqEvent() {
     faqItems[i].addEventListener("click", function () {
       if (faqItems[i].nextElementSibling.hidden === true) {
         faqItems[i].nextElementSibling.hidden = false;
+        faqItems[i].nextElementSibling.classList.remove("fadeInUp");
+        faqItems[i].nextElementSibling.classList.add("fadeInDown");
         faqArrow[i].classList.remove("untouched");
         faqArrow[i].classList.add("touched");
       } else {
-        faqItems[i].nextElementSibling.hidden = true;
+        faqItems[i].nextElementSibling.classList.remove("fadeInDown");
+        faqItems[i].nextElementSibling.classList.add("fadeInUp");
         faqArrow[i].classList.remove("touched");
         faqArrow[i].classList.add("untouched");
+      }
+    });
+    faqItems[i].nextElementSibling.addEventListener("animationend", function () {
+      if (faqItems[i].nextElementSibling.classList.contains("fadeInUp")) {
+        faqItems[i].nextElementSibling.hidden = true;
       }
     });
   }

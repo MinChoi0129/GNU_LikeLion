@@ -179,7 +179,13 @@ body{
   height: fit-content;
   border-left: #d9d9d970 0.5vw solid;
   border-right: #d9d9d970 0.5vw solid;
-  animation: fadeInDown 1s forwards;
+}
+
+.fadeInUp {
+  animation: fadeInUp 0.2s;
+}
+.fadeInDown {
+  animation: fadeInDown 0.2s;
 }
 
 @keyframes fadeInDown {
@@ -192,6 +198,18 @@ body{
     transform: translateZ(0);
   }
 }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+}
+
 
 .line-box {
   position: relative;
@@ -221,11 +239,11 @@ body{
   transform: rotate(90deg);
 }
 .touched{
-  animation: lineMove 0.2s;
+  animation: lineMoveReverse 0.2s;
   transform: rotate(0deg);
 }
 .untouched{
-  animation: lineMoveReverse 0.2s;
+  animation: lineMove 0.2s;
   transform: rotate(90deg);
 }
 @keyframes lineMove {
@@ -237,12 +255,12 @@ body{
   }
 }
 
-@keyframes lineMove {
+@keyframes lineMoveReverse {
   0% {
     transform: rotate(90deg);
   }
   100% {
-    transform: rotate(0deg);
+    transform: rotate(180deg);
   }
 }
 
