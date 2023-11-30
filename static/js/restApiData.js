@@ -9,6 +9,7 @@ export async function getProjectDataById(projectId) {
 		return null;
 	}
 }
+<<<<<<< HEAD
 
 export async function getPostDataById(postid) {
     const apiUrl = `http://127.0.0.1:8000/api/posts/${postid}/?format=json`;
@@ -22,3 +23,5 @@ export async function getPostDataById(postid) {
         return null;
     }
 }
+=======
+>>>>>>> 9049c598d61972c313bea4b9ff6454d93a5dd791
