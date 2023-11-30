@@ -2,7 +2,8 @@
 {% load static %}
   {% block backgroundHeader %}
   <link rel="stylesheet" href="{% static 'css/projectDetail.css' %}" />
-  <script src="{% static 'js/projectDetail.js' %}" defer></script>
+  <script src="{% static 'js/projectDetail.js' %}" type = "module" defer></script>
+
   {% endblock %}
 
   {% block projectDetail %}
@@ -17,7 +18,7 @@
         <div class="dtLine leftLine"></div>
         <div class="dtCircle leftCircle"></div>
       </div>
-      <div class="dtText">WheelWeGo</div>
+      <div class="dtText">{{ project.title }}</div>
 
       <div class="dtLines">
         <div class="dtCircle rightCircle"></div>
@@ -30,15 +31,7 @@
     <!--                       사진 Box                                  -->
     <div class="cContainer">
     <div class="dtimgBox">
-        {% comment %} <div class="item" data-index="0"></div>
-        <div class="item" data-index="1"><img src="{% static 'image/exImg1.png' %}"></div>
-        <div class="item" data-index="2"><img src="{% static 'image/exImg2.png' %}"></div>
-        <div class="item" data-index="3"><img src="{% static 'image/exImg3.png' %}"></div>
-        <div class="item" data-index="4"><img src="{% static 'image/exImg4.png' %}"></div>
-        <div class="item" data-index="5"><img src="{% static 'image/exImg4.png' %}"></div>
-        <div class="item" data-index="6"><img src="{% static 'image/exImg4.png' %}"></div>
 
-        <div class="item" data-index="7"></div> {% endcomment %}
     </div>
    </div>  
     <!--                       페이지 넘기기 버튼 Box                           -->
