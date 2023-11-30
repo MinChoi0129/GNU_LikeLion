@@ -310,7 +310,7 @@ a:hover {
 /********************* 섹션3 (Histroy) *********************/
 .histroy {
   height: 100vh;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
   text-align: center;
   padding-top: 12vh;
   background-color: brown;
@@ -318,6 +318,7 @@ a:hover {
 }
 
 .titleBox {
+  font-family: "Pretendard-Regular";
   position: relative;
   line-height: 200%;
   color: white;
@@ -395,6 +396,8 @@ a:hover {
 
 .slideText {
   text-align: left;
+  font-family: "Pretendard-Regular";
+
 }
 
 .slideBox>div div {
