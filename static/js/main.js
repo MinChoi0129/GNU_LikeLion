@@ -2,50 +2,53 @@ let topics = [
   {
     title: "백엔드",
     engTitle: "Backend",
-    imgSrc: "./static/image/exImg1.png",
+    imgSrc: "./static/image/server.jpg",
     description:
       "백엔드는 서버 측 개발을 담당하며, 데이터 처리와 로직을 구현합니다. 신속하고 정확한 서버를 구축하여 웹 어플리케이션을 지원합니다.",
-    youtubeLink: "https://www.youtube.com/watch?v=your_backend_video_id",
+    youtubeLink: "https://www.youtube.com/watch?v=R0YJ-r-qLNE",
   },
   {
     title: "프론트엔드",
     engTitle: "Frontend",
-    imgSrc: "./static/image/exImg2.png",
+    imgSrc: "./static/image/frontend.png",
     description:
       "프론트엔드는 사용자와 상호작용하며, 웹 디자인과 사용자 경험을 구현합니다. HTML, CSS, JavaScript를 활용하여 웹페이지를 개발합니다.",
-    youtubeLink: "https://www.youtube.com/watch?v=your_frontend_video_id",
+    youtubeLink: "https://www.youtube.com/watch?v=YD1-hnvVJq0",
   },
   {
     title: "웹이란?",
     engTitle: "What is Web?",
-    imgSrc: "./static/image/exImg3.png",
+    imgSrc: "./static/image/whatisweb.png",
     description:
       "웹은 정보를 전달하고 공유하는 수단으로, 전 세계적으로 연결된 컴퓨터 네트워크를 기반으로 합니다. 다양한 리소스에 접근 가능합니다.",
-    youtubeLink: "https://www.youtube.com/watch?v=your_web_video_id",
+    youtubeLink:
+      "https://www.youtube.com/watch?v=pYOEy_mAMpI&list=PLuHgQVnccGMDZP7FJ_ZsUrdCGH68ppvPb&index=16",
   },
   {
     title: "웹의 구조",
     engTitle: "Structure of Web",
-    imgSrc: "./static/image/exImg4.png",
+    imgSrc: "./static/image/web_structure.png",
     description:
       "웹의 구조는 클라이언트와 서버 간의 통신을 기반으로 합니다. 웹 브라우저, 서버, 데이터베이스 등이 상호작용하여 동작합니다.",
-    youtubeLink: "https://www.youtube.com/watch?v=your_web_structure_video_id",
+    youtubeLink:
+      "https://www.youtube.com/watch?v=yBPyzaccbkc&list=PLuHgQVnccGMDZP7FJ_ZsUrdCGH68ppvPb&index=17",
   },
   {
     title: "협업",
     engTitle: "Collaboration",
-    imgSrc: "./static/image/hakathon1.png",
+    imgSrc: "./static/image/collabo.png",
     description:
       "협업은 팀원 간의 소통과 협력을 강조하는 과정입니다. GitHub를 통한 협업은 프로젝트의 효율성을 높이는 데 중요한 역할을 합니다.",
-    youtubeLink: "https://www.youtube.com/watch?v=your_collaboration_video_id",
+    youtubeLink: "https://www.youtube.com/watch?v=Bd35Ze7-dIw",
   },
   {
     title: "디자인",
     engTitle: "Design",
-    imgSrc: "./static/image/hakathon2.png",
+    imgSrc: "./static/image/design.png",
     description:
       "디자인은 사용자 경험을 개선하고 시각적인 아름다움을 제공합니다. Figma와 같은 도구를 활용하여 디자인을 구현합니다.",
-    youtubeLink: "https://www.youtube.com/watch?v=your_design_video_id",
+    youtubeLink:
+      "https://www.youtube.com/watch?v=QwCdCcsPVTQ&list=PLuHgQVnccGMDZP7FJ_ZsUrdCGH68ppvPb&index=3",
   },
 ];
 
@@ -64,9 +67,7 @@ function updateContent() {
 
   // Update YouTube link
   let youtubeLink = currentTopic.youtubeLink || "https://www.youtube.com/";
-  document.getElementById("overlay").addEventListener("click", function () {
-    window.open(youtubeLink, "_blank");
-  });
+  document.getElementById("ylink").href = youtubeLink;
 
   // Update slider
   let sliderItems = document.querySelectorAll(".slider_item");
@@ -112,10 +113,6 @@ container.addEventListener("mouseleave", function () {
   startAnimation();
 });
 
-overlay.addEventListener("click", function () {
-  window.open("https://www.youtube.com/watch?v=R0YJ-r-qLNE", "_blank");
-});
-
 // Start the animation
 startAnimation();
 
@@ -136,9 +133,6 @@ startAnimation();
 // overlay.addEventListener("click", function () {
 //   window.open("https://www.youtube.com/watch?v=R0YJ-r-qLNE", "_blank");
 // });
-
-
-
 
 // window.requestAnimFrame = (function () {
 //   return (
@@ -266,7 +260,6 @@ startAnimation();
 //       },
 //       false
 //     );
-
 
 //     // 첫 프레임을 그리는 것은 그리기 루프를 시작합니다
 //     draw_frame();

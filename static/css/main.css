@@ -1,37 +1,43 @@
 @font-face {
   font-weight: 300;
   font-family: "Pretendard-Light";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
+    format("woff");
 }
 
 @font-face {
   font-weight: 400;
   font-family: "Pretendard-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
 }
 
 @font-face {
   font-weight: 500;
   font-family: "Pretendard-Medium";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff")
+    format("woff");
 }
 
 @font-face {
   font-weight: 600;
   font-family: "Pretendard-SemiBold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
+    format("woff");
 }
 
 @font-face {
   font-weight: 700;
   font-family: "Pretendard-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
 }
 
 @font-face {
   font-weight: 800;
   font-family: "Pretendard-ExtraBold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff")
+    format("woff");
 }
 
 * {
@@ -198,6 +204,9 @@ a:hover {
 
 .recruit_right img {
   border-radius: 30px;
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
 }
 
 .recruit_course {
@@ -340,7 +349,6 @@ a:hover {
   scroll-snap-type: x mandatory;
 }
 
-
 .slideBox {
   text-align: center;
   width: 70vw;
@@ -359,34 +367,31 @@ a:hover {
   position: relative;
 }
 
-
 .imgBox {
   width: 100%;
   text-align: center;
   position: absolute;
 }
-.sessionBox{
+.sessionBox {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.ideathonBox{
+.ideathonBox {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.mtBox{
+.mtBox {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.hackathonBox{
+.hackathonBox {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-
 
 .slideBox div {
   line-height: 170%;
@@ -397,7 +402,7 @@ a:hover {
   text-align: left;
 }
 
-.slideBox>div div {
+.slideBox > div div {
   display: inline-block;
   margin-left: 8vw;
   margin-right: 0vw;
@@ -405,7 +410,6 @@ a:hover {
   margin-bottom: 20vh;
   position: relative;
 }
-
 
 .session {
   margin-left: 100vw;
@@ -420,8 +424,6 @@ a:hover {
   font-size: 1.2rem;
 }
 
-
-
 .more {
   text-decoration: underline;
 }
@@ -430,7 +432,6 @@ a:hover {
   cursor: pointer;
   font-weight: bold;
 }
-
 
 .slideBtn {
   width: 10vw;
@@ -442,7 +443,7 @@ a:hover {
   display: inline-block;
 }
 
-.lrBtn{
+.lrBtn {
   z-index: 1000;
 }
 .go_write_resume {
@@ -465,8 +466,6 @@ a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-
 
 /********************* Footer *********************/
 footer {
