@@ -9,14 +9,14 @@ const question = [
   "세션에는 어떤 수업 방식이 사용되나요?",
 ];
 const answer = [
-  "네, 매주 세션 하나씩 진행됩니다.",
+  "네, 매주 세션 두번씩 진행됩니다.",
   "세션은 2시간 동안 진행됩니다.",
   "세션을 통해 코딩을 배우고, 코딩을 통해 문제를 해결하는 방법을 배울 수 있습니다.",
-  "세션은 일반적으로 화요일, 목요일 8시부터 시작됩니다.",
-  "세션에는 기본적인 코딩 개념과 예제, 실습 등이 포함됩니다.",
-  "세션에서는 주로 JavaScript와 HTML/CSS를 사용합니다.",
+  "세션은 일반적으로 월요일, 목요일 7시부터 시작됩니다.",
+  "세션에는 기초적인 코딩 개념과 실습, 추후 개발 계획 등이 포함됩니다.",
+  "세션에서는 주로 Python, JavaScript와 HTML/CSS를 사용합니다.",
   "세션은 오프라인으로 진행되며, 환경 상의 문제가 있을 시 Zoom 등의 플랫폼을 통해 진행할 수 있습니다.",
-  "세션에서는 강의와 실습을 조합한 형태로 진행됩니다.",
+  "세션에서는 강의와 실습, 질문과 응답의 형태로 진행됩니다.",
 ];
 function show_faqs() {
   for (let i = 0; i < question.length; i++) {
@@ -73,11 +73,14 @@ function addfaqEvent() {
         faqArrow[i].classList.add("untouched");
       }
     });
-    faqItems[i].nextElementSibling.addEventListener("animationend", function () {
-      if (faqItems[i].nextElementSibling.classList.contains("fadeInUp")) {
-        faqItems[i].nextElementSibling.hidden = true;
+    faqItems[i].nextElementSibling.addEventListener(
+      "animationend",
+      function () {
+        if (faqItems[i].nextElementSibling.classList.contains("fadeInUp")) {
+          faqItems[i].nextElementSibling.hidden = true;
+        }
       }
-    });
+    );
   }
 }
 
@@ -100,11 +103,11 @@ function search() {
   }
   addfaqEvent();
 }
-const myInput = document.getElementById('search');
-const myButton = document.getElementById('searchBtn');
+const myInput = document.getElementById("search");
+const myButton = document.getElementById("searchBtn");
 
-myInput.addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') {
+myInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
     myButton.click();
   }
 });
