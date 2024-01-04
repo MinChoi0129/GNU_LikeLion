@@ -1,3 +1,7 @@
+window.addEventListener('resize', () => {
+	location.reload();
+});
+
 let topics = [
   {
     title: "백엔드",
