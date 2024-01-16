@@ -116,7 +116,6 @@ addfaqEvent();
 
 window.addEventListener("scroll", function () {
   var scrollPosition = window.scrollY;
-  console.log(scrollPosition);
   if (scrollPosition >= 100) {
     document.getElementById("nav").style.backgroundColor = "black";
   } else {
