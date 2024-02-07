@@ -320,6 +320,20 @@ a:hover {
     margin-top: 10%;
 }
 
+.leader {
+    font-family: 'Pretendard-Bold';
+    font-size: 1.3rem;
+    margin-top: 10%;
+    color: yellow;
+}
+
+.helper {
+    font-family: 'Pretendard-Bold';
+    font-size: 1.3rem;
+    margin-top: 10%;
+    color:#00d9d2;
+}
+
 .profile2 {
     width: 9.5vw;
 
